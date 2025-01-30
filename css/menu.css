@@ -1,0 +1,5 @@
+.menu-container {
+    height: 80px;
+    width: 100%;
+    background: var(--p1); 
+}

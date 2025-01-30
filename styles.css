@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Kanit';
+    src: url('./assets/fonts/Kanit.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --bg: #473626;
+
+    --red: #a81134;
+    --yellow: #ffe876;
+    --blue: #00a6f2;
+    --green: #70ac4c;
+    --white: #d4d4d4;
+    --orange: #fa4723;
+    --gray: #afa98f;
+
+    --p1: #d3cbb5;
+    --p2: #d7d0ac;
+    --p3: #6a654d;
+    --p4: #463627;
+}
+
+body {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start; 
+    height: 100vh; 
+    overflow-x: hidden; 
+    overflow-y: auto; 
+}
+
+.stroke {
+    text-shadow:
+    -1px -1px 0 #000,
+     0   -1px 0 #000,
+     1px -1px 0 #000,
+     1px  0   0 #000,
+     1px  1px 0 #000,
+     0    1px 0 #000,
+    -1px  1px 0 #000,
+    -1px  0   0 #000;
+}
+
+.super-stroke {
+    text-shadow:
+    -2px -2px 0 #000,
+     0   -2px 0 #000,
+     2px -2px 0 #000,
+     2px  0   0 #000,
+     2px  2px 0 #000,
+     0    2px 0 #000,
+    -2px  2px 0 #000,
+    -2px  0   0 #000;
+}

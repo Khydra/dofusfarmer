@@ -1,0 +1,109 @@
+.status-container {
+    height: 800px; 
+    background: var(--p1); 
+    border: 1px solid #333;
+}
+
+.status-title {
+	height: 40px;
+	color: #333;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	background: var(--p2); 
+	border-bottom: 1px solid #333;
+}
+
+.status-player-container {
+	position: relative;
+	width: 100%;
+	height: 105px;
+}
+
+.status-portrait {
+	position: absolute;
+	top: 20px;
+	left: 15px;
+	width: 70px;
+	height: 70px;
+	border: 2px solid #333;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+}
+
+.status-name {
+	position: absolute;
+	top: 20px;
+	left: 100px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.status-class {
+	position: absolute;
+	top: 44px;
+	left: 100px;
+	font-size: 16px;
+}
+/* MAIN */
+.status-main-container {
+	position: relative;
+	width: 100%;
+	height: 135px;
+
+}
+.status-main-row {
+	position: relative;
+	left: 5%;
+	width: 90%;
+	align-items: center;
+	display: flex;
+	border-bottom: 1px solid #777;
+	color: #222;
+}
+
+.status-main-icon {
+	width: 24px;
+	height: 24px;
+	background-size: 100%;
+}
+
+.status-main-label {
+	position: relative;
+	width: 45%;
+	padding-left: 5px;
+	font-weight: bold;
+}
+
+.status-main-value {
+	position: relative;
+	width: 40%;
+	font-weight: bold;
+	text-align: right;
+}
+
+
+/* BASE */
+
+.status-stat-title {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	border-bottom: 2px dashed #333;
+}
+
+.status-base-container {
+	position: relative;
+	width: 100%;
+	height: 200px;
+
+}
+
+.status-general-container {
+	position: relative;
+	width: 100%;
+	height: 200px;
+
+}

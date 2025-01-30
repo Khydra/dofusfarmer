@@ -1,0 +1,5 @@
+.zaap-container {
+    height: 40px;
+    width: 100%;
+    background: var(--p1); 
+}

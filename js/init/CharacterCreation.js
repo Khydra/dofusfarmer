@@ -96,6 +96,8 @@ export class CharacterCreation {
 			body: this.classSelected.image.body[this.genderSelected],
 			class: this.classSelected,
 			level: 1,
+			availablePoints: 5,
+			exp: [0, 110],
 			vit: [60, 60],
 			pa: [6, 6],
 			pm: [3, 3],
@@ -128,7 +130,7 @@ export class CharacterCreation {
 			}, 
 			spells: [],
 			bag: [],
-			
+			jobs: []
 		}
 
 		createData(character);

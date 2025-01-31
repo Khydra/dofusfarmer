@@ -1,0 +1,27 @@
+export const text = {
+	stat: {
+		dps: 'Daño por segundo',
+		dpc: 'Daño por click',
+		pa: 'Puntos de acción',
+		pm: 'Puntos de movimiento',
+		vit: '',
+		str: 'Fuerza',
+		int: 'Inteligencia',
+		cha: 'Suerte',
+		agi: 'Agilidad',
+		paReg: 'Subida PA',
+		pmReg: 'Subida PM',
+		pot: 'Potencia',
+		strDmg: 'Daño tierra',
+		intDmg: 'Daño fuego',
+		chaDmg: 'Daño agua',
+		agiDmg: 'Daño aire',
+		dmg: 'Daños',
+		crt: '% Crítico',
+		crtDmg: 'Daño crítico',
+		wis: 'Sabiduria',
+		cur: 'Curas',
+		al: 'Alcance',
+		pp: 'Prospección',
+	}
+}

@@ -1,0 +1,33 @@
+.window {
+    position: absolute;
+    border: 1px solid #333;
+    overflow: hidden;
+    cursor: default;
+}
+
+.window-header {
+    height: 40px;
+    background: var(--p2); 
+    border-bottom: 1px solid #333;
+    color: #333;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    cursor: grab;
+}
+
+.window-close {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    line-height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.window-content {
+    padding: 15px;
+    background: var(--p1); 
+    height: calc(100% - 40px);
+}
+

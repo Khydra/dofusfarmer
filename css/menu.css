@@ -1,5 +1,20 @@
 .menu-container {
-    height: 80px;
+    height: 40px;
     width: 100%;
-    background: var(--p1); 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.menu-button {
+
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.menu-button:hover {
+    filter: drop-shadow(0 0 8px #222) brightness(1.2);
 }

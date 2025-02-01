@@ -7,8 +7,8 @@ export class Menu {
 		this.main = main;
 		this.player = player;
 
-		this.gearWindow = new Gear();
-		this.inventoryWindow = new Inventory();
+		this.gearWindow = new Gear(this);
+		this.inventoryWindow = new Inventory(this);
 
 		this.render();
 	}

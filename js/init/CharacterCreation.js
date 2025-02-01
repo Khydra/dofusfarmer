@@ -128,6 +128,7 @@ export class CharacterCreation {
 				al: 0,
 				pp: 100
 			}, 
+			kamas: 0,
 			spells: [],
 			bag: [],
 			jobs: []

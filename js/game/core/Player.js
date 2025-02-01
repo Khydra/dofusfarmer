@@ -15,6 +15,7 @@ export class Player {
 		this.pa = charData.pa;
 		this.pm = charData.pm;
 
+		this.kamas = charData.kamas;
 		this.stats = charData.stats;
 		this.spells = charData.spells;
 		this.bag = charData.bag;

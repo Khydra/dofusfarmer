@@ -25,9 +25,13 @@
     cursor: pointer;
 }
 
-.window-content {
-    padding: 15px;
+.window-container {
+    /*padding: 15px;
     background: var(--p1); 
+    height: calc(100% - 40px);*/
+    position: absolute;
     height: calc(100% - 40px);
+    width: 100%;
+    background: var(--p1); 
 }
 

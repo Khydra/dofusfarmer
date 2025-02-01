@@ -1,15 +1,15 @@
 import { Window } from '../../utils/Window.js';
 
 export class Gear extends Window { 
-	constructor() {
+	constructor(component) {
 		const title = "Equipamiento";
-	    const content = ""; 
 	    const width = 300;
 	    const height = 450;
 	    const x = 50; 
 	    const y = 80; 
 
-	    super(title, content, width, height, x, y); 
+	    super(title, width, height, x, y); 
+	    this.component = component;
 	}
 
 	open() {

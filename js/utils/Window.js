@@ -1,8 +1,7 @@
 export class Window {
-    constructor(title, content, width, height, x, y) {
+    constructor(title, width, height, x, y) {
         this.isOpen = false;
         this.title = title;
-        this.content = content;
         this.width = width;
         this.height = height;
         this.x = x;
@@ -26,14 +25,13 @@ export class Window {
         this.closeButton.addEventListener("click", () => this.close());
 
         // Crear el contenido
-        this.content = document.createElement("div");
-        this.content.className = "window-content";
-        this.content.innerHTML = content;
+        this.container = document.createElement("div");
+        this.container.className = "window-container";
 
         // Añadir elementos a la ventana
         this.header.appendChild(this.closeButton);
         this.window.appendChild(this.header);
-        this.window.appendChild(this.content);    
+        this.window.appendChild(this.container);    
     }
 
     open() {

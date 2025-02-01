@@ -15,7 +15,7 @@ export class Input {
 
         if (this.options.className) element.className = this.options.className;
         if (this.options.maxlength) element.setAttribute("maxlength", this.options.maxlength);
-
+        if (this.options.placeholder)  element.placeholder = this.options.placeholder;
         this.container.appendChild(element);
         return element;
     }

@@ -1,0 +1,52 @@
+.inventory-search-bar {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	height: 20px;
+	width: 350px;
+
+	background-color: var(--white);
+	border: 2px solid #3a3312;
+	outline: none;
+
+	font-size: 16px;
+	color: #3a3312;
+	
+	padding-left: 5px;
+}
+
+.inventory-filter {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	height: 22px;
+	width: 180px;
+
+	background-color: var(--white);
+	border: 2px solid #3a3312;
+	outline: none;
+
+	font-size: 16px;
+	color: #3a3312;
+	
+}
+
+.inventory-item-container {
+	position: absolute;
+	top: 60px;
+	left: 20px;
+	right: 20px;
+	bottom: 45px;
+	background: red;
+}
+
+.inventory-kamas {
+	position: absolute;
+	bottom: 15px;
+	right: 30px;
+	height: 20px;
+	width: 200px;
+	text-align: right;
+	font-weight: bold;
+	color: #333;
+}

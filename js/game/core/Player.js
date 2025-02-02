@@ -18,7 +18,6 @@ export class Player {
 		this.kamas = charData.kamas;
 		this.stats = charData.stats;
 		this.spells = charData.spells;
-		this.bag = charData.bag;
-
 	}
+
 }

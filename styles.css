@@ -63,3 +63,10 @@ body {
     -2px  2px 0 #000,
     -2px  0   0 #000;
 }
+
+::-webkit-scrollbar { width: 16px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { 
+    background: #333; 
+    border-radius: 2px;
+}

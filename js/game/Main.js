@@ -7,6 +7,9 @@ import { Battle } from './components/Battle.js';
 import { Zaap } from './components/Zaap.js';
 
 import { Player } from './core/Player.js';
+import { Inventory } from './core/Inventory.js';
+
+import { resourceData } from './data/item/resourceData.js'
 
 export class Main {
 	constructor(charData) {
@@ -18,6 +21,7 @@ export class Main {
 
 		//data
 		this.player = new Player(this, charData);
+		this.inventory = new Inventory(this, charData);
 
 		//components
 		this.status = new Status(this, this.player);
@@ -25,5 +29,20 @@ export class Main {
 		this.quest = new Quest(this, this.player);
 		this.battle = new Battle(this, this.player);
 		this.zaap = new Zaap(this, this.player);
+
+		this.test();
 	}
+
+	test = () => {
+
+		for (let i = 0; i < 230; i++) this.inventory.obtainItem(resourceData['ortiga'])
+		for (let i = 0; i < 13; i++) this.inventory.obtainItem(resourceData['ferrita'])
+		this.inventory.obtainItem(resourceData['piel_goota'])
+		this.inventory.obtainItem(resourceData['madera_de_fresno'])
+		this.inventory.obtainItem(resourceData['lana_celeste'])
+		for (let i = 0; i < 412; i++) this.inventory.obtainItem(resourceData['petalo_diafano'])
+		for (let i = 0; i < 1540; i++) this.inventory.obtainItem(resourceData['tabla_de_fresno'])
+		this.inventory.obtainItem(resourceData['trigo'])
+	}
+
 }

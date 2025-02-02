@@ -129,9 +129,9 @@ export class CharacterCreation {
 				pp: 100
 			}, 
 			kamas: 0,
-			spells: [],
-			bag: [],
-			jobs: []
+			spells: {},
+			jobs: {},
+			inventory: {}
 		}
 
 		createData(character);

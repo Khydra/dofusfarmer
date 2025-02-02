@@ -7,6 +7,10 @@ export class Input {
         if (this.options.onlyLetters) {
             this.addOnlyLettersValidation();
         }
+
+        if (this.options.onInput) {
+            this.element.addEventListener("input", this.options.onInput);
+        }
     }
 
     create() {

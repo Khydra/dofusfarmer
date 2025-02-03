@@ -8,8 +8,12 @@ import { Zaap } from './components/Zaap.js';
 
 import { Player } from './core/Player.js';
 import { Inventory } from './core/Inventory.js';
+import { Equipment } from './core/Equipment.js';
 
+//borrar
 import { resourceData } from './data/item/resourceData.js'
+import { equipmentData } from './data/item/equipmentData.js'
+import { generateItemStats } from './manager/equipmentManager.js'
 
 export class Main {
 	constructor(charData) {
@@ -22,6 +26,7 @@ export class Main {
 		//data
 		this.player = new Player(this, charData);
 		this.inventory = new Inventory(this, charData);
+		this.equipment = new Equipment(this, charData);
 
 		//components
 		this.status = new Status(this, this.player);
@@ -43,6 +48,9 @@ export class Main {
 		for (let i = 0; i < 412; i++) this.inventory.obtainItem(resourceData['petalo_diafano'])
 		for (let i = 0; i < 1540; i++) this.inventory.obtainItem(resourceData['tabla_de_fresno'])
 		this.inventory.obtainItem(resourceData['trigo'])
+
+		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']))
 	}
 
 }

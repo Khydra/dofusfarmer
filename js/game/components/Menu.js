@@ -1,14 +1,14 @@
 import { Element } from '../../utils/Element.js';
-import { Gear } from '../windows/Gear.js';
-import { Inventory } from '../windows/Inventory.js';
+import { EquipmentWindow } from '../windows/EquipmentWindow.js';
+import { InventoryWindow } from '../windows/InventoryWindow.js';
 
 export class Menu {
 	constructor(main, player) {
 		this.main = main;
 		this.player = player;
 
-		this.gearWindow = new Gear(this);
-		this.inventoryWindow = new Inventory(this);
+		this.equipmentWindow = new EquipmentWindow(this);
+		this.inventoryWindow = new InventoryWindow(this);
 
 		this.render();
 	}
@@ -27,7 +27,7 @@ export class Menu {
 	handleAction = (buttonName) => {
         switch (buttonName) {
         	 case 'gear':
-            	(!this.gearWindow.isOpen) ? this.gearWindow.open() : this.gearWindow.close();
+            	(!this.equipmentWindow.isOpen) ? this.equipmentWindow.open() : this.equipmentWindow.close();
                 break;
         	case 'inventory':
         		(!this.inventoryWindow.isOpen) ? this.inventoryWindow.open() : this.inventoryWindow.close();

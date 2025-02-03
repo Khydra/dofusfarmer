@@ -2,7 +2,7 @@ import { Window } from '../../utils/Window.js';
 import { Element } from '../../utils/Element.js';
 import { Input } from '../../utils/Input.js';
 
-export class Inventory extends Window { 
+export class InventoryWindow extends Window { 
 	constructor(component) {
 		const title = "Inventario";
 	    const width = 600;
@@ -95,7 +95,7 @@ export class Inventory extends Window {
   	}
 
   	passFilters = (items) => {
-  		const tab = ['all', 'gear', 'consumable', 'resource'];
+  		const tab = ['all', 'equipment', 'consumable', 'resource'];
 
   		var filterItems = items.filter(item => item.type === tab[this.tabSelected] || this.tabSelected == 0);
 
@@ -114,9 +114,30 @@ export class Inventory extends Window {
   	}
 
   	drawItem = (item, pos) => {
-  		//console.log(item)
   		this.slot[pos].className = 'inventory-slot';
   		this.slot[pos].style.backgroundImage = `url("${item.image}")`;
-  		this.slot[pos].innerHTML = `<span class="isq stroke">x${item.quantity}</span>`;
+  		if (item.type != 'equipment') this.slot[pos].innerHTML = `<span class="isq stroke">x${item.quantity}</span>`;
+
+  		// Agregar evento de doble clic para destruir equipamiento
+    	this.slot[pos].addEventListener('dblclick', () => {
+	        if (item.type === 'equipment') this.equipItem(item);
+	        if (item.type === 'consumable') this.useItem(item);
+    	});
+  	}
+
+  	equipItem = (item) => {
+  		if (this.component.main.player.level < item.level) return;
+  		console.log('equip item');
+  		console.log(item)
+  		this.component.main.inventory.removeItem(item);
+  		this.component.main.equipment.equipItem(item);
+
+	    
+	    this.updateItems();
+	    this.component.equipmentWindow.update();
+  	}
+
+  	useItem = (item) => {
+  		console.log('use item')
   	}
 }

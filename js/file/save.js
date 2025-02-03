@@ -1,10 +1,10 @@
 export const loadData = () => {
 	const data = window.localStorage.getItem("data");
-
 	if (!data) {
         let newData = {
             character: {},
-            bank: {}
+            bank: {},
+            itemId: 0
         };
         window.localStorage.setItem("data", JSON.stringify(newData));
         return newData;

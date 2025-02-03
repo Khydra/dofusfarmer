@@ -9,6 +9,7 @@ export class Player {
 		this.level = charData.level;
 		this.exp = charData.exp;
 		this.availablePoints = charData.availablePoints;
+
 		this.vit = charData.vit;
 		this.dps = charData.dps;
 		this.dpc = charData.dpc;

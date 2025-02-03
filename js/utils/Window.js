@@ -1,4 +1,6 @@
 export class Window {
+    static zIndexCounter = 1
+
     constructor(title, width, height, x, y) {
         this.isOpen = false;
         this.title = title;
@@ -27,6 +29,10 @@ export class Window {
         // Crear el contenido
         this.container = document.createElement("div");
         this.container.className = "window-container";
+
+        // Agregar evento para traer la ventana al frente
+        this.window.addEventListener("mousedown", () => this.bringToFront());
+
 
         // Añadir elementos a la ventana
         this.header.appendChild(this.closeButton);
@@ -63,6 +69,10 @@ export class Window {
             isDragging = false;
             this.header.style.cursor = "grab";
         });
+    }
+
+    bringToFront() {
+        this.window.style.zIndex = ++Window.zIndexCounter; // Asigna el z-index más alto
     }
 
     close() {

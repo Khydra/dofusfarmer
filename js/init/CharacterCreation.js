@@ -131,7 +131,25 @@ export class CharacterCreation {
 			kamas: 0,
 			spells: {},
 			jobs: {},
-			inventory: {}
+			inventory: {},
+			equipment: {
+				sombrero: null, 
+				arma: null, 
+				anillo1: null, 
+				capa: null, 
+				mascota: null,
+				amuleto: null, 
+				escudo: null, 
+				anillo2: null, 
+				cinturon: null, 
+				botas: null, 
+				dofus1: null, 
+				dofus2: null, 
+				dofus3: null, 
+				dofus4: null, 
+				dofus5: null, 
+				dofus6: null
+			}
 		}
 
 		createData(character);

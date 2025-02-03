@@ -13,7 +13,7 @@ import { Equipment } from './core/Equipment.js';
 //borrar
 import { resourceData } from './data/item/resourceData.js'
 import { equipmentData } from './data/item/equipmentData.js'
-import { generateItemStats } from './manager/equipmentManager.js'
+import { generateItemStats } from './manager/itemManager.js'
 
 export class Main {
 	constructor(charData) {
@@ -50,7 +50,21 @@ export class Main {
 		this.inventory.obtainItem(resourceData['trigo'])
 
 		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']))
+		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['la_capa_slok']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['las_okupas']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['la_spamita']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['el_masano']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['el_smesmo']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['el_halt_efkuat']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['bunihima']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['el_masano']));
 	}
 
 }
+
+
+
+
+
+

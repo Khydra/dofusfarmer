@@ -10,6 +10,7 @@ export class Equipment {
 	}
 
 	unequipItem = (item) => {
+		//this.main.inventory.obtainItem(item);
 		this.items[item.sort] = null;
 	}	
 }

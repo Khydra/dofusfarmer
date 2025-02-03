@@ -53,8 +53,9 @@ export class EquipmentWindow extends Window {
   		})
   	}
 
-  	unequipItem = (type) => {
-  		const item = this.component.main.equipment.items[type]
+  	unequipItem = (sort) => {
+  		console.log(sort)
+  		const item = this.component.main.equipment.items[sort]
   		if (item == null) return;
 
   		this.component.main.inventory.obtainItem(item);

@@ -159,7 +159,7 @@ export const equipmentData = {
 		key: 'sombrero_de_aventurero',
 		name: 'Sombrero de aventurero',
 		image: './assets/images/items/equipment/s002-0.webp',
-		level: 1,
+		level: 9,
 		stats: {
 			str: [5, 5],
 			int: [5, 5],
@@ -175,7 +175,7 @@ export const equipmentData = {
 		key: 'capa_de_aventurero',
 		name: 'Capa de aventurero',
 		image: './assets/images/items/equipment/s002-1.webp',
-		level: 1,
+		level: 8,
 		stats: {
 			str: [5, 5],
 			int: [5, 5],
@@ -191,7 +191,7 @@ export const equipmentData = {
 		key: 'botas_de_aventurero',
 		name: 'Botas de aventurero',
 		image: './assets/images/items/equipment/s002-2.webp',
-		level: 1,
+		level: 7,
 		stats: {
 			str: [5, 5],
 			int: [5, 5],
@@ -207,7 +207,7 @@ export const equipmentData = {
 		key: 'cinturon_de_aventurero',
 		name: 'Cinturón de aventurero',
 		image: './assets/images/items/equipment/s002-3.webp',
-		level: 1,
+		level: 6,
 		stats: {
 			str: [5, 5],
 			int: [5, 5],
@@ -223,7 +223,7 @@ export const equipmentData = {
 		key: 'anillo_de_aventurero',
 		name: 'Anillo de aventurero',
 		image: './assets/images/items/equipment/s002-4.webp',
-		level: 1,
+		level: 4,
 		stats: {
 			str: [2, 2],
 			int: [2, 2],
@@ -239,7 +239,7 @@ export const equipmentData = {
 		key: 'amuleto_de_aventurero',
 		name: "Amuleto de aventurero",
 		image: './assets/images/items/equipment/s002-5.webp',
-		level: 1,
+		level: 5,
 		stats: {
 			str: [5, 5],
 			int: [5, 5],

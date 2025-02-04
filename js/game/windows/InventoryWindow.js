@@ -128,16 +128,18 @@ export class InventoryWindow extends Window {
   	equipItem = (item) => {
   		if (this.component.main.player.level < item.level) return;
   		
-  		//si hay equipamiento, desequipar:
+  		// si hay equipamiento, desequipar:
   		this.component.equipmentWindow.unequipItem(item.sort);
 
-  		//equipar nuevo objeto:
+  		// equipar nuevo objeto:
   		this.component.main.inventory.removeItem(item);
   		this.component.main.equipment.equipItem(item);
-  		
-	    //actualizar:
+
+	    // actualizar:
 	    this.updateItems();
 	    this.component.equipmentWindow.update();
+
+	    // console.log(this.component.main.equipment.items)
   	}
 
   	useItem = (item) => {

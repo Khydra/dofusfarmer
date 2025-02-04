@@ -134,7 +134,7 @@ export class InventoryWindow extends Window {
   		//equipar nuevo objeto:
   		this.component.main.inventory.removeItem(item);
   		this.component.main.equipment.equipItem(item);
-  		console.log(this.component.main.inventory.items)
+  		
 	    //actualizar:
 	    this.updateItems();
 	    this.component.equipmentWindow.update();

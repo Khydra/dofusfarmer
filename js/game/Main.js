@@ -59,6 +59,13 @@ export class Main {
 		this.inventory.obtainItem(generateItemStats(equipmentData['el_halt_efkuat']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['bunihima']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['el_masano']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['animamuleto']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['sombrero_de_aventurero']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['botas_de_aventurero']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['cinturon_de_aventurero']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
 	}
 
 }

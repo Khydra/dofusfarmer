@@ -42,20 +42,34 @@ export class EquipmentWindow extends Window {
   	update = () => {
   		const equipment = this.component.main.equipment.items;
   		Object.keys(equipment).forEach((item) => {
-  			if (equipment[item] != undefined) {
-  				this.slot[item].style.backgroundImage = `url("${equipment[item].image}")`;
-  				this.slot[item].className = `equipment-slot equipment-slot-${item}`;
-  			} else {
-  				this.slot[item].style.backgroundImage = ``;
-  				this.slot[item].className = `equipment-slot-empty equipment-slot-${item}`;
+
+  			switch (equipment[item]?.sort) {
+  				case undefined: 
+  					this.slot[item].style.backgroundImage = ``;
+  					this.slot[item].className = `equipment-slot-empty equipment-slot-${item}`;
+  					break;
+  				case 'anillo':
+  					for (let i = 1; i <= 2; i++) {
+	                	this.slot[`anillo${i}`].style.backgroundImage = `url("${equipment[item].image}")`;
+  				 		this.slot[`anillo${i}`].className = `equipment-slot equipment-slot-anillo${i}`;
+	            	}
+  					break;
+  				case 'dofus':
+  					for (let i = 1; i <= 6; i++) {
+	                	this.slot[`dofus${i}`].style.backgroundImage = `url("${equipment[item].image}")`;
+  				 		this.slot[`dofus${i}`].className = `equipment-slot equipment-slot-dofus${i}`;
+	            	}
+  					break;
+  				default: 
+  					this.slot[item].style.backgroundImage = `url("${equipment[item].image}")`;
+  				 	this.slot[item].className = `equipment-slot equipment-slot-${item}`;
+  					break;
   			}
- 
   		})
   	}
 
   	unequipItem = (sort) => {
-  		console.log(sort)
-  		const item = this.component.main.equipment.items[sort]
+  		const item = this.component.main.equipment.items[sort];
   		if (item == null) return;
 
   		this.component.main.inventory.obtainItem(item);

@@ -1,6 +1,8 @@
 import { Element } from '../../utils/Element.js';
 import { EquipmentWindow } from '../windows/EquipmentWindow.js';
 import { InventoryWindow } from '../windows/InventoryWindow.js';
+import { JobsWindow } from '../windows/JobsWindow.js';
+import { BankWindow } from '../windows/BankWindow.js';
 
 export class Menu {
 	constructor(main, player) {
@@ -9,12 +11,14 @@ export class Menu {
 
 		this.equipmentWindow = new EquipmentWindow(this);
 		this.inventoryWindow = new InventoryWindow(this);
+		this.jobsWindow = new JobsWindow(this);
+		this.bankWindow = new BankWindow(this);
 
 		this.render();
 	}
 
 	render = () => {
-		const buttonName = ['gear', 'inventory', 'jobs', 'map', 'quests', 'achievements', 'dungeons', 'bestiary', 'shop']
+		const buttonName = ['gear', 'inventory', 'jobs', 'map', 'quests', 'achievements', 'dungeons', 'bestiary', 'bank']
 
 		this.container = new Element(this.main.centerContainer, { className: 'menu-container' }).element;
 
@@ -33,7 +37,7 @@ export class Menu {
         		(!this.inventoryWindow.isOpen) ? this.inventoryWindow.open() : this.inventoryWindow.close();
             	break;    
             case 'jobs':
-            	
+            	(!this.jobsWindow.isOpen) ? this.jobsWindow.open() : this.jobsWindow.close();
                 break;
             case 'map':
             	
@@ -50,8 +54,8 @@ export class Menu {
             case 'bestiary':
             	
                 break;
-            case 'shop':
-            	
+            case 'bank':
+            	(!this.bankWindow.isOpen) ? this.bankWindow.open() : this.bankWindow.close();
                 break;
         }
     }

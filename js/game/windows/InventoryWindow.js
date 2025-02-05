@@ -15,6 +15,7 @@ export class InventoryWindow extends Window {
 	    this.component = component;
 	    this.tabSelected = 0;
 	    this.itemSearched = "";
+	    this.tooltip;
 	  	this.render();
 	}
 
@@ -120,7 +121,7 @@ export class InventoryWindow extends Window {
   		if (item.type != 'equipment') this.slot[pos].innerHTML = `<span class="isq stroke">x${item.quantity}</span>`;
 
   		// Crear el tooltip al pasar el ratón por encima del slot
-		new Tooltip(this.slot[pos], item);
+		this.tooltip = new Tooltip(this.slot[pos], item);
 
   		// Agregar evento de doble clic para destruir equipamiento
     	this.slot[pos].addEventListener('dblclick', () => {

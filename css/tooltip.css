@@ -36,7 +36,7 @@
     position: absolute;
     top: 51px;
     left: 20px;
-    color: var(--yellow);
+    color: #ebc189;
     font-size: 12px;
 }
 
@@ -85,3 +85,8 @@
 .stat-green { color: #90e052; }
 .stat-red { color: #fe8081; }
 .stat-no { opacity: 0.5; }
+.stat-craft { color: #ebc189; }
+.stat-teoric {
+    padding-left: 10px;
+    color: #999;
+}

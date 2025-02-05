@@ -19,8 +19,6 @@ export class Player {
 		this.kamas = charData.kamas;
 		this.stats = charData.stats;
 		this.spells = charData.spells;
-
-		console.log(this)
 	}
 
 	gainExp = (value) => {

@@ -1,6 +1,7 @@
 import { Window } from '../../utils/Window.js';
 import { Element } from '../../utils/Element.js';
 import { Input } from '../../utils/Input.js';
+import { Tooltip } from '../../utils/Tooltip.js';
 
 export class InventoryWindow extends Window { 
 	constructor(component) {
@@ -117,6 +118,9 @@ export class InventoryWindow extends Window {
   		this.slot[pos].className = 'inventory-slot';
   		this.slot[pos].style.backgroundImage = `url("${item.image}")`;
   		if (item.type != 'equipment') this.slot[pos].innerHTML = `<span class="isq stroke">x${item.quantity}</span>`;
+
+  		// Crear el tooltip al pasar el ratón por encima del slot
+		new Tooltip(this.slot[pos], item);
 
   		// Agregar evento de doble clic para destruir equipamiento
     	this.slot[pos].addEventListener('dblclick', () => {

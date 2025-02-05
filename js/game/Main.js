@@ -49,9 +49,9 @@ export class Main {
 		for (let i = 0; i < 1540; i++) this.inventory.obtainItem(resourceData['tabla_de_fresno'])
 		this.inventory.obtainItem(resourceData['trigo'])
 
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['la_capa_slok']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['las_okupas']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['la_spamita']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['el_masano']));

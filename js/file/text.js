@@ -1,10 +1,10 @@
 export const text = {
 	stat: {
-		dps: 'Daño por segundo',
-		dpc: 'Daño por click',
-		pa: 'Puntos de acción',
-		pm: 'Puntos de movimiento',
-		vit: '',
+		dps: 'DPS',
+		dpc: 'DPC',
+		pa: 'PA',
+		pm: 'PM',
+		vit: 'Vitalidad',
 		str: 'Fuerza',
 		int: 'Inteligencia',
 		cha: 'Suerte',

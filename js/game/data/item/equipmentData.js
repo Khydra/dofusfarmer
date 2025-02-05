@@ -8,7 +8,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s000-0.webp',
 		level: 1,
 		stats: {
-			agi: [4, 5],
+			agi: [4, 6],
 			wis: [3, 4]
 		},
 		type: 'equipment',
@@ -22,7 +22,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s000-1.webp',
 		level: 1,
 		stats: {
-			agi: [4, 5],
+			str: [4, 6],
 			wis: [3, 4]
 		},
 		type: 'equipment',
@@ -36,8 +36,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s000-2.webp',
 		level: 1,
 		stats: {
-			agi: [4, 5],
-			wis: [3, 4]
+			int: [4, 6],
+			cha: [4, 6]
 		},
 		type: 'equipment',
 		sort: 'botas',
@@ -50,8 +50,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s000-3.webp',
 		level: 1,
 		stats: {
-			agi: [4, 5],
-			wis: [3, 4]
+			vit: [7, 10],
+			int: [4, 6]
 		},
 		type: 'equipment',
 		sort: 'cinturon',
@@ -64,8 +64,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s000-4.webp',
 		level: 1,
 		stats: {
-			agi: [4, 5],
-			wis: [3, 4]
+			str: [4, 6],
+			agi: [4, 6]
 		},
 		type: 'equipment',
 		sort: 'anillo',
@@ -78,8 +78,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s000-5.webp',
 		level: 1,
 		stats: {
-			agi: [4, 5],
-			wis: [3, 4]
+			vit: [7, 10],
+			cha: [4, 6]
 		},
 		type: 'equipment',
 		sort: 'amuleto',
@@ -92,8 +92,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s000-6.webp',
 		level: 1,
 		stats: {
-			agi: [4, 5],
-			wis: [3, 4]
+			vit: [11, 15],
 		},
 		type: 'equipment',
 		sort: 'escudo',
@@ -106,8 +105,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s000-7.webp',
 		level: 1,
 		stats: {
-			agi: [4, 5],
-			wis: [3, 4]
+			dpc: [1],
+			dmg: [1]
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -148,7 +147,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s001-2.webp',
 		level: 8,
 		stats: {
-			crt: [1, 5],
+			crt: [-5],
+			al: [1]
 		},
 		type: 'equipment',
 		sort: 'amuleto',
@@ -193,10 +193,10 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s002-2.webp',
 		level: 7,
 		stats: {
-			str: [5, 5],
-			int: [5, 5],
-			cha: [5, 5],
-			agi: [5, 5],
+			str: [5],
+			int: [5],
+			cha: [5],
+			agi: [5],
 		},
 		type: 'equipment',
 		sort: 'botas',

@@ -21,7 +21,7 @@ export const text = {
 		crtDmg: 'Daño crítico',
 		wis: 'Sabiduria',
 		cur: 'Curas',
-		al: 'Alcance',
+		al: 'Lucidez',
 		pp: 'Prospección',
 	}
 }

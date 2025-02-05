@@ -66,6 +66,8 @@ export class Main {
 		this.inventory.obtainItem(generateItemStats(equipmentData['cinturon_de_aventurero']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
+
+		this.player.gainExp(2000)
 	}
 
 }

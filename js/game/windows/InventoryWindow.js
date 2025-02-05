@@ -7,7 +7,7 @@ export class InventoryWindow extends Window {
 		const title = "Inventario";
 	    const width = 600;
 	    const height = 450;
-	    const x = 380; 
+	    const x = 530; 
 	    const y = 80; 
 
 	    super(title, width, height, x, y); 

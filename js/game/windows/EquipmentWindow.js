@@ -42,7 +42,6 @@ export class EquipmentWindow extends Window {
   	update = () => {
   		const equipment = this.component.main.equipment.items;
   		Object.keys(equipment).forEach((item) => {
-  			console.log(equipment[item])
   			if (equipment[item] == null) {
   				this.slot[item].style.backgroundImage = ``;
   				this.slot[item].className = `equipment-slot-empty equipment-slot-${item}`;

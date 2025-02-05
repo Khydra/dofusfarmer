@@ -62,17 +62,22 @@ export class Status {
 			this[`baseLabel${value}`] = new Element(this[`baseRow${value}`], { className: 'status-base-label', text: text.stat[value] }).element; 
 			this[`baseValue${value}`] = new Element(this[`baseRow${value}`], { className: 'status-base-value' }).element; 
 			this[`baseButton${value}`] = new Element(this[`baseRow${value}`], { className: 'status-base-button', text: '+' }).element; 
+			this[`baseButton${value}`].addEventListener('click', () => {
+				this.player.distributePoint(value);
+				this.update();
+			})
 		})
 
 		this[`baseRowPoints`] = new Element(this.baseContainer, { className: 'status-base-row-points' }).element; 
 		this[`baseLabelPoints`] = new Element(this[`baseRowPoints`], { className: 'status-base-label-points', text: 'Puntos disponibles' }).element; 
 		this[`baseValuePoints`] = new Element(this[`baseRowPoints`], { className: 'status-base-value-points' }).element; 
 
+
 		this.updateBaseStats();
 	}
 
 	renderGeneralStats = () => {
-		const label = ['pot', 'dmg', 'crt', 'strDmg', 'intDmg', 'chaDmg', 'agiDmg', 'crtDmg', 'wis', 'pp', 'paReg', 'pmReg',  'cur', 'al'];
+		const label = ['pot', 'dmg', 'crt', 'strDmg', 'intDmg', 'chaDmg', 'agiDmg', 'crtDmg', 'wis', 'cur', 'pp', 'al', 'paReg', 'pmReg'];
 
 		this.generalContainer = new Element(this.container, { className: 'status-general-container' }).element; 
 		this.generalTitle = new Element(this.generalContainer, { className: 'status-stat-title', text: 'General' }).element; 
@@ -95,14 +100,14 @@ export class Status {
 	}
 
 	updatePlayer = () => {
-		this.level.innerText =  `${this.player.class.name.toUpperCase()}, ${this.player.level}`;
-		this.exp.style.width = `30%`;
+		this.level.innerText = `${this.player.class.name.toUpperCase()}, ${this.player.level}`;
+		this.exp.style.width = `${(this.player.exp[0]/this.player.exp[1])*100}%`;
 	}
 
 	updateMainStats = () => {
 		this[`mainValueVit`].innerText = `${this.player.vit[0]}/${this.player.vit[0]}`;
-		this[`mainValueDps`].innerText = this.player.stats.dps;
-		this[`mainValueDpc`].innerText = this.player.stats.dpc;
+		this[`mainValueDps`].innerText = this.player.stats["dps"].base + this.player.stats["dps"].bonus;
+		this[`mainValueDpc`].innerText = this.player.stats["dpc"].base + this.player.stats["dpc"].bonus;
 		this[`mainValuePa`].innerText = `${this.player.pa[0]}/${this.player.pa[0]}`;
 		this[`mainValuePm`].innerText = `${this.player.pm[0]}/${this.player.pm[0]}`;
 	}
@@ -111,17 +116,24 @@ export class Status {
 		const label = ['str', 'int', 'cha', 'agi'];
 
 		label.forEach((value) => {
-			this[`baseValue${value}`].innerText = this.player.stats[value];
+			this[`baseValue${value}`].innerText = this.player.stats[value].base + this.player.stats[value].scroll + this.player.stats[value].bonus;
+
+			(
+				this.player.stats[value].base < 100 && this.player.availablePoints > 0 ||
+				this.player.stats[value].base < 200 && this.player.availablePoints > 1 ||
+				this.player.availablePoints > 2 
+			) 
+			? this[`baseButton${value}`].className = "status-base-button" : this[`baseButton${value}`].className = "status-base-button-disable";
 		})
 
-		this[`baseValuePoints`].innerText = this.player.availablePoints
+		this[`baseValuePoints`].innerText = this.player.availablePoints;
 	}
 
 	updateGeneralStats = () => {
 		const label = ['pot', 'dmg', 'crt', 'strDmg', 'intDmg', 'chaDmg', 'agiDmg', 'crtDmg', 'wis', 'pp', 'paReg', 'pmReg',  'cur', 'al'];
 
 		label.forEach((value) => {
-			this[`generalValue${value}`].innerText = this.player.stats[value];
+			this[`generalValue${value}`].innerText = this.player.stats[value].base + this.player.stats[value].bonus;
 		})
 	}
 }

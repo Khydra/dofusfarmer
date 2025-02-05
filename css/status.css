@@ -172,6 +172,20 @@
 	filter: brightness(1.5);
 }
 
+.status-base-button-disable {
+	position: relative;
+	left: 10px;
+	width: 14px;
+	height: 14px;
+	line-height: 13px;
+	border-radius: 2px;
+	background:  linear-gradient(180deg, #999 0%, #777 100%);
+	text-align: center;
+	justify-content: center;
+	outline: 1px solid #222;
+	font-weight: bold;
+}
+
 .status-base-points-available {
 	position: absolute;
 	width: 100%;

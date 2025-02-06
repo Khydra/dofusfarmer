@@ -199,9 +199,4 @@ export const expData = {
 	198: 0,  
 	199: 0,  
 	200: 0,
-
-}
-
-export const jobExpData = {
-
 }

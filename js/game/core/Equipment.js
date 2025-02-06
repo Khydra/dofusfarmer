@@ -49,14 +49,3 @@ export class Equipment {
         });
     }	
 }
-
-
-/*
-if (!this.items.anillo1) {
-                this.items.anillo1 = item;
-            } else if (!this.items.anillo2) {
-                this.items.anillo2 = item;
-            } else {
-                this.items.anillo2 = item; // Sustituye anillo2 si ambos están ocupados
-            }
-*/

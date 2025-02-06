@@ -20,7 +20,9 @@ export class Player {
 		this.stats = charData.stats;
 		this.spells = charData.spells;
 
+		this.jobs = charData.jobs;
 		this.inventory = charData.inventory;
+		this.equipment = charData.equipment;
 	}
 
 	gainExp = (value) => {
@@ -57,6 +59,26 @@ export class Player {
 		}
 	}
 
+	gainExpJob = (value, job) => {
+		let expNeeded = this.jobs[job].exp[0] - this.jobs[job].exp[1];
+
+		if (value >= expNeeded) {
+	        let extraExp = value - expNeeded; 
+	        this.levelUpJob(extraExp, job);            
+	    } else {
+	    	this.jobs[job].exp[0] += value;           
+	    }
+	}
+
+	levelUpJob = (exp, job) => {
+		this.jobs[job].level++;
+		this.jobs[job].exp = [jobs[job].exp[0], (jobs[job].exp[0] + jobs[job].exp[1])];
+
+		if (exp != undefined) this.gainExpJob(exp, job);
+
+		//update recipes y recoleccion
+	}
+
 	getData = () => {
 		return {
 			name: this.name,
@@ -72,7 +94,8 @@ export class Player {
 			kamas: this.kamas,
 			stats: this.stats,
 			spells: this.spells,
-			inventory: this.main.inventory.items
+			inventory: this.main.inventory.items,
+			equipment: this.main.equipment.items,
 		}
 	}
 

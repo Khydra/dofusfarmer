@@ -44,34 +44,34 @@ export class Main {
 
 	test = () => {
 
-		this.inventory.obtainItem(resourceData['ortiga'], 230)
-		this.inventory.obtainItem(resourceData['ferrita'], 12)
-		this.inventory.obtainItem(resourceData['piel_goota'], 85)
-		this.inventory.obtainItem(resourceData['madera_de_fresno'], 6)
-		this.inventory.obtainItem(resourceData['lana_celeste'], 4)
-		this.inventory.obtainItem(resourceData['petalo_diafano'], 412)
-		this.inventory.obtainItem(resourceData['tabla_de_fresno'], 1500)
-		this.inventory.obtainItem(resourceData['trigo'], 117)
+		// this.inventory.obtainItem(resourceData['ortiga'], 230)
+		// this.inventory.obtainItem(resourceData['ferrita'], 12)
+		// this.inventory.obtainItem(resourceData['piel_goota'], 85)
+		// this.inventory.obtainItem(resourceData['madera_de_fresno'], 6)
+		// this.inventory.obtainItem(resourceData['lana_celeste'], 4)
+		// this.inventory.obtainItem(resourceData['petalo_diafano'], 412)
+		// this.inventory.obtainItem(resourceData['tabla_de_fresno'], 1500)
+		// this.inventory.obtainItem(resourceData['trigo'], 117)
 
-		this.inventory.obtainItem(generateItemStats(equipmentData['la_capa_slok']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['las_okupas']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['la_spamita']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_masano']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_smesmo']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_halt_efkuat']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['bunihima']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_masano']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['animamuleto']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['sombrero_de_aventurero']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['botas_de_aventurero']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['cinturon_de_aventurero']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['la_capa_slok']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['las_okupas']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['la_spamita']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['el_masano']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['el_smesmo']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['el_halt_efkuat']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['bunihima']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['el_masano']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['animamuleto']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['sombrero_de_aventurero']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['botas_de_aventurero']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['cinturon_de_aventurero']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
+		// this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
 
-		this.player.gainExp(2000);
+		//this.player.gainExp(2000);
 
 
 		document.addEventListener("keydown", (e) => {

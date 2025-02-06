@@ -8,14 +8,16 @@ export class BankWindow extends Window {
 		const title = "Bankosaco";
 	    const width = 600;
 	    const height = 450;
-	    const x = 530; 
-	    const y = 120; 
+	    const x = 830; 
+	    const y = 80; 
 
 	    super(title, width, height, x, y); 
 	    this.component = component;
 	    this.tabSelected = 0;
 	    this.itemSearched = "";
 	    this.filtredItems = [];
+	    this.slotsMin = 40;
+	    this.slotsNeed = this.slotsMin;
 	    this.tooltip;
 	  	this.render();
 	}
@@ -30,7 +32,6 @@ export class BankWindow extends Window {
   		this.itemContainer = new Element(this.container, { className: 'inventory-item-container' }).element; 
 
   		this.slot = [];
-  		for (let i = 0; i < 40; i++) this.slot[i] = new Element(this.itemContainer, { className: 'inventory-slot-empty' }).element; 
   	}
 
   	renderTabs = () => {
@@ -85,7 +86,16 @@ export class BankWindow extends Window {
 	        });
 	        this.slot = [];
 	    }
-  		for (let i = 0; i < 40; i++) this.slot[i] = new Element(this.itemContainer, { className: 'inventory-slot-empty' }).element; 
+  	}
+
+  	drawSlots = () => {
+  		this.countSlots();
+  		for (let i = 0; i < this.slotsNeed; i++) this.slot[i] = new Element(this.itemContainer, { className: 'inventory-slot-empty' }).element; 
+  	}
+
+  	countSlots = () => {
+  		this.slotsNeed = this.slotsMin;
+  		if (this.filtredItems.length >= 39) this.slotsNeed = Math.ceil(this.filtredItems.length / 8) * 8;
   	}
 
   	updateItems = () => {
@@ -95,6 +105,8 @@ export class BankWindow extends Window {
   		const arrayItems = Object.values(items);
   		
   		this.filtredItems = this.passFilters(arrayItems);
+
+  		this.drawSlots();
 
   		this.filtredItems.forEach((item, i) => {
   			this.drawItem(item, i);

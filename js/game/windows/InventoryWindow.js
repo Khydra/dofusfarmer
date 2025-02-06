@@ -15,7 +15,9 @@ export class InventoryWindow extends Window {
 	    this.component = component;
 	    this.tabSelected = 0;
 	    this.itemSearched = "";
-	    this.filtredItems = []
+	    this.filtredItems = [];
+	    this.slotsMin = 40;
+	    this.slotsNeed = this.slotsMin;
 	    this.tooltip;
 	  	this.render();
 	}
@@ -30,7 +32,6 @@ export class InventoryWindow extends Window {
   		this.kamas = new Element(this.container, { className: 'inventory-kamas' }).element; 
 
   		this.slot = [];
-  		for (let i = 0; i < 40; i++) this.slot[i] = new Element(this.itemContainer, { className: 'inventory-slot-empty' }).element; 
   	}
 
   	renderTabs = () => {
@@ -68,7 +69,6 @@ export class InventoryWindow extends Window {
   	update = () => {
   		const player = this.component.main.player;
   		this.kamas.innerText = `${player.kamas} Kamas`;
-
   		this.updateItems();	
   	}
 
@@ -81,7 +81,16 @@ export class InventoryWindow extends Window {
 	        });
 	        this.slot = [];
 	    }
-  		for (let i = 0; i < 140; i++) this.slot[i] = new Element(this.itemContainer, { className: 'inventory-slot-empty' }).element; 
+  	}
+
+  	drawSlots = () => {
+  		this.countSlots();
+  		for (let i = 0; i < this.slotsNeed; i++) this.slot[i] = new Element(this.itemContainer, { className: 'inventory-slot-empty' }).element; 
+  	}
+
+  	countSlots = () => {
+  		this.slotsNeed = this.slotsMin;
+  		if (this.filtredItems.length >= 39) this.slotsNeed = Math.ceil(this.filtredItems.length / 8) * 8;
   	}
 
   	updateItems = () => {
@@ -91,7 +100,8 @@ export class InventoryWindow extends Window {
   		const arrayItems = Object.values(items);
   		
   		this.filtredItems = this.passFilters(arrayItems);
-  		//console.log(filtredItems)
+  		
+  		this.drawSlots();
 
   		this.filtredItems.forEach((item, i) => {
   			this.drawItem(item, i);

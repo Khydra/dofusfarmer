@@ -1,5 +1,6 @@
 import { Window } from '../../utils/Window.js';
 import { Element } from '../../utils/Element.js';
+import { Tooltip } from '../../utils/Tooltip.js';
 
 export class EquipmentWindow extends Window { 
 	constructor(component) {
@@ -11,6 +12,7 @@ export class EquipmentWindow extends Window {
 
 	    super(title, width, height, x, y); 
 	    this.component = component;
+	    this.tooltips = {};
 	    this.render();
 	}
 
@@ -45,35 +47,18 @@ export class EquipmentWindow extends Window {
   			if (equipment[item] == null) {
   				this.slot[item].style.backgroundImage = ``;
   				this.slot[item].className = `equipment-slot-empty equipment-slot-${item}`;
+
+  				// Si ya hay un tooltip para ese slot, lo eliminamos
+                if (this.tooltips[item]) this.tooltips[item].hideTooltip();            
   			} else {
   				this.slot[item].style.backgroundImage = `url("${equipment[item].image}")`;
   				this.slot[item].className = `equipment-slot equipment-slot-${item}`;
+  				// Si no existe un tooltip para este item, lo creamos
+                if (!this.tooltips[item]) {
+                    this.tooltips[item] = new Tooltip(this.slot[item], equipment[item], 'equipmentWindow');
+                }
   			}
-  			/*
-  			switch (equipment[item]?.sort) {
-  				case undefined: 
-  					this.slot[item].style.backgroundImage = ``;
-  					this.slot[item].className = `equipment-slot-empty equipment-slot-${item}`;
-  					break;
-  				// case 'anillo':
-  				// 	for (let i = 1; i <= 2; i++) {
-  				// 		//console.log(equipment[item])
-	            //     	this.slot[`anillo${i}`].style.backgroundImage = `url("${equipment[item].image}")`;
-  				//  		this.slot[`anillo${i}`].className = `equipment-slot equipment-slot-anillo${i}`;
-	            // 	}
-  				// 	break;
-  				// case 'dofus':
-  				// 	for (let i = 1; i <= 6; i++) {
-	            //     	this.slot[`dofus${i}`].style.backgroundImage = `url("${equipment[item].image}")`;
-  				//  		this.slot[`dofus${i}`].className = `equipment-slot equipment-slot-dofus${i}`;
-	            // 	}
-  				// 	break;
-  				default: 
-  					this.slot[item].style.backgroundImage = `url("${equipment[item].image}")`;
-  				 	this.slot[item].className = `equipment-slot equipment-slot-${item}`;
-  					break;
-  			}
-  			*/
+
   		})
   	}
 

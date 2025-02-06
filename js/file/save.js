@@ -24,3 +24,9 @@ export const createData = (character) => {
     window.localStorage.setItem("data", JSON.stringify(data));
 
 }
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "s") {
+        console.log('save')
+    }
+});

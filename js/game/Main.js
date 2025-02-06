@@ -9,14 +9,15 @@ import { Zaap } from './components/Zaap.js';
 import { Player } from './core/Player.js';
 import { Inventory } from './core/Inventory.js';
 import { Equipment } from './core/Equipment.js';
-
+import { Bank } from './core/Bank.js';
 //borrar
 import { resourceData } from './data/item/resourceData.js'
 import { equipmentData } from './data/item/equipmentData.js'
 import { generateItemStats } from './manager/itemManager.js'
 
 export class Main {
-	constructor(charData) {
+	constructor(charData, bankData) {
+
 		//scenes
 		this.mainContainer = new Element(document.body, { className: 'main-container' }).element;
 		this.leftContainer = new Element(this.mainContainer, { className: 'left-container' }).element;
@@ -27,6 +28,7 @@ export class Main {
 		this.player = new Player(this, charData);
 		this.inventory = new Inventory(this, charData);
 		this.equipment = new Equipment(this, charData);
+		this.bank = new Bank(this, bankData);
 
 		//components
 		this.status = new Status(this, this.player);
@@ -40,14 +42,14 @@ export class Main {
 
 	test = () => {
 
-		for (let i = 0; i < 230; i++) this.inventory.obtainItem(resourceData['ortiga'])
-		for (let i = 0; i < 13; i++) this.inventory.obtainItem(resourceData['ferrita'])
-		this.inventory.obtainItem(resourceData['piel_goota'])
-		this.inventory.obtainItem(resourceData['madera_de_fresno'])
-		this.inventory.obtainItem(resourceData['lana_celeste'])
-		for (let i = 0; i < 412; i++) this.inventory.obtainItem(resourceData['petalo_diafano'])
-		for (let i = 0; i < 1540; i++) this.inventory.obtainItem(resourceData['tabla_de_fresno'])
-		this.inventory.obtainItem(resourceData['trigo'])
+		this.inventory.obtainItem(resourceData['ortiga'], 230)
+		this.inventory.obtainItem(resourceData['ferrita'], 12)
+		this.inventory.obtainItem(resourceData['piel_goota'], 85)
+		this.inventory.obtainItem(resourceData['madera_de_fresno'], 6)
+		this.inventory.obtainItem(resourceData['lana_celeste'], 4)
+		this.inventory.obtainItem(resourceData['petalo_diafano'], 412)
+		this.inventory.obtainItem(resourceData['tabla_de_fresno'], 1500)
+		this.inventory.obtainItem(resourceData['trigo'], 117)
 
 		this.inventory.obtainItem(generateItemStats(equipmentData['la_capa_slok']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));

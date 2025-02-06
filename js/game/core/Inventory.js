@@ -4,13 +4,13 @@ export class Inventory {
 		this.items = charData.inventory;
 	}
 
-	obtainItem = (item) => {
+	obtainItem = (item, q = 1) => {
 		if (this.items[item.key]) {
-		    this.items[item.key].quantity += 1;
+		    this.items[item.key].quantity += q;
 		} else {
 		    this.items[item.key] = {
 		      	...item, 
-		      	quantity: 1          
+		      	quantity: q          
 		    };
 		}
 	}
@@ -24,4 +24,8 @@ export class Inventory {
 		    delete this.items[item.key];
 		}
 	}	
+
+	removeAll = (item) => {
+		delete this.items[item.key];
+	}
 }

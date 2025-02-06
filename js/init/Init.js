@@ -5,13 +5,12 @@ import { Main } from '../game/Main.js';
 export class Init {
 	constructor(data) {
 		this.data = data;
-
 		this.render();
 	}
 
 	render = () => {
 		//this.title = new Element(document.body, { className: 'game-title', text: 'DOFUS FARMER' }).element;
-		
+
 		this.characterContainer = new Element(document.body, { className: 'init-character-container' }).element;
 		this.character = [];
 		this.characterName = [];
@@ -43,7 +42,7 @@ export class Init {
 		this.characterClass[i] = new Element(this.character[i], { className: 'init-character-class', text: char.class.name.toUpperCase() }).element;
 
 		const clickHandler = () => { 
-	        new Main(char);
+	        new Main(char, this.data.bank);
 	        this.destroy();
 	    };
 

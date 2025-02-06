@@ -4,9 +4,11 @@ import { text } from '../file/text.js';
 export class Tooltip {
     static isControlActive = false;
 
-    constructor(parentElement, data) {
+    constructor(parentElement, data, location, src = undefined) {
         this.parentElement = parentElement;
         this.data = data;
+        this.location = location;
+        this.src = src;
         this.element = null;
 
         // Bind una sola vez en el constructor para mantener la misma referencia
@@ -80,13 +82,13 @@ export class Tooltip {
 
             case "resource":
                 this.infoType.innerText = `RECURSO ◆ ${this.data.sort.toUpperCase()}`;
-                this.eventGuide.innerText = `RMB: Opciones \n SHIFT: Almacenar`;
+                if (this.location == 'inventoryWindow') this.eventGuide.innerText = `RMB: Opciones \n SHIFT: Almacenar`;
+                if (this.location == 'bankWindow') this.eventGuide.innerText = `RMB: Opciones \n SHIFT: Retirar`;
             break;
 
             case "equipment":
                 this.infoType.innerText = `${this.data.sort.toUpperCase()} ◆ NIVEL ${this.data.level}`;
                 this.infoSet.innerText = `${this.data.set.name}`;
-                this.eventGuide.innerText = `RMB: Opciones \n DblClick: Equipar \n CTRL: Valores teóricos \n SHIFT: Almacenar`;
 
                 this.showEquipmentStats();
 
@@ -94,10 +96,13 @@ export class Tooltip {
                     Creado por: <span class="stat-craft">Khydra</span> <br> 
                     Modificado por: <span class="stat-craft">Khytrayer</span>
                 `;
+
+                if (this.location == 'equipmentWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Desquipar \n CTRL: Valores teóricos`;
+                if (this.location == 'inventoryWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Equipar \n CTRL: Valores teóricos \n SHIFT: Almacenar`;
             break;
 
             case "consumable":
-                this.eventGuide.innerText = `RMB: Opciones \n DblClick: Utilizar \n SHIFT: Almacenar`;
+                if (this.location == 'inventoryWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Utilizar \n SHIFT: Almacenar`;
             break;
         }
     }
@@ -134,13 +139,29 @@ export class Tooltip {
         }
     }
 
-
     handleControlToggle(event) {
         if (event.key === "Control" && this.data.type === 'equipment') {
             Tooltip.isControlActive = !Tooltip.isControlActive;
             if (this.data.type === 'equipment') {
                 this.showEquipmentStats();
             }
+        }
+
+        if (event.key === "Shift") {
+            if (this.location === 'inventoryWindow') {
+                this.src.component.main.inventory.removeAll(this.data);
+                this.src.component.main.bank.obtainItem(this.data, this.data.quantity);
+                this.hideTooltip();
+                this.src.update();
+                this.src.component.bankWindow.updateItems();
+
+            } else if (this.location === 'bankWindow') {
+                this.src.component.main.bank.removeAll(this.data);
+                this.src.component.main.inventory.obtainItem(this.data, this.data.quantity);
+                this.hideTooltip();
+                this.src.updateItems();
+                this.src.component.inventoryWindow.update();
+            } 
         }
     }
 }

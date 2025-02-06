@@ -45,7 +45,9 @@ export class Window {
         this.window.style.left = `${this.x}px`;
         this.window.style.top = `${this.y}px`;
         this.isOpen = true;
+        this.window.style.zIndex = ++Window.zIndexCounter;
         this.initDrag();
+
     }
 
     initDrag() {

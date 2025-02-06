@@ -40,7 +40,8 @@ export class InventoryWindow extends Window {
 
   		tabNames.forEach((name, i) => {
   			this.tab[i] = new Element(this.tabContainer, { className: 'inventory-tab', text: name}).element; 
-  			this.tab[i].addEventListener('click', () => this.changeTab(i))
+  			this.tab[i].addEventListener('click', () => this.changeTab(i));
+
   		})
 
   		this.updateTabs();
@@ -121,7 +122,7 @@ export class InventoryWindow extends Window {
   		if (item.type != 'equipment') this.slot[pos].innerHTML = `<span class="isq stroke">x${item.quantity}</span>`;
 
   		// Crear el tooltip al pasar el ratón por encima del slot
-		this.tooltip = new Tooltip(this.slot[pos], item);
+		this.tooltip = new Tooltip(this.slot[pos], item, 'inventoryWindow', this);
 
   		// Agregar evento de doble clic para destruir equipamiento
     	this.slot[pos].addEventListener('dblclick', () => {

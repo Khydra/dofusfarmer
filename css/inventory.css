@@ -80,7 +80,7 @@
 	width: 60px;
 	height: 60px;
 	background: rgba(0, 0, 0, 0.6);
-	outline: 1px solid #333;
+	box-shadow: inset 1px 1px 1px #333, inset -1px -1px 1px #333;
 }
 
 .inventory-slot {
@@ -120,3 +120,35 @@
 	font-weight: bold;
 	color: #333;
 }
+
+.bank-button-container {
+	position: absolute;
+	bottom: 15px;
+	right: 20px;
+	left: 20px;
+	height: 20px;
+	
+	text-align: right;
+	display: flex;
+	flex-wrap: wrap;
+	
+	text-align: center;
+	justify-content: space-between;
+}
+
+.bank-button {
+	position: relative;
+	width: 24%;
+	font-size: 13px;
+	line-height: 25px;
+	color: var(--white);
+	background-color: #333;
+	box-shadow: inset 1px 1px 1px #333, inset -1px -1px 1px #333;
+	cursor: pointer;
+}
+
+.bank-button:hover {
+	font-weight: bold;
+	background: var(--p2);
+	color: #333;
+}	

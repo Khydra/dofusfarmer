@@ -99,6 +99,7 @@ export class Tooltip {
 
                 if (this.location == 'equipmentWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Desquipar \n CTRL: Valores teóricos`;
                 if (this.location == 'inventoryWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Equipar \n CTRL: Valores teóricos \n SHIFT: Almacenar`;
+                if (this.location == 'bankWindow') this.eventGuide.innerText = `RMB: Opciones \n CTRL: Valores teóricos \n SHIFT: Retirar`;
             break;
 
             case "consumable":

@@ -10,10 +10,12 @@ import { Player } from './core/Player.js';
 import { Inventory } from './core/Inventory.js';
 import { Equipment } from './core/Equipment.js';
 import { Bank } from './core/Bank.js';
+
 //borrar
 import { resourceData } from './data/item/resourceData.js'
 import { equipmentData } from './data/item/equipmentData.js'
 import { generateItemStats } from './manager/itemManager.js'
+import { saveData } from '../file/save.js'
 
 export class Main {
 	constructor(charData, bankData) {
@@ -69,8 +71,24 @@ export class Main {
 		this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_aventurero']));
 
-		this.player.gainExp(2000)
+		this.player.gainExp(2000);
+
+
+		document.addEventListener("keydown", (e) => {
+		    if (e.key === "s") {
+
+		    	let character = this.player.getData();
+		    	let bank = this.bank.getData();
+
+		        saveData(
+		        	character,
+					bank,
+		        );
+		    }
+		});
 	}
+
+
 
 }
 

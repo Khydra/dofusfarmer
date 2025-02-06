@@ -28,4 +28,6 @@ export class Inventory {
 	removeAll = (item) => {
 		delete this.items[item.key];
 	}
+
+	
 }

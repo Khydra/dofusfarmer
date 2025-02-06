@@ -15,6 +15,7 @@ export class BankWindow extends Window {
 	    this.component = component;
 	    this.tabSelected = 0;
 	    this.itemSearched = "";
+	    this.filtredItems = [];
 	    this.tooltip;
 	  	this.render();
 	}
@@ -93,9 +94,9 @@ export class BankWindow extends Window {
   		const items = this.component.main.bank.items;
   		const arrayItems = Object.values(items);
   		
-  		var filtredItems = this.passFilters(arrayItems);
+  		this.filtredItems = this.passFilters(arrayItems);
 
-  		filtredItems.forEach((item, i) => {
+  		this.filtredItems.forEach((item, i) => {
   			this.drawItem(item, i);
   		})
   	}
@@ -147,15 +148,35 @@ export class BankWindow extends Window {
   	}
 
   	withdrawAll = () => {
-		console.log('widraw')
+		const items = this.component.main.bank.items;
+		Object.keys(items).forEach(key => {
+			this.component.main.inventory.obtainItem(items[key], items[key].quantity);
+			this.component.main.bank.removeAll(items[key]);
+		})
+
+		this.updateItems();
+		this.component.inventoryWindow.update();
   	}
 
   	storeVisible = () => {
-		console.log('stopre vis')
+		const items = this.component.inventoryWindow.filtredItems;
+		items.forEach(item => {
+			this.component.main.bank.obtainItem(item, item.quantity);
+			this.component.main.inventory.removeAll(item);
+		})
+
+		this.updateItems();
+		this.component.inventoryWindow.update();
   	}
 
   	withdrawVisible = () => {
-  		console.log('widraw vis')	
+  		this.filtredItems.forEach(item => {
+			this.component.main.inventory.obtainItem(item, item.quantity);
+			this.component.main.bank.removeAll(item);
+		})
+
+		this.updateItems();
+		this.component.inventoryWindow.update();
   	}
 
 }

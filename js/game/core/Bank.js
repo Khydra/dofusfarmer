@@ -28,4 +28,8 @@ export class Bank {
 	removeAll = (item) => {
 		delete this.items[item.key];
 	}
+
+	getData = () => {
+		return this.items;
+	}
 }

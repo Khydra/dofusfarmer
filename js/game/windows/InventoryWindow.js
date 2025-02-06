@@ -15,6 +15,7 @@ export class InventoryWindow extends Window {
 	    this.component = component;
 	    this.tabSelected = 0;
 	    this.itemSearched = "";
+	    this.filtredItems = []
 	    this.tooltip;
 	  	this.render();
 	}
@@ -80,7 +81,7 @@ export class InventoryWindow extends Window {
 	        });
 	        this.slot = [];
 	    }
-  		for (let i = 0; i < 40; i++) this.slot[i] = new Element(this.itemContainer, { className: 'inventory-slot-empty' }).element; 
+  		for (let i = 0; i < 140; i++) this.slot[i] = new Element(this.itemContainer, { className: 'inventory-slot-empty' }).element; 
   	}
 
   	updateItems = () => {
@@ -89,10 +90,10 @@ export class InventoryWindow extends Window {
   		const items = this.component.main.inventory.items;
   		const arrayItems = Object.values(items);
   		
-  		var filtredItems = this.passFilters(arrayItems);
+  		this.filtredItems = this.passFilters(arrayItems);
   		//console.log(filtredItems)
 
-  		filtredItems.forEach((item, i) => {
+  		this.filtredItems.forEach((item, i) => {
   			this.drawItem(item, i);
   		})
   	}

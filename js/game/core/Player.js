@@ -19,6 +19,8 @@ export class Player {
 		this.kamas = charData.kamas;
 		this.stats = charData.stats;
 		this.spells = charData.spells;
+
+		this.inventory = charData.inventory;
 	}
 
 	gainExp = (value) => {
@@ -55,6 +57,23 @@ export class Player {
 		}
 	}
 
-	
+	getData = () => {
+		return {
+			name: this.name,
+			portrait: this.portrait,
+			body: this.body,
+			class: this.class,
+			level: this.level,
+			exp: this.exp,
+			availablePoints: this.availablePoints,
+			vit: this.vit,
+			pa: this.pa,
+			pm: this.pm,
+			kamas: this.kamas,
+			stats: this.stats,
+			spells: this.spells,
+			inventory: this.main.inventory.items
+		}
+	}
 
 }

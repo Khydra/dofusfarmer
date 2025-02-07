@@ -23,5 +23,6 @@ export const text = {
 		cur: 'Curas',
 		al: 'Lucidez',
 		pp: 'Prospección',
+		invo: 'Bestialidad',
 	}
 }

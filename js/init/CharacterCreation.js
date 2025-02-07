@@ -125,6 +125,7 @@ export class CharacterCreation {
 				cur: { base: 0, bonus: 0},
 				al: { base: 0, bonus: 0},
 				pp: { base: 100, bonus: 0},
+				invo: { base: 0, bonus: 0},
 			}, 
 			kamas: 0,
 			spells: {},

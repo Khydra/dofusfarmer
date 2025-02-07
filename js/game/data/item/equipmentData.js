@@ -837,4 +837,339 @@ export const equipmentData = {
 		sort: 'amuleto',
 		set: null,
 	},
+	calzoncillo_de_capitan_chafer {
+		id: 10043,
+		key: 'calzoncillo_de_capitan_chafer',
+		name: "Calzoncillo de Capitán Chafer",
+		image: './assets/images/items/equipment/0043.webp',
+		level: 9,
+		stats: {
+			vit: [-70],
+			invo: [1]
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		set: null,
+	},
+	anillo_de_sabiduria {
+		id: 10044,
+		key: 'anillo_de_sabiduria',
+		name: "Anillo de sabiduria",
+		image: './assets/images/items/equipment/0044.webp',
+		level: 9,
+		stats: {
+			wis: [7, 10]
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	anillo_de_suerte {
+		id: 10045,
+		key: 'anillo_de_suerte',
+		name: "Anillo de suerte",
+		image: './assets/images/items/equipment/0045.webp',
+		level: 9,
+		stats: {
+			cha: [7, 10]
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	anillo_de_agilidad {
+		id: 10046,
+		key: 'anillo_de_agilidad',
+		name: "Anillo de agilidad",
+		image: './assets/images/items/equipment/0046.webp',
+		level: 9,
+		stats: {
+			agi: [7, 10]
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	ushanka_guau {
+		id: 10047,
+		key: 'ushanka_guau',
+		name: "Ushanka Guau",
+		image: './assets/images/items/equipment/0047.webp',
+		level: 9,
+		stats: {
+			vit: [26, 30],
+			//ini: [41, 50],
+		},
+		type: 'equipment',
+		sort: 'sombrero',
+		set: null,
+	},
+	anillo_fortalecedor {
+		id: 10048,
+		key: 'anillo_fortalecedor',
+		name: "Anillo fortalecedor",
+		image: './assets/images/items/equipment/0048.webp',
+		level: 9,
+		stats: {
+			str: [7, 10]
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	botas_de_dragun_rosa {
+		id: 10049,
+		key: 'botas_de_dragun_rosa',
+		name: "Botas de dragún rosa",
+		image: './assets/images/items/equipment/0049.webp',
+		level: 10,
+		stats: {
+			vit: [21, 30],
+			pot: [7, 10]
+		},
+		type: 'equipment',
+		sort: 'botas',
+		set: null,
+	},
+	cinturon_bragado {
+		id: 10050,
+		key: 'cinturon_bragado',
+		name: "Cinturón bragado",
+		image: './assets/images/items/equipment/0050.webp',
+		level: 10,
+		stats: {
+			int: [11, 15],
+			intDmg: [1, 2]
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		set: null,
+	},
+	anillo_nomen_tengu {
+		id: 10051,
+		key: 'anillo_nomen_tengu',
+		name: "Anillo nomen tengu",
+		image: './assets/images/items/equipment/0051.webp',
+		level: 10,
+		stats: {
+			agi: [7, 10],
+			agiDmg: [1, 2]
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	amuleto_sincha {
+		id: 10052,
+		key: 'amuleto_sincha',
+		name: "Amuleto sincha",
+		image: './assets/images/items/equipment/0052.webp',
+		level: 10,
+		stats: {
+			vit: [11, 15],
+			str: [6, 10],
+			strDmg: [1, 2]
+		},
+		type: 'equipment',
+		sort: 'amuleto',
+		set: null,
+	},
+	cinturon_kawaii {
+		id: 10053,
+		key: 'cinturon_kawaii',
+		name: "Cinturón kawaii",
+		image: './assets/images/items/equipment/0053.webp',
+		level: 10,
+		stats: {
+			vit: [11, 15],
+			cha: [11, 15]
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		set: null,
+	},
+	anillo_de_geisha {
+		id: 10054,
+		key: 'anillo_de_geisha',
+		name: "Anillo de geisha",
+		image: './assets/images/items/equipment/0054.webp',
+		level: 10,
+		stats: {
+			vit: [6, 10],
+			pot: [7, 10]
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	anillo_de_kuakua_negro {
+		id: 10055,
+		key: 'anillo_de_kuakua_negro',
+		name: "Anillo de kuakuá negro",
+		image: './assets/images/items/equipment/0055.webp',
+		level: 10,
+		stats: {
+			vit: [7, 10],
+			crt: [2]
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	anillo_de_kuakua_amarillo {
+		id: 10056,
+		key: 'anillo_de_kuakua_amarillo',
+		name: "Anillo de kuakuá amarillo",
+		image: './assets/images/items/equipment/0056.webp',
+		level: 10,
+		stats: {
+			vit: [11, 15],
+			intDmg: [2, 3]
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	amuleto_de_ninja_blanco {
+		id: 10057,
+		key: 'amuleto_de_ninja_blanco',
+		name: "Amuleto de ninja blanco",
+		image: './assets/images/items/equipment/0057.webp',
+		level: 10,
+		stats: {
+			vit: [6, 15],
+			agi: [6, 10],
+			crt: [1]
+		},
+		type: 'equipment',
+		sort: 'amuleto',
+		set: null,
+	},
+	amuleto_de_ninja_negro {
+		id: 10058,
+		key: 'amuleto_de_ninja_negro',
+		name: "Anillo de ninja negro",
+		image: './assets/images/items/equipment/0058.webp',
+		level: 10,
+		stats: {
+			int: [11, 15],
+			crt: [1]
+		},
+		type: 'equipment',
+		sort: 'amuleto',
+		set: null,
+	},
+	botas_aladas {
+		id: 10059,
+		key: 'botas_aladas',
+		name: "Botas aladas",
+		image: './assets/images/items/equipment/0059.webp',
+		level: 10,
+		stats: {
+			int: [6, 10]
+			agi: [6, 10],
+		},
+		type: 'equipment',
+		sort: 'botas',
+		set: null,
+	},
+	makinturon {
+		id: 10060,
+		key: 'makinturon',
+		name: "Makinturón",
+		image: './assets/images/items/equipment/0060.webp',
+		level: 10,
+		stats: {
+			str: [7, 10],
+			cha: [7, 10],
+			wis: [4, 5]
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		set: null,
+	},
+	delantal_de_criada {
+		id: 10061,
+		key: 'delantal_de_criada',
+		name: "Delantal de criada",
+		image: './assets/images/items/equipment/0061.webp',
+		level: 10,
+		stats: {
+			int: [11, 15],
+			cur: [2, 3],
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		set: null,
+	},
+	cinturon_de_samurai {
+		id: 10062,
+		key: 'cinturon_de_samurai',
+		name: "Cinturón de samurái",
+		image: './assets/images/items/equipment/0062.webp',
+		level: 10,
+		stats: {
+			crt: [2],
+			agi: [2, 3], // huida
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		set: null,
+	},
+	botas_no {
+		id: 10063,
+		key: 'botas_no',
+		name: "Botas nö",
+		image: './assets/images/items/equipment/0063.webp',
+		level: 10,
+		stats: {
+			vit: [6, 15],
+			agi: [3, 4], //placaje
+		},
+		type: 'equipment',
+		sort: 'botas',
+		set: null,
+	},
+	anillo_de_lolita {
+		id: 10064,
+		key: 'anillo_de_lolita',
+		name: "Anillo de lolita",
+		image: './assets/images/items/equipment/0064.webp',
+		level: 10,
+		stats: {
+			vit: [11, 15],
+			crt: [1],
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	collar_de_lilota {
+		id: 10065,
+		key: 'collar_de_lilota',
+		name: "Collar de Lilota",
+		image: './assets/images/items/equipment/0065.webp',
+		level: 10,
+		stats: {
+			vit: [6, 10],
+			cha: [6, 10],
+			chaDmg: [2, 3]
+		},
+		type: 'equipment',
+		sort: 'amuleto',
+		set: null,
+	},
+	escudo_cometa {
+		id: 10066,
+		key: 'escudo_cometa',
+		name: "Escudo cometa",
+		image: './assets/images/items/equipment/0066.webp',
+		level: 10,
+		stats: {
+			agi: [4, 5], //huida
+		},
+		type: 'equipment',
+		sort: 'escudo',
+		set: null,
+	},
 }

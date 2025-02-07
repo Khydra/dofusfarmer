@@ -43,7 +43,7 @@ export class InventoryWindow extends Window {
   		tabNames.forEach((name, i) => {
   			this.tab[i] = new Element(this.tabContainer, { className: 'inventory-tab', text: name}).element; 
   			this.tab[i].addEventListener('click', () => this.changeTab(i));
-
+  			
   		})
 
   		this.updateTabs();

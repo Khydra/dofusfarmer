@@ -1,6 +1,7 @@
 import { setData } from './setData.js'; 
 
 export const equipmentData = {
+	//sets
 	el_flud: {
 		id: 0,
 		key: 'el_flud',
@@ -249,5 +250,142 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		set: setData['set_de_aventurero'],
+	},
+
+
+	//no-sets
+	kamaturon: {
+		id: 10000,
+		key: 'kamaturon',
+		name: "Kamaturón",
+		image: './assets/images/items/equipment/0000.webp',
+		level: 1,
+		stats: {
+			pp: [5],
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		set: null,
+	},
+	kamancletas: {
+		id: 10001,
+		key: 'kamancletas',
+		name: "Kamancletas",
+		image: './assets/images/items/equipment/0001.webp',
+		level: 1,
+		stats: {
+			pp: [4, 5],
+		},
+		type: 'equipment',
+		sort: 'botas',
+		set: null,
+	},
+	anillo_del_audaz: {
+		id: 10002,
+		key: 'anillo_del_audaz',
+		name: "Anillo del audaz",
+		image: './assets/images/items/equipment/0002.webp',
+		level: 1,
+		stats: {
+			pot: [3, 4],
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	escudo_de_lenador: {
+		id: 10003,
+		key: 'escudo_de_lenador',
+		name: "Escudo de leñador",
+		image: './assets/images/items/equipment/0003.webp',
+		level: 1,
+		stats: {
+			vit: [5, 7],
+		},
+		type: 'equipment',
+		sort: 'escudo',
+		set: null,
+	},
+	botas_de_fuerza: {
+		id: 10004,
+		key: 'botas_de_fuerza',
+		name: "Botas de fuerza",
+		image: './assets/images/items/equipment/0004.webp',
+		level: 1,
+		stats: {
+			str: [4, 6],
+		},
+		type: 'equipment',
+		sort: 'botas',
+		set: null,
+	},
+	cinturon_de_suerte: {
+		id: 10005,
+		key: 'cinturon_de_suerte',
+		name: "Cinturón de suerte",
+		image: './assets/images/items/equipment/0005.webp',
+		level: 1,
+		stats: {
+			cha: [4, 7],
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		set: null,
+	},
+	pequeno_anillo_del_afortunado: {
+		id: 10006,
+		key: 'pequeno_anillo_del_afortunado',
+		name: "Pequeño anillo del afortunado",
+		image: './assets/images/items/equipment/0006.webp',
+		level: 1,
+		stats: {
+			cha: [5, 7],
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	pequeno_anillo_magico: {
+		id: 10007,
+		key: 'pequeno_anillo_magico',
+		name: "Pequeño anillo mágico",
+		image: './assets/images/items/equipment/0007.webp',
+		level: 1,
+		stats: {
+			int: [4, 7],
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	anillo_rexiko: {
+		id: 10008,
+		key: 'anillo_rexiko',
+		name: "Anillo Réxiko",
+		image: './assets/images/items/equipment/0008.webp',
+		level: 1,
+		stats: {
+			agi: [4, 5],
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: null,
+	},
+	koyar_clavito: {
+		id: 10009,
+		key: 'koyar_clavito',
+		name: "Koyar Clavito",
+		image: './assets/images/items/equipment/0009.webp',
+		level: 1,
+		stats: {
+			vit: [7, 10],
+			strDmg: [1],
+			intDmg: [1],
+			chaDmg: [1],
+			agiDmg: [1],
+		},
+		type: 'equipment',
+		sort: 'amuleto',
+		set: null,
 	},
 }

@@ -82,5 +82,12 @@ export const resourceData = {
 		image: './assets/images/items/resources/11-0000.png',
 		type: 'resource',
 		sort: 'polvo' 
+	},
+	agua_potable: {
+		key: 'agua_potable',
+		name: 'Agua potable',
+		image: './assets/images/items/resources/12-0000.png',
+		type: 'resource',
+		sort: 'liquido' 
 	}
 }

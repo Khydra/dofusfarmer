@@ -58,31 +58,34 @@ export class JobsWindow extends Window {
 
   	handleAction = (tabName) => {
         switch (tabName) {
-        	case 'gear':
+        	case 'lenador':
             	
                 break;
-        	case 'inventory':
+        	case 'minero':
         		
             	break;    
-            case 'jobs':
+            case 'alquimista':
 
                 break;
-            case 'map':
+            case 'campesino':
             	
                 break;    
-            case 'quests':
+            case 'joyero':
             	
                 break;
             case 'sastre':
             	(!this.sastreWindow.isOpen) ? this.sastreWindow.open() : this.sastreWindow.close();
             	break;
-            case 'dungeons':
+            case 'zapatero':
             	
             	break;
-            case 'bestiary':
+            case 'herrero':
             	
                 break;
-            case 'bank':
+            case 'escultor':
+
+                break;
+            case 'fabricante':
 
                 break;
         }

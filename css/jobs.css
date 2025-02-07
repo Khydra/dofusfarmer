@@ -81,11 +81,19 @@
 }
 
 /* jobs */
+.job-settings-container {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 85px;
+	background: #222;
+}
+
 .job-recipe-container {
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
-	height: 350px;
+	height: 375px;
 	background: #2f2925;
  	border-top: 1px solid black;
  	overflow: hidden;
@@ -111,4 +119,69 @@
 
 .job-recipe-slot:nth-child(2n) {
 	background: #3c3731;
+}
+
+.job-recipe-slot-image {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	transform: translate(0, -50%);
+	height: 60px;
+	width: 60px;
+	background-size: 100%;
+}
+
+.job-recipe-slot-name  {
+	position: absolute;
+	top: 12px;
+	left: 100px;
+	color: #f4f5f4;
+
+	font-size: 18px;
+}
+
+.job-recipe-slot-level  {
+	position: absolute;
+	top: 36px;
+	left: 100px;
+	color: #f4f5f4;
+
+	font-size: 14px;
+}
+
+.job-recipe-slot-craft {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translate(0, -50%);
+	background: var(--green);
+	height: 30px;
+	width: 80px;
+	border-radius: 4px;
+	outline: 1px solid black;
+	font-size: 14px;
+	text-align: center;
+	line-height: 32px;
+
+	cursor: pointer;
+}
+
+.job-recipe-slot-ingredient-container {
+	position: absolute;
+	top: 50%;
+	right: 120px;
+	transform: translate(0, -50%);
+	width: 350px;
+	height: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	align-items: center;
+}
+
+.job-recipe-slot-ingredient {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background-size: 100%;
 }

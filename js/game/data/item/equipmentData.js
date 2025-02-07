@@ -251,8 +251,194 @@ export const equipmentData = {
 		sort: 'amuleto',
 		set: setData['set_de_aventurero'],
 	},
-
-
+	sombrero_de_peazo_beyota: {
+		id: 17,
+		key: 'sombrero_de_peazo_beyota',
+		name: 'Sombrero de Peazo Beyota',
+		image: './assets/images/items/equipment/s003-0.webp',
+		level: 10,
+		stats: {
+			vit: [16, 20],
+			agi: [5],
+		},
+		type: 'equipment',
+		sort: 'sombrero',
+		set: setData['set_de_peazo_beyota'],
+	},
+	amuleto_de_peazo_beyota: {
+		id: 18,
+		key: 'amuleto_de_peazo_beyota',
+		name: "Amuleto de Peazo Beyota",
+		image: './assets/images/items/equipment/s003-1.webp',
+		level: 10,
+		stats: {
+			agi: [7, 10],
+			agiDmg: [1, 2],
+		},
+		type: 'equipment',
+		sort: 'amuleto',
+		set: setData['set_de_peazo_beyota'],
+	},
+	botas_de_peazo_beyota: {
+		id: 19,
+		key: 'botas_de_peazo_beyota',
+		name: 'Botas de Peazo Beyota',
+		image: './assets/images/items/equipment/s003-2.webp',
+		level: 10,
+		stats: {
+			agi: [5],
+			agiDmg: [1, 2],
+		},
+		type: 'equipment',
+		sort: 'botas',
+		set: setData['set_de_peazo_beyota'],
+	},
+	pamuleto: {
+		id: 20,
+		key: 'pamuleto',
+		name: "Pamuleto",
+		image: './assets/images/items/equipment/s004-0.webp',
+		level: 10,
+		stats: {
+			wis: [4, 5],
+			pot: [7, 10],
+		},
+		type: 'equipment',
+		sort: 'amuleto',
+		set: setData['set_pacmano'],
+	},
+	pacbotas: {
+		id: 21,
+		key: 'pacbotas',
+		name: 'Pacbotas',
+		image: './assets/images/items/equipment/s004-1.webp',
+		level: 10,
+		stats: {
+			//agi: [5],
+			//agiDmg: [1, 2],
+		},
+		type: 'equipment',
+		sort: 'botas',
+		set: setData['set_pacmano'],
+	},
+	amuleto_tetrista: {
+		id: 22,
+		key: 'amuleto_tetrista',
+		name: "Amuleto tetrista",
+		image: './assets/images/items/equipment/s005-0.webp',
+		level: 10,
+		stats: {
+			al: [1],
+			str: [-15],
+			int: [-15],
+			cha: [-15],
+			agi: [-15],
+		},
+		type: 'equipment',
+		sort: 'amuleto',
+		set: setData['set_tetrista'],
+	},
+	anillo_tetrista: {
+		id: 23,
+		key: 'anillo_tetrista',
+		name: 'Anillo tetrista',
+		image: './assets/images/items/equipment/s005-1.webp',
+		level: 10,
+		stats: {
+			invo: [1],
+			str: [-5],
+			int: [-5],
+			cha: [-5],
+			agi: [-5],
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: setData['set_tetrista'],
+	},
+	anillo_del_invasor_del_espacio: {
+		id: 24,
+		key: 'anillo_del_invasor_del_espacio',
+		name: "Anillo del invasor del espacio",
+		image: './assets/images/items/equipment/s006-0.webp',
+		level: 10,
+		stats: {
+			int: [6, 10],
+			cur: [2, 3],
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: setData['set_del_invasor_del_espacio'],
+	},
+	cinturon_del_invasor_del_espacio: {
+		id: 25,
+		key: 'cinturon_del_invasor_del_espacio',
+		name: 'Cinturón del invasor del espacio',
+		image: './assets/images/items/equipment/s006-1.webp',
+		level: 10,
+		stats: {
+			vit: [11, 15],
+			crt: [1, 2],
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		set: setData['set_del_invasor_del_espacio'],
+	},
+	cinturong: {
+		id: 26,
+		key: 'cinturong',
+		name: 'Cinturong',
+		image: './assets/images/items/equipment/s007-0.webp',
+		level: 10,
+		stats: {
+			vit: [11, 15],
+			dmg: [1, 2],
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		set: setData['set_ponguno'],
+	},
+	amuletong: {
+		id: 27,
+		key: 'amuletong',
+		name: 'Amuletong',
+		image: './assets/images/items/equipment/s007-1.webp',
+		level: 10,
+		stats: {
+			wis: [-15],
+			invo: [1],
+		},
+		type: 'equipment',
+		sort: 'amuleto',
+		set: setData['set_ponguno'],
+	},
+	collar_de_khan_karkasa: {
+		id: 28,
+		key: 'collar_de_khan_karkasa',
+		name: 'Collar de Khan Karkasa',
+		image: './assets/images/items/equipment/s008-0.webp',
+		level: 10,
+		stats: {
+			vit: [6, 10],
+			str: [11, 20],
+		},
+		type: 'equipment',
+		sort: 'amuleto',
+		set: setData['set_de_khan_karkasa'],
+	},
+	calzoncillo_de_khan_karkasa: {
+		id: 29,
+		key: 'calzoncillo_de_khan_karkasa',
+		name: 'Calzoncillo de Khan Karkasa',
+		image: './assets/images/items/equipment/s008-1.webp',
+		level: 10,
+		stats: {
+			strDmg: [3, 4],
+			//placaje: [2, 3],
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		set: setData['set_de_khan_karkasa'],
+	},
 	//no-sets
 	kamaturon: {
 		id: 10000,
@@ -697,7 +883,7 @@ export const equipmentData = {
 		sort: 'cinturon',
 		set: null,
 	},
-	cinturon_forcesco {
+	cinturon_forcesco: {
 		id: 10033,
 		key: 'cinturon_forcesco',
 		name: "Cinturón Forcesco",
@@ -711,7 +897,7 @@ export const equipmentData = {
 		sort: 'cinturon',
 		set: null,
 	},
-	cinturon_agilesco {
+	cinturon_agilesco: {
 		id: 10034,
 		key: 'cinturon_agilesco',
 		name: "Cinturón Agilesco",
@@ -725,7 +911,7 @@ export const equipmentData = {
 		sort: 'cinturon',
 		set: null,
 	},
-	amuleto_del_buho {
+	amuleto_del_buho: {
 		id: 10035,
 		key: 'amuleto_del_buho',
 		name: "Amuleto del búho",
@@ -738,7 +924,7 @@ export const equipmentData = {
 		sort: 'amuleto',
 		set: null,
 	},
-	amuleto_del_oso {
+	amuleto_del_oso: {
 		id: 10036,
 		key: 'amuleto_del_oso',
 		name: "Amuleto del oso",
@@ -751,7 +937,7 @@ export const equipmentData = {
 		sort: 'amuleto',
 		set: null,
 	},
-	anillo_de_satisfaccion {
+	anillo_de_satisfaccion: {
 		id: 10037,
 		key: 'anillo_de_satisfaccion',
 		name: "Anillo de satisfacción",
@@ -768,7 +954,7 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: null,
 	},
-	amuleto_de_milubo {
+	amuleto_de_milubo: {
 		id: 10038,
 		key: 'amuleto_de_milubo',
 		name: "Amuleto del milubo",
@@ -782,7 +968,7 @@ export const equipmentData = {
 		sort: 'amuleto',
 		set: null,
 	},
-	botas_de_nexus {
+	botas_de_nexus: {
 		id: 10039,
 		key: 'botas_de_nexus',
 		name: "Botas de Nexus",
@@ -796,7 +982,7 @@ export const equipmentData = {
 		sort: 'botas',
 		set: null,
 	},
-	cinturon_vitalesco {
+	cinturon_vitalesco: {
 		id: 10040,
 		key: 'cinturon_vitalesco',
 		name: "Cinturón vitalesco",
@@ -809,7 +995,7 @@ export const equipmentData = {
 		sort: 'cinturon',
 		set: null,
 	},
-	amuleto_del_arco_iris {
+	amuleto_del_arco_iris: {
 		id: 10041,
 		key: 'amuleto_del_arco_iris',
 		name: "Amuleto del Arco Iris",
@@ -823,7 +1009,7 @@ export const equipmentData = {
 		sort: 'amuleto',
 		set: null,
 	},
-	amuleto_de_kroketa {
+	amuleto_de_kroketa: {
 		id: 10042,
 		key: 'amuleto_de_kroketa',
 		name: "Amuleto de Kroketa",
@@ -837,7 +1023,7 @@ export const equipmentData = {
 		sort: 'amuleto',
 		set: null,
 	},
-	calzoncillo_de_capitan_chafer {
+	calzoncillo_de_capitan_chafer: {
 		id: 10043,
 		key: 'calzoncillo_de_capitan_chafer',
 		name: "Calzoncillo de Capitán Chafer",
@@ -851,7 +1037,7 @@ export const equipmentData = {
 		sort: 'cinturon',
 		set: null,
 	},
-	anillo_de_sabiduria {
+	anillo_de_sabiduria: {
 		id: 10044,
 		key: 'anillo_de_sabiduria',
 		name: "Anillo de sabiduria",
@@ -864,7 +1050,7 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: null,
 	},
-	anillo_de_suerte {
+	anillo_de_suerte: {
 		id: 10045,
 		key: 'anillo_de_suerte',
 		name: "Anillo de suerte",
@@ -877,7 +1063,7 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: null,
 	},
-	anillo_de_agilidad {
+	anillo_de_agilidad: {
 		id: 10046,
 		key: 'anillo_de_agilidad',
 		name: "Anillo de agilidad",
@@ -890,7 +1076,7 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: null,
 	},
-	ushanka_guau {
+	ushanka_guau: {
 		id: 10047,
 		key: 'ushanka_guau',
 		name: "Ushanka Guau",
@@ -904,7 +1090,7 @@ export const equipmentData = {
 		sort: 'sombrero',
 		set: null,
 	},
-	anillo_fortalecedor {
+	anillo_fortalecedor: {
 		id: 10048,
 		key: 'anillo_fortalecedor',
 		name: "Anillo fortalecedor",
@@ -917,7 +1103,7 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: null,
 	},
-	botas_de_dragun_rosa {
+	botas_de_dragun_rosa: {
 		id: 10049,
 		key: 'botas_de_dragun_rosa',
 		name: "Botas de dragún rosa",
@@ -931,7 +1117,7 @@ export const equipmentData = {
 		sort: 'botas',
 		set: null,
 	},
-	cinturon_bragado {
+	cinturon_bragado: {
 		id: 10050,
 		key: 'cinturon_bragado',
 		name: "Cinturón bragado",
@@ -945,7 +1131,7 @@ export const equipmentData = {
 		sort: 'cinturon',
 		set: null,
 	},
-	anillo_nomen_tengu {
+	anillo_nomen_tengu: {
 		id: 10051,
 		key: 'anillo_nomen_tengu',
 		name: "Anillo nomen tengu",
@@ -959,7 +1145,7 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: null,
 	},
-	amuleto_sincha {
+	amuleto_sincha: {
 		id: 10052,
 		key: 'amuleto_sincha',
 		name: "Amuleto sincha",
@@ -974,7 +1160,7 @@ export const equipmentData = {
 		sort: 'amuleto',
 		set: null,
 	},
-	cinturon_kawaii {
+	cinturon_kawaii: {
 		id: 10053,
 		key: 'cinturon_kawaii',
 		name: "Cinturón kawaii",
@@ -988,7 +1174,7 @@ export const equipmentData = {
 		sort: 'cinturon',
 		set: null,
 	},
-	anillo_de_geisha {
+	anillo_de_geisha: {
 		id: 10054,
 		key: 'anillo_de_geisha',
 		name: "Anillo de geisha",
@@ -1002,7 +1188,7 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: null,
 	},
-	anillo_de_kuakua_negro {
+	anillo_de_kuakua_negro: {
 		id: 10055,
 		key: 'anillo_de_kuakua_negro',
 		name: "Anillo de kuakuá negro",
@@ -1016,7 +1202,7 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: null,
 	},
-	anillo_de_kuakua_amarillo {
+	anillo_de_kuakua_amarillo: {
 		id: 10056,
 		key: 'anillo_de_kuakua_amarillo',
 		name: "Anillo de kuakuá amarillo",
@@ -1030,7 +1216,7 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: null,
 	},
-	amuleto_de_ninja_blanco {
+	amuleto_de_ninja_blanco: {
 		id: 10057,
 		key: 'amuleto_de_ninja_blanco',
 		name: "Amuleto de ninja blanco",
@@ -1045,7 +1231,7 @@ export const equipmentData = {
 		sort: 'amuleto',
 		set: null,
 	},
-	amuleto_de_ninja_negro {
+	amuleto_de_ninja_negro: {
 		id: 10058,
 		key: 'amuleto_de_ninja_negro',
 		name: "Anillo de ninja negro",
@@ -1059,21 +1245,21 @@ export const equipmentData = {
 		sort: 'amuleto',
 		set: null,
 	},
-	botas_aladas {
+	botas_aladas: {
 		id: 10059,
 		key: 'botas_aladas',
 		name: "Botas aladas",
 		image: './assets/images/items/equipment/0059.webp',
 		level: 10,
 		stats: {
-			int: [6, 10]
+			int: [6, 10],
 			agi: [6, 10],
 		},
 		type: 'equipment',
 		sort: 'botas',
 		set: null,
 	},
-	makinturon {
+	makinturon: {
 		id: 10060,
 		key: 'makinturon',
 		name: "Makinturón",
@@ -1088,7 +1274,7 @@ export const equipmentData = {
 		sort: 'cinturon',
 		set: null,
 	},
-	delantal_de_criada {
+	delantal_de_criada: {
 		id: 10061,
 		key: 'delantal_de_criada',
 		name: "Delantal de criada",
@@ -1102,7 +1288,7 @@ export const equipmentData = {
 		sort: 'cinturon',
 		set: null,
 	},
-	cinturon_de_samurai {
+	cinturon_de_samurai: {
 		id: 10062,
 		key: 'cinturon_de_samurai',
 		name: "Cinturón de samurái",
@@ -1116,7 +1302,7 @@ export const equipmentData = {
 		sort: 'cinturon',
 		set: null,
 	},
-	botas_no {
+	botas_no: {
 		id: 10063,
 		key: 'botas_no',
 		name: "Botas nö",
@@ -1130,7 +1316,7 @@ export const equipmentData = {
 		sort: 'botas',
 		set: null,
 	},
-	anillo_de_lolita {
+	anillo_de_lolita: {
 		id: 10064,
 		key: 'anillo_de_lolita',
 		name: "Anillo de lolita",
@@ -1144,7 +1330,7 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: null,
 	},
-	collar_de_lilota {
+	collar_de_lilota: {
 		id: 10065,
 		key: 'collar_de_lilota',
 		name: "Collar de Lilota",
@@ -1159,7 +1345,7 @@ export const equipmentData = {
 		sort: 'amuleto',
 		set: null,
 	},
-	escudo_cometa {
+	escudo_cometa: {
 		id: 10066,
 		key: 'escudo_cometa',
 		name: "Escudo cometa",

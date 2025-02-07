@@ -46,7 +46,7 @@ export class Main {
 
 		this.inventory.obtainItem(resourceData['ortiga'], 230)
 		this.inventory.obtainItem(resourceData['ferrita'], 12)
-		this.inventory.obtainItem(resourceData['piel_goota'], 85)
+		this.inventory.obtainItem(resourceData['piel_de_goota'], 85)
 		this.inventory.obtainItem(resourceData['madera_de_fresno'], 6)
 		this.inventory.obtainItem(resourceData['lana_celeste'], 4)
 		this.inventory.obtainItem(resourceData['petalo_diafano'], 412)

@@ -43,6 +43,7 @@
 	height: 60px;
 	width: 60px;
 	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 .job-tab-name {
@@ -185,3 +186,40 @@
 	height: 40px;
 	background-size: 100%;
 }
+
+.job-recipe-search {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	height: 20px;
+	width: 250px;
+
+	background-color: var(--white);
+	border: 2px solid #3a3312;
+	outline: none;
+
+	font-size: 16px;
+	color: #3a3312;
+	
+	padding-left: 5px;
+
+}
+
+.job-recipe-type {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 200px;
+	height: 20px;
+	color: var(--white);
+}
+
+.job-recipe-level {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	width: 200px;
+	height: 20px;
+	color: var(--white);
+}
+

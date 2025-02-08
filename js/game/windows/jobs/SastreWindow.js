@@ -1,5 +1,8 @@
 import { Window } from '../../../utils/Window.js';
 import { Element } from '../../../utils/Element.js';
+import { Input } from '../../../utils/Input.js';
+import { Selector } from '../../../utils/Selector.js';
+
 import { sastreRecipeData } from '../../data/item/recipeData.js';
 import { resourceData } from '../../data/item/resourceData.js';
 
@@ -19,6 +22,9 @@ export class SastreWindow extends Window {
 	render = () => {
 		this.settingsContainer = new Element(this.container, { className: 'job-settings-container' }).element;  
 
+    	new Selector(this.settingsContainer, "Mostrar", ["Todo", "Capa", "Sombrero"], 'job-recipe-type');
+    	new Selector(this.settingsContainer, "Nivel", ["1 - 10", "11 - 20", "190 - 200"], 'job-recipe-level');
+    	
 		this.recipeContainer = new Element(this.container, { className: 'job-recipe-container' }).element; 
   		this.recipeSlot = [];
   		this.recipeSlotImage = [];
@@ -61,5 +67,10 @@ export class SastreWindow extends Window {
   	open() {
 	    super.open(); 
 	    this.update();
+  	}
+
+  	search = () => {
+  		//this.itemSearched = this.searchBar.value;
+  		//this.updateItems();
   	}
 }

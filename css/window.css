@@ -7,10 +7,11 @@
 
 .window-header {
     height: 40px;
-    background: var(--p2); 
-    border-bottom: 1px solid #333;
-    color: #333;
+    background: #4a433b; 
+    border-bottom: 1px solid black;
+    color: var(--white);
     font-size: 20px;
+    font-weight: bold;
     line-height: 40px;
     text-align: center;
     cursor: grab;

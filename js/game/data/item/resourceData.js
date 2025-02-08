@@ -197,6 +197,13 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'hueso' 
 	},
+	craneo_de_chadalid: {
+		key: 'craneo_de_chadalid',
+		name: 'Cráneo de Chadalid',
+		image: './assets/images/items/resources/15-0001.png',
+		type: 'resource',
+		sort: 'hueso' 
+	},
 	// PATA
 	pata_de_arakna: {
 		key: 'pata_de_arakna',

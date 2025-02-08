@@ -140,6 +140,7 @@ export class CharacterCreation {
 				herrero: { level: 1, exp: [0, 20] },
 				escultor: { level: 1, exp: [0, 20] },
 				fabricante: { level: 1, exp: [0, 20] },
+				forjamago: { level: 1, exp: [0, 20] },
 			},
 			inventory: {},
 			equipment: {

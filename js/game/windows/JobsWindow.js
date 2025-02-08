@@ -88,6 +88,9 @@ export class JobsWindow extends Window {
             case 'fabricante':
 
                 break;
+            case 'forjamago':
+
+                break;
         }
     }
 }

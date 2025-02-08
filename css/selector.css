@@ -1,0 +1,27 @@
+.selector-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selector-label {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    text-align: left;
+}
+
+.selector-value {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.selector-arrow {
+    position: relative;
+    width: 5%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+}

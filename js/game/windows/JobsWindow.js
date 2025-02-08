@@ -30,7 +30,7 @@ export class JobsWindow extends Window {
 		this.tabExp = [];
 
 		Object.keys(jobs).forEach(key => {
-			this.tab[key] = new Element(this.tabContainer, { className: 'job-tab' }).element; 
+			this.tab[key] = new Element(this.tabContainer, { className: 'job-tab stroke' }).element; 
 			this.tabImage = new Element(this.tab[key], { className: 'job-tab-image', image: `./assets/images/icons/jobs/${key}.webp`}).element; 
 			this.tabName[key] = new Element(this.tab[key], { className: 'job-tab-name', text: key.toUpperCase() }).element; 
 			this.tabLevel[key] = new Element(this.tab[key], { className: 'job-tab-level' }).element; 

@@ -1,19 +1,21 @@
 .window {
     position: absolute;
     border: 1px solid black;
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
     overflow: hidden;
     cursor: default;
 }
 
 .window-header {
     height: 40px;
-    background: #4a433b; 
-    border-bottom: 1px solid black;
-    color: var(--white);
-    font-size: 20px;
-    font-weight: bold;
+    background: var(--bg3); 
+    font-size: 24px;
     line-height: 40px;
     text-align: center;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    color: var(--white);
     cursor: grab;
 }
 
@@ -33,6 +35,6 @@
     position: absolute;
     height: calc(100% - 40px);
     width: 100%;
-    background: var(--p1); 
+    background: var(--bg1); 
 }
 

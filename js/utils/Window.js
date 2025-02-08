@@ -17,7 +17,7 @@ export class Window {
 
         // Crear la cabecera de la ventana
         this.header = document.createElement("div");
-        this.header.className = "window-header";
+        this.header.className = "window-header stroke";
         this.header.innerHTML = title;
 
         // Botón de cerrar

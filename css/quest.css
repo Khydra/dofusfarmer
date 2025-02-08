@@ -1,5 +1,7 @@
 .quest-container {
-    height: 400px;
-    background: var(--p1); 
+    height: 425px;
+    background: var(--bg1); 
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
 }
 

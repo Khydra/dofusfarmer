@@ -11,7 +11,7 @@ export class Status {
 
 	render = () => {
 		this.container = new Element(this.main.leftContainer, { className: 'status-container' }).element;
-		this.title = new Element(this.container, { className: 'status-title', text: 'Características' }).element; 
+		this.title = new Element(this.container, { className: 'status-title stroke', text: 'Características' }).element; 
 
 		this.renderPlayer();
 		this.renderStats();
@@ -61,7 +61,7 @@ export class Status {
 			this[`baseIcon${value}`] = new Element(this[`baseRow${value}`], { className: 'status-base-icon', image: `./assets/images/icons/${value}.png` }).element; 
 			this[`baseLabel${value}`] = new Element(this[`baseRow${value}`], { className: 'status-base-label', text: text.stat[value] }).element; 
 			this[`baseValue${value}`] = new Element(this[`baseRow${value}`], { className: 'status-base-value' }).element; 
-			this[`baseButton${value}`] = new Element(this[`baseRow${value}`], { className: 'status-base-button', text: '+' }).element; 
+			this[`baseButton${value}`] = new Element(this[`baseRow${value}`], { className: 'status-base-button stroke', text: '+' }).element; 
 			this[`baseButton${value}`].addEventListener('click', () => {
 				this.player.distributePoint(value);
 				this.update();

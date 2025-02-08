@@ -29,7 +29,7 @@ export class InventoryWindow extends Window {
   		this.renderTabs();
 
   		this.itemContainer = new Element(this.container, { className: 'inventory-item-container' }).element; 
-  		this.kamas = new Element(this.container, { className: 'inventory-kamas' }).element; 
+  		this.kamas = new Element(this.container, { className: 'inventory-kamas stroke' }).element; 
 
   		this.slot = [];
   	}
@@ -38,7 +38,7 @@ export class InventoryWindow extends Window {
   		const tabNames = ['TODO', 'EQUIPAMIENTO', 'CONSUMIBLES', 'RECURSOS'];
   		this.tab = [];
 
-  		this.tabContainer = new Element(this.container, { className: 'inventory-tab-container' }).element; 
+  		this.tabContainer = new Element(this.container, { className: 'inventory-tab-container stroke' }).element; 
 
   		tabNames.forEach((name, i) => {
   			this.tab[i] = new Element(this.tabContainer, { className: 'inventory-tab', text: name}).element; 

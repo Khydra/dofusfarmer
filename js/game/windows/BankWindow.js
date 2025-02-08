@@ -38,7 +38,7 @@ export class BankWindow extends Window {
   		const tabNames = ['TODO', 'EQUIPAMIENTO', 'CONSUMIBLES', 'RECURSOS'];
   		this.tab = [];
 
-  		this.tabContainer = new Element(this.container, { className: 'inventory-tab-container' }).element; 
+  		this.tabContainer = new Element(this.container, { className: 'inventory-tab-container stroke' }).element; 
 
   		tabNames.forEach((name, i) => {
   			this.tab[i] = new Element(this.tabContainer, { className: 'inventory-tab', text: name}).element; 
@@ -55,7 +55,7 @@ export class BankWindow extends Window {
   		this.buttonContainer = new Element(this.container, { className: 'bank-button-container' }).element; 
 
   		buttonNames.forEach((name, i) => {
-  			this.button[i] = new Element(this.buttonContainer, { className: 'bank-button', text: name}).element; 
+  			this.button[i] = new Element(this.buttonContainer, { className: 'bank-button stroke', text: name}).element; 
   			this.button[i].addEventListener('click', () => this.handleButtonAction(i))
   		})
   	}

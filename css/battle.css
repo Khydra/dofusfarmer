@@ -1,7 +1,7 @@
 .battle-container {
     height: 300px;
     width: 100%;
-    background: var(--p1); 
-    border: 1px solid #333;
-    
+    background: var(--bg1); 
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
 }

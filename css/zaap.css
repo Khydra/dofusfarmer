@@ -1,5 +1,7 @@
 .zaap-container {
     height: 40px;
     width: 100%;
-    background: var(--p1); 
+    background: var(--bg1); 
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
 }

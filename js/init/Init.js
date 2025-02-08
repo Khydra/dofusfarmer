@@ -32,6 +32,10 @@ export class Init {
 			this.newCharacter = new Element(this.characterContainer, { className: 'init-new-character', text: '+' }).element;
 			this.newCharacter.addEventListener('click', this.newCharacterClickHandler);
 		}
+
+		// BORRAR BORRAR BORRAR BORRAR
+		new Main(this.data.character['Khydra'], this.data.bank);
+		this.destroy();
 	}
 
 	renderCharacter = (char, i) => {
@@ -92,3 +96,4 @@ export class Init {
 	    this.newCharacterClickHandler = null; // Limpiar el manejador
 	}
 }
+

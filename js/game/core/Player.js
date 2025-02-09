@@ -94,6 +94,7 @@ export class Player {
 			kamas: this.kamas,
 			stats: this.stats,
 			spells: this.spells,
+			jobs: this.jobs,
 			inventory: this.main.inventory.items,
 			equipment: this.main.equipment.items,
 		}

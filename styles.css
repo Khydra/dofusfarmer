@@ -69,3 +69,8 @@ body {
     -2px  0   0 #000;
 }
 
+input {
+    all: unset;
+    box-sizing: border-box;
+    cursor: text;
+}

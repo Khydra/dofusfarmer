@@ -31,8 +31,6 @@ export class SastreWindow extends Window {
   		this.recipeSlotName = [];
   		this.recipeSlotLevel = [];
   		this.recipeSlotIngredientContainer = [];
-  		//this.recipeSlotIngredients = [];
-  		this.recipeSlotCraft = [];
   	}
 
   	update = () => {
@@ -49,7 +47,6 @@ export class SastreWindow extends Window {
 			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: sastreRecipeData[key].item.name}).element; 
 			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${sastreRecipeData[key].item.level}`}).element; 
 			this.recipeSlotIngredientContainer[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-ingredient-container'}).element; 
-			this.recipeSlotCraft[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-craft', text: `FABRICAR`}).element; 
   			this.drawIngredients(sastreRecipeData[key].recipe, this.recipeSlotIngredientContainer[i]);
   		})
   	}

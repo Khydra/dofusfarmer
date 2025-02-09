@@ -1,5 +1,6 @@
 import { Window } from '../../utils/Window.js';
 import { Element } from '../../utils/Element.js';
+import { CraftWindow } from './CraftWindow.js';
 import { SastreWindow } from './jobs/SastreWindow.js';
 
 export class JobsWindow extends Window { 
@@ -13,6 +14,7 @@ export class JobsWindow extends Window {
 	    super(title, width, height, x, y); 
 	    this.component = component;
 
+	    this.craftWindow = new CraftWindow(this);
 	    this.sastreWindow = new SastreWindow(this);
 
 	    this.render();
@@ -28,7 +30,7 @@ export class JobsWindow extends Window {
 		this.tabLevel = [];
 		this.tabExpBar = [];
 		this.tabExp = [];
-
+		console.log(jobs)
 		Object.keys(jobs).forEach(key => {
 			this.tab[key] = new Element(this.tabContainer, { className: 'job-tab stroke' }).element; 
 			this.tabImage = new Element(this.tab[key], { className: 'job-tab-image', image: `./assets/images/icons/jobs/${key}.webp`}).element; 
@@ -75,6 +77,7 @@ export class JobsWindow extends Window {
                 break;
             case 'sastre':
             	(!this.sastreWindow.isOpen) ? this.sastreWindow.open() : this.sastreWindow.close();
+            	  this.craftWindow.open();
             	break;
             case 'zapatero':
             	

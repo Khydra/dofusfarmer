@@ -215,13 +215,49 @@
 .craft-ingredient-container {
 	position: absolute;
 	width: 100%;
-	height: 80px;
+	height: 110px;
 	background: var(--bg0);
-
 }
 
-.craft-ingredient-slot {
+.craft-ingredient-wraper {
+	position: absolute;
+	top: 10px;
+	bottom: 10px;
+	left: 45px;
+	right: 45px;
+	
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 5px 10px;
+}
 
+.craft-ingredient-slot-pass {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background: var(--green);
+	border-radius: 5px;
+	box-shadow: inset 0 0 5px black;
+}
+
+.craft-ingredient-slot-need {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background: var(--red);
+	border-radius: 5px;
+	box-shadow: inset 0 0 5px black;
+}
+
+.craft-ingredient-slot-empty {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+	box-shadow: inset 0 0 5px black;
 }
 
 .craft-item-container {
@@ -244,7 +280,17 @@
 }
 
 .craft-item-name {
-
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	height: 60px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	left: 100px;
+	font-weight: bold;
+	font-size: 20px;
+	color: var(--white);
 }
 
 .craft-button-min, .craft-button-max, .craft-button-less, .craft-button-more {
@@ -284,7 +330,6 @@
 	filter: brightness(1.2);
 } 
 
-
 .craft-item-amount {
 	position: absolute;
 	bottom: 55px;
@@ -302,10 +347,9 @@
     outline-color: #007BFF; /* Cambia a un color azul (o elige el que prefieras) */
 }
 
-
 .craft-button {
 	position: absolute;
-	bottom: 15px;
+	bottom: 13px;
 	left: 50%;
 	transform: translate(-50%);
 	height: 28px;

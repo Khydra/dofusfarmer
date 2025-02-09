@@ -37,6 +37,6 @@ export class Selector {
 
     updateValue() {
         this.value.innerText = this.values[this.currentIndex];
-        if (this.cb) this.cb();
+        if (this.cb) this.cb(this.currentIndex);
     }
 }

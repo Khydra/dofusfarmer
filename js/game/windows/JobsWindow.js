@@ -77,7 +77,7 @@ export class JobsWindow extends Window {
                 break;
             case 'sastre':
             	(!this.sastreWindow.isOpen) ? this.sastreWindow.open() : this.sastreWindow.close();
-            	  this.craftWindow.open();
+            	//this.craftWindow.open();
             	break;
             case 'zapatero':
             	

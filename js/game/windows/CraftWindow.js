@@ -6,7 +6,7 @@ export class CraftWindow extends Window {
 	constructor(component) {
 		const title = "Creación";
 	    const width = 300;
-	    const height = 300;
+	    const height = 325;
 	    const x = 530; 
 	    const y = 80; 
 
@@ -19,8 +19,9 @@ export class CraftWindow extends Window {
 
 	render = () => {
 		this.ingredientContainer = new Element(this.container, { className: 'craft-ingredient-container' }).element;
+		this.ingredientWraper = new Element(this.ingredientContainer, { className: 'craft-ingredient-wraper' }).element;
 		this.ingredientSlot = [];
-		for (let i = 0; i < 8; i++) this.ingredientSlot[i] = new Element(this.ingredientContainer, { className: 'craft-ingredient-slot' }).element;
+		for (let i = 0; i < 8; i++) this.ingredientSlot[i] = new Element(this.ingredientWraper, { className: 'craft-ingredient-slot-empty' }).element;
 		
   		this.itemContainer = new Element(this.container, { className: 'craft-item-container' }).element;
   		this.itemImage = new Element(this.itemContainer, { className: 'craft-item-image' }).element;

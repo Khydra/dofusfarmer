@@ -157,7 +157,7 @@
 .job-recipe-slot-ingredient-container {
 	position: absolute;
 	top: 50%;
-	right: 100px;
+	right: 60px;
 	transform: translate(0, -50%);
 	width: 370px;
 	height: 60px;
@@ -275,7 +275,8 @@
 	left: 20px;
 	width: 60px;
 	height: 60px;
-	background: red;
+	background-size: 100%;
+	background-repeat: no-repeat;
 
 }
 

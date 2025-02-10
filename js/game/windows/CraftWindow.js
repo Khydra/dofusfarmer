@@ -12,6 +12,7 @@ export class CraftWindow extends Window {
 
 	    super(title, width, height, x, y); 
 	    this.component = component;
+	    this.recipe = undefined;
 	    this.amount = 1;
 
 	    this.render();
@@ -29,27 +30,60 @@ export class CraftWindow extends Window {
 
   		this.buttonMin = new Element(this.itemContainer, { className: 'craft-button-min stroke', text: 'MIN' }).element;
   		this.buttonLess = new Element(this.itemContainer, { className: 'craft-button-less stroke', text: '-' }).element;
-  		this.inputAmount = new Input(this.itemContainer, { className: 'craft-item-amount' }).element;
+  		this.inputAmount = new Input(this.itemContainer, { className: 'craft-item-amount', maxlength: 4, onlyNumbers: true, minValue: 1, onInput: () => this.update() }).element;
   		this.buttonMore = new Element(this.itemContainer, { className: 'craft-button-more stroke', text: '+' }).element;
   		this.buttonMax = new Element(this.itemContainer, { className: 'craft-button-max stroke', text: 'MAX' }).element;
+
+  		this.buttonMin.addEventListener('click', () => this.amountButtonHandler('min'));
+  		this.buttonLess.addEventListener('click', () => this.amountButtonHandler('less'));
+  		this.buttonMore.addEventListener('click', () => this.amountButtonHandler('more'));
+  		this.buttonMax.addEventListener('click', () => this.amountButtonHandler('max'));
 
   		this.buttonCraft = new Element(this.itemContainer, { className: 'craft-button stroke', text: 'FUSIONAR' }).element;
   	}
 
   	update = (recipe) => {
+  		if (this.inputAmount.value === "") this.inputAmount.value = 1;
+  		if (recipe) {
+  			this.window.style.zIndex = ++Window.zIndexCounter;
+  			this.recipe = recipe;
+  			this.inputAmount.value = 1;
+  			this.itemName.innerText = this.recipe.item.name;
+  			this.itemImage.style.backgroundImage = `url("${this.recipe.item.image}")`;
+  		}
 
-  		this.itemName.innerText = 'Chcilla de chager'
-  		this.inputAmount.value = this.amount;
+  		
+  		this.updateAmount();
+  		console.log(this.amount)
   	}
 
   	open(recipe) {
 	    super.open(); 
-	    this.update(recipe);
-
+	    this.recipe = recipe;
+	    this.inputAmount.value = 1;
+	    this.itemName.innerText = this.recipe.item.name;
+  		this.itemImage.style.backgroundImage = `url("${this.recipe.item.image}")`;
+	    this.update();
   	}
 
-  	changeAmount = () => {
+  	updateAmount = () => {
   		this.amount = this.inputAmount.value;
   	}
 
+  	amountButtonHandler = (btn) => {
+  		switch(btn) {
+  			case 'min':
+  				this.inputAmount.value = 1;
+  				break;
+  			case 'less':
+  				if (this.amount > 1) this.inputAmount.value--;
+  				break;
+  			case 'more':
+  				this.inputAmount.value++;
+  				break;
+  			case 'max':
+  				break;
+  		}
+  		this.update();
+  	}
 }

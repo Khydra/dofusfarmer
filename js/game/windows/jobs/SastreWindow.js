@@ -56,7 +56,8 @@ export class SastreWindow extends Window {
   	drawRecipes = () => {
   		this.recipesShown = this.filterRecipes();
   		this.recipeSlot = [];
-  		console.log(this.recipesShown)
+  		this.recipeClickHandlers = [];
+
   		Object.keys(this.recipesShown).forEach((key, i) => {
   			this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot' }).element; 
   			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: sastreRecipeData[key].item.image }).element; 
@@ -64,7 +65,21 @@ export class SastreWindow extends Window {
 			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${sastreRecipeData[key].item.level}`}).element; 
 			this.recipeSlotIngredientContainer[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-ingredient-container'}).element; 
   			this.drawIngredients(sastreRecipeData[key].recipe, this.recipeSlotIngredientContainer[i]);
-  		})
+
+		    // Crear una función manejadora para este slot
+		    const clickHandler = () => {
+		     	const recipe = sastreRecipeData[Object.keys(this.recipesShown)[i]];
+		      	if (this.component.craftWindow.isOpen) {
+		        	this.component.craftWindow.update(recipe);
+		      	} else {
+		        	this.component.craftWindow.open(recipe);
+		      	}
+		    };
+		    // Guardar la referencia del manejador en el array
+		    this.recipeClickHandlers[i] = clickHandler;
+		    // Añadir el evento al slot
+		    this.recipeSlot[i].addEventListener('click', clickHandler);
+		})
   	}
 
   	drawIngredients = (recipe, ingredientContainer) => {
@@ -82,23 +97,25 @@ export class SastreWindow extends Window {
   	}
 
   	clearRecipes = () => {
-	  // Verifica si hay recetas creadas
-		if (this.recipeSlot && this.recipeSlot.length > 0) {
-		    // Recorre cada slot de receta y elimina el elemento del DOM
-		    this.recipeSlot.forEach((slot) => {
-		      	if (slot.parentNode) {
-		        	slot.parentNode.removeChild(slot);
-		      	}
+	  	if (this.recipeSlot && this.recipeSlot.length > 0) {
+	    	this.recipeSlot.forEach((slot, i) => {
+			    // Eliminar el evento usando la referencia almacenada en recipeClickHandlers
+			    if (this.recipeClickHandlers[i]) {
+			        slot.removeEventListener('click', this.recipeClickHandlers[i]);
+			    }
+			 	// Eliminar el elemento del DOM
+			    if (slot.parentNode) slot.parentNode.removeChild(slot);	    
 		    });
 
-		    // Limpia los arrays para evitar referencias residuales
+		    // Limpiar los arrays
 		    this.recipeSlot = [];
 		    this.recipeSlotImage = [];
 		    this.recipeSlotName = [];
 		    this.recipeSlotLevel = [];
 		    this.recipeSlotIngredientContainer = [];
-		}
-	}
+		    this.recipeClickHandlers = []; // Limpiar las referencias de eventos
+  		}
+	};
 
   	filterRecipes = () => {
   		let recipes = this.filterByLevel(sastreRecipeData, this.filter.level[0], this.filter.level[1]);

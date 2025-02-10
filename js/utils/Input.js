@@ -4,9 +4,10 @@ export class Input {
         this.options = options;
         this.element = this.create();
 
-        if (this.options.onlyLetters) {
-            this.addOnlyLettersValidation();
-        }
+        if (this.options.onlyLetters) this.addOnlyLettersValidation();
+        if (this.options.onlyNumbers) this.addOnlyNumbersValidation();
+        if (this.options.minValue) this.addMinValueValidation();
+
 
         if (this.options.onInput) {
             this.element.addEventListener("input", this.options.onInput);
@@ -26,8 +27,27 @@ export class Input {
 
     addOnlyLettersValidation() {
         this.element.addEventListener("input", () => {
-            // Permite solo letras A-Z y a-z (sin tildes, espacios, ni ñ)
             this.element.value = this.element.value.replace(/[^a-zA-Z-]/g, '');
+        });
+    }
+
+    addOnlyNumbersValidation() {
+        this.element.addEventListener("input", () => {
+            this.element.value = this.element.value.replace(/[^0-9]/g, '');
+        });
+    }
+
+    addMinValueValidation() {
+        this.element.addEventListener("input", () => {
+            if (this.element.value === "" || parseInt(this.element.value, 10) < 1) {
+                this.element.value = "";
+            }
+        });
+
+        this.element.addEventListener("blur", () => {
+            if (this.element.value === "") {
+                this.element.value = "1"; // Establece 1 como valor mínimo por defecto si está vacío
+            }
         });
     }
 }

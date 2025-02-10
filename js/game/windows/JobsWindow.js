@@ -30,7 +30,7 @@ export class JobsWindow extends Window {
 		this.tabLevel = [];
 		this.tabExpBar = [];
 		this.tabExp = [];
-		console.log(jobs)
+		
 		Object.keys(jobs).forEach(key => {
 			this.tab[key] = new Element(this.tabContainer, { className: 'job-tab stroke' }).element; 
 			this.tabImage = new Element(this.tab[key], { className: 'job-tab-image', image: `./assets/images/icons/jobs/${key}.webp`}).element; 

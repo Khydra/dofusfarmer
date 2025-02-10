@@ -1,6 +1,8 @@
 import { Window } from '../../utils/Window.js';
 import { Element } from '../../utils/Element.js';
 import { Input } from '../../utils/Input.js';
+import { resourceData} from '../data/item/resourceData.js';
+import { generateItemStats } from '../manager/itemManager.js'
 
 export class CraftWindow extends Window { 
 	constructor(component) {
@@ -14,6 +16,7 @@ export class CraftWindow extends Window {
 	    this.component = component;
 	    this.recipe = undefined;
 	    this.amount = 1;
+	    this.canCraft = false;
 
 	    this.render();
 	}
@@ -40,6 +43,7 @@ export class CraftWindow extends Window {
   		this.buttonMax.addEventListener('click', () => this.amountButtonHandler('max'));
 
   		this.buttonCraft = new Element(this.itemContainer, { className: 'craft-button stroke', text: 'FUSIONAR' }).element;
+  		this.buttonCraft.addEventListener('click', () => this.craft())
   	}
 
   	update = (recipe) => {
@@ -50,11 +54,10 @@ export class CraftWindow extends Window {
   			this.inputAmount.value = 1;
   			this.itemName.innerText = this.recipe.item.name;
   			this.itemImage.style.backgroundImage = `url("${this.recipe.item.image}")`;
+  			this.showRecipeIngredients();
   		}
-
   		
   		this.updateAmount();
-  		console.log(this.amount)
   	}
 
   	open(recipe) {
@@ -63,11 +66,13 @@ export class CraftWindow extends Window {
 	    this.inputAmount.value = 1;
 	    this.itemName.innerText = this.recipe.item.name;
   		this.itemImage.style.backgroundImage = `url("${this.recipe.item.image}")`;
+  		this.showRecipeIngredients();
 	    this.update();
   	}
 
   	updateAmount = () => {
   		this.amount = this.inputAmount.value;
+  		this.showRecipeIngredientsAmount();
   	}
 
   	amountButtonHandler = (btn) => {
@@ -85,5 +90,55 @@ export class CraftWindow extends Window {
   				break;
   		}
   		this.update();
+  	}
+
+  	showRecipeIngredients = () => {
+  		this.ingredientSlot.forEach(slot => {
+  			slot.style.backgroundImage = "";
+  			slot.innerHTML = "";
+  			slot.className = "craft-ingredient-slot-empty";
+  		})
+
+  		Object.keys(this.recipe.recipe).forEach((key, i) => {
+  			this.ingredientSlot[i].style.backgroundImage = `url("${resourceData[key].image}")`;
+  		})
+  	}
+
+  	showRecipeIngredientsAmount = () => {
+  		this.canCraft = true;
+  		Object.keys(this.recipe.recipe).forEach((key, i) => {
+  			let quantity = this.recipe.recipe[key] * this.amount;
+  			this.ingredientSlot[i].innerHTML = `<span class="isq stroke">x${quantity}</span>`;
+
+  			if (this.component.component.main.inventory?.items[key]?.quantity >= quantity) {
+  				this.ingredientSlot[i].className = "craft-ingredient-slot-pass";
+  			}
+  			else {
+  				this.ingredientSlot[i].className = "craft-ingredient-slot-need";
+  				this.canCraft = false;
+  			}
+  		})
+  	}
+
+  	craft = () => {
+  		if (this.canCraft) {
+  			// retirar recursos
+  			Object.keys(this.recipe.recipe).forEach((key, i) => {
+	  			let quantity = this.recipe.recipe[key] * this.amount;
+	  			this.component.component.main.inventory.removeItem(this.component.component.main.inventory.items[key], quantity);	
+	  		})
+
+
+  			// crear objeto:
+	  		if (this.recipe.item.type === 'equipment') {
+	  			for (let i = 0; i < this.amount; i++) {
+	  				console.log(this.recipe.item)
+	  				this.component.component.main.inventory.obtainItem(generateItemStats(this.recipe.item, this.component.component.main.player.name));
+	  			}		
+	  		}
+
+	  		this.component.component.inventoryWindow.update();		
+  			this.close();
+  		}
   	}
 }

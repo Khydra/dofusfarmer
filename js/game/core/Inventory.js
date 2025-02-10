@@ -15,10 +15,10 @@ export class Inventory {
 		}
 	}
 
-	removeItem = (item) => {
-		if (this.items[item.key].quantity > 1) {
+	removeItem = (item, q = 1) => {
+		if (this.items[item.key].quantity > q) {
 		    // Si hay más de uno, resta 1 a la cantidad
-		    this.items[item.key].quantity -= 1;
+		    this.items[item.key].quantity -= q;
 		} else {
 		    // Si solo hay uno, elimina el objeto de la mochila
 		    delete this.items[item.key];

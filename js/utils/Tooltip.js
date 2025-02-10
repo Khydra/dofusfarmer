@@ -88,14 +88,22 @@ export class Tooltip {
 
             case "equipment":
                 this.infoType.innerText = `${this.data.sort.toUpperCase()} ◆ NIVEL ${this.data.level}`;
-                this.infoSet.innerText = `${this.data.set.name}`;
+                if (this.data.set) this.infoSet.innerText = `${this.data.set.name}`;
 
                 this.showEquipmentStats();
 
-                this.statCraft.innerHTML = `
-                    Creado por: <span class="stat-craft">Khydra</span> <br> 
-                    Modificado por: <span class="stat-craft">Khytrayer</span>
-                `;
+                if (this.data.autor) {
+                    this.statCraft.innerHTML += `
+                        Fabricado por: <span class="stat-craft">${this.data.autor}</span> <br> 
+                    `;
+                }
+
+                if (this.data.mage) {
+                    this.statCraft.innerHTML += `
+                        Modificado por: <span class="stat-craft">${this.data.autor}</span>
+                    `;
+                }
+                
 
                 if (this.location == 'equipmentWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Desquipar \n CTRL: Valores teóricos`;
                 if (this.location == 'inventoryWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Equipar \n CTRL: Valores teóricos \n SHIFT: Almacenar`;

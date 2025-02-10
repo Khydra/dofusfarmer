@@ -1,4 +1,4 @@
-export const generateItemStats = (item) => {
+export const generateItemStats = (item, craft = false) => {
 	const newItem = JSON.parse(JSON.stringify(item));
 
 	let data = JSON.parse(window.localStorage.getItem("data"));
@@ -13,6 +13,8 @@ export const generateItemStats = (item) => {
 		newItem.stats[stat] = Math.floor(Math.random() * (max - min + 1)) + min;
 
 	})
+
+	if (craft != false) newItem.autor = craft;
 
 	data.itemId++;
 	window.localStorage.setItem("data", JSON.stringify({ ...data, itemId: data.itemId }));

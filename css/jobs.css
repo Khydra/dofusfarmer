@@ -88,8 +88,26 @@
 	position: absolute;
 	top: 0px;
 	width: 100%;
-	height: 85px;
+	height: 70px;
 	background: var(--bg1);
+}
+
+.job-recipe-type {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	width: 200px;
+	height: 20px;
+	color: var(--white);
+}
+
+.job-recipe-level {
+	position: absolute;
+	bottom: 15px;
+	left: 20px;
+	width: 200px;
+	height: 20px;
+	color: var(--white);
 }
 
 .job-recipe-container {
@@ -136,7 +154,6 @@
 	pointer-events: none;
 }
 
-
 .job-recipe-slot-image {
 	position: absolute;
 	top: 50%;
@@ -152,7 +169,7 @@
 	top: 12px;
 	left: 100px;
 	color: var(--white);
-
+	text-shadow: 1px 1px 2px black;
 	font-size: 18px;
 }
 
@@ -161,14 +178,14 @@
 	top: 36px;
 	left: 100px;
 	color: var(--white);
-
+	text-shadow: 1px 1px 2px black;
 	font-size: 14px;
 }
 
 .job-recipe-slot-ingredient-container {
 	position: absolute;
 	top: 50%;
-	right: 60px;
+	right: 110px;
 	transform: translate(0, -50%);
 	width: 370px;
 	height: 60px;
@@ -185,40 +202,14 @@
 	background-size: 100%;
 }
 
-.job-recipe-search {
+.job-recipe-slot-exp {
 	position: absolute;
-	top: 20px;
-	left: 20px;
-	height: 20px;
-	width: 250px;
-
-	background-color: var(--white);
-	border: 2px solid #3a3312;
-	outline: none;
-
-	font-size: 16px;
-	color: #3a3312;
-	
-	padding-left: 5px;
-
-}
-
-.job-recipe-type {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	width: 200px;
-	height: 20px;
-	color: var(--white);
-}
-
-.job-recipe-level {
-	position: absolute;
-	bottom: 20px;
-	left: 20px;
-	width: 200px;
-	height: 20px;
-	color: var(--white);
+	top: 50%;
+	right: 20px;
+	transform: translate(0, -50%);
+	color: var(--bg3);
+	font-weight: bold;
+	text-shadow: 1px 1px 2px black;
 }
 
 /* craft */

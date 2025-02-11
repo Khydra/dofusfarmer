@@ -5,12 +5,13 @@ import { Selector } from '../../../utils/Selector.js';
 
 import { sastreRecipeData } from '../../data/item/recipeData.js';
 import { resourceData } from '../../data/item/resourceData.js';
+import { expJobData } from '../../data/expData.js';
 
 export class SastreWindow extends Window { 
 	constructor(component) {
 		const title = "Sastre";
-	    const width = 800;
-	    const height = 500;
+	    const width = 850;
+	    const height = 485;
 	    const x = 530; 
 	    const y = 80; 
 
@@ -45,6 +46,7 @@ export class SastreWindow extends Window {
   		this.recipeSlotImage = [];
   		this.recipeSlotName = [];
   		this.recipeSlotLevel = [];
+  		this.recipeSlotExp = [];
   		this.recipeSlotIngredientContainer = [];
   	}
 
@@ -60,15 +62,20 @@ export class SastreWindow extends Window {
 
   		Object.keys(this.recipesShown).forEach((key, i) => {
 
+  			let exp = expJobData[sastreRecipeData[key].item.level + 1];
+
   			if (sastreRecipeData[key].item.level > this.component.component.player.jobs['sastre'].level) {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot-disabled' }).element; 
   			} else {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot' }).element; 
+  				exp = Math.floor(expJobData[sastreRecipeData[key].item.level + 1] * (1 - (0.05 * (this.component.component.player.jobs['sastre'].level - sastreRecipeData[key].item.level))));
+  				if (exp <= 0) exp = 1;
   			}
   			
   			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: sastreRecipeData[key].item.image }).element; 
 			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: sastreRecipeData[key].item.name}).element; 
 			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${sastreRecipeData[key].item.level}`}).element; 
+			this.recipeSlotExp[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-exp', text: `${exp} exp`}).element; 
 			this.recipeSlotIngredientContainer[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-ingredient-container'}).element; 
   			this.drawIngredients(sastreRecipeData[key].recipe, this.recipeSlotIngredientContainer[i]);
 
@@ -118,6 +125,7 @@ export class SastreWindow extends Window {
 		    this.recipeSlotImage = [];
 		    this.recipeSlotName = [];
 		    this.recipeSlotLevel = [];
+		    this.recipeSlotExp = [];
 		    this.recipeSlotIngredientContainer = [];
 		    this.recipeClickHandlers = []; // Limpiar las referencias de eventos
   		}

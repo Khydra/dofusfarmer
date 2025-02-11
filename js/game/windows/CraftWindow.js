@@ -136,7 +136,6 @@ export class CraftWindow extends Window {
   			// crear objeto:
 	  		if (this.recipe.item.type === 'equipment') {
 	  			for (let i = 0; i < this.amount; i++) {
-	  				console.log(this.recipe.item)
 	  				this.component.component.main.inventory.obtainItem(generateItemStats(this.recipe.item, this.component.component.main.player.name));
 	  			}		
 	  		}
@@ -149,8 +148,9 @@ export class CraftWindow extends Window {
   	}
 
   	gainExp = () => {
-  		let exp = expJobData[this.recipe.item.level + 1] * this.amount;
-  		console.log(exp)
+  		let exp = Math.floor(expJobData[this.recipe.item.level + 1] * (1 - (0.05 * (this.component.component.main.player.jobs[this.job].level - this.recipe.item.level))));
+  		if (exp <= 0) exp = 1;
+  		exp *= this.amount;
   		//console.log(this.component.component.main.player.jobs[this.job])
   		this.component.component.main.player.gainExpJob(exp, this.job);
   	}

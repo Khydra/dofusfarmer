@@ -1,4 +1,4 @@
-import { expData } from '../data/expData.js';
+import { expData, expJobData } from '../data/expData.js';
 
 export class Player {
 	constructor(main, charData) {
@@ -44,6 +44,7 @@ export class Player {
 		this.exp = [0, expData[this.level]];
 		this.main.status.update();
 		if (exp != undefined) this.gainExp(exp);
+		this.main.notification.display(`Subes a nivel ${this.level}`);	
 	}
 
 	distributePoint = (stat) => {
@@ -60,23 +61,59 @@ export class Player {
 	}
 
 	gainExpJob = (value, job) => {
-		let expNeeded = this.jobs[job].exp[0] - this.jobs[job].exp[1];
+		let expNeeded = this.jobs[job].exp[1] - this.jobs[job].exp[0];
 
 		if (value >= expNeeded) {
 	        let extraExp = value - expNeeded; 
 	        this.levelUpJob(extraExp, job);            
 	    } else {
-	    	this.jobs[job].exp[0] += value;           
+	    	this.jobs[job].exp[0] += value;  
+	    	this.main.menu.jobsWindow.update(); 
 	    }
 	}
 
 	levelUpJob = (exp, job) => {
 		this.jobs[job].level++;
-		this.jobs[job].exp = [jobs[job].exp[0], (jobs[job].exp[0] + jobs[job].exp[1])];
+		this.jobs[job].exp = [0, expJobData[this.jobs[job].level + 1]];
 
+		switch (job) {
+        	case 'lenador':
+            	
+                break;
+        	case 'minero':
+        		
+            	break;    
+            case 'alquimista':
+
+                break;
+            case 'campesino':
+            	
+                break;    
+            case 'joyero':
+            	
+                break;
+            case 'sastre':
+            	this.main.menu.jobsWindow.sastreWindow.update();
+            	break;
+            case 'zapatero':
+            	
+            	break;
+            case 'herrero':
+            	
+                break;
+            case 'escultor':
+
+                break;
+            case 'fabricante':
+
+                break;
+            case 'forjamago':
+
+                break;
+        }
+
+        this.main.notification.display(`Tu oficio ${job} pasa a nivel ${this.jobs[job].level}`);	
 		if (exp != undefined) this.gainExpJob(exp, job);
-
-		//update recipes y recoleccion
 	}
 
 	getData = () => {

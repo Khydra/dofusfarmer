@@ -11,6 +11,7 @@ import { Inventory } from './core/Inventory.js';
 import { Equipment } from './core/Equipment.js';
 import { Bank } from './core/Bank.js';
 
+import { Notification } from '../utils/Notification.js';
 //borrar
 import { resourceData } from './data/item/resourceData.js'
 import { equipmentData } from './data/item/equipmentData.js'
@@ -39,6 +40,7 @@ export class Main {
 		this.battle = new Battle(this, this.player);
 		this.zaap = new Zaap(this, this.player);
 
+		this.notification = new Notification();
 		this.test();
 	}
 
@@ -51,7 +53,7 @@ export class Main {
 		this.inventory.obtainItem(resourceData['lana_celeste'], 4)
 		this.inventory.obtainItem(resourceData['petalo_diafano'], 412)
 		this.inventory.obtainItem(resourceData['tabla_de_fresno'], 1500)
-		this.inventory.obtainItem(resourceData['trigo'], 117)
+		this.inventory.obtainItem(resourceData['cenizas_eternas'], 117)
 
 		this.inventory.obtainItem(generateItemStats(equipmentData['la_capa_slok']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));

@@ -59,7 +59,13 @@ export class SastreWindow extends Window {
   		this.recipeClickHandlers = [];
 
   		Object.keys(this.recipesShown).forEach((key, i) => {
-  			this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot' }).element; 
+
+  			if (sastreRecipeData[key].item.level > this.component.component.player.jobs['sastre'].level) {
+  				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot-disabled' }).element; 
+  			} else {
+  				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot' }).element; 
+  			}
+  			
   			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: sastreRecipeData[key].item.image }).element; 
 			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: sastreRecipeData[key].item.name}).element; 
 			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${sastreRecipeData[key].item.level}`}).element; 
@@ -70,9 +76,9 @@ export class SastreWindow extends Window {
 		    const clickHandler = () => {
 		     	const recipe = sastreRecipeData[Object.keys(this.recipesShown)[i]];
 		      	if (this.component.craftWindow.isOpen) {
-		        	this.component.craftWindow.update(recipe);
+		        	this.component.craftWindow.update(recipe, 'sastre');
 		      	} else {
-		        	this.component.craftWindow.open(recipe);
+		        	this.component.craftWindow.open(recipe, 'sastre');
 		      	}
 		    };
 		    // Guardar la referencia del manejador en el array

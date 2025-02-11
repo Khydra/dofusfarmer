@@ -3,6 +3,7 @@ import { Element } from '../../utils/Element.js';
 import { Input } from '../../utils/Input.js';
 import { resourceData} from '../data/item/resourceData.js';
 import { generateItemStats } from '../manager/itemManager.js'
+import { expJobData } from '../data/expData.js';
 
 export class CraftWindow extends Window { 
 	constructor(component) {
@@ -15,6 +16,7 @@ export class CraftWindow extends Window {
 	    super(title, width, height, x, y); 
 	    this.component = component;
 	    this.recipe = undefined;
+	    this.job = undefined;
 	    this.amount = 1;
 	    this.canCraft = false;
 
@@ -46,10 +48,11 @@ export class CraftWindow extends Window {
   		this.buttonCraft.addEventListener('click', () => this.craft())
   	}
 
-  	update = (recipe) => {
+  	update = (recipe, job) => {
   		if (this.inputAmount.value === "") this.inputAmount.value = 1;
   		if (recipe) {
   			this.window.style.zIndex = ++Window.zIndexCounter;
+  			this.job = job;
   			this.recipe = recipe;
   			this.inputAmount.value = 1;
   			this.itemName.innerText = this.recipe.item.name;
@@ -60,9 +63,10 @@ export class CraftWindow extends Window {
   		this.updateAmount();
   	}
 
-  	open(recipe) {
+  	open(recipe, job) {
 	    super.open(); 
 	    this.recipe = recipe;
+	    this.job = job;
 	    this.inputAmount.value = 1;
 	    this.itemName.innerText = this.recipe.item.name;
   		this.itemImage.style.backgroundImage = `url("${this.recipe.item.image}")`;
@@ -137,8 +141,17 @@ export class CraftWindow extends Window {
 	  			}		
 	  		}
 
-	  		this.component.component.inventoryWindow.update();		
+	  		this.component.component.inventoryWindow.update();	
+	  		this.gainExp();
+	  		this.component.component.main.notification.display(`Has fabricado x${this.amount} ${this.recipe.item.name}`);	
   			this.close();
   		}
+  	}
+
+  	gainExp = () => {
+  		let exp = expJobData[this.recipe.item.level + 1] * this.amount;
+  		console.log(exp)
+  		//console.log(this.component.component.main.player.jobs[this.job])
+  		this.component.component.main.player.gainExpJob(exp, this.job);
   	}
 }

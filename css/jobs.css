@@ -126,6 +126,17 @@
 	filter: brightness(1.2);
 }
 
+.job-recipe-slot-disabled {
+	position: relative;
+	width: 100%;
+	height: 74px;
+	border-bottom: 2px dashed var(--bg3);
+	background: var(--bg0);
+	filter: brightness(0.5);
+	pointer-events: none;
+}
+
+
 .job-recipe-slot-image {
 	position: absolute;
 	top: 50%;

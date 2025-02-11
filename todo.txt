@@ -1,3 +1,32 @@
+
+-> Mostrar EXP recetas
+
+-> Mostrar recurso al pasar el raton por encima en Recetas
+-> Mostrar objeto (valores teóricos) al pasar el raton por encima en Recetas
+-> Botón MAX en Craft
+-> Inventario y banco: Filtro por clase de objeto
+-> Inventario y banco: CSS de filtro de busqueda
+-> Actualizar stats al equipar/desequipar objetos y bonus de set
+
+---------------------------------------------------------------------------------
+
+-> Crear todos los objetos y recetas hasta nivel 20
+-> Forjamagia
+-> Logros
+-> Enciclopedia
+-> Combate
+-> Mazmorra Incarnam
+
+---------------------------------------------------------------------------------
+
+-> Efectos y sonidos
+-> Guardado de datos
+-> Parte superior derecha: Regulador de volumen
+-> Parte superior derecha: Selector de idioma
+-> Parte izquierda: Selector de personaje
+-> Remodelar CSS pag de creación y selector de personaje 
+
+---------------------------------------------------------------------------------
 amuleto_de_pio_amarillo: {
 		id: 40,
 		key: 'amuleto_de_pio_amarillo',

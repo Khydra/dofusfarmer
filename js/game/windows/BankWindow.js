@@ -24,8 +24,7 @@ export class BankWindow extends Window {
 
 	render = () => {
   		this.searchBar = new Input(this.container, { className: 'inventory-search-bar', maxlength: 40, placeholder: 'Buscar', onInput: () => this.search() }).element;
-  		this.filter = new Element(this.container, { className: 'inventory-filter' }).element; //dropdown
-
+  
   		this.renderTabs();
   		this.renderButtons();
 

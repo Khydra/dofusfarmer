@@ -7,12 +7,6 @@ export const sastreRecipeData = {
 		recipe: {
 			ortiga: 2, 
 			lana_celeste: 2,
-			madera_de_fresno: 3, 
-			cenizas_eternas: 3,
-			trigo: 2, 
-			pluma_quimerica: 3, 
-			volva_de_amenita: 3,
-			pluma_de_pio_azul: 3, 
 		},
 	},
 	la_capa_slok: {

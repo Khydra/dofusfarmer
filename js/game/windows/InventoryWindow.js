@@ -24,7 +24,6 @@ export class InventoryWindow extends Window {
 
 	render = () => {
   		this.searchBar = new Input(this.container, { className: 'inventory-search-bar', maxlength: 40, placeholder: 'Buscar', onInput: () => this.search() }).element;
-  		this.filter = new Element(this.container, { className: 'inventory-filter' }).element; //dropdown
 
   		this.renderTabs();
 
@@ -42,8 +41,7 @@ export class InventoryWindow extends Window {
 
   		tabNames.forEach((name, i) => {
   			this.tab[i] = new Element(this.tabContainer, { className: 'inventory-tab', text: name}).element; 
-  			this.tab[i].addEventListener('click', () => this.changeTab(i));
-  			
+  			this.tab[i].addEventListener('click', () => this.changeTab(i));	
   		})
 
   		this.updateTabs();

@@ -173,5 +173,109 @@ export const setData = {
 			cha: [10, 20]
 		}
 	},
+	set_de_champi_champ: {
+		key: 'set_de_champi_champ',
+		name: 'Set de champi champ',
+		parts: 4,
+		bonus: {
+			vit: [20, 30, 40],
+			//placaje
+			//esquiva pm
+		}
+	},
+	set_campestre: {
+		key: 'set_campestre',
+		name: 'Set campestre',
+		parts: 7,
+		bonus: {
+			vit: [20, 30, 30, 30, 50, 50],
+			str: [10, 20, 20, 20, 30, 30],
+			pot: [0, 0, 20, 20, 30, 30],
+			crt: [0, 0, 0, 5, 5, 5],
+			pm: [0, 0, 0, 0, 0, 1],
+			//ini
+		}
+	},
+	set_de_bandido: {
+		key: 'set_de_bandido',
+		name: 'Set de bandido',
+		parts: 4,
+		bonus: {
+			vit: [30, 40, 50],
+			strDmg: [3, 5, 10],
+			intDmg: [3, 5, 10],
+			chaDmg: [3, 5, 10],
+			agiDmg: [3, 5, 10],
+			//ini
+			//esquiva pm
+		}
+	},
+	set_de_jalato: {
+		key: 'set_de_jalato',
+		name: 'Set de jalató',
+		parts: 8,
+		bonus: {
+			vit: [5, 10, 10, 20, 30, 30, 50],
+			str: [5, 10, 10, 20, 30, 30, 50],
+			int: [5, 10, 10, 20, 30, 30, 50],
+			pa: [0, 0, 0, 0, 0, 1, 1],
+			strDmg: [0, 0, 1, 2, 3, 3, 5],
+			intDmg: [0, 0, 1, 2, 3, 3, 5],
+		}
+	},
+	set_de_hombre_oso: {
+		key: 'set_de_hombre_oso',
+		name: 'Set de hombre oso',
+		parts: 7,
+		bonus: {
+			int: [10, 10, 20, 30, 40, 40],
+			pa: [0, 0, 0, 0, 0, 1],
+			intDmg: [1, 1, 2, 3, 4, 4],
+			//resis fijas
+		}
+	},
+	set_de_campesino: {
+		key: 'set_de_campesino',
+		name: 'Set de campesino',
+		parts: 7,
+		bonus: {
+			vit: [10, 15, 15, 15, 30, 30],
+			cha: [10, 15, 15, 15, 30, 30],
+			wis: [0, 0, 0, 10, 20, 20],
+			pa: [0, 0, 0, 0, 0, 0, 1],
+			chaDmg: [0, 0, 2, 2, 5, 5],
+
+		}
+	},
+	set_invisible: {
+		key: 'set_invisible',
+		name: 'Set invisible',
+		parts: 3,
+		bonus: {
+			pot: [20, 30],
+		}
+	},
+	set_karnavalesco: {
+		key: 'set_karnavalesco',
+		name: 'Set karnavalesco',
+		parts: 2,
+		bonus: {
+			strDmg: [5],
+			intDmg: [5],
+			chaDmg: [5],
+			agiDmg: [5],
+			//ret PA [5]
+		}
+	},
+	set_prototipo_de_piloto: {
+		key: 'set_prototipo_de_piloto',
+		name: 'Set prototipo de piloto',
+		parts: 2,
+		bonus: {
+			vit: [40],
+			crt: [5],
+			// ini
+		}
+	},
 }
 

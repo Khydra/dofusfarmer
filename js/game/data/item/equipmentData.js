@@ -1042,6 +1042,63 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: setData['set_de_chadalid'],
 	},
+	anillo_de_champi_champ: {
+		id: 73,
+		key: 'anillo_de_champi_champ',
+		name: 'Anillo de champi champ',
+		image: './assets/images/items/equipment/s017-0.webp',
+		level: 13,
+		stats: {
+			vit: [16, 20],
+			//placaje: [2],
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: setData['set_de_champi_champ'],
+	},
+	alianza_de_champi_champ: {
+		id: 74,
+		key: 'alianza_de_champi_champ',
+		name: 'Alianza de champi champ',
+		image: './assets/images/items/equipment/s017-1.webp',
+		level: 11,
+		stats: {
+			vit: [16, 20],
+			//huida: [2],
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		set: setData['set_de_champi_champ'],
+	},
+	champisombrero: {
+		id: 75,
+		key: 'champisombrero',
+		name: 'Champisombrero',
+		image: './assets/images/items/equipment/s017-2.webp',
+		level: 12,
+		stats: {
+			vit: [21, 30],
+			//placaje: [2],
+		},
+		type: 'equipment',
+		sort: 'sombrero',
+		set: setData['set_de_champi_champ'],
+	},
+	capa_de_champi_champ: {
+		id: 76,
+		key: 'capa_de_champi_champ',
+		name: 'Capa de champi champ',
+		image: './assets/images/items/equipment/s017-3.webp',
+		level: 11,
+		stats: {
+			vit: [21, 30],
+			//placaje: [2],
+		},
+		type: 'equipment',
+		sort: 'capa',
+		set: setData['set_de_champi_champ'],
+	},
+
 	//no-sets
 	kamaturon: {
 		id: 10000,

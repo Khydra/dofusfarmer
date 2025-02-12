@@ -244,7 +244,6 @@ export const setData = {
 			wis: [0, 0, 0, 10, 20, 20],
 			pa: [0, 0, 0, 0, 0, 0, 1],
 			chaDmg: [0, 0, 2, 2, 5, 5],
-
 		}
 	},
 	set_invisible: {

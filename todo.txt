@@ -1,3 +1,5 @@
+
+-> Mostrar objeto (valores teóricos) al pasar el raton por encima en Recetas
 -> Actualizar stats al equipar/desequipar objetos y bonus de set
 
 ---------------------------------------------------------------------------------

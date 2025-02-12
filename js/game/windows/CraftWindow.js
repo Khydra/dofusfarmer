@@ -91,6 +91,15 @@ export class CraftWindow extends Window {
   				this.inputAmount.value++;
   				break;
   			case 'max':
+  				let maxMin = [];
+  				Object.keys(this.recipe.recipe).forEach(key => {
+  					let max;
+  					if (this.component.component.main.inventory.items[key] != undefined) {
+  						max = Math.floor(this.component.component.main.inventory.items[key].quantity / this.recipe.recipe[key]);
+  					} else max = 1;
+  					maxMin.push(max);
+  				})
+  				this.inputAmount.value = Math.min(...maxMin);
   				break;
   		}
   		this.update();

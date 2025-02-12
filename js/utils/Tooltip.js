@@ -65,45 +65,55 @@ export class Tooltip {
 
     generateContent() {
         this.infoContainer = new Element(this.element, { className: 'tooltip-info-container' }).element;
-        this.statContainer = new Element(this.element, { className: 'tooltip-stat-container' }).element;
+        if (this.data.type == 'equipment') this.statContainer = new Element(this.element, { className: 'tooltip-stat-container' }).element;
         this.eventContainer = new Element(this.element, { className: 'tooltip-event-container' }).element;
 
         this.infoTittle = new Element(this.infoContainer, { className: 'tooltip-info-tittle', text: this.data.name }).element;
         this.infoType = new Element(this.infoContainer, { className: 'tooltip-info-type' }).element;
         this.infoSet = new Element(this.infoContainer, { className: 'tooltip-info-set' }).element;
 
-        this.statExo = new Element(this.statContainer, { className: 'tooltip-stat-exo' }).element;
-        this.statValues = new Element(this.statContainer, { className: 'tooltip-stat-values' }).element;
-        this.statCraft = new Element(this.statContainer, { className: 'tooltip-stat-craft' }).element;
+        if (this.data.type == 'equipment') {
+            this.statExo = new Element(this.statContainer, { className: 'tooltip-stat-exo' }).element;
+            this.statValues = new Element(this.statContainer, { className: 'tooltip-stat-values' }).element;
+            this.statCraft = new Element(this.statContainer, { className: 'tooltip-stat-craft' }).element;
+        }
 
         this.eventGuide = new Element(this.eventContainer, { className: 'tooltip-event-guide' }).element;
-
         switch (this.data.type) {
 
             case "resource":
                 this.infoType.innerText = `RECURSO ◆ ${this.data.sort.toUpperCase()}`;
                 if (this.location == 'inventoryWindow') this.eventGuide.innerText = `RMB: Opciones \n SHIFT: Almacenar`;
                 if (this.location == 'bankWindow') this.eventGuide.innerText = `RMB: Opciones \n SHIFT: Retirar`;
+                if (this.location == 'jobWindow') {
+                    const quantityInventory = this.src.component.component.main.inventory.items[this.data.key]?.quantity ?? 0;
+                    const quantityBank = this.src.component.component.main.bank.items[this.data.key]?.quantity ?? 0;
+                    this.eventGuide.innerText = `Inventario: ${quantityInventory} \n Bancosako: ${quantityBank}`;
+                }
             break;
 
             case "equipment":
                 this.infoType.innerText = `${this.data.sort.toUpperCase()} ◆ NIVEL ${this.data.level}`;
                 if (this.data.set) this.infoSet.innerText = `${this.data.set.name}`;
 
-                this.showEquipmentStats();
-
-                if (this.data.autor) {
-                    this.statCraft.innerHTML += `
-                        Fabricado por: <span class="stat-craft">${this.data.autor}</span> <br> 
-                    `;
+                if (this.location == 'jobWindow') {
+                    this.showRecipeStats();
                 }
 
-                if (this.data.mage) {
-                    this.statCraft.innerHTML += `
-                        Modificado por: <span class="stat-craft">${this.data.autor}</span>
-                    `;
+                else {
+                    this.showEquipmentStats();
+                    if (this.data.autor) {
+                        this.statCraft.innerHTML += `
+                            Fabricado por: <span class="stat-craft">${this.data.autor}</span> <br> 
+                        `;
+                    }
+
+                    if (this.data.mage) {
+                        this.statCraft.innerHTML += `
+                            Modificado por: <span class="stat-craft">${this.data.autor}</span>
+                        `;
+                    }
                 }
-                
 
                 if (this.location == 'equipmentWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Desquipar \n CTRL: Valores teóricos`;
                 if (this.location == 'inventoryWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Equipar \n CTRL: Valores teóricos \n SHIFT: Almacenar`;
@@ -148,8 +158,19 @@ export class Tooltip {
         }
     }
 
+    showRecipeStats = () => {
+        this.statValues.innerHTML = "";
+        Object.keys(this.data.stats).forEach((key) => {
+            if (this.data.stats[key].length > 1) this.statValues.innerHTML += `<span class="stat-teoric">${this.data.stats[key][0]} a ${this.data.stats[key][1]} ${text.stat[key]}</span> <br>`;
+            else this.statValues.innerHTML += `<span class="stat-teoric">${this.data.stats[key][0]} ${text.stat[key]}</span> <br>`;
+        })
+        this.statContainer.style.padding = '0px 0px 2px 20px';
+        this.eventGuide.style.padding = '0px';
+    }
+
+
     handleControlToggle(event) {
-        if (event.key === "Control" && this.data.type === 'equipment') {
+        if (event.key === "Control" && this.data.type === 'equipment' && this.location !== 'jobWindow') {
             Tooltip.isControlActive = !Tooltip.isControlActive;
             if (this.data.type === 'equipment') {
                 this.showEquipmentStats();

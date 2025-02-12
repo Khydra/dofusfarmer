@@ -1,7 +1,3 @@
-
--> Mostrar recurso al pasar el raton por encima en Recetas
--> Mostrar objeto (valores teóricos) al pasar el raton por encima en Recetas
--> Botón MAX en Craft
 -> Actualizar stats al equipar/desequipar objetos y bonus de set
 
 ---------------------------------------------------------------------------------

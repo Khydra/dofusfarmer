@@ -2,7 +2,7 @@ import { Window } from '../../../utils/Window.js';
 import { Element } from '../../../utils/Element.js';
 import { Input } from '../../../utils/Input.js';
 import { Selector } from '../../../utils/Selector.js';
-
+import { Tooltip } from '../../../utils/Tooltip.js';
 import { sastreRecipeData } from '../../data/item/recipeData.js';
 import { resourceData } from '../../data/item/resourceData.js';
 import { expJobData } from '../../data/expData.js';
@@ -22,6 +22,7 @@ export class SastreWindow extends Window {
 	    	sort: 'todo',
 	    	level: [1, 10]
 	    }
+	    this.tooltip;
 	    this.render();
 	}
 
@@ -79,6 +80,8 @@ export class SastreWindow extends Window {
 			this.recipeSlotIngredientContainer[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-ingredient-container'}).element; 
   			this.drawIngredients(sastreRecipeData[key].recipe, this.recipeSlotIngredientContainer[i]);
 
+
+  			this.tooltip = new Tooltip(this.recipeSlotImage[i], sastreRecipeData[key].item, 'jobWindow', this);
 		    // Crear una función manejadora para este slot
 		    const clickHandler = () => {
 		     	const recipe = sastreRecipeData[Object.keys(this.recipesShown)[i]];
@@ -101,6 +104,8 @@ export class SastreWindow extends Window {
   		Object.keys(recipe).forEach((key, i) => {
   			ingredients[i] = new Element(ingredientContainer, { className: 'job-recipe-slot-ingredient', image: resourceData[key].image }).element; 
   			ingredients[i].innerHTML = `<span class="isq stroke">x${recipe[key]}</span>`;
+
+  			this.tooltip = new Tooltip(ingredients[i], resourceData[key], 'jobWindow', this);
   		})
   	}
 

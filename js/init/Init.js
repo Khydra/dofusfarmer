@@ -34,8 +34,8 @@ export class Init {
 		}
 
 		// BORRAR BORRAR BORRAR BORRAR
-		new Main(this.data.character['Khydra'], this.data.bank);
-		this.destroy();
+		//new Main(this.data.character['Khydra'], this.data.bank);
+		//this.destroy();
 	}
 
 	renderCharacter = (char, i) => {

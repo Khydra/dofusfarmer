@@ -14,6 +14,7 @@
 
 ---------------------------------------------------------------------------------
 
+-> Botón borrar PJ
 -> Efectos y sonidos
 -> Guardado de datos
 -> Parte superior derecha: Regulador de volumen

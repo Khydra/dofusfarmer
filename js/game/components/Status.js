@@ -77,7 +77,7 @@ export class Status {
 	}
 
 	renderGeneralStats = () => {
-		const label = ['pot', 'dmg', 'crt', 'strDmg', 'intDmg', 'chaDmg', 'agiDmg', 'crtDmg', 'wis', 'cur', 'pp', 'al', 'paReg', 'pmReg'];
+		const label = ['pot', 'dmg', 'crt', 'strDmg', 'intDmg', 'chaDmg', 'agiDmg', 'crtDmg', 'wis', 'cur', 'pp', 'al', 'invo', 'paReg', 'pmReg'];
 
 		this.generalContainer = new Element(this.container, { className: 'status-general-container' }).element; 
 		this.generalTitle = new Element(this.generalContainer, { className: 'status-stat-title', text: 'General' }).element; 
@@ -130,7 +130,7 @@ export class Status {
 	}
 
 	updateGeneralStats = () => {
-		const label = ['pot', 'dmg', 'crt', 'strDmg', 'intDmg', 'chaDmg', 'agiDmg', 'crtDmg', 'wis', 'pp', 'paReg', 'pmReg',  'cur', 'al'];
+		const label = ['pot', 'dmg', 'crt', 'strDmg', 'intDmg', 'chaDmg', 'agiDmg', 'crtDmg', 'wis', 'cur', 'pp', 'al', 'invo', 'paReg', 'pmReg'];
 
 		label.forEach((value) => {
 			this[`generalValue${value}`].innerText = this.player.stats[value].base + this.player.stats[value].bonus;

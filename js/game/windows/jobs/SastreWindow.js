@@ -85,6 +85,7 @@ export class SastreWindow extends Window {
 		    // Crear una función manejadora para este slot
 		    const clickHandler = () => {
 		     	const recipe = sastreRecipeData[Object.keys(this.recipesShown)[i]];
+		     	if (sastreRecipeData[key].item.level > this.component.component.player.jobs['sastre'].level) return;
 		      	if (this.component.craftWindow.isOpen) {
 		        	this.component.craftWindow.update(recipe, 'sastre');
 		      	} else {

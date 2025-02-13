@@ -308,7 +308,7 @@ export const sastreRecipeData = {
 		item: equipmentData['sombrero_del_hombre_oso'],
 		recipe: {
 			colmillo_de_jabali: 4,
-			pelos_de_draft: 1
+			pelos_de_darit: 1
 		},
 	},
 	capa_del_hombre_oso: {

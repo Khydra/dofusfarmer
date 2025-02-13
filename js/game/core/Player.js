@@ -43,8 +43,8 @@ export class Player {
 		this.stats.vit.base += 5;
 		this.exp = [0, expData[this.level]];
 		this.main.status.update();
-		if (exp != undefined) this.gainExp(exp);
 		this.main.notification.display(`Subes a nivel ${this.level}`);	
+		if (exp != undefined) this.gainExp(exp);
 	}
 
 	distributePoint = (stat) => {

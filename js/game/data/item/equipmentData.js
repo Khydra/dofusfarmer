@@ -3082,4 +3082,300 @@ export const equipmentData = {
 		sort: 'anillo',
 		set: null,
 	},
+	bio_varita: {
+		id: 10100,
+		key: 'bio_varita',
+		name: "Bio varita",
+		image: './assets/images/items/equipment/0100.webp',
+		level: 1,
+		stats: {
+			dps: [2, 6],
+			cha: [3, 4]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	hacha_kemata: {
+		id: 10101,
+		key: 'hacha_kemata',
+		name: "Hacha Kemata",
+		image: './assets/images/items/equipment/0101.webp',
+		level: 1,
+		stats: {
+			dpc: [6, 10],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	machete_de_lenador: {
+		id: 10102,
+		key: 'machete_de_lenador',
+		name: "Machete de leñador",
+		image: './assets/images/items/equipment/0102.webp',
+		level: 1,
+		stats: {
+			dps: [4, 9],
+			vit: [7, 10]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	martillo_martel: {
+		id: 10103,
+		key: 'martillo_martel',
+		name: "Martillo Martel",
+		image: './assets/images/items/equipment/0103.webp',
+		level: 1,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	talladora_de_mangos: {
+		id: 10104,
+		key: 'talladora_de_mangos',
+		name: "Talladora de mangos",
+		image: './assets/images/items/equipment/0104.webp',
+		level: 2,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	varita_de_maderucha: {
+		id: 10105,
+		key: 'varita_de_maderucha',
+		name: "Varita de maderucha",
+		image: './assets/images/items/equipment/0105.webp',
+		level: 3,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	arco_nada: {
+		id: 10106,
+		key: 'arco_nada',
+		name: "Arco nada",
+		image: './assets/images/items/equipment/0106.webp',
+		level: 5,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	hachita_ermundo: {
+		id: 10107,
+		key: 'hachita_ermundo',
+		name: "Hachita Ermundo",
+		image: './assets/images/items/equipment/0107.webp',
+		level: 5,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	martillo_de_maderucha: {
+		id: 10108,
+		key: 'martillo_de_maderucha',
+		name: "Martillo de maderucha",
+		image: './assets/images/items/equipment/0108.webp',
+		level: 6,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	mal_pico: {
+		id: 10109,
+		key: 'mal_pico',
+		name: "Mal Pico",
+		image: './assets/images/items/equipment/0109.webp',
+		level: 6,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	pala_de_maderucha: {
+		id: 10110,
+		key: 'pala_de_maderucha',
+		name: "Pala de maderucha",
+		image: './assets/images/items/equipment/0110.webp',
+		level: 6,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	espada_de_maderucha: {
+		id: 10111,
+		key: 'espada_de_maderucha',
+		name: "Espada de maderucha",
+		image: './assets/images/items/equipment/0111.webp',
+		level: 7,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	arco_de_maderucha: {
+		id: 10112,
+		key: 'arco_de_maderucha',
+		name: "Arco de maderucha",
+		image: './assets/images/items/equipment/0112.webp',
+		level: 7,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	dagas_de_maderucha: {
+		id: 10113,
+		key: 'dagas_de_maderucha',
+		name: "Dagas de maderucha",
+		image: './assets/images/items/equipment/0113.webp',
+		level: 7,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	baston_cojomudo: {
+		id: 10114,
+		key: 'baston_cojomudo',
+		name: "Bastón cojomudo",
+		image: './assets/images/items/equipment/0114.webp',
+		level: 8,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	devoradora_de_castanos: {
+		id: 10115,
+		key: 'devoradora_de_castanos',
+		name: "Devoradora de castaños",
+		image: './assets/images/items/equipment/0115.webp',
+		level: 8,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	devoradora_de_fresnos: {
+		id: 10116,
+		key: 'devoradora_de_fresnos',
+		name: "Devoradora de fresnos",
+		image: './assets/images/items/equipment/0116.webp',
+		level: 8,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	martillo_linkantrabioso: {
+		id: 10117,
+		key: 'martillo_linkantrabioso',
+		name: "Martillo Linkantrabioso",
+		image: './assets/images/items/equipment/0117.webp',
+		level: 8,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	baston_de_maderucha: {
+		id: 10118,
+		key: 'baston_de_maderucha',
+		name: "Bastón de maderucha",
+		image: './assets/images/items/equipment/0118.webp',
+		level: 9,
+		stats: {
+			dpc: [4, 6],
+			str: [4, 5],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	varita_de_fuego_fatuo: {
+		id: 10119,
+		key: 'varita_de_fuego_fatuo',
+		name: "Varita de fuego fatuo",
+		image: './assets/images/items/equipment/0119.webp',
+		level: 10,
+		stats: {
+			dps: [8, 12],
+			int: [5, 7],
+			crt: [2]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
 }

@@ -52,7 +52,7 @@ export class Main {
 		this.inventory.obtainItem(resourceData['madera_de_fresno'], 6)
 		this.inventory.obtainItem(resourceData['lana_celeste'], 4)
 		this.inventory.obtainItem(resourceData['petalo_diafano'], 412)
-		this.inventory.obtainItem(resourceData['tabla_de_fresno'], 1500)
+		this.inventory.obtainItem(resourceData['tabla_de_aglomerado'], 1500)
 		this.inventory.obtainItem(resourceData['cenizas_eternas'], 117)
 
 		this.inventory.obtainItem(generateItemStats(equipmentData['la_capa_slok']));

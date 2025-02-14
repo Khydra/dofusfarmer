@@ -3145,9 +3145,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0104.webp',
 		level: 2,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dpc: [1, 3],
+			vit: [5, 7],
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3160,9 +3159,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0105.webp',
 		level: 3,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dps: [4, 8],
+			int: [3, 5],
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3175,9 +3173,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0106.webp',
 		level: 5,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dpc: [3, 5],
+			int: [7, 10],
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3190,9 +3187,9 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0107.webp',
 		level: 5,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dpc: [6, 10],
+			vit: [5, 7],
+			str: [5, 7],
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3205,9 +3202,9 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0108.webp',
 		level: 6,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dpc: [8, 10],
+			vit: [7, 10],
+			crt: [2]
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3220,9 +3217,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0109.webp',
 		level: 6,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dps: [10, 13],
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3235,9 +3230,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0110.webp',
 		level: 6,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dpc: [9, 11],
+			cha: [7, 10],
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3250,8 +3244,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0111.webp',
 		level: 7,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
+			dpc: [8, 10],
+			str: [7, 10],
 			strDmg: [1]
 		},
 		type: 'equipment',
@@ -3265,9 +3259,9 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0112.webp',
 		level: 7,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dps: [8, 10],
+			str: [16, 20],
+			//pla 2
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3280,9 +3274,9 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0113.webp',
 		level: 7,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dpc: [3, 4],
+			agi: [7, 10],
+			agiDmg: [1]
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3295,9 +3289,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0114.webp',
 		level: 8,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dpc: [2, 4],
+			wis: [7, 10],
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3310,9 +3303,9 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0115.webp',
 		level: 8,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dpc: [6, 10],
+			agi: [7, 10],
+			agiDmg: [1]
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3325,9 +3318,9 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0116.webp',
 		level: 8,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dpc: [6, 10],
+			cha: [7, 10],
+			crt: [2]
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3340,9 +3333,10 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0117.webp',
 		level: 8,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
-			strDmg: [1]
+			dpc: [5, 7],
+			dps: [5, 7],
+			vit: [7, 10],
+			pot: [7, 10],
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3355,8 +3349,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0118.webp',
 		level: 9,
 		stats: {
-			dpc: [4, 6],
-			str: [4, 5],
+			dpc: [7, 11],
+			str: [7, 10],
 			strDmg: [1]
 		},
 		type: 'equipment',

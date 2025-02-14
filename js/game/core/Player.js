@@ -11,6 +11,7 @@ export class Player {
 		this.level = charData.level;
 		this.exp = charData.exp;
 		this.availablePoints = charData.availablePoints;
+		this.ubication = charData.ubication;
 
 		this.vit = charData.vit;
 		this.pa = charData.pa;
@@ -125,6 +126,7 @@ export class Player {
 			level: this.level,
 			exp: this.exp,
 			availablePoints: this.availablePoints,
+			ubication: this.ubication,
 			vit: this.vit,
 			pa: this.pa,
 			pm: this.pm,
@@ -138,3 +140,4 @@ export class Player {
 	}
 
 }
+

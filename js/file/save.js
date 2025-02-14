@@ -2,7 +2,7 @@ export const loadData = () => {
 	const data = window.localStorage.getItem("data");
 	if (!data) {
         let newData = {
-            character: {},
+            profile: {},
             bank: {},
             itemId: 0
         };
@@ -13,11 +13,14 @@ export const loadData = () => {
 	return JSON.parse(data); 
 }
 
-export const saveData = (character, bank) => {
+export const saveData = (character, enemy, bank) => {
     console.log('saveData');
     const data = JSON.parse(window.localStorage.getItem("data"));
 
-    data.character[character.name] = character;
+    data.profile[character.name] = {
+        character: character,
+        enemy: enemy
+    }
     data.bank = bank;
     console.log(data);
 
@@ -25,10 +28,14 @@ export const saveData = (character, bank) => {
     window.localStorage.setItem("data", JSON.stringify(data));
 }
 
-export const createData = (character) => {
+export const createData = (character, enemy) => {
     const data = JSON.parse(window.localStorage.getItem("data"));
 
-    data.character[character.name] = character;
+    data.profile[character.name] = {
+        character: character,
+        enemy: enemy
+    }
+
     window.localStorage.setItem("data", JSON.stringify(data));
 
 }

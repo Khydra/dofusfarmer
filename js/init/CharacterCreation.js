@@ -1,6 +1,8 @@
 import { Element } from '../utils/Element.js';
 import { Input } from '../utils/Input.js';
 import { classData } from '../game/data/classData.js';
+import { ubicationData } from '../game/data/world/ubicationData.js';
+import { enemyData } from '../game/data/world/enemyData.js';
 import { createData } from '../file/save.js';
 
 export class CharacterCreation {
@@ -97,6 +99,7 @@ export class CharacterCreation {
 			class: this.classSelected,
 			level: 1,
 			availablePoints: 0,
+			ubication: ubicationData['incarnam'], 
 			exp: [0, 110],
 			vit: [60, 60],
 			pa: [6, 6],
@@ -163,7 +166,7 @@ export class CharacterCreation {
 			}
 		}
 
-		createData(character);
+		createData(character, enemyData['miaucrobata']);
 		location.reload(true);
 	}
 

@@ -1,4 +1,4 @@
-
+-> Separar profil y player?
 -> Actualizar stats al equipar/desequipar objetos y bonus de set
 
 ---------------------------------------------------------------------------------

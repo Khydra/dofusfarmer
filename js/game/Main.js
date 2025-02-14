@@ -7,6 +7,7 @@ import { Battle } from './components/Battle.js';
 import { Zaap } from './components/Zaap.js';
 
 import { Player } from './core/Player.js';
+import { Enemy } from './core/Enemy.js';
 import { Inventory } from './core/Inventory.js';
 import { Equipment } from './core/Equipment.js';
 import { Bank } from './core/Bank.js';
@@ -19,8 +20,8 @@ import { generateItemStats } from './manager/itemManager.js'
 import { saveData } from '../file/save.js'
 
 export class Main {
-	constructor(charData, bankData) {
-
+	constructor(charData, enemyData, bankData) {
+		console.log(enemyData)
 		//scenes
 		this.mainContainer = new Element(document.body, { className: 'main-container' }).element;
 		this.leftContainer = new Element(this.mainContainer, { className: 'left-container' }).element;
@@ -31,13 +32,14 @@ export class Main {
 		this.player = new Player(this, charData);
 		this.inventory = new Inventory(this, charData);
 		this.equipment = new Equipment(this, charData);
+		this.enemy = new Enemy(this, enemyData);
 		this.bank = new Bank(this, bankData);
-
+		
 		//components
 		this.status = new Status(this, this.player);
 		this.menu = new Menu(this, this.player);
 		this.quest = new Quest(this, this.player);
-		this.battle = new Battle(this, this.player);
+		this.battle = new Battle(this, this.player, this.enemy);
 		this.zaap = new Zaap(this, this.player);
 
 		this.notification = new Notification();
@@ -72,10 +74,12 @@ export class Main {
 		    if (e.key === "s") {
 
 		    	let character = this.player.getData();
+		    	let enemy = this.enemy.getData();
 		    	let bank = this.bank.getData();
 
 		        saveData(
 		        	character,
+		        	enemy,
 					bank,
 		        );
 		    }

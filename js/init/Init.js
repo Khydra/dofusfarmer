@@ -20,11 +20,11 @@ export class Init {
 		this.characterClickHandlers = []; // Aseguramos que este array siempre esté inicializado
 		this.newCharacterClickHandler = null; // Inicializar el manejador para el botón de nuevo personaje
 
-		Object.keys(this.data.character).forEach((char, i) => {
-			this.renderCharacter(this.data.character[char], i);
+		Object.keys(this.data.profile).forEach((char, i) => {
+			this.renderCharacter(this.data.profile[char], i);
 		})
 		
-		if (Object.keys(this.data.character).length < 3) {
+		if (Object.keys(this.data.profile).length < 3) {
 			// Definimos el manejador para el botón de nuevo personaje
 			this.newCharacterClickHandler = () => { 
 				new CharacterCreation(this.data);
@@ -38,15 +38,15 @@ export class Init {
 		//this.destroy();
 	}
 
-	renderCharacter = (char, i) => {
+	renderCharacter = (profile, i) => {
 		this.character[i] = new Element(this.characterContainer, { className: 'init-character' }).element;
-		this.characterName[i] = new Element(this.character[i], { className: 'init-character-name', text: char.name }).element;
-		this.characterBody[i] = new Element(this.character[i], { className: 'init-character-body', image: char.body}).element;
-		this.characterLevel[i] = new Element(this.character[i], { className: 'init-character-level', text: `Nivel ${char.level}` }).element;
-		this.characterClass[i] = new Element(this.character[i], { className: 'init-character-class', text: char.class.name.toUpperCase() }).element;
+		this.characterName[i] = new Element(this.character[i], { className: 'init-character-name', text: profile.character.name }).element;
+		this.characterBody[i] = new Element(this.character[i], { className: 'init-character-body', image: profile.character.body}).element;
+		this.characterLevel[i] = new Element(this.character[i], { className: 'init-character-level', text: `Nivel ${profile.character.level}` }).element;
+		this.characterClass[i] = new Element(this.character[i], { className: 'init-character-class', text: profile.character.class.name.toUpperCase() }).element;
 
 		const clickHandler = () => { 
-	        new Main(char, this.data.bank);
+	        new Main(profile.character, profile.enemy, this.data.bank);
 	        this.destroy();
 	    };
 

@@ -25,10 +25,11 @@ export class Enemy {
 	}	
 
 	setStats(enemyData) {
+		let n = Math.floor(Math.random() * enemyData.level.length);
 
-		this.level = enemyData.level[Math.floor(Math.random() * enemyData.level.length)]
-		this.vit = [enemyData.vit[this.level], enemyData.vit[this.level]];
-		this.exp = enemyData.exp[this.level];
+		this.level = enemyData.level[n]
+		this.vit = [enemyData.vit[n], enemyData.vit[n]];
+		this.exp = enemyData.exp[n];
 	}
 
 	getData() {

@@ -20,9 +20,12 @@ export class Battle {
 		this.enemyName = new Element(this.container, { className: 'battle-enemy-name', text: `${this.enemy.name}, lv ${this.enemy.level}` }).element;
 		this.enemyHealthBarContainer = new Element(this.container, { className: 'battle-enemy-health-bar-container' }).element;
 		this.enemyHealthBar = new Element(this.enemyHealthBarContainer, { className: 'battle-enemy-health-bar' }).element;
+		this.enemyHealth = new Element(this.enemyHealthBarContainer, { className: 'battle-enemy-health' }).element;
+
+		this.update();
 	}
 
 	update = () => {
-
+		this.enemyHealth.innerText = `${this.enemy.vit[0]}/${this.enemy.vit[1]}`;
 	}
 }

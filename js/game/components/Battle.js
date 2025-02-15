@@ -8,10 +8,9 @@ export class Battle {
 		
 		this.ubication = player.ubication;
 		this.render();
-	}
+	}	
 
 	render = () => {
-		console.log(this.ubication)
 		this.container = new Element(this.main.centerContainer, { className: 'battle-container', image: this.ubication.background }).element;
 
 		this.ubicationName = new Element(this.container, { className: 'battle-ubication-name', text: this.ubication.name.toUpperCase() }).element;
@@ -28,4 +27,6 @@ export class Battle {
 	update = () => {
 		this.enemyHealth.innerText = `${this.enemy.vit[0]}/${this.enemy.vit[1]}`;
 	}
+
+
 }

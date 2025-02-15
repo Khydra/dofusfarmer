@@ -43,4 +43,10 @@ export class Enemy {
 			exp: this.exp,
 		}
 	}
+
+	getDamaged = (value) => {
+		this.vit[0] -= value;
+		if (this.vit[0] <= 0) this.defeated();
+	} 
+
 }

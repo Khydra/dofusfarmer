@@ -1,0 +1,67 @@
+.scenes-container {
+    position: relative;
+    height: 580px; 
+    background: var(--bg1); 
+    box-shadow: 0 0 5px black;
+    border-radius: 5px;
+    overflow: hidden;
+    text-shadow: 1px 1px 2px black;
+}
+
+.scenes-ubication-option-container {
+    position: absolute;
+    width: 100%;
+    height: Calc(100% - 40px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+.scenes-ubication-option-container::-webkit-scrollbar { width: 12px; }
+.scenes-ubication-option-container::-webkit-scrollbar-thumb { 
+    background: var(--bg2); 
+    box-shadow: inset 1px 0 1px black;
+}
+.scenes-ubication-option-container::-webkit-scrollbar-track { 
+    box-shadow: inset 1px 0 1px black;
+    background: #222; 
+}
+
+.scenes-container-option {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    color: var(--white);
+    box-shadow: 0 0 5px black;
+    background-position: center;
+    background-size: 120%;
+    cursor: pointer;
+    outline: 1px solid black;
+    overflow: hidden;
+    transition: color .2s, background-size 0.8s;
+}
+
+.scenes-container-option:hover {
+    color: var(--yellow);
+    background-size: 100%;
+}
+
+.scenes-container-option-tittle {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    
+    border-top: 1px solid black;
+
+    text-shadow: 1px 1px 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ 

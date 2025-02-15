@@ -46,7 +46,8 @@ export class Init {
 		this.characterClass[i] = new Element(this.character[i], { className: 'init-character-class', text: profile.character.class.name.toUpperCase() }).element;
 
 		const clickHandler = () => { 
-	        new Main(profile.character, profile.enemy, this.data.bank);
+	        //new Main(profile.character, profile.enemy, this.data.bank);
+	        new Main(profile.character, this.data.bank);
 	        this.destroy();
 	    };
 

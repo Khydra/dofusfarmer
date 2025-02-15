@@ -24,6 +24,8 @@ export class Player {
 		this.jobs = charData.jobs;
 		this.inventory = charData.inventory;
 		this.equipment = charData.equipment;
+		this.zaaps = charData.zaaps;
+		this.savedZaap = charData.savedZaap;
 	}
 
 	gainExp = (value) => {
@@ -134,8 +136,10 @@ export class Player {
 			stats: this.stats,
 			spells: this.spells,
 			jobs: this.jobs,
+			zaaps: this.zaaps,
+			savedZaap: this.savedZaap,
 			inventory: this.main.inventory.items,
-			equipment: this.main.equipment.items,
+			equipment: this.main.equipment.items, 
 		}
 	}
 

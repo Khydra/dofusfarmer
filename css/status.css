@@ -1,4 +1,5 @@
 .status-container {
+	position: relative;
     height: 880px; 
     background: var(--bg1); 
     box-shadow: 0 0 5px black;

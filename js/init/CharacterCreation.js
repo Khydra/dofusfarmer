@@ -100,6 +100,8 @@ export class CharacterCreation {
 			level: 1,
 			availablePoints: 0,
 			ubication: ubicationData['incarnam'], 
+			zaaps: ['incarnam'],
+			savedZaap: 'incarnam',
 			exp: [0, 110],
 			vit: [60, 60],
 			pa: [6, 6],

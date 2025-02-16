@@ -1,7 +1,7 @@
 export class Inventory {
-	constructor(main, charData) {
+	constructor(main, player) {
 		this.main = main;
-		this.items = charData.inventory;
+		this.items = player.inventory;
 	}
 
 	obtainItem = (item, q = 1) => {

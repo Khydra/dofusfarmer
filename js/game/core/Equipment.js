@@ -1,7 +1,7 @@
 export class Equipment {
-	constructor(main, charData) {
+	constructor(main, player) {
 		this.main = main;
-		this.items = charData.equipment;
+		this.items = player.equipment;
 	}
 
 	equipItem = (item) => {

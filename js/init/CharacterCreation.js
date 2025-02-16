@@ -1,7 +1,6 @@
 import { Element } from '../utils/Element.js';
 import { Input } from '../utils/Input.js';
 import { classData } from '../game/data/classData.js';
-import { ubicationData } from '../game/data/world/ubicationData.js';
 import { enemyData } from '../game/data/world/enemyData.js';
 import { createData } from '../file/save.js';
 
@@ -99,7 +98,7 @@ export class CharacterCreation {
 			class: this.classSelected,
 			level: 1,
 			availablePoints: 0,
-			ubication: ubicationData['incarnam'], 
+			ubication: ['incarnam', 'zaap'], 
 			zaaps: ['incarnam'],
 			savedZaap: 'incarnam',
 			exp: [0, 110],

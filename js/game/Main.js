@@ -30,18 +30,15 @@ export class Main {
 
 		//data
 		this.player = new Player(this, charData);
-		this.inventory = new Inventory(this, charData);
-		this.equipment = new Equipment(this, charData);
-		//this.enemy = new Enemy(this, enemyData);
+		this.inventory = new Inventory(this, this.player); // this.player -> charData
+		this.equipment = new Equipment(this, this.player); // this.player -> charData
 		this.bank = new Bank(this, bankData);
 		
 		//components
-		
 		this.status = new Status(this, this.player);
 		this.menu = new Menu(this, this.player);
-		this.game = new Game(this);
-		//this.battle = new Battle(this, this.player, this.enemy);
-		this.scenes = new Scenes(this);
+		this.game = new Game(this, this.player);
+		this.scenes = new Scenes(this, this.player);
 		
 		this.notification = new Notification();
 		this.test();

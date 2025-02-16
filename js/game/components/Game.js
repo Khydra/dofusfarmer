@@ -1,11 +1,11 @@
-
 import { Element } from '../../utils/Element.js';
+import { ubicationData } from '../data/world/ubicationData.js';
 
 export class Game {
-	constructor(main) {
+	constructor(main, player) {
 		this.main = main;
+		this.player = player;
 
-		this.ubication;
 		this.render();
 	}	
 
@@ -16,9 +16,8 @@ export class Game {
 	}
 
 	update = () => {
-		this.ubication = this.main.player.ubication;
-
-		this.container.style.backgroundImage = `url("${this.ubication.background}")`;
+		this.spot = ubicationData[this.player.ubication[0]].spot[this.player.ubication[1]];
+		this.container.style.backgroundImage = `url("${this.spot.image}")`;
 
 	}
 

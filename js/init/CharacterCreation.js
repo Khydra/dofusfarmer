@@ -99,7 +99,7 @@ export class CharacterCreation {
 			level: 1,
 			availablePoints: 0,
 			ubication: ['incarnam', 'zaap'], 
-			zaaps: ['incarnam'],
+			zaaps: [],
 			savedZaap: 'incarnam',
 			exp: [0, 110],
 			vit: [60, 60],

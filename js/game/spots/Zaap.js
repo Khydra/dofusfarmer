@@ -11,7 +11,22 @@ export class Zaap {
 	}
 
 	render = () => {
+		this.memorizeZaap();
+
 		this.zaapList = new Element(this.game.container, { className: 'zaap-list' }).element;
+
+		this.zaapRows = [];
+		//this.zaapSaved = [];
+		this.zaapName = [];
+		this.zaapPrice = [];
+
+		this.player.zaaps.forEach((zaap, i) => {
+			this.zaapRows[i] = new Element(this.zaapList, { className: 'zaap-row' }).element;
+			//this.zaapSaved[i] = new Element(this.zaapRows[i], { className: 'zaap-saved' }).element;
+			this.zaapName[i] = new Element(this.zaapRows[i], { className: 'zaap-name', text: zaap.toUpperCase() }).element;
+			this.zaapPrice[i] = new Element(this.zaapRows[i], { className: 'zaap-price', text: '0 Kamas' }).element;
+			this.zaapRows[i].addEventListener('click', () => this.travel(zaap))
+		})
 
 		this.buttonContainer = new Element(this.game.container, { className: 'zaap-button-container',  }).element;
 
@@ -19,11 +34,7 @@ export class Zaap {
 		this.buttonSave = new Element(this.buttonContainer, { className: 'zaap-button', text: `Guardar Zaap` }).element;
 
 		this.buttonView.addEventListener('click', () => this.viewZaapList());
-		this.update();
-	}
-
-	update = () => {
-
+		this.buttonSave.addEventListener('click', () => this.saveZaap());
 	}
 
 	viewZaapList = () => {
@@ -39,15 +50,21 @@ export class Zaap {
 	}
 
 	memorizeZaap = () => {
-
+		if (!this.player.zaaps.includes(this.player.ubication[0])) {
+			this.game.main.notification.display(`Acabas de memorizar un nuevo Zaap.`);
+			this.player.zaaps.push(this.player.ubication[0]);
+		} 
 	}
 
 	saveZaap = () => {
-
+		this.player.savedZaap = this.player.ubication[0];
+		this.game.main.notification.display(`Has guardado tu posición en ${this.player.ubication[0].toUpperCase()}`);
 	}
 
-	travel = () => {
-
+	travel = (destination) => {
+		this.player.ubication[0] = destination;
+		this.game.update();
+		this.game.main.notification.display(`Has viajado hasta ${this.player.ubication[0].toUpperCase()}`);
 	}
 
 	destroy = () => {
@@ -57,3 +74,4 @@ export class Zaap {
         if (this.buttonSave) this.buttonSave.remove();
     }
 }
+

@@ -40,5 +40,45 @@
 	outline: 1px solid black;
 	box-shadow: 0 0 5px black;
 	border-radius: 5px;
+	overflow-y: auto;
 }
 
+.zaap-row {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	background: var(--bg3);
+	outline: 1px solid black;
+	text-shadow: 1px 1px 1px black;
+	font-weight: bold;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	transition: .1s;
+}
+
+.zaap-row:nth-child(2n) {
+	background: var(--bg1);
+}
+
+.zaap-row:hover {
+	filter: brightness(1.2);
+}
+
+.zaap-name {
+	position: relative;
+	height: 100%;
+	width: 50%;
+	color: var(--white);
+}
+
+.zaap-price {
+	position: relative;
+	height: 100%;
+	width: 50%;
+	justify-content: center;
+	align-items: center;
+	color: var(--yellow);
+}

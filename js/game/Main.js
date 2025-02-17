@@ -26,6 +26,8 @@ export class Main {
 		this.centerContainer = new Element(this.mainContainer, { className: 'center-container' }).element;
 		this.rightContainer = new Element(this.mainContainer, { className: 'right-container' }).element;
 
+		this.notification = new Notification();
+		
 		//data
 		this.player = new Player(this, charData);
 		this.inventory = new Inventory(this, this.player); // this.player -> charData
@@ -38,7 +40,7 @@ export class Main {
 		this.game = new Game(this, this.player);
 		this.scenes = new Scenes(this, this.player);
 		
-		this.notification = new Notification();
+		
 		this.test();
 	}
 

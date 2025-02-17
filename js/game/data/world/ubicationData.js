@@ -54,7 +54,11 @@ export const ubicationData = {
 				key: 'moveAstrub',
 				name: 'Ir a Astrub',
 				image: './assets/images/ubication/incarnam/moveAstrub.png',
-				type: 'travel'
+				type: 'travel',
+				condition: {
+					level: 10,
+					description: `Necesitas alcancar el nivel 10 para ir a Astrub`
+				}
 			},
 		},
 		

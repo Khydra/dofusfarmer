@@ -1,6 +1,6 @@
 export class Enemy {
-	constructor(main, enemyData) {
-		this.main = main;
+	constructor(enemyData) {
+		//this.main = main;
 
 		this.name = enemyData.name;
 		this.image = enemyData.image;

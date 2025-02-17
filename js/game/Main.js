@@ -2,8 +2,6 @@ import { Element } from '../utils/Element.js';
 
 import { Status } from './components/Status.js';
 import { Menu } from './components/Menu.js';
-import { Battle } from './components/Battle.js';
-import { Zaap } from './components/Zaap.js';
 import { Game } from './components/Game.js';
 import { Scenes } from './components/Scenes.js';
 
@@ -45,7 +43,6 @@ export class Main {
 	}
 
 	test = () => {
-
 		this.inventory.obtainItem(resourceData['ortiga'], 230)
 		this.inventory.obtainItem(resourceData['ferrita'], 12)
 		this.inventory.obtainItem(resourceData['piel_de_goota'], 85)

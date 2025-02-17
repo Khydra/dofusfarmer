@@ -1,3 +1,44 @@
-.zaap-container {
- 
+.zaap-button-container {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
+
+.zaap-button {
+	position: relative;
+	height: 30px;
+	width: 220px;
+	background: var(--bg2);
+	outline: 1px solid black;
+	box-shadow: 0 0 5px black;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+	color: var(--white);
+	line-height: 30px;
+	text-shadow: 1px 1px 2px black;
+	transition: .15s;
+}
+
+.zaap-button:hover {
+	background: var(--bg3);
+	box-shadow: 0 0 10px black;
+}
+
+.zaap-list {
+	display: none;
+ 	position: absolute;
+ 	top: 25px;
+ 	left: 50%;
+ 	transform: translate(-50%);
+ 	width: 440px;
+ 	height: 200px;
+ 	background: var(--bg2);
+	outline: 1px solid black;
+	box-shadow: 0 0 5px black;
+	border-radius: 5px;
+}
+

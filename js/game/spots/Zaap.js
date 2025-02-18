@@ -64,6 +64,7 @@ export class Zaap {
 	travel = (destination) => {
 		this.player.ubication[0] = destination;
 		this.game.update();
+		this.game.main.scenes.update();
 		this.game.main.notification.display(`Has viajado hasta ${this.player.ubication[0].toUpperCase()}`);
 	}
 

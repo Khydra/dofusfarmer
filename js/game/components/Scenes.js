@@ -30,7 +30,7 @@ export class Scenes {
 	}
 
 	drawSpots = () => {
-		 this.clearSpots(); // Limpiar spots antes de redibujar
+		this.clearSpots(); // Limpiar spots antes de redibujar
 
 		this.spots = [];
 		this.spotsTittle = [];

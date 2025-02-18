@@ -4,7 +4,6 @@ export const ubicationData = {
 	incarnam: {
 		key: 'incarnam',
 		name: 'Incarnam',
-		//background: './assets/images/ubication/incarnam/background.png',
 		spot: {
 			tutorial: {
 				key: 'tutorial',
@@ -57,8 +56,9 @@ export const ubicationData = {
 				type: 'travel',
 				condition: {
 					level: 10,
-					description: `Necesitas alcancar el nivel 10 para ir a Astrub`
-				}
+					description: `Necesitas alcancar el nivel 10 para ir a Astrub.`
+				},
+				newUbication: ['astrub', 'moveIncarnam']
 			},
 		},
 		
@@ -66,23 +66,51 @@ export const ubicationData = {
 	astrub: {
 		key: 'astrub',
 		name: 'Ciudad de Astrub',
-		//background: './assets/images/background/astrub.png',
 		spot: {
-			battle: {
-				name: 'Combate',
-				image: null
+			zaap: {
+				key: 'zaap',
+				name: 'Zaap',
+				image: './assets/images/ubication/astrub/zaap.png',
+				type: 'zaap'
+			},
+			skirmish: {
+				key: 'skirmish',
+				name: 'Escaramuza',
+				image: './assets/images/ubication/astrub/skirmish.png',
+				type: 'skirmish',
+				enemies: [
+					enemyData['miaucrobata'],
+					enemyData['ronroteston'],
+					enemyData['tigrelindre']
+				],
 			},
 			gathering: {
+				key: 'gathering',
 				name: 'Recolección',
-				image: null
+				image: './assets/images/ubication/astrub/gathering.png',
+				type: 'gathering',
+				materials: [
+					null
+				],
 			},
-			dungeon: {
-				name: 'Mazmorra de Incarnam',
-				image: null
+			milicia: {
+				key: 'milicia',
+				name: 'Milícia',
+				image: './assets/images/ubication/astrub/milicia.png',
+				type: 'npc',
+			},
+			kerubim: {
+				key: 'kerubim',
+				name: 'Casa de Kerubim',
+				image: './assets/images/ubication/astrub/kerubim.png',
+				type: 'npc',
 			},
 			moveIncarnam: {
+				key: 'moveIncarnam',
 				name: 'Ir a Incarnam',
-				image: null
+				image: './assets/images/ubication/astrub/moveIncarnam.png',
+				type: 'travel',
+				newUbication: ['incarnam', 'moveAstrub']
 			},
 		},
 		enemies: [

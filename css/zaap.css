@@ -25,7 +25,7 @@
 
 .zaap-button:hover {
 	background: var(--bg3);
-	box-shadow: 0 0 10px black;
+	box-shadow: 0 0 3px black;
 }
 
 .zaap-list {

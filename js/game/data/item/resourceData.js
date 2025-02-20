@@ -5,7 +5,13 @@ export const resourceData = {
 		name: 'Hierro',
 		image: './assets/images/items/resources/00-0000.png',
 		type: 'resource',
-		sort: 'mineral' 
+		sort: 'mineral',
+		collect: {
+			time: 11,
+			amount: [4, 8],
+			exp: 5,
+			level: 1
+		}
 	},
 	// MADERA
 	madera_de_fresno: {
@@ -13,7 +19,13 @@ export const resourceData = {
 		name: 'Madera de fresno',
 		image: './assets/images/items/resources/01-0000.png',
 		type: 'resource',
-		sort: 'madera' 
+		sort: 'madera',
+		collect: {
+			time: 11,
+			amount: [4, 8],
+			exp: 5,
+			level: 1
+		}
 	},
 	madera_carcomida: {
 		key: 'madera_carcomida',
@@ -28,7 +40,13 @@ export const resourceData = {
 		name: 'Trigo',
 		image: './assets/images/items/resources/02-0000.png',
 		type: 'resource',
-		sort: 'cereal' 
+		sort: 'cereal',
+		collect: {
+			time: 11,
+			amount: [4, 8],
+			exp: 5,
+			level: 1
+		}
 	},
 	// PLANTA
 	ortiga: {
@@ -36,7 +54,13 @@ export const resourceData = {
 		name: 'Ortiga',
 		image: './assets/images/items/resources/03-0000.png',
 		type: 'resource',
-		sort: 'planta' 
+		sort: 'planta',
+		collect: {
+			time: 11,
+			amount: [4, 8],
+			exp: 5,
+			level: 1
+		}
 	},
 	lengua_de_espanterrador: {
 		key: 'lengua_de_espanterrador',

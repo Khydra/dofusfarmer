@@ -1,20 +1,20 @@
 .scenes-container {
     position: relative;
-    height: 580px; 
-    background: var(--bg1); 
-    box-shadow: 0 0 5px black;
+    height: auto; 
     border-radius: 5px;
-    overflow: hidden;
     text-shadow: 1px 1px 2px black;
+    box-shadow: 0 0 5px black;
+    overflow: hidden;
 }
 
 .scenes-ubication-spot-container {
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: Calc(100% - 40px);
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    flex-direction: column;
     overflow-y: auto;
 }
 

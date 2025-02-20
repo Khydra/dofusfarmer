@@ -1,4 +1,6 @@
 import { enemyData } from './enemyData.js';
+import { npcData } from './npcData.js';
+import { resourceData } from '../item/resourceData.js';
 
 export const ubicationData = {
 	incarnam: {
@@ -9,7 +11,7 @@ export const ubicationData = {
 				key: 'tutorial',
 				name: 'Tutorial',
 				image: './assets/images/ubication/incarnam/tutorial.png',
-				type: 'npc'
+				type: 'event'
 			},
 			zaap: {
 				key: 'zaap',
@@ -21,7 +23,11 @@ export const ubicationData = {
 				key: 'tabern',
 				name: 'Taberna de Incarnam',
 				image: './assets/images/ubication/incarnam/tabern.png',
-				type: 'npc'
+				type: 'social',
+				npc: [
+					npcData['hadaRisitas'],
+					npcData['nokenOkuto'],
+				],
 			},
 			skirmish: {
 				key: 'skirmish',
@@ -39,9 +45,12 @@ export const ubicationData = {
 				name: 'Recolección',
 				image: './assets/images/ubication/incarnam/gathering.png',
 				type: 'gathering',
-				materials: [
-					null
-				],
+				materials: {
+					madera: [resourceData['madera_de_fresno']],
+					mineral: [resourceData['hierro']],
+					cereal: [resourceData['trigo']],
+					planta: [resourceData['ortiga']],
+				},
 			},
 			dungeonChadalid: {
 				key: 'dungeonChadalid',
@@ -89,21 +98,31 @@ export const ubicationData = {
 				name: 'Recolección',
 				image: './assets/images/ubication/astrub/gathering.png',
 				type: 'gathering',
-				materials: [
-					null
-				],
+				materials: {
+					madera: [resourceData['madera_de_fresno']],
+					mineral: [resourceData['hierro']],
+					cereal: [resourceData['trigo']],
+					planta: [resourceData['ortiga']],
+				},
 			},
 			milicia: {
 				key: 'milicia',
 				name: 'Milícia',
 				image: './assets/images/ubication/astrub/milicia.png',
-				type: 'npc',
+				type: 'social',
+				npc: [
+					npcData['consejeraArchi'],
+					npcData['guardian'],
+				],
 			},
 			kerubim: {
 				key: 'kerubim',
 				name: 'Casa de Kerubim',
 				image: './assets/images/ubication/astrub/kerubim.png',
-				type: 'npc',
+				type: 'social',
+				npc: [
+					npcData['kerubimCrepin'],
+				],
 			},
 			moveIncarnam: {
 				key: 'moveIncarnam',

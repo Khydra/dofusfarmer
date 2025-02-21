@@ -33,22 +33,26 @@ export class Gathering {
 
 	buttonHandler = (resource) => {
 		this.recollectContainer.style.display = 'block';
+
+		Object.keys(this.spot.materials).forEach((key) => this.button[key].className = 'gathering-button')
+		this.button[resource].className = 'gathering-button-selected';
+
 		switch(resource) {
 			case 'madera': 
-				this.alert.innerText = 'Recolectando madera...';
-				this.job = this.player.jobs['lenador'];
+				this.alert.innerText = 'Buscando madera...';
+				this.job = 'lenador';
 				break;
 			case 'mineral': 
-				this.alert.innerText = 'Recolectando minerales...';
-				this.job = this.player.jobs['minero'];
+				this.alert.innerText = 'Buscando minerales...';
+				this.job = 'minero';
 				break;
 			case 'cereal': 
-				this.alert.innerText = 'Recolectando cereales...';
-				this.job = this.player.jobs['campesino'];
+				this.alert.innerText = 'Buscando cereales...';
+				this.job = 'campesino';
 				break;
 			case 'planta': 
-				this.alert.innerText = 'Recolectando plantas...';
-				this.job = this.player.jobs['alquimista'];
+				this.alert.innerText = 'Buscando plantas...';
+				this.job ='alquimista';
 				break;
 		}
 		this.resourceType = resource;
@@ -56,16 +60,15 @@ export class Gathering {
 	}
 
 	selectResource = () => {
-		if (this.stopwatch) this.stopwatch.destroy();
-
 		this.resourceSelected = this.spot.materials[this.resourceType][Math.floor(Math.random() * this.spot.materials[this.resourceType].length)];
 		this.recollectContainerImage.style.backgroundImage = `url("${this.resourceSelected.image}")`;
 
-		let time = this.resourceSelected.collect.time - (this.job.level * 0.05);
+		let time = this.resourceSelected.collect.time - (this.player.jobs[this.job].level * 0.05);
 		if (time < 3) time = 3;
 
 		this.timer = time;
 		this.totalTime = time;
+
 		this.collecting();
 	}
 
@@ -76,7 +79,7 @@ export class Gathering {
 			if (this.timer <= 0) this.timer = 0;
 			let percentage = ((this.totalTime - this.timer) / this.totalTime) * 100;
 			this.recollectContainerCharge.style.height = `${percentage.toFixed(1)}%`
-			this.alert.innerText = `Tiempo restante: ${this.timer.toFixed(1)}s`;
+			this.alert.innerText = `Recolectando ${this.resourceSelected.name}: ${this.timer.toFixed(1)}s`;
 			if (this.timer <= 0) {
 				clearInterval(this.interval);
 				this.collectResource();
@@ -86,16 +89,24 @@ export class Gathering {
 
 	collectResource = () => {
 		let amount = Math.floor(Math.random() * (this.resourceSelected.collect.amount[1] - this.resourceSelected.collect.amount[0] + 1)) + this.resourceSelected.collect.amount[0];
-		let bonus = Math.max(0, Math.floor((this.job.level - this.resourceSelected.collect.level) / 20));
+		let bonus = Math.max(0, Math.floor((this.player.jobs[this.job].level - this.resourceSelected.collect.level) / 20));
 		let total = amount + bonus;
 
 		this.game.main.inventory.obtainItem(this.resourceSelected, total);
-
+		this.player.gainExpJob(this.resourceSelected.collect.exp, this.job);
+		if (this.game.main.menu.inventoryWindow.isOpen) this.game.main.menu.inventoryWindow.update();
 		this.selectResource();
 	}
 
 	destroy = () => {
-	    this.button.forEach((btn, i) => {
+	    // Detener el intervalo de recolección si está activo
+	    if (this.interval) {
+	        clearInterval(this.interval);
+	        this.interval = null;  // Opcional: para limpiar la referencia del intervalo
+	    }
+
+	    // Eliminar los event listeners y los botones
+	    this.button.forEach((btn) => {
 	        btn.removeEventListener('click', () => this.buttonHandler(buttonLabel[i]));
 	        btn.remove();
 	    });
@@ -103,7 +114,7 @@ export class Gathering {
 	    if (this.buttonContainer) this.buttonContainer.remove();
 	    if (this.recollectContainer) this.recollectContainer.remove();
 	    if (this.alert) this.alert.remove();
-	    
+
 	    this.button = [];
 	    this.buttonContainer = null;
 	    this.alert = null;

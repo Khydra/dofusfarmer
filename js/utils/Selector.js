@@ -15,10 +15,16 @@ export class Selector {
     render() {
         this.selector = new Element(this.container, { className: `selector-container stroke ${this.selectorClassName}` }).element; 
 
-        this.label = new Element(this.selector, { className: 'selector-label', text: this.label }).element; 
-        this.leftArrow = new Element(this.selector, { className: 'selector-arrow', text: "◄" }).element; 
-        this.value = new Element(this.selector, { className: 'selector-value stroke', text: this.values[this.currentIndex] }).element; 
-        this.rightArrow = new Element(this.selector, { className: 'selector-arrow', text: "►" }).element; 
+        if (this.label != null) {
+            this.label = new Element(this.selector, { className: 'selector-label', text: this.label }).element; 
+            this.leftArrow = new Element(this.selector, { className: 'selector-arrow', text: "◄" }).element; 
+            this.value = new Element(this.selector, { className: 'selector-value stroke', text: this.values[this.currentIndex] }).element; 
+            this.rightArrow = new Element(this.selector, { className: 'selector-arrow', text: "►" }).element; 
+        } else {
+            this.leftArrow = new Element(this.selector, { className: 'selector-arrow-nl', text: "◄" }).element; 
+            this.value = new Element(this.selector, { className: 'selector-value-nl stroke', text: this.values[this.currentIndex] }).element; 
+            this.rightArrow = new Element(this.selector, { className: 'selector-arrow-nl', text: "►" }).element; 
+        }
 
 
         this.leftArrow.addEventListener('click', () => this.previousValue());

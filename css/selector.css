@@ -25,3 +25,19 @@
     text-align: center;
     cursor: pointer;
 }
+
+.selector-value-nl {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.selector-arrow-nl {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+}

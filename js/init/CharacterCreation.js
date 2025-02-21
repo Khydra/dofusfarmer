@@ -101,6 +101,7 @@ export class CharacterCreation {
 			ubication: ['incarnam', 'zaap'], 
 			zaaps: [],
 			savedZaap: 'incarnam',
+			toolbar: {},
 			exp: [0, 110],
 			vit: [60, 60],
 			pa: [6, 6],

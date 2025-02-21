@@ -4,6 +4,7 @@ import { Status } from './components/Status.js';
 import { Menu } from './components/Menu.js';
 import { Game } from './components/Game.js';
 import { Scenes } from './components/Scenes.js';
+import { Toolbar } from './components/Toolbar.js';
 
 import { Player } from './core/Player.js';
 import { Enemy } from './core/Enemy.js';
@@ -38,6 +39,7 @@ export class Main {
 		this.status = new Status(this, this.player);
 		this.menu = new Menu(this, this.player);
 		this.game = new Game(this, this.player);
+		this.toolbar = new Toolbar(this, this.player);
 		this.scenes = new Scenes(this, this.player);
 		
 		

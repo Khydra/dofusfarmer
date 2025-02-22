@@ -2,7 +2,7 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 25%;
+	width: 35%;
 	height: 30px;
 	text-align: center;
 	color: var(--white);
@@ -14,8 +14,8 @@
 .spells-list-level-label {
 	position: absolute;
 	top: 0px;
-	left: 25%;
-	width: 25%;
+	left: 35%;
+	width: 15%;
 	height: 30px;
 	text-align: center;
 	color: var(--white);
@@ -74,18 +74,24 @@
 	background: var(--bg2);
 }
 
+.spells-spell-container:not(:first-child) {
+	border-top: 1px solid black;
+}
+
 .spells-spell-image {
 	position: relative;
 	height: 100%;
-	width: 30%;
-	background: red;
+	width: 25%;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .spells-spell-name {
 	position: relative;
 	height: 100%;
-	width: 45%;
-
+	width: 50%;
+	font-size: 14px;
 }
 
 .spells-spell-level {

@@ -29,7 +29,7 @@ export class SpellsWindow extends Window {
 
 		Object.keys(this.spellList).forEach((key) => {
 			this.spellContainer[key] = new Element(this.listContainer, { className: 'spells-spell-container' }).element; 
-			this.spellImage[key] = new Element(this.spellContainer[key], { className: 'spells-spell-image' }).element; 
+			this.spellImage[key] = new Element(this.spellContainer[key], { className: 'spells-spell-image', image: this.spellList[key].image }).element; 
 			this.spellName[key] = new Element(this.spellContainer[key], { className: 'spells-spell-name', text: this.spellList[key].name }).element; 
 			this.spellLevel[key] = new Element(this.spellContainer[key], { className: 'spells-spell-level', text: this.spellList[key].level }).element;
 		})

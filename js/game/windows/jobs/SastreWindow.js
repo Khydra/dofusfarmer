@@ -5,7 +5,7 @@ import { Selector } from '../../../utils/Selector.js';
 import { Tooltip } from '../../../utils/Tooltip.js';
 import { sastreRecipeData } from '../../data/item/recipeData.js';
 import { resourceData } from '../../data/item/resourceData.js';
-import { expJobData } from '../../data/expData.js';
+import { expJobData } from '../../data/class/expData.js';
 
 export class SastreWindow extends Window { 
 	constructor(component) {

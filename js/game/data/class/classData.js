@@ -1,3 +1,5 @@
+import { spellSetData } from './spellData.js';
+
 export const classData = {
 	yopuka: {
 		name: 'yopuka',
@@ -11,7 +13,8 @@ export const classData = {
 				male: './assets/images/classes/yopukaBodyM.png',
 				female:'./assets/images/classes/yopukaBodyF.png',
 			}
-		}
+		},
+		spells: spellSetData['yopuka']
 	},
 	ocra: {
 		name: 'ocra',

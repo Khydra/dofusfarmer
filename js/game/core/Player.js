@@ -1,4 +1,4 @@
-import { expData, expJobData } from '../data/expData.js';
+import { expData, expJobData } from '../data/class/expData.js';
 
 export class Player {
 	constructor(main, charData) {
@@ -11,6 +11,7 @@ export class Player {
 		this.level = charData.level;
 		this.exp = charData.exp;
 		this.availablePoints = charData.availablePoints;
+		this.spellPoints = charData.spellPoints;
 		this.ubication = charData.ubication;
 
 		this.vit = charData.vit;
@@ -129,6 +130,7 @@ export class Player {
 			level: this.level,
 			exp: this.exp,
 			availablePoints: this.availablePoints,
+			spellPoints: this.spellPoints,
 			ubication: this.ubication,
 			vit: this.vit,
 			pa: this.pa,

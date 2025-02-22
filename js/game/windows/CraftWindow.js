@@ -3,7 +3,7 @@ import { Element } from '../../utils/Element.js';
 import { Input } from '../../utils/Input.js';
 import { resourceData} from '../data/item/resourceData.js';
 import { generateItemStats } from '../manager/itemManager.js'
-import { expJobData } from '../data/expData.js';
+import { expJobData } from '../data/class/expData.js';
 
 export class CraftWindow extends Window { 
 	constructor(component) {

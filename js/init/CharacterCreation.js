@@ -1,6 +1,6 @@
 import { Element } from '../utils/Element.js';
 import { Input } from '../utils/Input.js';
-import { classData } from '../game/data/classData.js';
+import { classData } from '../game/data/class/classData.js';
 import { enemyData } from '../game/data/world/enemyData.js';
 import { createData } from '../file/save.js';
 
@@ -98,6 +98,7 @@ export class CharacterCreation {
 			class: this.classSelected,
 			level: 1,
 			availablePoints: 0,
+			spellPoints: 0,
 			ubication: ['incarnam', 'zaap'], 
 			zaaps: [],
 			savedZaap: 'incarnam',
@@ -133,7 +134,7 @@ export class CharacterCreation {
 				invo: { base: 0, bonus: 0},
 			}, 
 			kamas: 0,
-			spells: {},
+			spells: this.classSelected.spells,
 			jobs: {
 				lenador: { level: 1, exp: [0, 20] },
 				minero: { level: 1, exp: [0, 20] },

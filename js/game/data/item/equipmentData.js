@@ -105,8 +105,10 @@ export const equipmentData = {
 		name: 'Bunihima',
 		image: './assets/images/items/equipment/s000-7.webp',
 		level: 1,
+		power: {
+			earth: [[14, 18]],
+		},
 		stats: {
-			dpc: [1],
 			dmg: [1]
 		},
 		type: 'equipment',
@@ -314,8 +316,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s004-1.webp',
 		level: 10,
 		stats: {
-			//agi: [5],
-			//agiDmg: [1, 2],
+			invo: [1],
+			pot: [7, 10],
 		},
 		type: 'equipment',
 		sort: 'botas',
@@ -432,8 +434,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s008-1.webp',
 		level: 10,
 		stats: {
+			vit: [6, 10],
 			strDmg: [3, 4],
-			//placaje: [2, 3],
 		},
 		type: 'equipment',
 		sort: 'cinturon',
@@ -475,7 +477,7 @@ export const equipmentData = {
 		level: 9,
 		stats: {
 			vit: [11, 15],
-			//huida: [2],
+			agiDmg: [3],
 		},
 		type: 'equipment',
 		sort: 'anillo',
@@ -488,7 +490,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s009-3.webp',
 		level: 11,
 		stats: {
-			dps: [3, 4],
+			//dps: [3, 4],
 			vit: [11, 15],
 			agi: [9, 12]
 		},
@@ -602,7 +604,7 @@ export const equipmentData = {
 		level: 8,
 		stats: {
 			pot: [7, 10],
-			//ini: [31, 50],
+			dmg: [1]
 		},
 		type: 'equipment',
 		sort: 'anillo',
@@ -630,7 +632,7 @@ export const equipmentData = {
 		level: 12,
 		stats: {
 			vit: [16, 20],
-			//ini: [31, 50],
+			dmg: [1]
 		},
 		type: 'equipment',
 		sort: 'capa',
@@ -644,7 +646,7 @@ export const equipmentData = {
 		level: 11,
 		stats: {
 			wis: [7, 10],
-			//ini: [31, 50],
+			dmg: [1]
 		},
 		type: 'equipment',
 		sort: 'cinturon',
@@ -756,7 +758,7 @@ export const equipmentData = {
 		level: 8,
 		stats: {
 			vit: [16, 20],
-			//huida: [2, 3],
+			dmg: [1]
 		},
 		type: 'equipment',
 		sort: 'amuleto',
@@ -770,7 +772,7 @@ export const equipmentData = {
 		level: 7,
 		stats: {
 			cur: [1, 3],
-			//huida: [2, 3],
+			dmg: [1]
 		},
 		type: 'equipment',
 		sort: 'anillo',
@@ -826,7 +828,7 @@ export const equipmentData = {
 		level: 9,
 		stats: {
 			crt: [2, 3],
-			//huida: [1, 2],
+			cur: [1],
 		},
 		type: 'equipment',
 		sort: 'sombrero',
@@ -1050,7 +1052,7 @@ export const equipmentData = {
 		level: 13,
 		stats: {
 			vit: [16, 20],
-			//placaje: [2],
+			reDmg: [1, 2],
 		},
 		type: 'equipment',
 		sort: 'anillo',
@@ -1064,7 +1066,7 @@ export const equipmentData = {
 		level: 11,
 		stats: {
 			vit: [16, 20],
-			//huida: [2],
+			reDmg: [1, 2],
 		},
 		type: 'equipment',
 		sort: 'anillo',
@@ -1078,7 +1080,7 @@ export const equipmentData = {
 		level: 12,
 		stats: {
 			vit: [21, 30],
-			//placaje: [2],
+			reDmg: [1, 2],
 		},
 		type: 'equipment',
 		sort: 'sombrero',
@@ -1092,7 +1094,7 @@ export const equipmentData = {
 		level: 11,
 		stats: {
 			vit: [21, 30],
-			//placaje: [2],
+			reDmg: [1, 2],
 		},
 		type: 'equipment',
 		sort: 'capa',
@@ -1106,8 +1108,8 @@ export const equipmentData = {
 		level: 15,
 		stats: {
 			invo: [1],
-			//ini
-			//-placaje
+			str: [11, 15],
+			agi: [11, 15],
 		},
 		type: 'equipment',
 		sort: 'amuleto',
@@ -1134,7 +1136,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s018-2.webp',
 		level: 15,
 		stats: {
-			dpc: [6, 10],
+			//dpc: [6, 10],
 			vit: [21, 25],
 			str: [7, 10],
 			strDmg: [2]
@@ -1151,8 +1153,8 @@ export const equipmentData = {
 		level: 14,
 		stats: {
 			vit: [21, 30],
-			pot: [9, 12]
-			//ini: [31, 50],
+			pot: [9, 12],
+			crt: [1, 2],
 		},
 		type: 'equipment',
 		sort: 'botas',
@@ -1223,8 +1225,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s019-1.webp',
 		level: 12,
 		stats: {
-			dpc: [3, 5],
-			dps: [3, 5],
+			//dpc: [3, 5],
+			//dps: [3, 5],
 			vit: [16, 20],
 			pot: [7, 10],
 		},
@@ -1285,8 +1287,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s020-1.webp',
 		level: 20,
 		stats: {
-			vit: [36, 40],
-			//ini
+			vit: [41, 50],
 		},
 		type: 'equipment',
 		sort: 'capa',
@@ -1299,8 +1300,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s020-2.webp',
 		level: 20,
 		stats: {
-			dpc: [4, 8],
-			dpc: [4, 8],
+			//dpc: [4, 8],
+			//dpc: [4, 8],
 			vit: [16, 20],
 			invo: [1],
 		},
@@ -1315,8 +1316,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s020-3.webp',
 		level: 20,
 		stats: {
-			vit: [21, 30],
-			//ini: [71, 100],
+			vit: [31, 40],
 		},
 		type: 'equipment',
 		sort: 'anillo',
@@ -1358,9 +1358,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s020-6.webp',
 		level: 20,
 		stats: {
-			str: [11, 15],
-			int: [11, 15],
-			//pods
+			str: [11, 20],
+			int: [11, 20],
 		},
 		type: 'equipment',
 		sort: 'cinturon',
@@ -1402,7 +1401,7 @@ export const equipmentData = {
 		level: 20,
 		stats: {
 			int: [16, 20],
-			//placaje
+			crt: [1]
 		},
 		type: 'equipment',
 		sort: 'capa',
@@ -1416,8 +1415,7 @@ export const equipmentData = {
 		level: 20,
 		stats: {
 			int: [7, 10],
-			crt: [4]
-			//placaje
+			crt: [5]
 		},
 		type: 'equipment',
 		sort: 'botas',
@@ -1431,8 +1429,8 @@ export const equipmentData = {
 		level: 20,
 		stats: {
 			vit: [16, 20],
-			intDmg: [2]
-			//ini
+			intDmg: [2],
+			crt: [1]
 		},
 		type: 'equipment',
 		sort: 'anillo',
@@ -1446,8 +1444,8 @@ export const equipmentData = {
 		level: 20,
 		stats: {
 			wis: [5, 7],
-			al: [1]
-			//-7% res fuego
+			al: [1],
+			res: [-3]
 		},
 		type: 'equipment',
 		sort: 'amuleto',
@@ -1475,7 +1473,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s021-6.webp',
 		level: 20,
 		stats: {
-			dpc: [8, 12],
+			//dpc: [8, 12],
 			int: [5, 7],
 			invo: [1]
 		},
@@ -1490,10 +1488,9 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s022-0.webp',
 		level: 20,
 		stats: {
+			vit: [11, 25],
 			cha: [11, 15],
 			chaDmg: [2],
-			//huida
-			//ini
 		},
 		type: 'equipment',
 		sort: 'amuleto',
@@ -1508,7 +1505,6 @@ export const equipmentData = {
 		stats: {
 			vit: [16, 20],
 			cha: [16, 20],
-			//huida
 		},
 		type: 'equipment',
 		sort: 'cinturon',
@@ -1549,7 +1545,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s022-4.webp',
 		level: 17,
 		stats: {
-			dps: [4, 5],
+			//dps: [4, 5],
 			vit: [16, 20],
 			crt: [2, 3],
 			chaDmg: [2],
@@ -1581,7 +1577,7 @@ export const equipmentData = {
 		level: 18,
 		stats: {
 			cha: [16, 20],
-			//pods
+			chaDmg: [1, 2],
 		},
 		type: 'equipment',
 		sort: 'capa',
@@ -1596,7 +1592,7 @@ export const equipmentData = {
 		stats: {
 			vit: [26, 30],
 			cha: [11, 15],
-			//huida
+			crtDmg: [2]
 		},
 		type: 'equipment',
 		sort: 'capa',
@@ -1611,7 +1607,7 @@ export const equipmentData = {
 		stats: {
 			vit: [26, 30],
 			cha: [11, 15],
-			//huida
+			crt: [1, 5]
 		},
 		type: 'equipment',
 		sort: 'sombrero',
@@ -1657,7 +1653,7 @@ export const equipmentData = {
 		stats: {
 			vit: [21, 30],
 			invo: [1],
-			//ret pa
+			res: [1],
 			crtDmg: [-20],
 		},
 		type: 'equipment',
@@ -1672,7 +1668,7 @@ export const equipmentData = {
 		level: 20,
 		stats: {
 			vit: [26, 30],
-			// huida
+			res: [1, 3]
 		},
 		type: 'equipment',
 		sort: 'sombrero',
@@ -1687,7 +1683,7 @@ export const equipmentData = {
 		stats: {
 			vit: [31, 35],
 			crt: [2],
-			// ini
+			agi: [11, 15]
 		},
 		type: 'equipment',
 		sort: 'capa',
@@ -1889,7 +1885,7 @@ export const equipmentData = {
 		level: 3,
 		stats: {
 			cha: [4, 5],
-			agi: [1], // 1 huida
+			agi: [1], 
 		},
 		type: 'equipment',
 		sort: 'botas',
@@ -1903,7 +1899,7 @@ export const equipmentData = {
 		level: 3,
 		stats: {
 			int: [7, 10],
-			agi: [2, 3] // 2 a 3 huida
+			agi: [2, 3],
 		},
 		type: 'equipment',
 		sort: 'amuleto',
@@ -1942,8 +1938,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0018.webp',
 		level: 4,
 		stats: {
-			crt: [1, 2], // 81 a 100 ini
-			agi: [3, 4] // 3 a 4 huida
+			crt: [1, 2], 
+			agi: [3, 4] 
 		},
 		type: 'equipment',
 		sort: 'sombrero',
@@ -2339,7 +2335,7 @@ export const equipmentData = {
 		level: 9,
 		stats: {
 			vit: [26, 30],
-			//ini: [41, 50],
+			crt: [2, 3],
 		},
 		type: 'equipment',
 		sort: 'sombrero',
@@ -2551,7 +2547,7 @@ export const equipmentData = {
 		level: 10,
 		stats: {
 			crt: [2],
-			agi: [2, 3], // huida
+			agi: [2, 3], 
 		},
 		type: 'equipment',
 		sort: 'cinturon',
@@ -2565,7 +2561,7 @@ export const equipmentData = {
 		level: 10,
 		stats: {
 			vit: [6, 15],
-			agi: [3, 4], //placaje
+			agi: [3, 4], 
 		},
 		type: 'equipment',
 		sort: 'botas',
@@ -2607,7 +2603,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0066.webp',
 		level: 10,
 		stats: {
-			agi: [4, 5], //huida
+			agi: [11, 15], 
 		},
 		type: 'equipment',
 		sort: 'escudo',
@@ -2648,7 +2644,7 @@ export const equipmentData = {
 		level: 11,
 		stats: {
 			vit: [11, 15], 
-			//placaje y huida
+			agi: [16, 25]
 		},
 		type: 'equipment',
 		sort: 'capa',
@@ -2663,7 +2659,7 @@ export const equipmentData = {
 		stats: {
 			vit: [11, 15], 
 			agi: [7, 10], 
-			//huida
+			str: [7, 10]
 		},
 		type: 'equipment',
 		sort: 'amuleto',
@@ -2678,7 +2674,7 @@ export const equipmentData = {
 		stats: {
 			str: [11, 15], 
 			cha: [11, 15],
-			//pla
+			res: [1, 2]
 		},
 		type: 'equipment',
 		sort: 'anillo',
@@ -2737,7 +2733,7 @@ export const equipmentData = {
 		level: 13,
 		stats: {
 			int: [7, 10], 
-			//huida
+			intDmg: [2]
 		},
 		type: 'equipment',
 		sort: 'amuleto',
@@ -2751,7 +2747,7 @@ export const equipmentData = {
 		level: 13,
 		stats: {
 			str: [7, 10], 
-			//pods
+			dmg: [1]
 		},
 		type: 'equipment',
 		sort: 'cinturon',
@@ -2779,7 +2775,7 @@ export const equipmentData = {
 		level: 14,
 		stats: {
 			vit: [21, 25], 
-			//da emp y placaje
+			pp: [10]
 		},
 		type: 'equipment',
 		sort: 'capa',
@@ -2834,8 +2830,8 @@ export const equipmentData = {
 		level: 15,
 		stats: {
 			vit: [7, 10], 
-			cha: [7, 10]
-			//huida
+			cha: [7, 10],
+			chaDmg: [2, 3]
 		},
 		type: 'equipment',
 		sort: 'anillo',
@@ -2861,7 +2857,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0084.webp',
 		level: 15,
 		stats: {
-			//ini
+			str: [11, 30]
 		},
 		type: 'equipment',
 		sort: 'escudo',
@@ -2888,7 +2884,7 @@ export const equipmentData = {
 		level: 16,
 		stats: {
 			vit: [21, 30],
-			//huida
+			int: [8]
 		},
 		type: 'equipment',
 		sort: 'capa',
@@ -2961,7 +2957,6 @@ export const equipmentData = {
 		level: 17,
 		stats: {
 			str: [16, 20],
-			// huida
 		},
 		type: 'equipment',
 		sort: 'cinturon',
@@ -3003,8 +2998,7 @@ export const equipmentData = {
 		level: 18,
 		stats: {
 			vit: [21, 25],
-			agi: [11, 15],
-			// pla
+			agi: [11, 15],	
 		},
 		type: 'equipment',
 		sort: 'capa',
@@ -3018,7 +3012,7 @@ export const equipmentData = {
 		level: 18,
 		stats: {
 			vit: [16, 20],
-			// pla y hui
+			agi: [6, 10]
 		},
 		type: 'equipment',
 		sort: 'anillo',
@@ -3089,7 +3083,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0100.webp',
 		level: 1,
 		stats: {
-			dps: [2, 6],
+			//dps: [2, 6],
 			cha: [3, 4]
 		},
 		type: 'equipment',
@@ -3103,7 +3097,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0101.webp',
 		level: 1,
 		stats: {
-			dpc: [6, 10],
+			//dpc: [6, 10],
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3116,7 +3110,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0102.webp',
 		level: 1,
 		stats: {
-			dps: [4, 9],
+			//dps: [4, 9],
 			vit: [7, 10]
 		},
 		type: 'equipment',
@@ -3130,7 +3124,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0103.webp',
 		level: 1,
 		stats: {
-			dpc: [4, 6],
+			//dpc: [4, 6],
 			str: [4, 5],
 			strDmg: [1]
 		},
@@ -3145,7 +3139,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0104.webp',
 		level: 2,
 		stats: {
-			dpc: [1, 3],
+			//dpc: [1, 3],
 			vit: [5, 7],
 		},
 		type: 'equipment',
@@ -3159,7 +3153,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0105.webp',
 		level: 3,
 		stats: {
-			dps: [4, 8],
+			//dps: [4, 8],
 			int: [3, 5],
 		},
 		type: 'equipment',
@@ -3173,7 +3167,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0106.webp',
 		level: 5,
 		stats: {
-			dpc: [3, 5],
+			//dpc: [3, 5],
 			int: [7, 10],
 		},
 		type: 'equipment',
@@ -3187,7 +3181,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0107.webp',
 		level: 5,
 		stats: {
-			dpc: [6, 10],
+			//dpc: [6, 10],
 			vit: [5, 7],
 			str: [5, 7],
 		},
@@ -3202,7 +3196,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0108.webp',
 		level: 6,
 		stats: {
-			dpc: [8, 10],
+			//dpc: [8, 10],
 			vit: [7, 10],
 			crt: [2]
 		},
@@ -3217,7 +3211,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0109.webp',
 		level: 6,
 		stats: {
-			dps: [10, 13],
+			//dps: [10, 13],
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3230,7 +3224,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0110.webp',
 		level: 6,
 		stats: {
-			dpc: [9, 11],
+			//dpc: [9, 11],
 			cha: [7, 10],
 		},
 		type: 'equipment',
@@ -3244,7 +3238,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0111.webp',
 		level: 7,
 		stats: {
-			dpc: [8, 10],
+			//dpc: [8, 10],
 			str: [7, 10],
 			strDmg: [1]
 		},
@@ -3259,7 +3253,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0112.webp',
 		level: 7,
 		stats: {
-			dps: [8, 10],
+			//dps: [8, 10],
 			str: [16, 20],
 			//pla 2
 		},
@@ -3274,7 +3268,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0113.webp',
 		level: 7,
 		stats: {
-			dpc: [3, 4],
+			//dpc: [3, 4],
 			agi: [7, 10],
 			agiDmg: [1]
 		},
@@ -3289,7 +3283,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0114.webp',
 		level: 8,
 		stats: {
-			dpc: [2, 4],
+			//dpc: [2, 4],
 			wis: [7, 10],
 		},
 		type: 'equipment',
@@ -3303,7 +3297,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0115.webp',
 		level: 8,
 		stats: {
-			dpc: [6, 10],
+			//dpc: [6, 10],
 			agi: [7, 10],
 			agiDmg: [1]
 		},
@@ -3318,7 +3312,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0116.webp',
 		level: 8,
 		stats: {
-			dpc: [6, 10],
+			//dpc: [6, 10],
 			cha: [7, 10],
 			crt: [2]
 		},
@@ -3333,8 +3327,8 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0117.webp',
 		level: 8,
 		stats: {
-			dpc: [5, 7],
-			dps: [5, 7],
+			//dpc: [5, 7],
+			//dps: [5, 7],
 			vit: [7, 10],
 			pot: [7, 10],
 		},
@@ -3349,7 +3343,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0118.webp',
 		level: 9,
 		stats: {
-			dpc: [7, 11],
+			//dpc: [7, 11],
 			str: [7, 10],
 			strDmg: [1]
 		},
@@ -3364,7 +3358,7 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/0119.webp',
 		level: 10,
 		stats: {
-			dps: [8, 12],
+			//dps: [8, 12],
 			int: [5, 7],
 			crt: [2]
 		},

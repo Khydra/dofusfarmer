@@ -9,8 +9,10 @@ export const text = {
 		int: 'Inteligencia',
 		cha: 'Suerte',
 		agi: 'Agilidad',
-		paReg: 'Subida PA',
-		pmReg: 'Subida PM',
+		speDmg: '% Daño hechizo',
+		wepDmg: '% Daño arma',
+		res: '% Resistencia',
+		reDmg: '% Reenvío',
 		pot: 'Potencia',
 		strDmg: 'Daño tierra',
 		intDmg: 'Daño fuego',
@@ -24,5 +26,11 @@ export const text = {
 		al: 'Lucidez',
 		pp: 'Prospección',
 		invo: 'Bestialidad',
+	},
+	element: {
+		earth: 'Tierra',
+		fire: 'Fuego',
+		water: 'Agua',
+		air: 'Aire',
 	}
 }

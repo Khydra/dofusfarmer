@@ -18,7 +18,6 @@ export const generateItemStats = (item, craft = false) => {
 
 	data.itemId++;
 	window.localStorage.setItem("data", JSON.stringify({ ...data, itemId: data.itemId }));
-
 	return newItem;
 }
 

@@ -117,18 +117,18 @@ input {
     color: var(--p2);
 }
 
-.strDmg {
+.earth {
     color: var(--str);
 }
 
-.intDmg {
+.fire {
     color: var(--int);
 }
 
-.chaDmg {
+.water {
     color: var(--cha);
 }
 
-.agiDmg {
+.air {
     color: var(--agi);
 }

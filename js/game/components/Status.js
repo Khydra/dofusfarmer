@@ -36,7 +36,7 @@ export class Status {
 	}
 
 	renderMainStats = () => {
-		const label = ['Vit', 'Dps', 'Dpc', 'Pa', 'Pm'];
+		const label = ['Vit', 'Pa', 'Pm'];
 
 		this.mainContainer = new Element(this.container, { className: 'status-main-container' }).element; 
 
@@ -77,7 +77,7 @@ export class Status {
 	}
 
 	renderGeneralStats = () => {
-		const label = ['pot', 'dmg', 'crt', 'strDmg', 'intDmg', 'chaDmg', 'agiDmg', 'crtDmg', 'wis', 'cur', 'pp', 'al', 'invo', 'paReg', 'pmReg'];
+		const label = ['pot', 'dmg', 'crt', 'strDmg', 'intDmg', 'chaDmg', 'agiDmg', 'crtDmg', 'wis', 'cur', 'pp', 'al', 'invo', 'speDmg', 'wepDmg', 'res', 'reDmg'];
 
 		this.generalContainer = new Element(this.container, { className: 'status-general-container' }).element; 
 		this.generalTitle = new Element(this.generalContainer, { className: 'status-stat-title', text: 'General' }).element; 
@@ -106,8 +106,6 @@ export class Status {
 
 	updateMainStats = () => {
 		this[`mainValueVit`].innerText = `${this.player.vit[0]}/${this.player.vit[0]}`;
-		this[`mainValueDps`].innerText = this.player.stats["dps"].base + this.player.stats["dps"].bonus;
-		this[`mainValueDpc`].innerText = this.player.stats["dpc"].base + this.player.stats["dpc"].bonus;
 		this[`mainValuePa`].innerText = `${this.player.pa[0]}/${this.player.pa[0]}`;
 		this[`mainValuePm`].innerText = `${this.player.pm[0]}/${this.player.pm[0]}`;
 	}
@@ -130,7 +128,7 @@ export class Status {
 	}
 
 	updateGeneralStats = () => {
-		const label = ['pot', 'dmg', 'crt', 'strDmg', 'intDmg', 'chaDmg', 'agiDmg', 'crtDmg', 'wis', 'cur', 'pp', 'al', 'invo', 'paReg', 'pmReg'];
+		const label = ['pot', 'dmg', 'crt', 'strDmg', 'intDmg', 'chaDmg', 'agiDmg', 'crtDmg', 'wis', 'cur', 'pp', 'al', 'invo', 'speDmg', 'wepDmg', 'res', 'reDmg'];
 
 		label.forEach((value) => {
 			this[`generalValue${value}`].innerText = this.player.stats[value].base + this.player.stats[value].bonus;

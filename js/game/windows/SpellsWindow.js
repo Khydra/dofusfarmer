@@ -22,7 +22,7 @@ export class SpellsWindow extends Window {
 	render = () => {
 		this.spellList = this.component.main.player.spells;
 		this.spellSelected = this.spellList[0];
-	    this.levelSelected = this.spellList[0].level;
+	    this.levelSelected = this.spellList[0].level - 1;
 
 		this.listNameLabel = new Element(this.container, { className: 'spells-list-name-label', text: 'Hechizo' }).element; 
 		this.listLevelLabel = new Element(this.container, { className: 'spells-list-level-label', text: 'Nivel' }).element;
@@ -97,26 +97,27 @@ export class SpellsWindow extends Window {
   	drawSpellInfoDamage = () => {
   		this.infoDamage.innerHTML = "<span class='spells-info-dmg-label'>Daño: </span><br>";	
   		Object.keys(this.spellSelected.damage[this.levelSelected]).forEach((key) => {
-  			this.infoDamage.innerHTML += `
-  				<span class='${key} spells-info-dmg-value'>${this.spellSelected.damage[this.levelSelected][key][0]} a 
-  				${this.spellSelected.damage[this.levelSelected][key][1]} ${text.stat[key]}</span>
-  			`
+  			this.spellSelected.damage[this.levelSelected][key].forEach((value) => {
+  				if (value[2]) this.infoDamage.innerHTML += `<span class='${key} spells-info-dmg-value'>${value[0]} a ${value[1]} Robo ${text.element[key]}</span><br>`;
+  				else this.infoDamage.innerHTML += `<span class='${key} spells-info-dmg-value'>${value[0]} a ${value[1]} Daños ${text.element[key]}</span><br>`;		
+  			})	
   		})
-  		this.infoDamage.innerHTML += `<br> <span class='neu spells-info-dmg-value'>${this.spellSelected.effectDescription[this.levelSelected]}</span>`;
+  		this.infoDamage.innerHTML += `<span class='neu spells-info-dmg-value'>${this.spellSelected.effectDescription[this.levelSelected]}</span>`;
 
   		this.infoDamageCritical.innerHTML = "<span class='spells-info-dmg-label'>Daño crítico: </span><br>";
   		Object.keys(this.spellSelected.damageCritical[this.levelSelected]).forEach((key) => {
-  			this.infoDamageCritical.innerHTML += `
-  				<span class='${key} spells-info-dmg-value'>${this.spellSelected.damageCritical[this.levelSelected][key][0]} a 
-  				${this.spellSelected.damageCritical[this.levelSelected][key][1]} ${text.stat[key]}</span>
-  			`
-  		})	
-  		this.infoDamageCritical.innerHTML += `<br> <span class='neu spells-info-dmg-value'>${this.spellSelected.effectCriticalDescription[this.levelSelected]}</span>`;
+  			this.spellSelected.damageCritical[this.levelSelected][key].forEach((value) => {
+  				if (value[2]) this.infoDamageCritical.innerHTML += `<span class='${key} spells-info-dmg-value'>${value[0]} a ${value[1]} Robo ${text.element[key]}</span><br>`;
+  				else this.infoDamageCritical.innerHTML += `<span class='${key} spells-info-dmg-value'>${value[0]} a ${value[1]} Daños ${text.element[key]}</span><br>`;		
+  			})	
+  		})
+
+  		this.infoDamageCritical.innerHTML += `<span class='neu spells-info-dmg-value'>${this.spellSelected.effectCriticalDescription[this.levelSelected]}</span>`;
   	}
 
   	selectSpell = (pos) => {
   		this.spellSelected = this.spellList[pos];
-	    this.levelSelected = this.spellList[pos].level;
+	    this.levelSelected = this.spellList[pos].level - 1;
   		this.drawSpell();
   	}
 

@@ -128,6 +128,17 @@ export class Tooltip {
 
     showEquipmentStats = () => {
         this.statValues.innerHTML = "";
+
+        if (this.data.sort == 'arma') {
+            Object.keys(this.data.power).forEach((key) => {
+                this.data.power[key].forEach((value) => {
+                    if (value[2]) this.statValues.innerHTML += `<span class='${key}'>${value[0]} a ${value[1]} Robo ${text.element[key]}</span><br>`;
+                    else this.statValues.innerHTML += `<span class='${key}'>${value[0]} a ${value[1]} Daños ${text.element[key]}</span><br>`;
+                })
+                //this.statValues.innerHTML = `<span class='${key}'><b>${this.data.power[key][i][0]} a ${this.data.power[key][i][1]} ${text.stat[key]}</b></span><br>`;
+            })
+        }
+
         if (!Tooltip.isControlActive) {
             Object.keys(this.data.stats).forEach((key) => {
                 if (this.data.stats[key] > 0) this.statValues.innerHTML += `<span class="stat-green"><b>${this.data.stats[key]}</b> ${text.stat[key]}</span> <br>`; 
@@ -160,6 +171,13 @@ export class Tooltip {
 
     showRecipeStats = () => {
         this.statValues.innerHTML = "";
+
+        if (this.data.sort == 'arma') {
+            Object.keys(this.data.power).forEach((key, i) => {
+                this.statValues.innerHTML = `<span class='${key}'><b>${this.data.power[key][i][0]} a ${this.data.power[key][i][1]} ${text.stat[key]}</b></span><br>`;
+            })
+        }
+
         Object.keys(this.data.stats).forEach((key) => {
             if (this.data.stats[key].length > 1) this.statValues.innerHTML += `<span class="stat-teoric">${this.data.stats[key][0]} a ${this.data.stats[key][1]} ${text.stat[key]}</span> <br>`;
             else this.statValues.innerHTML += `<span class="stat-teoric">${this.data.stats[key][0]} ${text.stat[key]}</span> <br>`;

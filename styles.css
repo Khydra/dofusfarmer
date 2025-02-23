@@ -25,6 +25,11 @@
     --p2: #d7d0ac;
     --p3: #6a654d;
     --p4: #463627;
+
+    --str: #a17535;
+    --int: #ff6d01;
+    --agi: #88c465;
+    --cha: #7fd0fe;
 }
 
 body {
@@ -108,3 +113,22 @@ input {
     margin-right: auto; 
 }
 
+.neu {
+    color: var(--p2);
+}
+
+.strDmg {
+    color: var(--str);
+}
+
+.intDmg {
+    color: var(--int);
+}
+
+.chaDmg {
+    color: var(--cha);
+}
+
+.agiDmg {
+    color: var(--agi);
+}

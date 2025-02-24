@@ -55,8 +55,8 @@ export class CraftWindow extends Window {
   			this.job = job;
   			this.recipe = recipe;
   			this.inputAmount.value = 1;
-  			this.itemName.innerText = this.recipe.item.name;
-  			this.itemImage.style.backgroundImage = `url("${this.recipe.item.image}")`;
+  			this.itemName.innerText = this.recipe.name;
+  			this.itemImage.style.backgroundImage = `url("${this.recipe.image}")`;
   			this.showRecipeIngredients();
   		}
   		
@@ -68,8 +68,8 @@ export class CraftWindow extends Window {
 	    this.recipe = recipe;
 	    this.job = job;
 	    this.inputAmount.value = 1;
-	    this.itemName.innerText = this.recipe.item.name;
-  		this.itemImage.style.backgroundImage = `url("${this.recipe.item.image}")`;
+	    this.itemName.innerText = this.recipe.name;
+  		this.itemImage.style.backgroundImage = `url("${this.recipe.image}")`;
   		this.showRecipeIngredients();
 	    this.update();
   	}
@@ -143,21 +143,21 @@ export class CraftWindow extends Window {
 
 
   			// crear objeto:
-	  		if (this.recipe.item.type === 'equipment') {
+	  		if (this.recipe.type === 'equipment') {
 	  			for (let i = 0; i < this.amount; i++) {
-	  				this.component.component.main.inventory.obtainItem(generateItemStats(this.recipe.item, this.component.component.main.player.name));
+	  				this.component.component.main.inventory.obtainItem(generateItemStats(this.recipe, this.component.component.main.player.name));
 	  			}		
 	  		}
 
 	  		this.component.component.inventoryWindow.update();	
 	  		this.gainExp();
-	  		this.component.component.main.notification.display(`Has fabricado x${this.amount} ${this.recipe.item.name}`);	
+	  		this.component.component.main.notification.display(`Has fabricado x${this.amount} ${this.recipe.name}`);	
   			this.close();
   		}
   	}
 
   	gainExp = () => {
-  		let exp = Math.floor(expJobData[this.recipe.item.level + 1] * (1 - (0.05 * (this.component.component.main.player.jobs[this.job].level - this.recipe.item.level))));
+  		let exp = Math.floor(expJobData[this.recipe.level + 1] * (1 - (0.05 * (this.component.component.main.player.jobs[this.job].level - this.recipe.level))));
   		if (exp <= 0) exp = 1;
   		exp *= this.amount;
   		//console.log(this.component.component.main.player.jobs[this.job])

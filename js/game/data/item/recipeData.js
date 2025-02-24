@@ -1,10 +1,53 @@
 import { equipmentData } from './equipmentData.js';
 
+export var joyeroRecipeData = {};
+export var zapateroRecipeData = {};
+export var sastreRecipeData = {};
+export var herreroRecipeData = {};
+export var fabricanteRecipeData = {};
+
+Object.values(equipmentData).forEach((item)=>{
+	switch(item.sort) {
+		case 'anillo':
+		case 'amuleto':
+			joyeroRecipeData[item.key] = item;
+			break;
+		case 'botas':
+		case 'cinturon':
+			zapateroRecipeData[item.key] = item;
+			break;
+		case 'sombrero':
+		case 'capa':
+			sastreRecipeData[item.key] = item;
+			break;
+		case 'arma':
+			herreroRecipeData[item.key] = item;
+			break;
+		case 'escudo':
+		case 'trofeo':
+			fabricanteRecipeData[item.key] = item;
+	}
+})
+
+function sortEquipmentByLevel(equipmentData) {
+    return Object.fromEntries(
+        Object.entries(equipmentData)
+            .sort(([, a], [, b]) => a.level - b.level)
+    );
+}
+
+joyeroRecipeData = sortEquipmentByLevel(joyeroRecipeData);
+zapateroRecipeData = sortEquipmentByLevel(zapateroRecipeData);
+sastreRecipeData = sortEquipmentByLevel(sastreRecipeData);
+herreroRecipeData = sortEquipmentByLevel(herreroRecipeData);
+fabricanteRecipeData = sortEquipmentByLevel(fabricanteRecipeData);
+
 export const lenadorRecipeData = {}
 export const mineroRecipeData = {}
 export const alquimistaRecipeData = {}
 export const campesinoRecipeData = {}
 
+/*
 export const joyeroRecipeData = {
 	//lvl 1-10
 	el_masano: {
@@ -628,7 +671,7 @@ export const joyeroRecipeData = {
 	},
 }
 
-export const sastreRecipeData = {
+export const aasastreRecipeData = {
 	//lvl 1-10
 	el_flud: {
 		item: equipmentData['el_flud'],
@@ -1442,9 +1485,4 @@ export const zapateroRecipeData = {
 		},
 	},
 }
-
-export const herreroRecipeData = {}
-
-export const escultorRecipeData = {}
-
-export const fabricanteRecipeData = {}
+*/

@@ -63,29 +63,29 @@ export class SastreWindow extends Window {
 
   		Object.keys(this.recipesShown).forEach((key, i) => {
 
-  			let exp = expJobData[sastreRecipeData[key].item.level + 1];
+  			let exp = expJobData[sastreRecipeData[key].level + 1];
 
-  			if (sastreRecipeData[key].item.level > this.component.component.player.jobs['sastre'].level) {
+  			if (sastreRecipeData[key].level > this.component.component.player.jobs['sastre'].level) {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot-disabled' }).element; 
   			} else {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot' }).element; 
-  				exp = Math.floor(expJobData[sastreRecipeData[key].item.level + 1] * (1 - (0.05 * (this.component.component.player.jobs['sastre'].level - sastreRecipeData[key].item.level))));
+  				exp = Math.floor(expJobData[sastreRecipeData[key].level + 1] * (1 - (0.05 * (this.component.component.player.jobs['sastre'].level - sastreRecipeData[key].level))));
   				if (exp <= 0) exp = 1;
   			}
   			
-  			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: sastreRecipeData[key].item.image }).element; 
-			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: sastreRecipeData[key].item.name}).element; 
-			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${sastreRecipeData[key].item.level}`}).element; 
+  			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: sastreRecipeData[key].image }).element; 
+			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: sastreRecipeData[key].name}).element; 
+			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${sastreRecipeData[key].level}`}).element; 
 			this.recipeSlotExp[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-exp', text: `${exp} exp`}).element; 
 			this.recipeSlotIngredientContainer[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-ingredient-container'}).element; 
   			this.drawIngredients(sastreRecipeData[key].recipe, this.recipeSlotIngredientContainer[i]);
 
 
-  			this.tooltip = new Tooltip(this.recipeSlotImage[i], sastreRecipeData[key].item, 'jobWindow', this);
+  			this.tooltip = new Tooltip(this.recipeSlotImage[i], sastreRecipeData[key], 'jobWindow', this);
 		    // Crear una función manejadora para este slot
 		    const clickHandler = () => {
 		     	const recipe = sastreRecipeData[Object.keys(this.recipesShown)[i]];
-		     	if (sastreRecipeData[key].item.level > this.component.component.player.jobs['sastre'].level) return;
+		     	if (sastreRecipeData[key].level > this.component.component.player.jobs['sastre'].level) return;
 		      	if (this.component.craftWindow.isOpen) {
 		        	this.component.craftWindow.update(recipe, 'sastre');
 		      	} else {
@@ -147,14 +147,14 @@ export class SastreWindow extends Window {
 
   	filterSort = (recipes, sort) => {
 	  	return Object.fromEntries(
-	    	Object.entries(recipes).filter(([key, value]) => value.item.sort === sort)
+	    	Object.entries(recipes).filter(([key, value]) => value.sort === sort)
 	  	);
 	};
 
 	filterByLevel = (recipes, minLevel, maxLevel) => {
 	  	return Object.fromEntries(
 	    	Object.entries(recipes).filter(([key, value]) => {
-		      	const level = value.item.level;
+		      	const level = value.level;
 		      	return level >= minLevel && level <= maxLevel;
 	    	})
 	  	);

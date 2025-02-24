@@ -10,7 +10,6 @@ import { JoyeroWindow } from './jobs/JoyeroWindow.js';
 import { SastreWindow } from './jobs/SastreWindow.js';
 import { ZapateroWindow } from './jobs/ZapateroWindow.js';
 import { HerreroWindow } from './jobs/HerreroWindow.js';
-import { EscultorWindow } from './jobs/EscultorWindow.js';
 import { FabricanteWindow } from './jobs/FabricanteWindow.js';
 import { ForjamagoWindow } from './jobs/ForjamagoWindow.js';
 
@@ -36,7 +35,6 @@ export class JobsWindow extends Window {
 	    this.sastreWindow = new SastreWindow(this);
 	    this.zapateroWindow = new ZapateroWindow(this);
 	    this.herreroWindow = new HerreroWindow(this);
-	    this.escultorWindow = new EscultorWindow(this);
 	    this.fabricanteWindow = new FabricanteWindow(this);
 
 	    //this.forjamagoWindow = new ForjamagoWindow(this);
@@ -107,9 +105,6 @@ export class JobsWindow extends Window {
             	break;
             case 'herrero':
             	(!this.herreroWindow.isOpen) ? this.herreroWindow.open() : this.herreroWindow.close();
-                break;
-            case 'escultor':
-				(!this.escultorWindow.isOpen) ? this.escultorWindow.open() : this.escultorWindow.close();
                 break;
             case 'fabricante':
 				(!this.fabricanteWindow.isOpen) ? this.fabricanteWindow.open() : this.fabricanteWindow.close();

@@ -3522,4 +3522,459 @@ export const equipmentData = {
 		sort: 'arma',
 		set: null,
 	},
+	dagas_de_hierrucho: {
+		id: 10126,
+		key: 'dagas_de_hierrucho',
+		name: "Dagas de hierrucho",
+		image: './assets/images/items/equipment/0126.webp',
+		level: 13,
+		power: {
+			earth: [[5, 8]],
+		},
+		stats: {
+			str: [7, 10],
+			crt: [2],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	la_cola: {
+		id: 10127,
+		key: 'la_cola',
+		name: "La Cola",
+		image: './assets/images/items/equipment/0127.webp',
+		level: 13,
+		power: {
+			earth: [[1, 25]],
+		},
+		stats: {
+			vit: [21, 25],
+			agi: [7, 10],
+			agiDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	arco_holico: {
+		id: 10128,
+		key: 'arco_holico',
+		name: "Arco Hólico",
+		image: './assets/images/items/equipment/0128.webp',
+		level: 13,
+		power: {
+			water: [[12, 14]],
+		},
+		stats: {
+			vit: [16, 20],
+			cha: [11, 15]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	martillo_de_paliza: {
+		id: 10129,
+		key: 'martillo_de_paliza',
+		name: "Martillo de paliza",
+		image: './assets/images/items/equipment/0129.webp',
+		level: 15,
+		power: {
+			str: [[14, 18]],
+		},
+		stats: {
+			vit: [16, 20],
+			int: [7, 10],
+			pot: [5, 7]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	pala_de_los_campos: {
+		id: 10130,
+		key: 'pala_de_los_campos',
+		name: "Pala de los Campos",
+		image: './assets/images/items/equipment/0130.webp',
+		level: 15,
+		power: {
+			fire: [[5, 9]],
+		},
+		stats: {
+			vit: [21, 25],
+			int: [11, 15]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	hacha_alterfilo: {
+		id: 10131,
+		key: 'hacha_alterfilo',
+		name: "Haca Al-Terófilo",
+		image: './assets/images/items/equipment/0131.webp',
+		level: 15,
+		power: {
+			earth: [[3, 7]],
+		},
+		stats: {
+			str: [21, 25],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	maza_clavito: {
+		id: 10132,
+		key: 'maza_clavito',
+		name: "Maza Clavito",
+		image: './assets/images/items/equipment/0132.webp',
+		level: 15,
+		power: {
+			fire: [[12, 16]],
+		},
+		stats: {
+			strDmg: [2],
+			intDmg: [2],
+			chaDmg: [2],
+			agiDmg: [2],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	baston_espiritual: {
+		id: 10133,
+		key: 'baston_espiritual',
+		name: "Bastón Espiritual",
+		image: './assets/images/items/equipment/0133.webp',
+		level: 16,
+		power: {
+			fire: [[7, 11]],
+		},
+		stats: {
+			vit: [16, 20],
+			int: [11, 15],
+			crt: [1],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	cerberus: {
+		id: 10134,
+		key: 'cerberus',
+		name: "Cerberus",
+		image: './assets/images/items/equipment/0134.webp',
+		level: 16,
+		power: {
+			earth: [[16, 20]],
+		},
+		stats: {
+			agi: [16, 20],
+			crt: [1, 2]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	hoja_de_gobletrotter: {
+		id: 10135,
+		key: 'hoja_de_gobletrotter',
+		name: "Hoja de gobletrotter",
+		image: './assets/images/items/equipment/0135.webp',
+		level: 16,
+		power: {
+			earth: [[16, 20]],
+		},
+		stats: {
+			str: [16, 20],
+			crt: [1, 2]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	espada_dha: {
+		id: 10136,
+		key: 'espada_dha',
+		name: "Espada Dha",
+		image: './assets/images/items/equipment/0136.webp',
+		level: 17,
+		power: {
+			earth: [[6, 10]],
+		},
+		stats: {
+			vit: [16, 20],
+			str: [7, 10],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	dagas_de_croclage: {
+		id: 10137,
+		key: 'dagas_de_croclage',
+		name: "Dagas de Croclage",
+		image: './assets/images/items/equipment/0137.webp',
+		level: 17,
+		power: {
+			air: [[2, 5]],
+		},
+		stats: {
+			vit: [21, 25],
+			agi: [16, 20],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	pala_de_crapullo: {
+		id: 10138,
+		key: 'pala_de_crapullo',
+		name: "Pala de Crapullo",
+		image: './assets/images/items/equipment/0138.webp',
+		level: 17,
+		power: {
+			water: [[6, 10]],
+		},
+		stats: {
+			vit: [21, 30],
+			cha: [9, 12]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	cortadora_de_tejo: {
+		id: 10139,
+		key: 'cortadora_de_tejo',
+		name: "Cortadora de Tejo",
+		image: './assets/images/items/equipment/0139.webp',
+		level: 17,
+		power: {
+			fire: [[11, 15]],
+		},
+		stats: {
+			int: [21, 30],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	espada_sagrada: {
+		id: 10140,
+		key: 'espada_sagrada',
+		name: "Espada sagrada",
+		image: './assets/images/items/equipment/0140.webp',
+		level: 17,
+		power: {
+			earth: [[14, 18]],
+		},
+		stats: {
+			vit: [26, 30],
+			crt: [3]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	korta_kotas: {
+		id: 10141,
+		key: 'korta_kotas',
+		name: "Korta-Kotas",
+		image: './assets/images/items/equipment/0141.webp',
+		level: 18,
+		power: {
+			air: [[11, 15]],
+		},
+		stats: {
+			agi: [16, 25],
+			crt: [2],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	martillo_picador: {
+		id: 10142,
+		key: 'martillo_picador',
+		name: "Martillo picador",
+		image: './assets/images/items/equipment/0142.webp',
+		level: 18,
+		power: {
+			earth: [[6, 10]],
+		},
+		stats: {
+			str: [16, 25],
+			crt: [2]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	martillo_de_marfil: {
+		id: 10143,
+		key: 'martillo_de_marfil',
+		name: "Martillo de marfil",
+		image: './assets/images/items/equipment/0143.webp',
+		level: 19,
+		power: {
+			fire: [[10, 14]],
+		},
+		stats: {
+			vit: [21, 30],
+			intDmg: [2],
+			crt: [2, 3],
+			crtDmg: [2],
+			res: [2]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	pala_de_raspadura: {
+		id: 10144,
+		key: 'pala_de_raspadura',
+		name: "Pala de raspadura",
+		image: './assets/images/items/equipment/0144.webp',
+		level: 19,
+		power: {
+			earth: [[11, 15]],
+		},
+		stats: {
+			vit: [11, 15],
+			cha: [11, 15],
+			agi: [11, 15],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	arco_desconcertante: {
+		id: 10145,
+		key: 'arco_desconcertante',
+		name: "Arco desconcertante",
+		image: './assets/images/items/equipment/0145.webp',
+		level: 19,
+		power: {
+			water: [[5, 7]],
+		},
+		stats: {
+			vit: [16, 20],
+			cha: [11, 15],
+			wis: [4, 5],
+			pp: [2, 3],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	barba_gris: {
+		id: 10146,
+		key: 'barba_gris',
+		name: "Barba Gris",
+		image: './assets/images/items/equipment/0146.webp',
+		level: 20,
+		power: {
+			earth: [[16, 20]],
+		},
+		stats: {
+			vit: [16, 25],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	varita_de_liriel: {
+		id: 10147,
+		key: 'varita_de_liriel',
+		name: "Varita de Liriel",
+		image: './assets/images/items/equipment/0147.webp',
+		level: 20,
+		power: {
+			air: [[16, 20]],
+		},
+		stats: {
+			agi: [11, 15],
+			crt: [2, 3],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	arco_de_bwork_arquero: {
+		id: 10148,
+		key: 'arco_de_bwork_arquero',
+		name: "Arco de bwork arquero",
+		image: './assets/images/items/equipment/0148.webp',
+		level: 20,
+		power: {
+			earth: [[8, 12]],
+		},
+		stats: {
+			str: [16, 20],
+			strDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	baston_torron: {
+		id: 10149,
+		key: 'baston_torron',
+		name: "Bastón Torrón",
+		image: './assets/images/items/equipment/0149.webp',
+		level: 20,
+		power: {
+			fire: [[12, 16]],
+		},
+		stats: {
+			vit: [21, 25],
+			int: [16, 20],
+			intDmg: [2],
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	ergot_mina: {
+		id: 10150,
+		key: 'ergot_mina',
+		name: "Ergot Mina",
+		image: './assets/images/items/equipment/0150.webp',
+		level: 20,
+		power: {
+			earth: [[6, 8, true]],
+		},
+		stats: {
+			vit: [6, 10],
+			cha: [16, 20],
+			crt: [2]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	espada_del_caballero_de_hielo: {
+		id: 10151,
+		key: 'espada_del_caballero_de_hielo',
+		name: "Espada del Caballero de Hielo",
+		image: './assets/images/items/equipment/0151.webp',
+		level: 20,
+		power: {
+			fire: [[11, 15, true]],
+		},
+		stats: {
+			vit: [16, 20],
+			int: [11, 15],
+			cur: [5]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+
 }

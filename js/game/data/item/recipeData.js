@@ -1,5 +1,633 @@
 import { equipmentData } from './equipmentData.js';
 
+export const lenadorRecipeData = {}
+export const mineroRecipeData = {}
+export const alquimistaRecipeData = {}
+export const campesinoRecipeData = {}
+
+export const joyeroRecipeData = {
+	//lvl 1-10
+	el_masano: {
+		item: equipmentData['el_masano'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	el_smesmo: {
+		item: equipmentData['el_smesmo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_del_audaz: {
+		item: equipmentData['anillo_del_audaz'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	koyar_clavito: {
+		item: equipmentData['koyar_clavito'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	pequeno_anillo_del_afortunado: {
+		item: equipmentData['pequeno_anillo_del_afortunado'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	pequeno_anillo_magico: {
+		item: equipmentData['pequeno_anillo_magico'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_rexiko: {
+		item: equipmentData['anillo_rexiko'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_forcesco: {
+		item: equipmentData['anillo_forcesco'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_agilesco: {
+		item: equipmentData['anillo_agilesco'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_vitalesco: {
+		item: equipmentData['anillo_vitalesco'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	colgante_del_buho_enclenque: {
+		item: equipmentData['colgante_del_buho_enclenque'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	camafeoso: {
+		item: equipmentData['camafeoso'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_aventurero: {
+		item: equipmentData['anillo_de_aventurero'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_aventurero: {
+		item: equipmentData['amuleto_de_aventurero'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	la_lagrima_de_jalato: {
+		item: equipmentData['la_lagrima_de_jalato'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	ganti_real: {
+		item: equipmentData['ganti_real'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_pio_rosa: {
+		item: equipmentData['anillo_de_pio_rosa'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_sram: {
+		item: equipmentData['amuleto_de_sram'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_pio_verde: {
+		item: equipmentData['amuleto_de_pio_verde'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	animamuleto: {
+		item: equipmentData['animamuleto'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_milubo: {
+		item: equipmentData['amuleto_de_milubo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_satisfaccion: {
+		item: equipmentData['anillo_de_satisfaccion'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_pio_violeta: {
+		item: equipmentData['anillo_de_pio_violeta'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_del_buho: {
+		item: equipmentData['amuleto_del_buho'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_del_oso: {
+		item: equipmentData['amuleto_del_oso'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_pio_rosa: {
+		item: equipmentData['amuleto_de_pio_rosa'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_sabiduria: {
+		item: equipmentData['anillo_de_sabiduria'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_del_arco_iris: {
+		item: equipmentData['amuleto_del_arco_iris'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_suerte: {
+		item: equipmentData['anillo_de_suerte'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	araknoton: {
+		item: equipmentData['araknoton'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_kroketa: {
+		item: equipmentData['amuleto_de_kroketa'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_agilidad: {
+		item: equipmentData['anillo_de_agilidad'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_pio_azul: {
+		item: equipmentData['anillo_de_pio_azul'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_pio_violeta: {
+		item: equipmentData['amuleto_de_pio_violeta'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+
+	anillo_fortalecedor: {
+		item: equipmentData['anillo_fortalecedor'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_nomen_tengu: {
+		item: equipmentData['anillo_nomen_tengu'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_geisha: {
+		item: equipmentData['anillo_de_geisha'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_kuakua_negro: {
+		item: equipmentData['anillo_de_kuakua_negro'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_pio_rojo: {
+		item: equipmentData['anillo_de_pio_rojo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_tetrista: {
+		item: equipmentData['anillo_tetrista'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_tetrista: {
+		item: equipmentData['amuleto_tetrista'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuletong: {
+		item: equipmentData['amuletong'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_pio_azul: {
+		item: equipmentData['amuleto_de_pio_azul'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	collar_de_khan_karkasa: {
+		item: equipmentData['collar_de_khan_karkasa'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	pamuleto: {
+		item: equipmentData['pamuleto'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_peazo_beyota: {
+		item: equipmentData['amuleto_de_peazo_beyota'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_del_invasor_del_espacio: {
+		item: equipmentData['anillo_del_invasor_del_espacio'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_kuakua_amarillo: {
+		item: equipmentData['anillo_de_kuakua_amarillo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_lolita: {
+		item: equipmentData['anillo_de_lolita'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_sincha: {
+		item: equipmentData['amuleto_sincha'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_ninja_blanco: {
+		item: equipmentData['amuleto_de_ninja_blanco'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_ninja_negro: {
+		item: equipmentData['amuleto_de_ninja_negro'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	collar_de_lilota: {
+		item: equipmentData['collar_de_lilota'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+
+	//lvl 11-20
+	amuleto_de_pio_rojo: {
+		item: equipmentData['amuleto_de_pio_rojo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_las_rocosas: {
+		item: equipmentData['anillo_de_las_rocosas'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	jabun_suave: {
+		item: equipmentData['jabun_suave'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_pio_amarillo: {
+		item: equipmentData['anillo_de_pio_amarillo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	alianza_de_champi_champ: {
+		item: equipmentData['alianza_de_champi_champ'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+
+	anillo_de_valor: {
+		item: equipmentData['anillo_de_valor'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_pio_amarillo: {
+		item: equipmentData['amuleto_de_pio_amarillo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	el_destino_dorado: {
+		item: equipmentData['el_destino_dorado'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	mitones_apolillados_de_campesino: {
+		item: equipmentData['mitones_apolillados_de_campesino'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_pio_verde: {
+		item: equipmentData['anillo_de_pio_verde'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	brazalete_de_chadalid: {
+		item: equipmentData['brazalete_de_chadalid'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_blada: {
+		item: equipmentData['amuleto_blada'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+
+	anillo_de_champi_champ: {
+		item: equipmentData['anillo_de_champi_champ'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	la_cadena_nhoro_kebriya: {
+		item: equipmentData['la_cadena_nhoro_kebriya'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+
+	anillo_mental: {
+		item: equipmentData['anillo_mental'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+
+	herida_de_sacrogrito: {
+		item: equipmentData['herida_de_sacrogrito'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	el_anillador: {
+		item: equipmentData['el_anillador'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	la_lucecita: {
+		item: equipmentData['la_lucecita'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_campestre: {
+		item: equipmentData['anillo_campestre'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_los_campos: {
+		item: equipmentData['amuleto_de_los_campos'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+
+	amuleto_de_bandido: {
+		item: equipmentData['amuleto_de_bandido'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_hortilla: {
+		item: equipmentData['amuleto_hortilla'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	el_etirujo: {
+		item: equipmentData['el_etirujo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_bandido: {
+		item: equipmentData['anillo_de_bandido'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_vizna: {
+		item: equipmentData['anillo_vizna'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+
+	anillo_novato: {
+		item: equipmentData['anillo_novato'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_chafer: {
+		item: equipmentData['amuleto_de_chafer'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+
+	amuleto_campesino: {
+		item: equipmentData['amuleto_campesino'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_de_boz_layt_yer: {
+		item: equipmentData['anillo_de_boz_layt_yer'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_de_jalato: {
+		item: equipmentData['amuleto_de_jalato'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	suerte_de_zurcarak: {
+		item: equipmentData['suerte_de_zurcarak'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	anillo_ralladuro: {
+		item: equipmentData['anillo_ralladuro'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	amuleto_del_hombre_oso: {
+		item: equipmentData['amuleto_del_hombre_oso'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	alianza_del_hombre_oso: {
+		item: equipmentData['alianza_del_hombre_oso'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+}
+
 export const sastreRecipeData = {
 	//lvl 1-10
 	el_flud: {
@@ -355,3 +983,468 @@ export const sastreRecipeData = {
 	},
 }
 
+export const zapateroRecipeData = {
+	//lvl 1-10
+	las_okupas: {
+		item: equipmentData['las_okupas'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	kamaturon: {
+		item: equipmentData['kamaturon'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	kamancletas: {
+		item: equipmentData['kamancletas'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_de_fuerza: {
+		item: equipmentData['botas_de_fuerza'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_suerte: {
+		item: equipmentData['cinturon_de_suerte'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	la_spamita: {
+		item: equipmentData['la_spamita'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	fecarak: {
+		item: equipmentData['fecarak'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	sandalias_tofuescas: {
+		item: equipmentData['sandalias_tofuescas'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_del_gato_con_gotas: {
+		item: equipmentData['botas_del_gato_con_gotas'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_de_jalato: {
+		item: equipmentData['botas_de_jalato'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	einekenoso: {
+		item: equipmentData['einekenoso'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_de_suerte: {
+		item: equipmentData['botas_de_suerte'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	sandalias_de_inteligencia: {
+		item: equipmentData['sandalias_de_inteligencia'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_agilescas: {
+		item: equipmentData['botas_agilescas'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_aventurero: {
+		item: equipmentData['cinturon_de_aventurero'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_de_kluh: {
+		item: equipmentData['botas_de_kluh'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_de_aventurero: {
+		item: equipmentData['botas_de_aventurero'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},	
+	cinturon_de_cangwejo: {
+		item: equipmentData['cinturon_de_cangwejo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_forcesco: {
+		item: equipmentData['cinturon_forcesco'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_agilesco: {
+		item: equipmentData['cinturon_agilesco'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_pio_rojo: {
+		item: equipmentData['cinturon_de_pio_rojo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	sandalias_de_pio_violeta: {
+		item: equipmentData['sandalias_de_pio_violeta'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_de_nexus: {
+		item: equipmentData['botas_de_nexus'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_pio_amarillo: {
+		item: equipmentData['cinturon_de_pio_amarillo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	sandalias_de_pio_azul: {
+		item: equipmentData['sandalias_de_pio_azul'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_pio_verde: {
+		item: equipmentData['cinturon_de_pio_verde'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	sandalias_de_pio_rojo: {
+		item: equipmentData['sandalias_de_pio_rojo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_vitalesco: {
+		item: equipmentData['cinturon_vitalesco'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	calzoncillo_de_capitan_chafer: {
+		item: equipmentData['calzoncillo_de_capitan_chafer'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_pio_rosa: {
+		item: equipmentData['cinturon_de_pio_rosa'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	sandalias_de_pio_amarillo: {
+		item: equipmentData['sandalias_de_pio_amarillo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	pacbotas: {
+		item: equipmentData['pacbotas'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_del_invasor_del_espacio: {
+		item: equipmentData['cinturon_del_invasor_del_espacio'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturong: {
+		item: equipmentData['cinturong'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_de_dragun_rosa: {
+		item: equipmentData['botas_de_dragun_rosa'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	delantal_de_criada: {
+		item: equipmentData['delantal_de_criada'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_samurai: {
+		item: equipmentData['cinturon_de_samurai'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_de_peazo_beyota: {
+		item: equipmentData['botas_de_peazo_beyota'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},	
+	botas_aladas: {
+		item: equipmentData['botas_aladas'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	calzoncillo_de_khan_karkasa: {
+		item: equipmentData['calzoncillo_de_khan_karkasa'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_no: {
+		item: equipmentData['botas_no'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_bragado: {
+		item: equipmentData['cinturon_bragado'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_kawaii: {
+		item: equipmentData['cinturon_kawaii'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	makinturon: {
+		item: equipmentData['makinturon'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	//lvl 11-20
+	araknocinto: {
+		item: equipmentData['araknocinto'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_pio_violeta: {
+		item: equipmentData['cinturon_de_pio_violeta'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	sandalias_de_pio_verde: {
+		item: equipmentData['sandalias_de_pio_verde'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	poderosas_botas_de_klim: {
+		item: equipmentData['poderosas_botas_de_klim'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_de_satisfaccion: {
+		item: equipmentData['botas_de_satisfaccion'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_pio_azul: {
+		item: equipmentData['cinturon_de_pio_azul'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	sandalias_de_pio_rosa: {
+		item: equipmentData['sandalias_de_pio_rosa'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_florido: {
+		item: equipmentData['cinturon_florido'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_bolsillo: {
+		item: equipmentData['cinturon_de_bolsillo'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_campestres: {
+		item: equipmentData['botas_campestres'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_bandido: {
+		item: equipmentData['cinturon_de_bandido'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_de_potencia: {
+		item: equipmentData['botas_de_potencia'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_seguridad: {
+		item: equipmentData['cinturon_de_seguridad'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_campesinas: {
+		item: equipmentData['botas_campesinas'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_del_hombre_oso: {
+		item: equipmentData['cinturon_del_hombre_oso'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_del_hombre_oso: {
+		item: equipmentData['botas_del_hombre_oso'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_jalato: {
+		item: equipmentData['cinturon_de_jalato'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	jalabotas: {
+		item: equipmentData['jalabotas'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cintobermuda_de_campesino: {
+		item: equipmentData['cintobermuda_de_campesino'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	cinturon_de_karnaval: {
+		item: equipmentData['cinturon_de_karnaval'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+	botas_de_karnaval: {
+		item: equipmentData['botas_de_karnaval'],
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+	},
+}
+
+export const herreroRecipeData = {}
+
+export const escultorRecipeData = {}
+
+export const fabricanteRecipeData = {}

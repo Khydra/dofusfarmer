@@ -811,8 +811,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'capa',
 		recipe: {
-			pluma_de_pio_violeta: 3
-			baba_de_jalato: 3, 
+			pluma_de_pio_violeta: 3,
+			baba_de_jalato: 3
 		},
 		set: setData['set_de_pio_violeta'],
 	},
@@ -973,8 +973,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-			pluma_de_pio_rosa: 3
-			petalo_diafano: 3,
+			pluma_de_pio_rosa: 3,
+			petalo_diafano: 3
 		},
 		set: setData['set_de_pio_rosa'],
 	},
@@ -991,8 +991,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-			pluma_de_pio_rosa: 3
-			reliquia_de_incarnam: 3,
+			pluma_de_pio_rosa: 3,
+			reliquia_de_incarnam: 3
 		},
 		set: setData['set_de_pio_rosa'],
 	},
@@ -1009,8 +1009,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-			pluma_de_pio_rosa: 3
-			baba_de_jalato: 3,
+			pluma_de_pio_rosa: 3,
+			baba_de_jalato: 3
 		},
 		set: setData['set_de_pio_rosa'],
 	},
@@ -1027,8 +1027,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'capa',
 		recipe: {
-			pluma_de_pio_rosa: 3
-			cenizas_eternas: 3, 
+			pluma_de_pio_rosa: 3,
+			cenizas_eternas: 3
 		},
 		set: setData['set_de_pio_rosa'],
 	},
@@ -1045,8 +1045,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-			pluma_de_pio_rosa: 3
-			hueso_de_chafer: 3,
+			pluma_de_pio_rosa: 3,
+			hueso_de_chafer: 3
 		},
 		set: setData['set_de_pio_rosa'],
 	},
@@ -1081,8 +1081,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-			pluma_de_pio_verde: 3
-			petalo_diafano: 3,
+			pluma_de_pio_verde: 3,
+			petalo_diafano: 3
 		},
 		set: setData['set_de_pio_verde'],
 	},
@@ -1099,8 +1099,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-			pluma_de_pio_verde: 3
-			cenizas_eternas: 3,
+			pluma_de_pio_verde: 3,
+			cenizas_eternas: 3
 		},
 		set: setData['set_de_pio_verde'],
 	},
@@ -1117,8 +1117,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-			pluma_de_pio_verde: 3
-			cola_de_miauflan: 3,
+			pluma_de_pio_verde: 3,
+			cola_de_miauflan: 3
 		},
 		set: setData['set_de_pio_verde'],
 	},
@@ -1153,7 +1153,7 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-			pluma_de_pio_verde: 3
+			pluma_de_pio_verde: 3,
 			reliquia_de_incarnam: 3,
 		},
 		set: setData['set_de_pio_verde'],
@@ -1189,7 +1189,7 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-			pluma_de_pio_amarillo: 3
+			pluma_de_pio_amarillo: 3,
 			baba_de_jalato: 3,
 		},
 		set: setData['set_de_pio_amarillo'],
@@ -1207,7 +1207,7 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-			pluma_de_pio_amarillo: 3
+			pluma_de_pio_amarillo: 3,
 			hueso_de_chafer: 3,
 		},
 		set: setData['set_de_pio_amarillo'],
@@ -1225,7 +1225,7 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-			pluma_de_pio_amarillo: 3
+			pluma_de_pio_amarillo: 3,
 			petalo_diafano: 3,
 		},
 		set: setData['set_de_pio_amarillo'],
@@ -1261,7 +1261,7 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-			pluma_de_pio_amarillo: 3
+			pluma_de_pio_amarillo: 3,
 			cenizas_eternas: 3,
 		},
 		set: setData['set_de_pio_amarillo'],
@@ -1279,7 +1279,7 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'sombrero',
 		recipe: {
-			pluma_de_pio_amarillo: 3
+			pluma_de_pio_amarillo: 3,
 			reliquia_de_incarnam: 3,
 		},
 		set: setData['set_de_pio_amarillo'],
@@ -1351,7 +1351,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			espina_de_champi_champ: 3,
+			baba_de_jalato: 3
 		},
 		set: setData['set_de_champi_champ'],
 	},
@@ -1368,7 +1369,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			espina_de_champi_champ: 3,
+			petalo_diafano: 3
 		},
 		set: setData['set_de_champi_champ'],
 	},
@@ -1422,7 +1424,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			petalo_de_girasol_salvaje: 4,
+			alogdon_ancestral: 1
 		},
 		set: setData['set_campestre'],
 	},
@@ -1439,7 +1442,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			petalo_de_rosa_demoniaca: 4,
+			mantillo: 1
 		},
 		set: setData['set_campestre'],
 	},
@@ -1460,7 +1464,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			semilla_de_girasol: 1,
+			hoja_de_girasol_salvaje: 1
 		},
 		set: setData['set_campestre'],
 	},
@@ -1478,7 +1483,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			petalo_de_rosa_oscura: 4,
+			hierba_loca: 1
 		},
 		set: setData['set_campestre'],
 	},
@@ -1511,7 +1517,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			flor_del_diente_de_leon_diabolico: 4,
+			hoja_de_rosa_oscura: 1
 		},
 		set: setData['set_campestre'],
 	},
@@ -1550,7 +1557,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			semilla_de_girasol: 1,
+			concentrado_de_matorral: 1
 		},
 		set: setData['set_de_bandido'],
 	},
@@ -1570,7 +1578,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			petalo_de_girasol_salvaje: 3,
+			ferrita: 2
 		},
 		set: setData['set_de_bandido'],
 	},
@@ -1591,7 +1600,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			piel_de_larva_amarilla: 4,
+			piel_de_arakna_enferma: 1
 		},
 		set: setData['set_de_bandido'],
 	},
@@ -1608,7 +1618,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			piel_de_larva_verde: 4,
+			fluido_glacial: 1,
 		},
 		set: setData['set_de_bandido'],
 	},
@@ -1664,7 +1675,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			lana_de_jalatin_negro: 4,
+			lana_de_jefe_de_guerra_jalato: 1
 		},
 		set: setData['set_de_jalato'],
 	},
@@ -1680,7 +1692,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			cuerno_de_jalatin: 4,
+			lana_de_jalatin_negro: 1
 		},
 		set: setData['set_de_jalato'],
 	},
@@ -1697,7 +1710,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			lana_de_jalato: 4,
+			cuerno_de_jalatin: 1
 		},
 		set: setData['set_de_jalato'],
 	},
@@ -1715,7 +1729,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			lana_de_jalato: 4,
+			sangre_de_jalato: 1
 		},
 		set: setData['set_de_jalato'],
 	},
@@ -1732,7 +1747,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			lana_de_jefe_de_guerra_jalato: 4,
+			lana_de_jalatin_negro: 1
 		},
 		set: setData['set_de_jalato'],
 	},
@@ -1749,7 +1765,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'escudo',
 		recipe: {
-
+			lana_de_jalato: 5,
+			lana_de_jalatin_negro: 5
 		},
 		set: setData['set_de_jalato'],
 	},
@@ -1766,7 +1783,7 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'sombrero',
 		recipe: {
-				colmillo_de_jabali: 4,
+			colmillo_de_jabali: 4,
 			pelos_de_darit: 1
 		},
 		set: setData['set_del_hombre_oso'],
@@ -1802,7 +1819,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			pincho_de_prespic: 4,
+			cabellera_de_minilubo: 1
 		},
 		set: setData['set_del_hombre_oso'],
 	},
@@ -1820,7 +1838,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			pincho_de_prespic: 4,
+			pelos_de_darit: 1
 		},
 		set: setData['set_del_hombre_oso'],
 	},
@@ -1838,7 +1857,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			colmillo_de_jabali: 4,
+			cabellera_de_minilubo: 1
 		},
 		set: setData['set_del_hombre_oso'],
 	},
@@ -1856,7 +1876,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			avellana: 4,
+			tejido_de_ardilloxido: 1
 		},
 		set: setData['set_del_hombre_oso'],
 	},
@@ -1876,7 +1897,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			avellana: 4,
+			tejido_de_jabali: 1
 		},
 		set: setData['set_del_hombre_oso'],
 	},
@@ -1894,7 +1916,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			petalo_de_girasol_salvaje: 4,
+			petalo_magico_de_girasol_hambriento: 1
 		},
 		set: setData['set_de_campesino'],
 	},
@@ -1911,7 +1934,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			petalo_de_rosa_demoniaca: 4,
+			petalo_magico_de_girasol_hambriento: 1
 		},
 		set: setData['set_de_campesino'],
 	},
@@ -1946,7 +1970,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			flor_del_diente_de_leon_diabolico: 4,
+			petalo_magico_de_girasol_hambriento: 1
 		},
 		set: setData['set_de_campesino'],
 	},
@@ -1967,7 +1992,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			flor_del_diente_de_leon_diabolico: 5,
+			petalo_magico_de_girasol_hambriento: 1
 		},
 		set: setData['set_de_campesino'],
 	},
@@ -1985,7 +2011,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			alogdon_ancestral: 3,
+			petalo_magico_de_girasol_hambriento: 1
 		},
 		set: setData['set_de_campesino'],
 	},
@@ -2057,7 +2084,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'escudo',
 		recipe: {
-
+			craneo_de_chadalid: 5,
+			reliquia_de_incarnam: 1
 		},
 		set: setData['set_invisible'],
 	},
@@ -2078,7 +2106,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			piel_de_larva_naranja: 3,
+			piel_de_larva_verde: 3
 		},
 		set: setData['set_karnavalesco'],
 	},
@@ -2097,7 +2126,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			piel_de_larva_azul: 3,
+			piel_de_larva_amarilla: 3
 		},
 		set: setData['set_karnavalesco'],
 	},
@@ -2152,7 +2182,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			fuego_interno: 3,
+			reliquia_de_incarnam: 3
 		},
 		set: null,
 	},
@@ -2168,7 +2199,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			hueso_de_chafer: 2,
+			petalo_diafano: 1
 		},
 		set: null,
 	},
@@ -2184,7 +2216,10 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			trigo: 1,
+			madera_de_fresno: 1,
+			hierro: 1,
+			ortiga: 1,
 		},
 		set: null,
 	},
@@ -2217,7 +2252,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			petalo_diafano: 3,
+			cola_de_miauflan: 3
 		},
 		set: null,
 	},
@@ -2233,7 +2269,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			ortiga: 3,
+			fuego_interno: 3
 		},
 		set: null,
 	},
@@ -2249,7 +2286,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			cenizas_eternas: 3,
+			cola_de_miauflan: 3
 		},
 		set: null,
 	},
@@ -2265,7 +2303,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			madera_de_fresno: 3,
+			fuego_interno: 3
 		},
 		set: null,
 	},
@@ -2281,7 +2320,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			pluma_quimerica: 3,
+			piel_de_goota: 3
 		},
 		set: null,
 	},
@@ -2301,7 +2341,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			polvo_temporal: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -2317,7 +2358,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			cola_de_miauflan: 3,
+			piel_de_goota: 3
 		},
 		set: null,
 	},
@@ -2333,7 +2375,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			cenizas_eternas: 3,
+			piel_de_goota: 3
 		},
 		set: null,
 	},
@@ -2349,7 +2392,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			madera_de_fresno: 3,
+			cola_de_miauflan: 3
 		},
 		set: null,
 	},
@@ -2365,7 +2409,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			pluma_quimerica: 3,
+			petalo_diafano: 3
 		},
 		set: null,
 	},
@@ -2382,7 +2427,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			ortiga: 3,
+			cola_de_miauflan: 3
 		},
 		set: null,
 	},
@@ -2399,7 +2445,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			polvo_temporal: 3,
+			petalo_diafano: 3
 		},
 		set: null,
 	},
@@ -2467,7 +2514,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			lana_celeste: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -2483,7 +2531,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			madera_de_fresno: 3,
+			baba_de_jalato: 3
 		},
 		set: null,
 	},
@@ -2499,7 +2548,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			pluma_quimerica: 3,
+			cola_de_miauflan: 3
 		},
 		set: null,
 	},
@@ -2515,7 +2565,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			baba_de_jalato: 3,
+			fuego_interno: 3
 		},
 		set: null,
 	},
@@ -2531,7 +2582,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			lana_celeste: 3,
+			cola_de_miauflan: 3
 		},
 		set: null,
 	},
@@ -2547,7 +2599,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'escudo',
 		recipe: {
-
+			petalo_diafano: 2,
+			tabla_de_aglomerado: 1
 		},
 		set: null,
 	},
@@ -2563,7 +2616,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			baba_de_jalato: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -2580,7 +2634,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			cenizas_eternas: 3,
+			pluma_quimerica: 3
 		},
 		set: null,
 	},
@@ -2596,11 +2651,11 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			cenizas_eternas: 3,
+			lana_celeste: 3
 		},
 		set: null,
 	},
-
 	amuleto_de_sram: {
 		id: 10028,
 		key: 'amuleto_de_sram',
@@ -2614,7 +2669,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			polvo_temporal: 3,
+			volva_de_amenita: 3
 		},
 		set: null,
 	},
@@ -2631,7 +2687,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			piel_de_goota: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -2648,7 +2705,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			pluma_quimerica: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -2683,7 +2741,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			piel_de_goota: 3,
+			hueso_de_chafer: 2
 		},
 		set: null,
 	},
@@ -2700,7 +2759,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			madera_de_fresno: 3,
+			cenizas_eternas: 3
 		},
 		set: null,
 	},
@@ -2717,7 +2777,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			baba_de_jalato: 3,
+			lana_celeste: 3
 		},
 		set: null,
 	},
@@ -2733,7 +2794,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			baba_de_jalato: 3,
+			reliquia_de_incarnam: 3
 		},
 		set: null,
 	},
@@ -2749,7 +2811,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			cenizas_eternas: 3,
+			reliquia_de_incarnam: 3
 		},
 		set: null,
 	},
@@ -2769,7 +2832,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			ortiga: 3,
+			pluma_quimerica: 3
 		},
 		set: null,
 	},
@@ -2786,7 +2850,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			madera_de_fresno: 3,
+			reliquia_de_incarnam: 3
 		},
 		set: null,
 	},
@@ -2803,7 +2868,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			pluma_quimerica: 3,
+			reliquia_de_incarnam: 3
 		},
 		set: null,
 	},
@@ -2819,7 +2885,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			volva_de_amenita: 3,
+			reliquia_de_incarnam: 3
 		},
 		set: null,
 	},
@@ -2836,7 +2903,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			volva_de_amenita: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -2853,7 +2921,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			hueso_de_chafer: 3,
+			lana_celeste: 3
 		},
 		set: null,
 	},
@@ -2870,7 +2939,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			ortiga: 3,
+			reliquia_de_incarnam: 3
 		},
 		set: null,
 	},
@@ -2886,7 +2956,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			hueso_de_chafer: 3,
+			piel_de_goota: 3
 		},
 		set: null,
 	},
@@ -2902,7 +2973,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			madera_de_fresno: 3,
+			volva_de_amenita: 3
 		},
 		set: null,
 	},
@@ -2918,7 +2990,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			reliquia_de_incarnam: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -2952,7 +3025,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			madera_de_fresno: 3,
+			hueso_de_chafer: 3
 		},
 		set: null,
 	},
@@ -2969,7 +3043,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			baba_de_jalato: 3,
+			petalo_diafano: 3
 		},
 		set: null,
 	},
@@ -2986,7 +3061,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			lana_celeste: 3,
+			pluma_quimerica: 3
 		},
 		set: null,
 	},
@@ -3003,7 +3079,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			lana_celeste: 3,
+			volva_de_amenita: 3
 		},
 		set: null,
 	},
@@ -3021,7 +3098,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			cenizas_eternas: 3,
+			petalo_diafano: 3
 		},
 		set: null,
 	},
@@ -3038,7 +3116,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			ortiga: 3,
+			lana_celeste: 3
 		},
 		set: null,
 	},
@@ -3055,7 +3134,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			pluma_quimerica: 4,
+			ortiga: 3
 		},
 		set: null,
 	},
@@ -3072,7 +3152,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			ortiga: 4,
+			pluma_quimerica: 3
 		},
 		set: null,
 	},
@@ -3089,7 +3170,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			hueso_de_chafer: 3,
+			pluma_quimerica: 3
 		},
 		set: null,
 	},
@@ -3107,7 +3189,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			madera_de_fresno: 4,
+			fuego_interno: 3
 		},
 		set: null,
 	},
@@ -3124,7 +3207,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			fuego_interno: 3,
+			reliquia_de_incarnam: 3
 		},
 		set: null,
 	},
@@ -3141,7 +3225,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			fuego_interno: 4,
+			madera_de_fresno: 3
 		},
 		set: null,
 	},
@@ -3159,7 +3244,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			cola_de_miauflan: 3,
+			piel_de_goota: 3
 		},
 		set: null,
 	},
@@ -3176,7 +3262,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			madera_de_fresno: 3,
+			lana_celeste: 3
 		},
 		set: null,
 	},
@@ -3193,7 +3280,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			hueso_de_chafer: 3,
+			reliquia_de_incarnam: 3
 		},
 		set: null,
 	},
@@ -3210,7 +3298,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			volva_de_amenita: 4,
+			madera_de_fresno: 3
 		},
 		set: null,
 	},
@@ -3227,7 +3316,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			ortiga: 4,
+			baba_de_jalato: 3
 		},
 		set: null,
 	},
@@ -3245,7 +3335,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			piel_de_goota: 4,
+			fuego_interno: 3
 		},
 		set: null,
 	},
@@ -3261,7 +3352,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'escudo',
 		recipe: {
-
+			pelos_de_arakna_enferma: 4,
+			tabla_de_aglomerado: 3
 		},
 		set: null,
 	},

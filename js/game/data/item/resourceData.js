@@ -76,6 +76,13 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'planta' 
 	},
+	hoja_de_rosa_oscura: {
+		key: 'hoja_de_rosa_oscura',
+		name: 'Hoja de rosa oscura',
+		image: './assets/images/items/resources/03-0003.png',
+		type: 'resource',
+		sort: 'planta' 
+	},
 	// ALEACION
 	ferrita: {
 		key: 'ferrita',
@@ -247,6 +254,13 @@ export const resourceData = {
 		key: 'hoja_de_girasol_salvaje',
 		name: 'Hoja de girasol salvaje',
 		image: './assets/images/items/resources/09-0004.png',
+		type: 'resource',
+		sort: 'flor' 
+	},
+	petalo_de_rosa_oscura: {
+		key: 'petalo_de_rosa_oscura',
+		name: 'Pétalo de rosa oscura',
+		image: './assets/images/items/resources/09-0005.png',
 		type: 'resource',
 		sort: 'flor' 
 	},

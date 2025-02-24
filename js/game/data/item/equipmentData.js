@@ -3370,7 +3370,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			pluma_de_pio_amarillo: 3,
+			sangre_de_jalato: 1
 		},
 		set: null,
 	},
@@ -3386,7 +3387,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			pluma_de_pio_amarillo: 3,
+			tabla_de_aglomerado: 2
 		},
 		set: null,
 	},
@@ -3422,7 +3424,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			espina_de_champi_champ: 3,
+			ferrita: 2
 		},
 		set: null,
 	},
@@ -3440,7 +3443,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			piel_de_larva_verde: 3,
+			ojo_de_arakmutada: 3
 		},
 		set: null,
 	},
@@ -3458,7 +3462,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			pluma_de_pio_amarillo: 3,
+			ferrita: 2
 		},
 		set: null,
 	},
@@ -3474,7 +3479,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			semilla_de_adormidera: 3,
+			piel_de_larva_amarilla: 3
 		},
 		set: null,
 	},
@@ -3494,7 +3500,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			pluma_de_pio_rojo: 3,
+			tabla_de_aglomerado: 2
 		},
 		set: null,
 	},
@@ -3511,7 +3518,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			pico_de_tofu: 3,
+			tabla_de_aglomerado: 2
 		},
 		set: null,
 	},
@@ -3528,7 +3536,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			ala_de_moskito: 3,
+			intestino_de_araknausea: 2
 		},
 		set: null,
 	},
@@ -3598,7 +3607,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			ojo_de_arakmutada: 3,
+			toalla_de_playa: 3
 		},
 		set: null,
 	},
@@ -3615,7 +3625,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			ala_de_moskito: 3,
+			caracola_marina: 3
 		},
 		set: null,
 	},
@@ -3633,7 +3644,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			piel_de_larva_verde: 3,
+			concentrado_de_matorral: 1
 		},
 		set: null,
 	},
@@ -3649,7 +3661,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			pelos_de_arakna_enferma: 3,
+			bronceador: 3
 		},
 		set: null,
 	},
@@ -3665,7 +3678,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'escudo',
 		recipe: {
-
+			crin_de_miserata_strubiense: 2,
+			tabla_de_aglomerado: 1
 		},
 		set: null,
 	},
@@ -3681,7 +3695,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'escudo',
 		recipe: {
-
+			esporma_de_champi_champ: 4,
+			tabla_de_aglomerado: 1
 		},
 		set: null,
 	},
@@ -3717,7 +3732,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'botas',
 		recipe: {
-
+			lengua_de_espanterrador: 3,
+			pata_de_arakna_magica: 1
 		},
 		set: null,
 	},
@@ -3735,7 +3751,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			piel_de_larva_naranja: 3,
+			caracola_marina: 3
 		},
 		set: null,
 	},
@@ -3753,7 +3770,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			caracola_marina: 3,
+			esporma_de_champi_champ: 1
 		},
 		set: null,
 	},
@@ -3787,7 +3805,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'cinturon',
 		recipe: {
-
+			intestino_de_araknausea: 3,
+			piel_de_larva_amarilla: 3
 		},
 		set: null,
 	},
@@ -3822,7 +3841,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			bronceador: 3,
+			concentrado_de_matorral: 1
 		},
 		set: null,
 	},
@@ -3839,7 +3859,7 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'capa',
 		recipe: {
-				colmillos_de_ratas: 3,
+			colmillos_de_ratas: 3,
 			alogdon_ancestral: 1
 		},
 		set: null,
@@ -3857,7 +3877,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			flor_del_diente_de_leon_diabolico: 3,
+			pluma_de_pio_violeta: 3
 		},
 		set: null,
 	},
@@ -3875,7 +3896,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'amuleto',
 		recipe: {
-
+			hueso_de_chafer: 10,
+			concentrado_de_matorral: 1
 		},
 		set: null,
 	},
@@ -3911,7 +3933,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			petalo_de_rosa_demoniaca: 3,
+			hierba_loca: 1
 		},
 		set: null,
 	},
@@ -3928,7 +3951,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-
+			pluma_de_pio_violeta: 3,
+			pluma_de_pio_amarillo: 3
 		},
 		set: null,
 	},
@@ -3947,7 +3971,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			lana_celeste: 3,
+			petalo_diafano: 3
 		},
 		set: null,
 	},
@@ -3966,7 +3991,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			madera_de_fresno: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -3985,7 +4011,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			lana_celeste: 5,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -4005,7 +4032,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			madera_de_fresno: 3,
+			petalo_diafano: 3
 		},
 		set: null,
 	},
@@ -4023,9 +4051,10 @@ export const equipmentData = {
 		},
 		type: 'equipment',
 		sort: 'arma',
-		recipe: {
-
-		},
+		recipe: {	
+			petalo_diafano: 3,
+			hierro: 1
+		},	
 		set: null,
 	},
 	varita_de_maderucha: {
@@ -4043,7 +4072,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			cola_de_miauflan: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -4062,7 +4092,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			baba_de_jalato: 3,
+			ortiga: 3
 		},
 		set: null,
 	},
@@ -4082,7 +4113,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			cenizas_eternas: 3,
+			ferrita: 1
 		},
 		set: null,
 	},
@@ -4102,7 +4134,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			hueso_de_chafer: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -4121,7 +4154,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			madera_de_fresno: 10,
+			hierro: 5
 		},
 		set: null,
 	},
@@ -4140,7 +4174,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			madera_de_fresno: 3,
+			piel_de_goota: 3
 		},
 		set: null,
 	},
@@ -4160,7 +4195,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			madera_de_fresno: 3,
+			pluma_quimerica: 3
 		},
 		set: null,
 	},
@@ -4180,7 +4216,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			ortiga: 3,
+			piel_de_goota: 3
 		},
 		set: null,
 	},
@@ -4200,7 +4237,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			cola_de_miauflan: 3,
+			reliquia_de_incarnam: 3
 		},
 		set: null,
 	},
@@ -4219,7 +4257,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			cenizas_eternas: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -4239,7 +4278,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			aceite_de_sesamo: 1,
+			tabla_de_aglomerado: 1
 		},
 		set: null,
 	},
@@ -4259,7 +4299,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			hueso_de_chafer: 5,
+			piel_de_goota: 5
 		},
 		set: null,
 	},
@@ -4280,7 +4321,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			ferrita: 2,
+			tabla_de_aglomerado: 2
 		},
 		set: null,
 	},
@@ -4300,7 +4342,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			cenizas_eternas: 3,
+			hierro: 1
 		},
 		set: null,
 	},
@@ -4320,7 +4363,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			fuego_interno: 3,
+			volva_de_amenita: 3
 		},
 		set: null,
 	},
@@ -4340,7 +4384,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			espina_de_champi_champ: 3,
+			pluma_de_pio_azul: 3
 		},
 		set: null,
 	},
@@ -4360,7 +4405,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			ojo_de_arakmutada: 3,
+			piel_de_larva_amarilla: 3
 		},
 		set: null,
 	},
@@ -4380,7 +4426,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			pluma_de_pio_rosa: 3,
+			baba_de_rosa_demoniaca: 1
 		},
 		set: null,
 	},
@@ -4401,7 +4448,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			pelos_de_arakna_enferma: 3,
+			sangre_de_jalato: 1
 		},
 		set: null,
 	},
@@ -4421,7 +4469,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			reliquia_de_incarnam: 5,
+			ferrita: 1
 		},
 		set: null,
 	},
@@ -4441,7 +4490,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			pelos_de_arakna_enferma: 3,
+			madera_carcomida: 1
 		},
 		set: null,
 	},
@@ -4462,7 +4512,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			pluma_de_pio_rosa: 3,
+			baba_de_rosa_demoniaca: 1
 		},
 		set: null,
 	},
@@ -4483,7 +4534,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			petalo_de_girasol_salvaje: 3,
+			escama_pegajosa: 1
 		},
 		set: null,
 	},
@@ -4503,7 +4555,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			piel_de_larva_amarilla: 3,
+			baba_de_rosa_demoniaca: 1
 		},
 		set: null,
 	},
@@ -4524,7 +4577,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			pluma_de_pio_verde: 3,
+			cejas_de_mosquito: 1
 		},
 		set: null,
 	},
@@ -4544,7 +4598,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			lengua_de_espanterrador: 3,
+			tabla_de_aglomerado: 2
 		},
 		set: null,
 	},
@@ -4563,7 +4618,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			semilla_de_girasol: 5,
+			ferrita: 2
 		},
 		set: null,
 	},
@@ -4585,7 +4641,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			bronceador: 3,
+			ferrita: 2
 		},
 		set: null,
 	},
@@ -4606,7 +4663,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			pata_de_arakna: 3,
+			pluma_de_pio_amarillo: 3
 		},
 		set: null,
 	},
@@ -4626,7 +4684,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			flor_del_diente_de_leon_diabolico: 3,
+			pluma_de_pio_rosa: 3
 		},
 		set: null,
 	},
@@ -4646,7 +4705,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			lengua_de_espanterrador: 4,
+			piel_de_larva_naranja: 3
 		},
 		set: null,
 	},
@@ -4666,7 +4726,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			pico_de_tofu: 3,
+			pata_de_arakna_magica: 1
 		},
 		set: null,
 	},
@@ -4686,7 +4747,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			caracola_marina: 3,
+			aluminita: 1
 		},
 		set: null,
 	},
@@ -4706,7 +4768,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			pico_de_tofu: 3,
+			pluma_de_pio_rosa: 3
 		},
 		set: null,
 	},
@@ -4725,7 +4788,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			pincho_de_prespic: 4,
+			concentrado_de_matorral: 1
 		},
 		set: null,
 	},
@@ -4745,7 +4809,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			hilo_de_seda: 1,
+			aluminita: 1
 		},
 		set: null,
 	},
@@ -4765,7 +4830,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			petalo_de_girasol_salvaje: 3,
+			pluma_de_pio_verde: 3
 		},
 		set: null,
 	},
@@ -4785,7 +4851,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			intestino_de_araknausea: 3,
+			concentrado_de_matorral: 1
 		},
 		set: null,
 	},
@@ -4808,7 +4875,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			pluma_de_pio_rojo: 3,
+			baba_de_rosa_demoniaca: 1
 		},
 		set: null,
 	},
@@ -4829,7 +4897,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			aletas_de_competicion: 3,
+			pata_de_arakna_magica: 1
 		},
 		set: null,
 	},
@@ -4851,7 +4920,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			lengua_de_espanterrador: 3,
+			bronceador: 3
 		},
 		set: null,
 	},
@@ -4870,7 +4940,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			ala_de_moskito: 3,
+			piel_pachucha: 1
 		},
 		set: null,
 	},
@@ -4890,7 +4961,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			aletas_de_competicion: 3,
+			concentrado_de_matorral: 2
 		},
 		set: null,
 	},
@@ -4910,7 +4982,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			piel_de_larva_verde: 3,
+			aletas_de_competicion: 3
 		},
 		set: null,
 	},
@@ -4931,7 +5004,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			espina_de_champi_champ: 3,
+			ojo_de_arakmutada: 3
 		},
 		set: null,
 	},
@@ -4952,7 +5026,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			petalo_de_girasol_salvaje: 3,
+			aluminita: 2
 		},
 		set: null,
 	},
@@ -4973,7 +5048,8 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'arma',
 		recipe: {
-
+			ala_de_moskito: 3,
+			concentrado_de_matorral: 2
 		},
 		set: null,
 	},

@@ -8,7 +8,7 @@ export const resourceData = {
 		sort: 'mineral',
 		collect: {
 			time: 11,
-			amount: [4, 8],
+			amount: [2, 5],
 			exp: 6,
 			level: 1
 		}
@@ -22,7 +22,7 @@ export const resourceData = {
 		sort: 'madera',
 		collect: {
 			time: 11,
-			amount: [4, 8],
+			amount: [3, 7],
 			exp: 6,
 			level: 1
 		}
@@ -57,7 +57,7 @@ export const resourceData = {
 		sort: 'planta',
 		collect: {
 			time: 11,
-			amount: [4, 8],
+			amount: [2, 5],
 			exp: 6,
 			level: 1
 		}

@@ -63,29 +63,29 @@ export class ZapateroWindow extends Window {
 
   		Object.keys(this.recipesShown).forEach((key, i) => {
 
-  			let exp = expJobData[zapateroRecipeData[key].item.level + 1];
+  			let exp = expJobData[zapateroRecipeData[key].level + 1];
 
-  			if (zapateroRecipeData[key].item.level > this.component.component.player.jobs['zapatero'].level) {
+  			if (zapateroRecipeData[key].level > this.component.component.player.jobs['zapatero'].level) {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot-disabled' }).element; 
   			} else {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot' }).element; 
-  				exp = Math.floor(expJobData[zapateroRecipeData[key].item.level + 1] * (1 - (0.05 * (this.component.component.player.jobs['zapatero'].level - zapateroRecipeData[key].item.level))));
+  				exp = Math.floor(expJobData[zapateroRecipeData[key].level + 1] * (1 - (0.05 * (this.component.component.player.jobs['zapatero'].level - zapateroRecipeData[key].level))));
   				if (exp <= 0) exp = 1;
   			}
   			
-  			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: zapateroRecipeData[key].item.image }).element; 
-			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: zapateroRecipeData[key].item.name}).element; 
-			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${zapateroRecipeData[key].item.level}`}).element; 
+  			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: zapateroRecipeData[key].image }).element; 
+			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: zapateroRecipeData[key].name}).element; 
+			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${zapateroRecipeData[key].level}`}).element; 
 			this.recipeSlotExp[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-exp', text: `${exp} exp`}).element; 
 			this.recipeSlotIngredientContainer[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-ingredient-container'}).element; 
   			this.drawIngredients(zapateroRecipeData[key].recipe, this.recipeSlotIngredientContainer[i]);
 
 
-  			this.tooltip = new Tooltip(this.recipeSlotImage[i], zapateroRecipeData[key].item, 'jobWindow', this);
+  			this.tooltip = new Tooltip(this.recipeSlotImage[i], zapateroRecipeData[key], 'jobWindow', this);
 		    // Crear una función manejadora para este slot
 		    const clickHandler = () => {
 		     	const recipe = zapateroRecipeData[Object.keys(this.recipesShown)[i]];
-		     	if (zapateroRecipeData[key].item.level > this.component.component.player.jobs['zapatero'].level) return;
+		     	if (zapateroRecipeData[key].level > this.component.component.player.jobs['zapatero'].level) return;
 		      	if (this.component.craftWindow.isOpen) {
 		        	this.component.craftWindow.update(recipe, 'zapatero');
 		      	} else {
@@ -147,14 +147,14 @@ export class ZapateroWindow extends Window {
 
   	filterSort = (recipes, sort) => {
 	  	return Object.fromEntries(
-	    	Object.entries(recipes).filter(([key, value]) => value.item.sort === sort)
+	    	Object.entries(recipes).filter(([key, value]) => value.sort === sort)
 	  	);
 	};
 
 	filterByLevel = (recipes, minLevel, maxLevel) => {
 	  	return Object.fromEntries(
 	    	Object.entries(recipes).filter(([key, value]) => {
-		      	const level = value.item.level;
+		      	const level = value.level;
 		      	return level >= minLevel && level <= maxLevel;
 	    	})
 	  	);

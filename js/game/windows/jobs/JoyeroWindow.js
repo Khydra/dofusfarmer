@@ -63,29 +63,29 @@ export class JoyeroWindow extends Window {
 
   		Object.keys(this.recipesShown).forEach((key, i) => {
 
-  			let exp = expJobData[joyeroRecipeData[key].item.level + 1];
+  			let exp = expJobData[joyeroRecipeData[key].level + 1];
 
-  			if (joyeroRecipeData[key].item.level > this.component.component.player.jobs['joyero'].level) {
+  			if (joyeroRecipeData[key].level > this.component.component.player.jobs['joyero'].level) {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot-disabled' }).element; 
   			} else {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot' }).element; 
-  				exp = Math.floor(expJobData[joyeroRecipeData[key].item.level + 1] * (1 - (0.05 * (this.component.component.player.jobs['joyero'].level - joyeroRecipeData[key].item.level))));
+  				exp = Math.floor(expJobData[joyeroRecipeData[key].level + 1] * (1 - (0.05 * (this.component.component.player.jobs['joyero'].level - joyeroRecipeData[key].level))));
   				if (exp <= 0) exp = 1;
   			}
   			
-  			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: joyeroRecipeData[key].item.image }).element; 
-			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: joyeroRecipeData[key].item.name}).element; 
-			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${joyeroRecipeData[key].item.level}`}).element; 
+  			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: joyeroRecipeData[key].image }).element; 
+			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: joyeroRecipeData[key].name}).element; 
+			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${joyeroRecipeData[key].level}`}).element; 
 			this.recipeSlotExp[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-exp', text: `${exp} exp`}).element; 
 			this.recipeSlotIngredientContainer[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-ingredient-container'}).element; 
   			this.drawIngredients(joyeroRecipeData[key].recipe, this.recipeSlotIngredientContainer[i]);
 
 
-  			this.tooltip = new Tooltip(this.recipeSlotImage[i], joyeroRecipeData[key].item, 'jobWindow', this);
+  			this.tooltip = new Tooltip(this.recipeSlotImage[i], joyeroRecipeData[key], 'jobWindow', this);
 		    // Crear una función manejadora para este slot
 		    const clickHandler = () => {
 		     	const recipe = joyeroRecipeData[Object.keys(this.recipesShown)[i]];
-		     	if (joyeroRecipeData[key].item.level > this.component.component.player.jobs['joyero'].level) return;
+		     	if (joyeroRecipeData[key].level > this.component.component.player.jobs['joyero'].level) return;
 		      	if (this.component.craftWindow.isOpen) {
 		        	this.component.craftWindow.update(recipe, 'joyero');
 		      	} else {
@@ -147,14 +147,14 @@ export class JoyeroWindow extends Window {
 
   	filterSort = (recipes, sort) => {
 	  	return Object.fromEntries(
-	    	Object.entries(recipes).filter(([key, value]) => value.item.sort === sort)
+	    	Object.entries(recipes).filter(([key, value]) => value.sort === sort)
 	  	);
 	};
 
 	filterByLevel = (recipes, minLevel, maxLevel) => {
 	  	return Object.fromEntries(
 	    	Object.entries(recipes).filter(([key, value]) => {
-		      	const level = value.item.level;
+		      	const level = value.level;
 		      	return level >= minLevel && level <= maxLevel;
 	    	})
 	  	);

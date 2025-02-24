@@ -63,29 +63,29 @@ export class LenadorWindow extends Window {
 
   		Object.keys(this.recipesShown).forEach((key, i) => {
 
-  			let exp = expJobData[lenadorRecipeData[key].item.level + 1];
+  			let exp = expJobData[lenadorRecipeData[key].level + 1];
 
-  			if (lenadorRecipeData[key].item.level > this.component.component.player.jobs['lenador'].level) {
+  			if (lenadorRecipeData[key].level > this.component.component.player.jobs['lenador'].level) {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot-disabled' }).element; 
   			} else {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot' }).element; 
-  				exp = Math.floor(expJobData[lenadorRecipeData[key].item.level + 1] * (1 - (0.05 * (this.component.component.player.jobs['lenador'].level - lenadorRecipeData[key].item.level))));
+  				exp = Math.floor(expJobData[lenadorRecipeData[key].level + 1] * (1 - (0.05 * (this.component.component.player.jobs['lenador'].level - lenadorRecipeData[key].level))));
   				if (exp <= 0) exp = 1;
   			}
   			
-  			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: lenadorRecipeData[key].item.image }).element; 
-			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: lenadorRecipeData[key].item.name}).element; 
-			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${lenadorRecipeData[key].item.level}`}).element; 
+  			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: lenadorRecipeData[key].image }).element; 
+			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: lenadorRecipeData[key].name}).element; 
+			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${lenadorRecipeData[key].level}`}).element; 
 			this.recipeSlotExp[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-exp', text: `${exp} exp`}).element; 
 			this.recipeSlotIngredientContainer[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-ingredient-container'}).element; 
   			this.drawIngredients(lenadorRecipeData[key].recipe, this.recipeSlotIngredientContainer[i]);
 
 
-  			this.tooltip = new Tooltip(this.recipeSlotImage[i], lenadorRecipeData[key].item, 'jobWindow', this);
+  			this.tooltip = new Tooltip(this.recipeSlotImage[i], lenadorRecipeData[key], 'jobWindow', this);
 		    // Crear una función manejadora para este slot
 		    const clickHandler = () => {
 		     	const recipe = lenadorRecipeData[Object.keys(this.recipesShown)[i]];
-		     	if (lenadorRecipeData[key].item.level > this.component.component.player.jobs['lenador'].level) return;
+		     	if (lenadorRecipeData[key].level > this.component.component.player.jobs['lenador'].level) return;
 		      	if (this.component.craftWindow.isOpen) {
 		        	this.component.craftWindow.update(recipe, 'lenador');
 		      	} else {
@@ -147,14 +147,14 @@ export class LenadorWindow extends Window {
 
   	filterSort = (recipes, sort) => {
 	  	return Object.fromEntries(
-	    	Object.entries(recipes).filter(([key, value]) => value.item.sort === sort)
+	    	Object.entries(recipes).filter(([key, value]) => value.sort === sort)
 	  	);
 	};
 
 	filterByLevel = (recipes, minLevel, maxLevel) => {
 	  	return Object.fromEntries(
 	    	Object.entries(recipes).filter(([key, value]) => {
-		      	const level = value.item.level;
+		      	const level = value.level;
 		      	return level >= minLevel && level <= maxLevel;
 	    	})
 	  	);

@@ -330,6 +330,13 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'liquido' 
 	},
+	agua_ferruginosa: {
+		key: 'agua_ferruginosa',
+		name: 'Agua ferruginosa',
+		image: './assets/images/items/resources/12-0005.png',
+		type: 'resource',
+		sort: 'liquido' 
+	},
 	// HONGO
 	volva_de_amenita: {
 		key: 'volva_de_amenita',
@@ -457,7 +464,14 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'semilla' 
 	},
-
+	//HUEVO
+	huevo_quimerico: {
+		key: 'huevo_quimerico',
+		name: 'Huevo quimérico',
+		image: './assets/images/items/resources/21-0000.png',
+		type: 'resource',
+		sort: 'huevo' 
+	},
 
 }
 

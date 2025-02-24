@@ -489,8 +489,10 @@ export const equipmentData = {
 		name: 'La cortadora de arakna',
 		image: './assets/images/items/equipment/s009-3.webp',
 		level: 11,
+		power: {
+			air: [[7, 11]],
+		},
 		stats: {
-			//dps: [3, 4],
 			vit: [11, 15],
 			agi: [9, 12]
 		},
@@ -1135,8 +1137,10 @@ export const equipmentData = {
 		name: 'La plantamaza de los campos',
 		image: './assets/images/items/equipment/s018-2.webp',
 		level: 15,
+		power: {
+			earth: [[6, 10]],
+		},
 		stats: {
-			//dpc: [6, 10],
 			vit: [21, 25],
 			str: [7, 10],
 			strDmg: [2]
@@ -1224,9 +1228,10 @@ export const equipmentData = {
 		name: 'Dagas de bandido',
 		image: './assets/images/items/equipment/s019-1.webp',
 		level: 12,
+		power: {
+			air: [[3, 5]],
+		},
 		stats: {
-			//dpc: [3, 5],
-			//dps: [3, 5],
 			vit: [16, 20],
 			pot: [7, 10],
 		},
@@ -1299,9 +1304,11 @@ export const equipmentData = {
 		name: 'Martillo de jalató',
 		image: './assets/images/items/equipment/s020-2.webp',
 		level: 20,
+		power: {
+			earth: [[4, 8]],
+			fire: [[4, 8]],
+		},
 		stats: {
-			//dpc: [4, 8],
-			//dpc: [4, 8],
 			vit: [16, 20],
 			invo: [1],
 		},
@@ -1472,8 +1479,10 @@ export const equipmentData = {
 		name: 'Bastón del hombre oso',
 		image: './assets/images/items/equipment/s021-6.webp',
 		level: 20,
+		power: {
+			fire: [[8, 12]],
+		},
 		stats: {
-			//dpc: [8, 12],
 			int: [5, 7],
 			invo: [1]
 		},
@@ -1544,8 +1553,10 @@ export const equipmentData = {
 		name: 'Guadaña gastada de campesino',
 		image: './assets/images/items/equipment/s022-4.webp',
 		level: 17,
+		power: {
+			water: [[4, 5, true]],
+		},
 		stats: {
-			//dps: [4, 5],
 			vit: [16, 20],
 			crt: [2, 3],
 			chaDmg: [2],
@@ -3082,8 +3093,10 @@ export const equipmentData = {
 		name: "Bio varita",
 		image: './assets/images/items/equipment/0100.webp',
 		level: 1,
+		power: {
+			water: [[2, 6]],
+		},
 		stats: {
-			//dps: [2, 6],
 			cha: [3, 4]
 		},
 		type: 'equipment',
@@ -3096,8 +3109,11 @@ export const equipmentData = {
 		name: "Hacha Kemata",
 		image: './assets/images/items/equipment/0101.webp',
 		level: 1,
+		power: {
+			earth: [[6, 10]],
+		},
 		stats: {
-			//dpc: [6, 10],
+			str: [6, 10]
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3109,8 +3125,10 @@ export const equipmentData = {
 		name: "Machete de leñador",
 		image: './assets/images/items/equipment/0102.webp',
 		level: 1,
+		power: {
+			earth: [[4, 9]],
+		},
 		stats: {
-			//dps: [4, 9],
 			vit: [7, 10]
 		},
 		type: 'equipment',
@@ -3123,8 +3141,10 @@ export const equipmentData = {
 		name: "Martillo Martel",
 		image: './assets/images/items/equipment/0103.webp',
 		level: 1,
+		power: {
+			earth: [[4, 6]],
+		},
 		stats: {
-			//dpc: [4, 6],
 			str: [4, 5],
 			strDmg: [1]
 		},
@@ -3138,8 +3158,10 @@ export const equipmentData = {
 		name: "Talladora de mangos",
 		image: './assets/images/items/equipment/0104.webp',
 		level: 2,
+		power: {
+			earth: [[1, 3]],
+		},
 		stats: {
-			//dpc: [1, 3],
 			vit: [5, 7],
 		},
 		type: 'equipment',
@@ -3152,8 +3174,10 @@ export const equipmentData = {
 		name: "Varita de maderucha",
 		image: './assets/images/items/equipment/0105.webp',
 		level: 3,
+		power: {
+			fire: [[4, 8]],
+		},
 		stats: {
-			//dps: [4, 8],
 			int: [3, 5],
 		},
 		type: 'equipment',
@@ -3166,8 +3190,10 @@ export const equipmentData = {
 		name: "Arco nada",
 		image: './assets/images/items/equipment/0106.webp',
 		level: 5,
+		power: {
+			fire: [[3, 5]],
+		},
 		stats: {
-			//dpc: [3, 5],
 			int: [7, 10],
 		},
 		type: 'equipment',
@@ -3180,8 +3206,10 @@ export const equipmentData = {
 		name: "Hachita Ermundo",
 		image: './assets/images/items/equipment/0107.webp',
 		level: 5,
+		power: {
+			earth: [[6, 10]],
+		},
 		stats: {
-			//dpc: [6, 10],
 			vit: [5, 7],
 			str: [5, 7],
 		},
@@ -3195,8 +3223,10 @@ export const equipmentData = {
 		name: "Martillo de maderucha",
 		image: './assets/images/items/equipment/0108.webp',
 		level: 6,
+		power: {
+			fire: [[8, 10]],
+		},
 		stats: {
-			//dpc: [8, 10],
 			vit: [7, 10],
 			crt: [2]
 		},
@@ -3210,8 +3240,11 @@ export const equipmentData = {
 		name: "Mal Pico",
 		image: './assets/images/items/equipment/0109.webp',
 		level: 6,
+		power: {
+			water: [[10, 13]],
+		},
 		stats: {
-			//dps: [10, 13],
+			pp: [10],
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3223,8 +3256,10 @@ export const equipmentData = {
 		name: "Pala de maderucha",
 		image: './assets/images/items/equipment/0110.webp',
 		level: 6,
+		power: {
+			water: [[9, 11]],
+		},
 		stats: {
-			//dpc: [9, 11],
 			cha: [7, 10],
 		},
 		type: 'equipment',
@@ -3237,8 +3272,10 @@ export const equipmentData = {
 		name: "Espada de maderucha",
 		image: './assets/images/items/equipment/0111.webp',
 		level: 7,
+		power: {
+			earth: [[8, 10]],
+		},
 		stats: {
-			//dpc: [8, 10],
 			str: [7, 10],
 			strDmg: [1]
 		},
@@ -3252,10 +3289,12 @@ export const equipmentData = {
 		name: "Arco de maderucha",
 		image: './assets/images/items/equipment/0112.webp',
 		level: 7,
+		power: {
+			air: [[8, 10]],
+		},
 		stats: {
-			//dps: [8, 10],
-			str: [16, 20],
-			//pla 2
+			vit: [16, 20],
+			agi: [3, 8]
 		},
 		type: 'equipment',
 		sort: 'arma',
@@ -3267,8 +3306,10 @@ export const equipmentData = {
 		name: "Dagas de maderucha",
 		image: './assets/images/items/equipment/0113.webp',
 		level: 7,
+		power: {
+			earth: [[3, 4]],
+		},
 		stats: {
-			//dpc: [3, 4],
 			agi: [7, 10],
 			agiDmg: [1]
 		},
@@ -3282,8 +3323,10 @@ export const equipmentData = {
 		name: "Bastón cojomudo",
 		image: './assets/images/items/equipment/0114.webp',
 		level: 8,
+		power: {
+			air: [[2, 4]],
+		},
 		stats: {
-			//dpc: [2, 4],
 			wis: [7, 10],
 		},
 		type: 'equipment',
@@ -3296,8 +3339,10 @@ export const equipmentData = {
 		name: "Devoradora de castaños",
 		image: './assets/images/items/equipment/0115.webp',
 		level: 8,
+		power: {
+			earth: [[6, 10]],
+		},
 		stats: {
-			//dpc: [6, 10],
 			agi: [7, 10],
 			agiDmg: [1]
 		},
@@ -3311,8 +3356,10 @@ export const equipmentData = {
 		name: "Devoradora de fresnos",
 		image: './assets/images/items/equipment/0116.webp',
 		level: 8,
+		power: {
+			water: [[6, 10]],
+		},
 		stats: {
-			//dpc: [6, 10],
 			cha: [7, 10],
 			crt: [2]
 		},
@@ -3326,9 +3373,11 @@ export const equipmentData = {
 		name: "Martillo Linkantrabioso",
 		image: './assets/images/items/equipment/0117.webp',
 		level: 8,
+		power: {
+			water: [[5, 7]],
+			air: [[5, 7]],
+		},
 		stats: {
-			//dpc: [5, 7],
-			//dps: [5, 7],
 			vit: [7, 10],
 			pot: [7, 10],
 		},
@@ -3342,8 +3391,10 @@ export const equipmentData = {
 		name: "Bastón de maderucha",
 		image: './assets/images/items/equipment/0118.webp',
 		level: 9,
+		power: {
+			earth: [[7, 11]],
+		},
 		stats: {
-			//dpc: [7, 11],
 			str: [7, 10],
 			strDmg: [1]
 		},
@@ -3357,10 +3408,115 @@ export const equipmentData = {
 		name: "Varita de fuego fatuo",
 		image: './assets/images/items/equipment/0119.webp',
 		level: 10,
+		power: {
+			fire: [[8, 12]],
+		},
 		stats: {
-			//dps: [8, 12],
 			int: [5, 7],
 			crt: [2]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	arco_silbante: {
+		id: 10120,
+		key: 'arco_silbante',
+		name: "Arco silbante",
+		image: './assets/images/items/equipment/0120.webp',
+		level: 11,
+		power: {
+			earth: [[3, 5]],
+		},
+		stats: {
+			pot: [7, 10],
+			dmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	varita_de_hielo: {
+		id: 10121,
+		key: 'varita_de_hielo',
+		name: "Varita de hielo",
+		image: './assets/images/items/equipment/0121.webp',
+		level: 11,
+		power: {
+			fire: [[14, 18]],
+		},
+		stats: {
+			int: [9, 12],
+			intDmg: [1]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	limpiadoras: {
+		id: 10122,
+		key: 'limpiadoras',
+		name: "Limpiadoras",
+		image: './assets/images/items/equipment/0122.webp',
+		level: 12,
+		power: {
+			earth: [[1, 3]],
+		},
+		stats: {
+			vit: [11, 15],
+			earth: [7, 10]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	baston_de_jalatero: {
+		id: 10123,
+		key: 'baston_de_jalatero',
+		name: "Bastón de jalatero",
+		image: './assets/images/items/equipment/0123.webp',
+		level: 12,
+		power: {
+			earth: [[6, 10]],
+		},
+		stats: {
+			vit: [11, 15],
+			earth: [5, 7],
+			fire: [5, 7]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	hacha_vorom: {
+		id: 10124,
+		key: 'hacha_vorom',
+		name: "Hacha Vor'Om",
+		image: './assets/images/items/equipment/0124.webp',
+		level: 12,
+		power: {
+			air: [[10, 14]],
+		},
+		stats: {
+			vit: [21, 25],
+			agi: [7, 10]
+		},
+		type: 'equipment',
+		sort: 'arma',
+		set: null,
+	},
+	baston_hojudo: {
+		id: 10125,
+		key: 'baston_hojudo',
+		name: "Bastón Hojudo",
+		image: './assets/images/items/equipment/0125.webp',
+		level: 12,
+		power: {
+			earth: [[13, 17]],
+		},
+		stats: {
+			str: [11, 15],
+			strDmg: [2]
 		},
 		type: 'equipment',
 		sort: 'arma',

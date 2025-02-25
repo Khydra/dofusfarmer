@@ -47,6 +47,19 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'madera' 
 	},
+	madera_de_castano: {
+		key: 'madera_de_castano',
+		name: 'Madera de castaño',
+		image: './assets/images/items/resources/01-0002.png',
+		type: 'resource',
+		sort: 'madera',
+		collect: {
+			time: 12,
+			amount: [4, 6],
+			exp: 18,
+			level: 20
+		}
+	},
 	// CEREAL
 	trigo: {
 		key: 'trigo',
@@ -60,6 +73,33 @@ export const resourceData = {
 			exp: 6,
 			level: 1
 		}
+	},
+	cebada: {
+		key: 'cebada',
+		name: 'Cebada',
+		image: './assets/images/items/resources/02-0001.png',
+		type: 'resource',
+		sort: 'cereal',
+		collect: {
+			time: 15,
+			amount: [7, 11],
+			exp: 21,
+			level: 20
+		}
+	},
+	trigo_de_oro: {
+		key: 'trigo_de_oro',
+		name: 'Trigo de oro',
+		image: './assets/images/items/resources/02-0002.png',
+		type: 'resource',
+		sort: 'cereal',
+	},
+	cebada_azucarada: {
+		key: 'cebada_azucarada',
+		name: 'Cebada azucarada',
+		image: './assets/images/items/resources/02-0003.png',
+		type: 'resource',
+		sort: 'cereal',
 	},
 	// PLANTA
 	ortiga: {
@@ -103,20 +143,54 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'planta' 
 	},
+	salvia: {
+		key: 'salvia',
+		name: 'Salvia',
+		image: './assets/images/items/resources/03-0005.png',
+		type: 'resource',
+		sort: 'planta',
+		collect: {
+			time: 12,
+			amount: [4, 6],
+			exp: 18,
+			level: 20
+		}
+	},
 	// ALEACION
 	ferrita: {
 		key: 'ferrita',
 		name: 'Ferrita',
 		image: './assets/images/items/resources/04-0000.png',
 		type: 'resource',
-		sort: 'aleacion' 
+		sort: 'aleacion',
+		level: 1,
+		recipe: {
+			hierro: 10,
+		}
 	},
 	aluminita: {
 		key: 'aluminita',
 		name: 'Aluminita',
 		image: './assets/images/items/resources/04-0001.png',
 		type: 'resource',
-		sort: 'aleacion' 
+		sort: 'aleacion',
+		level: 20,
+		recipe: {
+			hierro: 10,
+			cobre: 10
+		}
+	},
+	agua_ferruginosa: {
+		key: 'agua_ferruginosa',
+		name: 'Agua ferruginosa',
+		image: './assets/images/items/resources/04-0002.png',
+		type: 'resource',
+		sort: 'aleacion',
+		level: 10,
+		recipe: {
+			hierro: 10,
+			agua_potable: 10
+		}
 	},
 	// TABLA
 	tabla_de_aglomerado: {
@@ -124,7 +198,23 @@ export const resourceData = {
 		name: 'Tabla de aglomerado',
 		image: './assets/images/items/resources/05-0000.png',
 		type: 'resource',
-		sort: 'tabla' 
+		sort: 'tabla',
+		level: 1,
+		recipe: {
+			madera_de_fresno: 10,
+		}
+	},
+	tabla_de_contrachapado: {
+		key: 'tabla_de_contrachapado',
+		name: 'Tabla de contrachapado',
+		image: './assets/images/items/resources/05-0001.png',
+		type: 'resource',
+		sort: 'tabla',
+		level: 20,
+		recipe: {
+			madera_de_fresno: 10,
+			madera_de_castano: 10,
+		}
 	},
 	// RECURSO
 	fuego_interno: {
@@ -490,13 +580,6 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'liquido' 
 	},
-	agua_ferruginosa: {
-		key: 'agua_ferruginosa',
-		name: 'Agua ferruginosa',
-		image: './assets/images/items/resources/12-0005.png',
-		type: 'resource',
-		sort: 'liquido' 
-	},
 	// HONGO
 	volva_de_amenita: {
 		key: 'volva_de_amenita',
@@ -669,7 +752,12 @@ export const resourceData = {
 		name: 'Concentrado de matorral',
 		image: './assets/images/items/resources/18-0000.png',
 		type: 'resource',
-		sort: 'concentrado' 
+		sort: 'concentrado',
+		level: 20,
+		recipe: {
+			tabla_de_contrachapado: 1,
+			pocima_de_firma: 1
+		}
 	},
 	// TEJIDO
 	tejido_de_jabali: {
@@ -801,7 +889,185 @@ export const resourceData = {
 		name: 'Aceite de sésamo',
 		image: './assets/images/items/resources/24-0000.png',
 		type: 'resource',
-		sort: 'aceite' 
+		sort: 'aceite',
+		level: 1,
+		recipe: {
+			semillas_de_sesamo: 3
+		}
+	},
+	// PREPARACION
+	pocima_de_firma: {
+		key: 'pocima_de_firma',
+		name: 'Pócima de firma',
+		image: './assets/images/items/resources/25-0000.png',
+		type: 'resource',
+		sort: 'preparacion',
+		level: 30,
+		recipe: {
+			salvia: 10,
+			ortiga: 20
+		}
+	},
+	// TINTE
+	tinte_magico_oscuro: {
+		key: 'tinte_magico_oscuro',
+		name: 'Tinte mágico oscuro',
+		image: './assets/images/items/resources/26-0000.png',
+		type: 'resource',
+		sort: 'tinte',
+		level: 10,
+		recipe: {
+			pata_de_arakna: 10,
+			ala_de_moskito: 20
+		}
+	},
+	// POCION
+	pocima_de_mini_cuidados: {
+		key: 'pocima_de_mini_cuidados',
+		name: 'Pócima de mini cuidados',
+		image: './assets/images/items/resources/27-0000.png',
+		type: 'resource',
+		sort: 'pocion',
+		level: 1,
+		recipe: {
+			ortiga: 4,
+		}
+	},
+	pocima_de_mini_cuidados_superior: {
+		key: 'pocima_de_mini_cuidados_superior',
+		name: 'Pócima de mini cuidados superior',
+		image: './assets/images/items/resources/27-0001.png',
+		type: 'resource',
+		sort: 'pocion',
+		level: 10,
+		recipe: {
+			salvia: 4,
+			trigo: 1
+		}
+	},
+	pocima_de_recuerdo: {
+		key: 'pocima_de_recuerdo',
+		name: 'Pócima de recuerdo',
+		image: './assets/images/items/resources/27-0002.png',
+		type: 'resource',
+		sort: 'pocion',
+		level: 10,
+		recipe: {
+			ortiga: 5,
+			agua_potable: 1
+		}
+	},
+	pocima_de_ciudad_brakmar: {
+		key: 'pocima_de_ciudad_brakmar',
+		name: 'Pócima de ciudad: Brakmar',
+		image: './assets/images/items/resources/27-0003.png',
+		type: 'resource',
+		sort: 'pocion',
+		level: 10,
+		recipe: {
+			salvia: 10,
+			cobre: 5,
+			agua_potable: 1
+		}
+	},
+	pocima_de_ciudad_bonta: {
+		key: 'pocima_de_ciudad_bonta',
+		name: 'Pócima de ciudad: Bonta',
+		image: './assets/images/items/resources/27-0004.png',
+		type: 'resource',
+		sort: 'pocion',
+		level: 10,
+		recipe: {
+			salvia: 10,
+			cebada: 5,
+			agua_potable: 1
+		}
+	},
+	// PAN
+	pan_de_incarnam: {
+		key: 'pan_de_incarnam',
+		name: 'Pan de Incarnam',
+		image: './assets/images/items/resources/28-0000.png',
+		type: 'resource',
+		sort: 'pan',
+		level: 1,
+		recipe: {
+			trigo: 4,
+		}
+	},
+	pan_de_oro: {
+		key: 'pan_de_oro',
+		name: 'Pan de oro',
+		image: './assets/images/items/resources/28-0001.png',
+		type: 'resource',
+		sort: 'pan',
+		level: 10,
+		recipe: {
+			trigo_de_oro: 1
+		}
+	},
+	carasau: {
+		key: 'carasau',
+		name: 'Carasau',
+		image: './assets/images/items/resources/28-0002.png',
+		type: 'resource',
+		sort: 'pan',
+		level: 20,
+		recipe: {
+			cebada: 4,
+			ortiga: 1
+		}
+	},
+	tronquito_de_fresno: {
+		key: 'tronquito_de_fresno',
+		name: 'Tronquito de fresno',
+		image: './assets/images/items/resources/28-0003.png',
+		type: 'resource',
+		sort: 'pan',
+		level: 10,
+		recipe: {
+			savia_de_fresno: 1
+		}
+	},
+	baston_de_caramelo: {
+		key: 'baston_de_caramelo',
+		name: 'Bastón de caramelo',
+		image: './assets/images/items/resources/28-0004.png',
+		type: 'resource',
+		sort: 'pan',
+		level: 20,
+		recipe: {
+			cebada_azucarada: 4,
+			ortiga: 1
+		}
+	},
+	tronquito_de_castano: {
+		key: 'tronquito_de_castano',
+		name: 'Tronquito de castaño',
+		image: './assets/images/items/resources/28-0005.png',
+		type: 'resource',
+		sort: 'pan',
+		level: 20,
+		recipe: {
+			savia_de_castano: 1,
+			cebada: 1
+		}
+	},
+	// SAVIA
+	savia_de_fresno: {
+		key: 'savia_de_fresno',
+		name: 'Savia de fresno',
+		image: './assets/images/items/resources/29-0000.png',
+		type: 'resource',
+		sort: 'savia',
+	},
+	savia_de_castano: {
+		key: 'savia_de_castano',
+		name: 'Savia de castaño',
+		image: './assets/images/items/resources/29-0001.png',
+		type: 'resource',
+		sort: 'savia',
+
 	},
 }
 

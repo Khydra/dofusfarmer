@@ -70,6 +70,7 @@ export class MineroWindow extends Window {
   			} else {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot' }).element; 
   				exp = Math.floor(expJobData[mineroRecipeData[key].level + 1] * (1 - (0.05 * (this.component.component.player.jobs['minero'].level - mineroRecipeData[key].level))));
+  				exp = Math.ceil(exp / 15);
   				if (exp <= 0) exp = 1;
   			}
   			

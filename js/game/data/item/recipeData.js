@@ -1,12 +1,17 @@
 import { equipmentData } from './equipmentData.js';
+import { resourceData } from './resourceData.js';
 
 export var joyeroRecipeData = {};
 export var zapateroRecipeData = {};
 export var sastreRecipeData = {};
 export var herreroRecipeData = {};
 export var fabricanteRecipeData = {};
+export var lenadorRecipeData = {}
+export var mineroRecipeData = {}
+export var alquimistaRecipeData = {}
+export var campesinoRecipeData = {}
 
-Object.values(equipmentData).forEach((item)=>{
+Object.values(equipmentData).forEach((item) => {
 	switch(item.sort) {
 		case 'anillo':
 		case 'amuleto':
@@ -29,6 +34,29 @@ Object.values(equipmentData).forEach((item)=>{
 	}
 })
 
+Object.values(resourceData).forEach((resource) => {
+	if (!resource.recipe) return;
+
+	switch(resource.sort) {
+		case 'aleacion':
+			mineroRecipeData[resource.key] = resource;
+			break;
+		case 'tabla':
+		case 'concentrado':
+			lenadorRecipeData[resource.key] = resource;
+			break;
+		case 'pocion':
+		case 'tinte':
+		case 'preparacion':
+			alquimistaRecipeData[resource.key] = resource;
+			break;
+		case 'pan':
+		case 'aceite':
+			campesinoRecipeData[resource.key] = resource;
+			break;
+	}
+})
+
 function sortEquipmentByLevel(equipmentData) {
     return Object.fromEntries(
         Object.entries(equipmentData)
@@ -41,12 +69,10 @@ zapateroRecipeData = sortEquipmentByLevel(zapateroRecipeData);
 sastreRecipeData = sortEquipmentByLevel(sastreRecipeData);
 herreroRecipeData = sortEquipmentByLevel(herreroRecipeData);
 fabricanteRecipeData = sortEquipmentByLevel(fabricanteRecipeData);
-
-export const lenadorRecipeData = {}
-export const mineroRecipeData = {}
-export const alquimistaRecipeData = {}
-export const campesinoRecipeData = {}
-
+mineroRecipeData = sortEquipmentByLevel(mineroRecipeData);
+alquimistaRecipeData = sortEquipmentByLevel(alquimistaRecipeData);
+lenadorRecipeData = sortEquipmentByLevel(lenadorRecipeData);
+campesinoRecipeData = sortEquipmentByLevel(campesinoRecipeData);
 /*
 export const joyeroRecipeData = {
 	//lvl 1-10

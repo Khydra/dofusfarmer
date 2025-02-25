@@ -149,6 +149,11 @@ export class CraftWindow extends Window {
 	  			}		
 	  		}
 
+	  		// crear recurso
+	  		if (this.recipe.type === 'resource') {
+	  			this.component.component.main.inventory.obtainItem(this.recipe, Math.floor(this.amount))		
+	  		}
+
 	  		this.component.component.inventoryWindow.update();	
 	  		this.gainExp();
 	  		this.component.component.main.notification.display(`Has fabricado x${this.amount} ${this.recipe.name}`);	
@@ -158,8 +163,10 @@ export class CraftWindow extends Window {
 
   	gainExp = () => {
   		let exp = Math.floor(expJobData[this.recipe.level + 1] * (1 - (0.05 * (this.component.component.main.player.jobs[this.job].level - this.recipe.level))));
+  		if (this.recipe.type === 'resource') exp = Math.ceil(exp / 15);
   		if (exp <= 0) exp = 1;
   		exp *= this.amount;
+  		console.log(exp)
   		//console.log(this.component.component.main.player.jobs[this.job])
   		this.component.component.main.player.gainExpJob(exp, this.job);
   	}

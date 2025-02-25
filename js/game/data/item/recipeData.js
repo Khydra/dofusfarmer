@@ -52,6 +52,7 @@ Object.values(resourceData).forEach((resource) => {
 			break;
 		case 'pan':
 		case 'aceite':
+		case 'golosina':
 			campesinoRecipeData[resource.key] = resource;
 			break;
 	}

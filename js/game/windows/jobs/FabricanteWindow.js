@@ -29,8 +29,8 @@ export class FabricanteWindow extends Window {
 	render = () => {
 		this.settingsContainer = new Element(this.container, { className: 'job-settings-container' }).element;  
 
-    	new Selector(this.settingsContainer, "Mostrar", ["Todo", "Sombrero", "Capa"], 'job-recipe-type', (value) => {
-    		let sortValues =  ["todo", "sombrero", "capa"]
+    	new Selector(this.settingsContainer, "Mostrar", ["Todo", "Escudo"], 'job-recipe-type', (value) => {
+    		let sortValues =  ["todo", "escudo"]
     		this.filter.sort = sortValues[value];
     		this.update();
     	});

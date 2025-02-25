@@ -1,0 +1,211 @@
+.forjamago-tab-container {
+	position: absolute;
+	width: 100%;
+	height: 30px;
+	display: flex;
+	flex-wrap: wrap;
+
+	font-weight: bold;
+	text-align: center;
+	color: var(--white);
+	line-height: 32px;
+}
+
+.forjamago-tab {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	background: var(--bg2);
+	outline: 1px solid black;
+	
+	cursor: pointer;
+}
+
+.forjamago-tab:hover {
+	filter: brightness(1.2);
+}
+
+.forjamago-tab-selected {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	background: var(--bg4);
+	outline: 1px solid black;
+	pointer-events: none;
+}
+
+/* TRITURADORA */
+.forjamago-crusher-scene {
+	position: absolute;
+	width: 100%;
+	top: 31px;
+	bottom: 0px;
+	background: red;
+}
+
+/* MAGUEO */
+.forjamago-mag-scene {
+	position: absolute;
+	width: 100%;
+	top: 31px;
+	bottom: 0px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.mag-history-container {
+	position: relative;
+	height: 100%;
+	width: 25%;
+	background: var(--bg1);
+}
+
+.mag-work-container {
+	position: relative;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	outline: 1px solid black;
+	z-index: 1;
+}
+
+.mag-inventory-container {
+	position: relative;
+	height: 100%;
+	width: 25%;
+	background: var(--bg1);
+}
+
+.mag-item-container {
+	position: relative;
+	height: 20%;
+	width: 100%;
+	background: var(--bg3);
+	border-bottom: 1px solid black;
+}
+
+.mag-rune-container {
+	position: relative;
+	height: 80%;
+	width: 100%;
+	background: var(--bg2);
+}
+
+.mag-rune-guide-container {
+	position: absolute;
+	height: 20px;
+	width: 100%;
+	background: var(--bg4);
+	border-bottom: 1px solid black;
+	display: flex; 
+	flex-wrap: wrap;
+	color: var(--white);
+	text-align: center;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.mag-rune-guide-label:nth-child(1) {
+	width: 15%;
+}
+.mag-rune-guide-label:nth-child(2) {
+	width: 15%;
+}
+.mag-rune-guide-label:nth-child(3) {
+	width: 30%;
+}
+.mag-rune-guide-label:nth-child(4) {
+	width: 20%;
+}
+
+.mag-rune-stat-container {
+	position: absolute;
+	width: 100%;
+	top: 21px;
+	bottom: 0px;
+}
+
+.mag-rune-stat-row {
+	position: relative;
+	width: 100%;
+	height: 25px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.mag-rune-stat-row:nth-child(2n) {background-color:  var(--bg1);}
+
+.mag-rune-stat-min {
+	position: relative;
+	width: 15%;
+}
+
+.mag-rune-stat-max {
+	position: relative;
+	width: 15%;
+	background: red;
+}
+
+.mag-rune-stat-effect {
+	position: relative;
+	width: 30%;
+}
+
+.mag-rune-stat-modif {
+	position: relative;
+	width: 20%;
+	background: red;
+}	
+
+.mag-rune-stat-r1 {
+	position: relative;
+	width: 7%;
+}
+
+.mag-rune-stat-r2 {
+	position: relative;
+	width: 6%;
+	background: red;
+}
+
+.mag-rune-stat-r3 {
+	position: relative;
+	width: 6%;
+}
+
+
+/*INVENTORY*/
+.mag-inventory-tab-container {
+	position: absolute;
+	width: 100%;
+	height: 24px;
+	display: flex;
+	flex-wrap: wrap;
+
+	font-weight: bold;
+	text-align: center;
+	color: var(--white);
+	line-height: 26px;
+}
+
+.mag-inventory-tab {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	background: var(--bg2);
+	outline: 1px solid black;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.mag-inventory-tab-selected {
+	position: relative;
+	width: 50%;
+	height: 100%;
+	font-size: 12px;
+	background: var(--bg4);
+	outline: 1px solid black;
+	pointer-events: none;
+
+}

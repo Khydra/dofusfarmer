@@ -1018,41 +1018,6 @@ export const resourceData = {
 			ortiga: 1
 		}
 	},
-	tronquito_de_fresno: {
-		key: 'tronquito_de_fresno',
-		name: 'Tronquito de fresno',
-		image: './assets/images/items/resources/28-0003.png',
-		type: 'resource',
-		sort: 'pan',
-		level: 10,
-		recipe: {
-			savia_de_fresno: 1
-		}
-	},
-	baston_de_caramelo: {
-		key: 'baston_de_caramelo',
-		name: 'Bastón de caramelo',
-		image: './assets/images/items/resources/28-0004.png',
-		type: 'resource',
-		sort: 'pan',
-		level: 20,
-		recipe: {
-			cebada_azucarada: 4,
-			ortiga: 1
-		}
-	},
-	tronquito_de_castano: {
-		key: 'tronquito_de_castano',
-		name: 'Tronquito de castaño',
-		image: './assets/images/items/resources/28-0005.png',
-		type: 'resource',
-		sort: 'pan',
-		level: 20,
-		recipe: {
-			savia_de_castano: 1,
-			cebada: 1
-		}
-	},
 	// SAVIA
 	savia_de_fresno: {
 		key: 'savia_de_fresno',
@@ -1068,6 +1033,42 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'savia',
 
+	},
+	// GOLOSINA
+	tronquito_de_fresno: {
+		key: 'tronquito_de_fresno',
+		name: 'Tronquito de fresno',
+		image: './assets/images/items/resources/30-0000.png',
+		type: 'resource',
+		sort: 'golosina',
+		level: 10,
+		recipe: {
+			savia_de_fresno: 1
+		}
+	},
+	baston_de_caramelo: {
+		key: 'baston_de_caramelo',
+		name: 'Bastón de caramelo',
+		image: './assets/images/items/resources/30-0001.png',
+		type: 'resource',
+		sort: 'golosina',
+		level: 20,
+		recipe: {
+			cebada_azucarada: 4,
+			ortiga: 1
+		}
+	},
+	tronquito_de_castano: {
+		key: 'tronquito_de_castano',
+		name: 'Tronquito de castaño',
+		image: './assets/images/items/resources/30-0002.png',
+		type: 'resource',
+		sort: 'golosina',
+		level: 20,
+		recipe: {
+			savia_de_castano: 1,
+			cebada: 1
+		}
 	},
 }
 

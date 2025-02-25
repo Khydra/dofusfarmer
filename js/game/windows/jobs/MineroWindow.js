@@ -29,8 +29,8 @@ export class MineroWindow extends Window {
 	render = () => {
 		this.settingsContainer = new Element(this.container, { className: 'job-settings-container' }).element;  
 
-    	new Selector(this.settingsContainer, "Mostrar", ["Todo", "Sombrero", "Capa"], 'job-recipe-type', (value) => {
-    		let sortValues =  ["todo", "sombrero", "capa"]
+    	new Selector(this.settingsContainer, "Mostrar", ["Todo", "Aleación"], 'job-recipe-type', (value) => {
+    		let sortValues =  ["todo", "aleacion"]
     		this.filter.sort = sortValues[value];
     		this.update();
     	});
@@ -70,10 +70,10 @@ export class MineroWindow extends Window {
   			} else {
   				this.recipeSlot[i] = new Element(this.recipeContainer, { className: 'job-recipe-slot' }).element; 
   				exp = Math.floor(expJobData[mineroRecipeData[key].level + 1] * (1 - (0.05 * (this.component.component.player.jobs['minero'].level - mineroRecipeData[key].level))));
-  				exp = Math.ceil(exp / 15);
-  				if (exp <= 0) exp = 1;
   			}
-  			
+  			exp = Math.ceil(exp / 15);
+  			if (exp <= 0) exp = 1;
+
   			this.recipeSlotImage[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-image', image: mineroRecipeData[key].image }).element; 
 			this.recipeSlotName[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-name', text: mineroRecipeData[key].name}).element; 
 			this.recipeSlotLevel[i] = new Element(this.recipeSlot[i], { className: 'job-recipe-slot-level', text: `Nivel ${mineroRecipeData[key].level}`}).element; 

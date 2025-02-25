@@ -37,7 +37,7 @@ export class JobsWindow extends Window {
 	    this.herreroWindow = new HerreroWindow(this);
 	    this.fabricanteWindow = new FabricanteWindow(this);
 
-	    //this.forjamagoWindow = new ForjamagoWindow(this);
+	    this.forjamagoWindow = new ForjamagoWindow(this);
 
 	    this.render();
 	}
@@ -78,6 +78,7 @@ export class JobsWindow extends Window {
   	open() {
 	    super.open(); 
 	    this.update();
+	     this.forjamagoWindow.open()
   	}
 
   	handleAction = (tabName) => {
@@ -110,7 +111,7 @@ export class JobsWindow extends Window {
 				(!this.fabricanteWindow.isOpen) ? this.fabricanteWindow.open() : this.fabricanteWindow.close();
                 break;
             case 'forjamago':
-            	//(!this.forjamagoWindow.isOpen) ? this.forjamagoWindow.open() : this.forjamagoWindow.close();
+            	(!this.forjamagoWindow.isOpen) ? this.forjamagoWindow.open() : this.forjamagoWindow.close();
                 break;
         }
     }

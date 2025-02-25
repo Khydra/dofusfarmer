@@ -8,9 +8,22 @@ export const resourceData = {
 		sort: 'mineral',
 		collect: {
 			time: 11,
-			amount: [2, 5],
+			amount: [2, 7],
 			exp: 6,
 			level: 1
+		}
+	},
+	cobre: {
+		key: 'cobre',
+		name: 'Cobre',
+		image: './assets/images/items/resources/00-0001.png',
+		type: 'resource',
+		sort: 'mineral',
+		collect: {
+			time: 10,
+			amount: [4, 6],
+			exp: 13,
+			level: 10
 		}
 	},
 	// MADERA
@@ -83,11 +96,25 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'planta' 
 	},
+	hoja_de_girasol_salvaje: {
+		key: 'hoja_de_girasol_salvaje',
+		name: 'Hoja de girasol salvaje',
+		image: './assets/images/items/resources/03-0004.png',
+		type: 'resource',
+		sort: 'planta' 
+	},
 	// ALEACION
 	ferrita: {
 		key: 'ferrita',
 		name: 'Ferrita',
 		image: './assets/images/items/resources/04-0000.png',
+		type: 'resource',
+		sort: 'aleacion' 
+	},
+	aluminita: {
+		key: 'aluminita',
+		name: 'Aluminita',
+		image: './assets/images/items/resources/04-0001.png',
 		type: 'resource',
 		sort: 'aleacion' 
 	},
@@ -156,6 +183,34 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'resource' 
 	},
+	hilo_de_lino: {
+		key: 'hilo_de_lino',
+		name: 'Hilo de lino',
+		image: './assets/images/items/resources/06-0008.png',
+		type: 'resource',
+		sort: 'resource' 
+	},
+	intestino_de_araknausea: {
+		key: 'intestino_de_araknausea',
+		name: 'Intestino de araknáusea',
+		image: './assets/images/items/resources/06-0009.png',
+		type: 'resource',
+		sort: 'resource' 
+	},
+	mantillo: {
+		key: 'mantillo',
+		name: 'Mantillo',
+		image: './assets/images/items/resources/06-0010.png',
+		type: 'resource',
+		sort: 'resource' 
+	},
+	cabellera_de_minilubo: {
+		key: 'cabellera_de_minilubo',
+		name: 'Cabellera de minilubo',
+		image: './assets/images/items/resources/06-0011.png',
+		type: 'resource',
+		sort: 'resource' 
+	},
 	// PLUMA
 	pluma_quimerica: {
 		key: 'pluma_quimerica',
@@ -217,7 +272,98 @@ export const resourceData = {
 	piel_de_mob_laesponja: {
 		key: 'piel_de_mob_laesponja',
 		name: 'Piel de Mob Laesponja',
-		image: './assets/images/items/resources/17-0000.png',
+		image: './assets/images/items/resources/08-0001.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	piel_de_larva_verde: {
+		key: 'piel_de_larva_verde',
+		name: 'Piel de larva verde',
+		image: './assets/images/items/resources/08-0002.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	piel_de_larva_azul: {
+		key: 'piel_de_larva_azul',
+		name: 'Piel de larva azul',
+		image: './assets/images/items/resources/08-0003.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	piel_de_larva_naranja: {
+		key: 'piel_de_larva_naranja',
+		name: 'Piel de larva naranja',
+		image: './assets/images/items/resources/08-0004.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	piel_de_larva_amarilla: {
+		key: 'piel_de_larva_amarilla',
+		name: 'Piel de larva amarilla',
+		image: './assets/images/items/resources/08-0005.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	escama_pegajosa: {
+		key: 'escama_pegajosa',
+		name: 'Escama pegajosa',
+		image: './assets/images/items/resources/08-0006.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	piel_pachucha: {
+		key: 'piel_pachucha',
+		name: 'Piel pachucha',
+		image: './assets/images/items/resources/08-0007.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	piel_de_larva_zafiro: {
+		key: 'piel_de_larva_zafiro',
+		name: 'Piel de larva zafiro',
+		image: './assets/images/items/resources/08-0008.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	escama_de_cocodrail: {
+		key: 'escama_de_cocodrail',
+		name: 'Escama de cocodrail',
+		image: './assets/images/items/resources/08-0009.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	piel_de_raul_mops: {
+		key: 'piel_de_raul_mops',
+		name: 'Piel de Raúl Mops',
+		image: './assets/images/items/resources/08-0010.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	piel_de_larva_esmeralda: {
+		key: 'piel_de_larva_esmeralda',
+		name: 'Piel de larva esmeralda',
+		image: './assets/images/items/resources/08-0011.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	piel_de_larva_rubi: {
+		key: 'piel_de_larva_rubi',
+		name: 'Piel de larva rubí',
+		image: './assets/images/items/resources/08-0012.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	piel_de_shin_larva: {
+		key: 'piel_de_shin_larva',
+		name: 'Piel de Shin Larva',
+		image: './assets/images/items/resources/08-0013.png',
+		type: 'resource',
+		sort: 'piel' 
+	},
+	piel_de_bworka: {
+		key: 'piel_de_bworka',
+		name: 'Piel de Bworka',
+		image: './assets/images/items/resources/08-0014.png',
 		type: 'resource',
 		sort: 'piel' 
 	},
@@ -250,9 +396,9 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'flor' 
 	},
-	hoja_de_girasol_salvaje: {
-		key: 'hoja_de_girasol_salvaje',
-		name: 'Hoja de girasol salvaje',
+	petalo_de_girasol_salvaje: {
+		key: 'petalo_de_girasol_salvaje',
+		name: 'Pétalo de girasol salvaje',
 		image: './assets/images/items/resources/09-0004.png',
 		type: 'resource',
 		sort: 'flor' 
@@ -366,6 +512,55 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'hongo' 
 	},
+	esporma_de_champi_champ: {
+		key: 'esporma_de_champi_champ',
+		name: 'Esporma de champi champ',
+		image: './assets/images/items/resources/13-0002.png',
+		type: 'resource',
+		sort: 'hongo' 
+	},
+	champinon_luidchi: {
+		key: 'champinon_luidchi',
+		name: 'Champiñón Luidchi',
+		image: './assets/images/items/resources/13-0003.png',
+		type: 'resource',
+		sort: 'hongo' 
+	},
+	laminilla_de_champo_azul: {
+		key: 'laminilla_de_champo_azul',
+		name: 'Laminilla de champo azul',
+		image: './assets/images/items/resources/13-0004.png',
+		type: 'resource',
+		sort: 'hongo' 
+	},
+	laminilla_de_champo_marron: {
+		key: 'laminilla_de_champo_marron',
+		name: 'Laminilla de champo marrón',
+		image: './assets/images/items/resources/13-0005.png',
+		type: 'resource',
+		sort: 'hongo' 
+	},
+	laminilla_de_champo_rojo: {
+		key: 'laminilla_de_champo_rojo',
+		name: 'Laminilla de champo rojo',
+		image: './assets/images/items/resources/13-0006.png',
+		type: 'resource',
+		sort: 'hongo' 
+	},
+	laminilla_de_champo_verde: {
+		key: 'laminilla_de_champo_verde',
+		name: 'Laminilla de champo verde',
+		image: './assets/images/items/resources/13-0007.png',
+		type: 'resource',
+		sort: 'hongo' 
+	},
+	seta: {
+		key: 'seta',
+		name: 'Seta',
+		image: './assets/images/items/resources/13-0008.png',
+		type: 'resource',
+		sort: 'hongo' 
+	},
 	// COLA
 	cola_de_miauflan: {
 		key: 'cola_de_miauflan',
@@ -417,11 +612,25 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'hueso' 
 	},
+	pico_de_tofu: {
+		key: 'pico_de_tofu',
+		name: 'Pico de tofu',
+		image: './assets/images/items/resources/15-0006.png',
+		type: 'resource',
+		sort: 'hueso' 
+	},
 	// PATA
 	pata_de_arakna: {
 		key: 'pata_de_arakna',
 		name: 'Pata de arakna',
 		image: './assets/images/items/resources/16-0000.png',
+		type: 'resource',
+		sort: 'pata' 
+	},
+	pata_de_arakna_magica: {
+		key: 'pata_de_arakna_magica',
+		name: 'Pata de arakna mágica',
+		image: './assets/images/items/resources/16-0001.png',
 		type: 'resource',
 		sort: 'pata' 
 	},
@@ -447,6 +656,13 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'pelos' 
 	},
+	pelo_de_minilubo: {
+		key: 'pelo_de_minilubo',
+		name: 'Pelo de minilubo',
+		image: './assets/images/items/resources/17-0003.png',
+		type: 'resource',
+		sort: 'pelos' 
+	},
 	// CONCENTRADO
 	concentrado_de_matorral: {
 		key: 'concentrado_de_matorral',
@@ -463,6 +679,41 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'teijo' 
 	},
+	toalla_de_playa: {
+		key: 'toalla_de_playa',
+		name: 'Toalla de playa',
+		image: './assets/images/items/resources/19-0001.png',
+		type: 'resource',
+		sort: 'teijo' 
+	},
+	tejido_de_ardilloxido: {
+		key: 'tejido_de_ardilloxido',
+		name: 'Tejido de ardillóxido',
+		image: './assets/images/items/resources/19-0002.png',
+		type: 'resource',
+		sort: 'teijo' 
+	},
+	tejido_de_misterioso: {
+		key: 'tejido_de_misterioso',
+		name: 'Tejido de misterioso',
+		image: './assets/images/items/resources/19-0003.png',
+		type: 'resource',
+		sort: 'teijo' 
+	},
+	tejido_invisible: {
+		key: 'tejido_invisible',
+		name: 'Tejido invisible',
+		image: './assets/images/items/resources/19-0004.png',
+		type: 'resource',
+		sort: 'teijo' 
+	},
+	tejido_oscuro: {
+		key: 'tejido_oscuro',
+		name: 'Tejido oscuro',
+		image: './assets/images/items/resources/19-0005.png',
+		type: 'resource',
+		sort: 'teijo' 
+	},
 	// SEMILLA
 	semilla_de_girasol: {
 		key: 'semilla_de_girasol',
@@ -471,14 +722,56 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'semilla' 
 	},
-	semilla_de_sesamo: {
-		key: 'semilla_de_sesamo',
+	semillas_de_sesamo: {
+		key: 'semillas_de_sesamo',
 		name: 'Semillas de sésamo',
 		image: './assets/images/items/resources/20-0001.png',
 		type: 'resource',
 		sort: 'semilla' 
 	},
-	//HUEVO
+	semilla_de_adormidera: {
+		key: 'semilla_de_adormidera',
+		name: 'Semilla de adormidera',
+		image: './assets/images/items/resources/20-0002.png',
+		type: 'resource',
+		sort: 'semilla' 
+	},
+	semillas_de_calawaza_maldita: {
+		key: 'semillas_de_calawaza_maldita',
+		name: 'Semillas de calawaza maldita',
+		image: './assets/images/items/resources/20-0003.png',
+		type: 'resource',
+		sort: 'semilla' 
+	},
+	semilla_de_scorbuto: {
+		key: 'semilla_de_scorbuto',
+		name: 'Semillas de scorbuto',
+		image: './assets/images/items/resources/20-0004.png',
+		type: 'resource',
+		sort: 'semilla' 
+	},
+	semilla_de_discordia: {
+		key: 'semilla_de_discordia',
+		name: 'Semillas de discordia',
+		image: './assets/images/items/resources/20-0005.png',
+		type: 'resource',
+		sort: 'semilla' 
+	},
+	semilla_de_pandoja: {
+		key: 'semilla_de_pandoja',
+		name: 'Semillas de pandoja',
+		image: './assets/images/items/resources/20-0006.png',
+		type: 'resource',
+		sort: 'semilla' 
+	},
+	avellana: {
+		key: 'avellana',
+		name: 'Avellana',
+		image: './assets/images/items/resources/20-0007.png',
+		type: 'resource',
+		sort: 'semilla' 
+	},
+	// HUEVO
 	huevo_quimerico: {
 		key: 'huevo_quimerico',
 		name: 'Huevo quimérico',
@@ -486,7 +779,30 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'huevo' 
 	},
-
+	// OJO
+	ojo_de_arakmutada: {
+		key: 'ojo_de_arakmutada',
+		name: 'Ojo de arakmutada',
+		image: './assets/images/items/resources/22-0000.png',
+		type: 'resource',
+		sort: 'ojo' 
+	},
+	// ALA
+	ala_de_moskito: {
+		key: 'ala_de_moskito',
+		name: 'Ala de moskito',
+		image: './assets/images/items/resources/23-0000.png',
+		type: 'resource',
+		sort: 'ala' 
+	},
+	// ACEITE
+	aceite_de_sesamo: {
+		key: 'aceite_de_sesamo',
+		name: 'Aceite de sésamo',
+		image: './assets/images/items/resources/24-0000.png',
+		type: 'resource',
+		sort: 'aceite' 
+	},
 }
 
 

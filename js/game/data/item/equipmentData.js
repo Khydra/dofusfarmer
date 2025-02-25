@@ -296,7 +296,7 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'anillo',
 		recipe: {
-			semilla_de_sesamo: 3, 
+			semillas_de_sesamo: 3, 
 			tabla_de_aglomerado: 1
 		},
 		set: setData['set_de_aventurero'],
@@ -1601,7 +1601,7 @@ export const equipmentData = {
 		sort: 'cinturon',
 		recipe: {
 			piel_de_larva_amarilla: 4,
-			piel_de_arakna_enferma: 1
+			pelos_de_arakna_enferma: 1
 		},
 		set: setData['set_de_bandido'],
 	},

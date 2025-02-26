@@ -80,7 +80,6 @@ export class Tooltip {
 
         this.eventGuide = new Element(this.eventContainer, { className: 'tooltip-event-guide' }).element;
         switch (this.data.type) {
-
             case "resource":
                 this.infoType.innerText = `RECURSO ◆ ${this.data.sort.toUpperCase()}`;
                 if (this.location == 'inventoryWindow') this.eventGuide.innerText = `RMB: Opciones \n SHIFT: Almacenar`;
@@ -91,7 +90,6 @@ export class Tooltip {
                     this.eventGuide.innerText = `Inventario: ${quantityInventory} \n Bancosako: ${quantityBank}`;
                 }
             break;
-
             case "equipment":
                 this.infoType.innerText = `${this.data.sort.toUpperCase()} ◆ NIVEL ${this.data.level}`;
                 if (this.data.set) this.infoSet.innerText = `${this.data.set.name}`;
@@ -118,6 +116,7 @@ export class Tooltip {
                 if (this.location == 'equipmentWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Desquipar \n CTRL: Valores teóricos`;
                 if (this.location == 'inventoryWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Equipar \n CTRL: Valores teóricos \n SHIFT: Almacenar`;
                 if (this.location == 'bankWindow') this.eventGuide.innerText = `RMB: Opciones \n CTRL: Valores teóricos \n SHIFT: Retirar`;
+                if (this.location == 'forjamagoWindow') this.eventGuide.innerText = `Click: Añadir`;
             break;
 
             case "consumable":

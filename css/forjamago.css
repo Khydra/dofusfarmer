@@ -17,7 +17,6 @@
 	height: 100%;
 	background: var(--bg2);
 	outline: 1px solid black;
-	
 	cursor: pointer;
 }
 
@@ -36,45 +35,39 @@
 
 /* TRITURADORA */
 .forjamago-crusher-scene {
+	display: none;
 	position: absolute;
-	width: 100%;
+	width: 675px;
 	top: 31px;
 	bottom: 0px;
-	background: red;
+	background: var(--bg2);
 }
 
 /* MAGUEO */
 .forjamago-mag-scene {
+	display: none;
 	position: absolute;
-	width: 100%;
+	width: 675px;
 	top: 31px;
 	bottom: 0px;
-	display: flex;
 	flex-wrap: wrap;
 }
 
 .mag-history-container {
 	position: relative;
 	height: 100%;
-	width: 25%;
+	width: 225px;
 	background: var(--bg1);
 }
 
 .mag-work-container {
 	position: relative;
 	height: 100%;
-	width: 50%;
+	width: 449px;
 	display: flex;
 	flex-wrap: wrap;
 	outline: 1px solid black;
-	z-index: 1;
-}
 
-.mag-inventory-container {
-	position: relative;
-	height: 100%;
-	width: 25%;
-	background: var(--bg1);
 }
 
 .mag-item-container {
@@ -176,7 +169,18 @@
 
 
 /*INVENTORY*/
-.mag-inventory-tab-container {
+.forjamago-inventory-container {
+	position: absolute;
+	right: 0px;
+	top: 31px;
+	bottom: 0px;
+	width: 225px;
+	outline: 1px solid black;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.forjamago-inventory-tab-container {
 	position: absolute;
 	width: 100%;
 	height: 24px;
@@ -189,7 +193,7 @@
 	line-height: 26px;
 }
 
-.mag-inventory-tab {
+.forjamago-inventory-tab {
 	position: relative;
 	width: 50%;
 	height: 100%;
@@ -199,7 +203,7 @@
 	cursor: pointer;
 }
 
-.mag-inventory-tab-selected {
+.forjamago-inventory-tab-selected {
 	position: relative;
 	width: 50%;
 	height: 100%;
@@ -208,4 +212,52 @@
 	outline: 1px solid black;
 	pointer-events: none;
 
+}
+
+.forjamago-inventory-slot-container {
+	position: absolute;
+	top: 40px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.forjamago-inventory-slot-container::-webkit-scrollbar { width: 16px; }
+.forjamago-inventory-slot-container::-webkit-scrollbar-track { background: transparent; }
+.forjamago-inventory-slot-container::-webkit-scrollbar-thumb { 
+	outline: 1px solid black;
+    background: var(--bg0); 
+    border-radius: 2px;
+}
+
+.forjamago-inventory-slot-empty {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: inset 1px 1px 2px black, inset -1px -1px 2px black;
+	border-radius: 5px;
+}
+
+.forjamago-inventory-slot {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	background-color: rgba(0, 0, 0, 0.25);
+	box-shadow: inset 1px 1px 2px black, inset -1px -1px 2px black;
+	border-radius: 5px;
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.forjamago-inventory-slot:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+	filter: brightness(1.1);
 }

@@ -18,9 +18,15 @@ export class ForjamagoWindow extends Window {
 	    this.component = component;
 	    this.tabSelected = 0;
 
+	    this.inventoryData = {
+	    	tabSelected: 0,
+	    	slotsMin: 44,
+	    	slotsNeed: 44,
+	    	items: []
+	    }
+
 	    this.magData = {
 	    	itemSelected: null,
-	    	tabSelected: 0
 	    }
 
 	    this.crusherData = {
@@ -32,10 +38,12 @@ export class ForjamagoWindow extends Window {
 	}
 
 	render = () => {
+		this.scenes = [];
 
-		this.renderTabs();
 		this.renderCrusher();
 		this.renderMag();
+		this.renderTabs();
+		this.renderInventory();
   	}
 
   	renderTabs = () => {
@@ -52,19 +60,37 @@ export class ForjamagoWindow extends Window {
   		this.updateTabs();
   	}
 
-  	renderCrusher = () => {
+  	renderInventory = () => {
+  		this.inventoryContainer = new Element(this.container, { className: 'forjamago-inventory-container' }).element; 
 
+  		const inventoryTabNames = ['OBJETOS', 'RUNAS']
+
+  		this.inventoryTab = [];
+  		this.inventoryTabContainer = new Element(this.inventoryContainer, { className: 'forjamago-inventory-tab-container stroke' }).element; 
+
+  		inventoryTabNames.forEach((name, i) => {
+  			this.inventoryTab[i] = new Element(this.inventoryTabContainer, { className: 'forjamago-inventory-tab', text: name}).element; 
+  			this.inventoryTab[i].addEventListener('click', () => this.changeTab(i, true));	
+  		})
+
+  		this.inventorySlotContainer = new Element(this.inventoryContainer, { className: 'forjamago-inventory-slot-container' }).element; 
+
+  		this.inventorySlot = [];
+
+  		this.updateTabs(true);
+  	}
+
+  	renderCrusher = () => {
+  		this.scenes[0] = new Element(this.container, { className: 'forjamago-crusher-scene' }).element; 
   	}
 
   	renderMag = () => {
-  		this.magScene = new Element(this.container, { className: 'forjamago-mag-scene' }).element; 
+  		this.scenes[1] = new Element(this.container, { className: 'forjamago-mag-scene' }).element; 
 
-  		this.historyContainer = new Element(this.magScene, { className: 'mag-history-container' }).element; 
-  		this.workContainer = new Element(this.magScene, { className: 'mag-work-container' }).element;
+  		this.historyContainer = new Element(this.scenes[1], { className: 'mag-history-container' }).element; 
+  		this.workContainer = new Element(this.scenes[1], { className: 'mag-work-container' }).element;
   		this.itemContainer = new Element(this.workContainer, { className: 'mag-item-container' }).element;
   		this.runeContainer = new Element(this.workContainer, { className: 'mag-rune-container' }).element;
-  		this.inventoryContainer = new Element(this.magScene, { className: 'mag-inventory-container' }).element;
-
   		// HISTROTY
 
   		// ITEM
@@ -98,31 +124,20 @@ export class ForjamagoWindow extends Window {
   			this.runeStatRowR1[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r1'}).element; 
   			this.runeStatRowR2[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r2'}).element; 
   			this.runeStatRowR3[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r3'}).element; 
-  		}
-
-  		// INVENTORY
-  		const inventoryTabNames = ['OBJETOS', 'RUNAS']
-
-  		this.inventoryTab = [];
-  		this.inventoryTabContainer = new Element(this.inventoryContainer, { className: 'mag-inventory-tab-container stroke' }).element; 
-
-  		inventoryTabNames.forEach((name, i) => {
-  			this.inventoryTab[i] = new Element(this.inventoryTabContainer, { className: 'mag-inventory-tab', text: name}).element; 
-  			this.inventoryTab[i].addEventListener('click', () => this.changeTab(i, true));	
-  		})
-
-  		this.updateTabs(true);
+  		} 		
   	}
 
   	updateTabs = (inventory = false) => {
   		if (!inventory) {
   			this.tab.forEach((tab, i) => {
   				(i == this.tabSelected) ? tab.className = 'forjamago-tab-selected' : tab.className = 'forjamago-tab';
+  				(i == this.tabSelected) ? this.scenes[i].style.display = 'flex' : this.scenes[i].style.display = 'none';
   			});
   		} else {
   			this.inventoryTab.forEach((tab, i) => {
-  				(i == this.magData.tabSelected) ? tab.className = 'mag-inventory-tab-selected' : tab.className = 'mag-inventory-tab';
+  				(i == this.inventoryData.tabSelected) ? tab.className = 'forjamago-inventory-tab-selected' : tab.className = 'forjamago-inventory-tab';
   			});
+  			this.updateInventoryItems();
   		}
   	}
 
@@ -130,12 +145,72 @@ export class ForjamagoWindow extends Window {
   		if (!inventory) {
   			this.tabSelected = n;
 	  		this.updateTabs();
-	  		//this.updateItems();
   		} else {
-  			this.magData.tabSelected = n;
+  			this.inventoryData.tabSelected = n;
 	  		this.updateTabs(true);
   		}
+  	}
+
+  	destroyInventoryItems = () => {
+  		if (this.inventorySlot && this.inventorySlot.length) {
+	        this.inventorySlot.forEach(slot => {
+	            if (slot.parentNode) {
+	                slot.parentNode.removeChild(slot);
+	            }
+	        });
+	        this.inventorySlot = [];
+	    }
+  	}
+
+  	updateInventoryItems = () => {
+  		this.destroyInventoryItems();
+  		this.inventoryData.items = [];
+  		const items = this.component.component.main.inventory.items;
+
+  		if (this.inventoryData.tabSelected == 0) {
+  			Object.values(items).forEach((item) => {
+  				if (item.type == 'equipment') this.inventoryData.items.push(item)
+  			})
+  		} else {
+  			Object.values(items).forEach((item) => {
+  				if (item.type == 'resource' && item.sort == 'rune') this.inventoryData.items.push(item)
+  			})
+  		}
   		
+  		// const arrayItems = Object.values(items);
+  		
+  		// this.filtredItems = this.passFilters(arrayItems);
+  		
+  		this.drawInventorySlots();
+
+  		this.inventoryData.items.forEach((item, i) => {
+  		 	this.drawInventoryItem(item, i);
+  		})
+  	}
+
+  	drawInventorySlots = () => {
+  		this.countInventorySlots();
+  		for (let i = 0; i < this.inventoryData.slotsNeed; i++) this.inventorySlot[i] = new Element(this.inventorySlotContainer, { className: 'forjamago-inventory-slot-empty' }).element; 
+  	}
+
+	countInventorySlots = () => {
+		this.inventoryData.slotsNeed = this.inventoryData.slotsMin;
+  		if (this.inventoryData.items.length >= 39) this.inventoryData.slotsNeed = Math.ceil(this.inventoryData.items.length / 4) * 4;
+	}
+
+	drawInventoryItem = (item, pos) => {
+  		this.inventorySlot[pos].className = 'forjamago-inventory-slot';
+  		this.inventorySlot[pos].style.backgroundImage = `url("${item.image}")`;
+  		if (item.type != 'equipment') this.inventorySlot[pos].innerHTML = `<span class="isq stroke">x${item.quantity}</span>`;
+
+  		// Crear el tooltip al pasar el ratón por encima del slot
+		this.tooltip = new Tooltip(this.inventorySlot[pos], item, 'forjamagoWindow', this);
+
+  		// Agregar evento de doble clic para destruir equipamiento
+    	this.inventorySlot[pos].addEventListener('dblclick', () => {
+	        if (item.type === 'equipment') this.selectItem(item);    
+	        else this.setRune();
+    	});
   	}
 
   	open() {
@@ -145,10 +220,14 @@ export class ForjamagoWindow extends Window {
 
   	update = () => {
 
+  		this.updateInventoryItems();
   	}
 
   	selectItem = () => {
 
   	}
 
+  	setRune = () => {
+
+  	}
 }

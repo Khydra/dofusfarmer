@@ -1070,6 +1070,474 @@ export const resourceData = {
 			cebada: 1
 		}
 	},
+
+	//RUNAS
+	runa_vi: {
+		key: 'runa_vi',
+		name: 'Runa Vi',
+		image: './assets/images/items/resources/r0.png',
+		type: 'resource',
+		sort: 'rune',
+		level: 20,
+		value: {
+			vit: 5,
+			peso: 1
+		}
+	},
+	runa_bu_vi: {
+		key: 'runa_bu_vi',
+		name: 'Runa Bu Vi',
+		image: './assets/images/items/resources/r1.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			vit: 15,
+			peso: 3
+		}
+	},
+	runa_su_vi: {
+		key: 'runa_su_vi',
+		name: 'Runa Su Vi',
+		image: './assets/images/items/resources/r2.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			vit: 50,
+			peso: 10
+		}
+	},
+	runa_fu: {
+		key: 'runa_fu',
+		name: 'Runa Fu',
+		image: './assets/images/items/resources/r3.png',
+		type: 'resource',
+		sort: 'rune',
+		level: 20,
+		value: {
+			str: 1,
+			peso: 1
+		}
+	},
+	runa_bu_fu: {
+		key: 'runa_bu_fu',
+		name: 'Runa Bu Fu',
+		image: './assets/images/items/resources/r4.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			str: 3,
+			peso: 3
+		}
+	},
+	runa_su_fu: {
+		key: 'runa_su_fu',
+		name: 'Runa Su Fu',
+		image: './assets/images/items/resources/r5.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			str: 10,
+			peso: 10
+		}
+	},
+	runa_inte: {
+		key: 'runa_inte',
+		name: 'Runa Inte',
+		image: './assets/images/items/resources/r6.png',
+		type: 'resource',
+		sort: 'rune',
+		level: 20,
+		value: {
+			int: 1,
+			peso: 1
+		}
+	},
+	runa_bu_inte: {
+		key: 'runa_bu_inte',
+		name: 'Runa Bu Inte',
+		image: './assets/images/items/resources/r7.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			int: 3,
+			peso: 3
+		}
+	},
+	runa_su_inte: {
+		key: 'runa_su_inte',
+		name: 'Runa Su Inte',
+		image: './assets/images/items/resources/r8.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			int: 10,
+			peso: 10
+		}
+	},
+	runa_sue: {
+		key: 'runa_sue',
+		name: 'Runa Sue',
+		image: './assets/images/items/resources/r9.png',
+		type: 'resource',
+		sort: 'rune',
+		level: 20,
+		value: {
+			cha: 1,
+			peso: 1
+		}
+	},
+	runa_bu_sue: {
+		key: 'runa_bu_sue',
+		name: 'Runa Bu Sue',
+		image: './assets/images/items/resources/r10.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			cha: 3,
+			peso: 3
+		}
+	},
+	runa_su_sue: {
+		key: 'runa_su_sue',
+		name: 'Runa Su Sue',
+		image: './assets/images/items/resources/r11.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			cha: 10,
+			peso: 10
+		}
+	},
+	runa_agi: {
+		key: 'runa_agi',
+		name: 'Runa Agi',
+		image: './assets/images/items/resources/r12.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			agi: 1,
+			peso: 1
+		}
+	},
+	runa_bu_agi: {
+		key: 'runa_bu_agi',
+		name: 'Runa Bu Agi',
+		image: './assets/images/items/resources/r13.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			agi: 3,
+			peso: 3
+		}
+	},
+	runa_su_agi: {
+		key: 'runa_su_agi',
+		name: 'Runa Su Agi',
+		image: './assets/images/items/resources/r14.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			agi: 10,
+			peso: 10
+		}
+	},
+	runa_pa: {
+		key: 'runa_pa',
+		name: 'Runa Pa',
+		image: './assets/images/items/resources/r15.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			pa: 1,
+			peso: 100
+		}
+	},
+	runa_pm: {
+		key: 'runa_pm',
+		name: 'Runa Pm',
+		image: './assets/images/items/resources/r16.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			pm: 1,
+			peso: 90
+		}
+	},
+	runa_lu: {
+		key: 'runa_lu',
+		name: 'Runa Lu',
+		image: './assets/images/items/resources/r17.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			al: 1,
+			peso: 51
+		}
+	},
+	runa_be: {
+		key: 'runa_be',
+		name: 'Runa Be',
+		image: './assets/images/items/resources/r18.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			invo: 1,
+			peso: 30
+		}
+	},
+	runa_prospe: {
+		key: 'runa_prospe',
+		name: 'Runa Prospe',
+		image: './assets/images/items/resources/r19.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			pp: 1,
+			peso: 3
+		}
+	},
+	runa_bu_prospe: {
+		key: 'runa_bu_prospe',
+		name: 'Runa Bu Prospe',
+		image: './assets/images/items/resources/r20.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			pp: 3,
+			peso: 9
+		}
+	},
+	runa_pot: {
+		key: 'runa_pot',
+		name: 'Runa Pot',
+		image: './assets/images/items/resources/r21.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			pot: 1,
+			peso: 2
+		}
+	},
+	runa_bu_pot: {
+		key: 'runa_bu_pot',
+		name: 'Runa Bu Pot',
+		image: './assets/images/items/resources/r22.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			pot: 3,
+			peso: 6
+		}
+	},
+	runa_su_pot: {
+		key: 'runa_su_pot',
+		name: 'Runa Su Pot',
+		image: './assets/images/items/resources/r23.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			pot: 10,
+			peso: 20
+		}
+	},
+	runa_cri: {
+		key: 'runa_cri',
+		name: 'Runa Cri',
+		image: './assets/images/items/resources/r24.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			cri: 1,
+			peso: 10
+		}
+	},
+	runa_da: {
+		key: 'runa_da',
+		name: 'Runa Da',
+		image: './assets/images/items/resources/r25.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			dmg: 1,
+			peso: 20
+		}
+	},
+	runa_cu: {
+		key: 'runa_cu',
+		name: 'Runa Cu',
+		image: './assets/images/items/resources/r26.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			cue: 1,
+			peso: 10
+		}
+	},
+	runa_bu_cu: {
+		key: 'runa_bu_cu',
+		name: 'Runa Bu Cu',
+		image: './assets/images/items/resources/r27.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			cue: 3,
+			peso: 30
+		}
+	},
+	runa_da_tierra: {
+		key: 'runa_da_tierra',
+		name: 'Runa Da Tierra',
+		image: './assets/images/items/resources/r28.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			strDmg: 1,
+			peso: 5
+		}
+	},
+	runa_bu_da_tierra: {
+		key: 'runa_bu_da_tierra',
+		name: 'Runa Bu Da Tierra',
+		image: './assets/images/items/resources/r29.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			strDmg: 3,
+			peso: 15
+		}
+	},
+	runa_da_fuego: {
+		key: 'runa_da_fuego',
+		name: 'Runa Da Fuego',
+		image: './assets/images/items/resources/r30.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			intDmg: 1,
+			peso: 5
+		}
+	},
+	runa_bu_da_fuego: {
+		key: 'runa_bu_da_fuego',
+		name: 'Runa Bu Da Fuego',
+		image: './assets/images/items/resources/r31.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			intDmg: 3,
+			peso: 15
+		}
+	},
+	runa_da_agua: {
+		key: 'runa_da_agua',
+		name: 'Runa Da Agua',
+		image: './assets/images/items/resources/r32.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			chaDmg: 1,
+			peso: 5
+		}
+	},
+	runa_bu_da_agua: {
+		key: 'runa_bu_da_agua',
+		name: 'Runa Bu Da Agua',
+		image: './assets/images/items/resources/r33.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			chaDmg: 3,
+			peso: 15
+		}
+	},
+	runa_da_aire: {
+		key: 'runa_da_aire',
+		name: 'Runa Da Aire',
+		image: './assets/images/items/resources/r34.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			agiDmg: 1,
+			peso: 5
+		}
+	},
+	runa_bu_da_aire: {
+		key: 'runa_bu_da_aire',
+		name: 'Runa Bu Da Aire',
+		image: './assets/images/items/resources/r35.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			agiDmg: 3,
+			peso: 15
+		}
+	},
+	runa_da_cri: {
+		key: 'runa_da_cri',
+		name: 'Runa Da Cri',
+		image: './assets/images/items/resources/r36.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			crtDmg: 1,
+			peso: 5
+		}
+	},
+	runa_bu_da_cri: {
+		key: 'runa_bu_da_cri',
+		name: 'Runa Bu Da Cri',
+		image: './assets/images/items/resources/r37.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			crtDmg: 3,
+			peso: 15
+		}
+	},
+	runa_por_he: {
+		key: 'runa_por_he',
+		name: 'Runa Por He',
+		image: './assets/images/items/resources/r38.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			speDmg: 1,
+			peso: 10
+		}
+	},
+	runa_por_ar: {
+		key: 'runa_por_ar',
+		name: 'Runa Por Ar',
+		image: './assets/images/items/resources/r39.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			wepDmg: 1,
+			peso: 10
+		}
+	},
+	runa_por_res: {
+		key: 'runa_por_res',
+		name: 'Runa Por Res',
+		image: './assets/images/items/resources/r40.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			res: 1,
+			peso: 10
+		}
+	},
+	runa_por_reen: {
+		key: 'runa_por_reen',
+		name: 'Runa Por Reen',
+		image: './assets/images/items/resources/r41.png',
+		type: 'resource',
+		sort: 'rune',
+		value: {
+			reDmg: 1,
+			peso: 10
+		}
+	},
 }
 
 

@@ -100,6 +100,10 @@ export class ForjamagoWindow extends Window {
   		this.runeSelectedSlot = new Element(this.itemContainer, { className: 'mag-rune-selected-slot' }).element;	
   		this.fusionButton = new Element(this.itemContainer, { className: 'mag-fusion-button stroke', text: 'FUSIONAR' }).element;
 
+  		this.itemSelectedSlot.addEventListener('click', () => { this.removeItem() });
+  		this.runeSelectedSlot.addEventListener('click', () => { this.removeRune() });
+  		this.fusionButton.addEventListener('click', () => { this.fusionRune() });
+
   		// MAG
   		this.runeGuideContainer = new Element(this.runeContainer, { className: 'mag-rune-guide-container' }).element;
   		this.runeGuideLabel = [];
@@ -181,11 +185,7 @@ export class ForjamagoWindow extends Window {
   				if (item.type == 'resource' && item.sort == 'rune') this.inventoryData.items.push(item)
   			})
   		}
-  		
-  		// const arrayItems = Object.values(items);
-  		
-  		// this.filtredItems = this.passFilters(arrayItems);
-  		
+	
   		this.drawInventorySlots();
 
   		this.inventoryData.items.forEach((item, i) => {
@@ -214,7 +214,7 @@ export class ForjamagoWindow extends Window {
   		// Agregar evento de doble clic para destruir equipamiento
     	this.inventorySlot[pos].addEventListener('click', () => {
 	        if (item.type === 'equipment') this.selectItem(item);    
-	        else this.selectRune();
+	        else this.selectRune(item);
     	});
   	}
 
@@ -242,7 +242,23 @@ export class ForjamagoWindow extends Window {
   		}
   	}
 
+  	selectRune = (rune) => {
+  		if (this.tabSelected != 1) return;
+
+  		let inventory = this.component.component.main.inventory;
+  		if (this.magData.runeSelected != null) this.removeRune();
+
+  		this.magData.runeSelected = rune;
+  		inventory.removeAll(rune);
+  		this.runeSelectedSlot.style.backgroundImage = `url("${rune.image}")`;
+  		this.runeSelectedSlot.innerHTML = `<span class="isq stroke">x${rune.quantity}</span>`
+  		this.updateInventoryItems();
+  		console.log(this.magData.runeSelected)
+  		removeTooltips();
+  	}
+
   	removeItem = () => {
+  		if (this.magData.itemSelected == null) return;
   		let inventory = this.component.component.main.inventory;
   		inventory.obtainItem(this.magData.itemSelected);
   		this.magData.itemSelected = null;
@@ -250,14 +266,17 @@ export class ForjamagoWindow extends Window {
   		this.updateInventoryItems();	
   	}
 
-  	selectRune = (rune) => {
-  		if (this.tabSelected == 1) {
-  			if (this.magData.runeSelected != null) this.removeRune();
-  			this.magData.runeSelected = rune;
-  		}	
+  	removeRune = () => {
+  		if (this.magData.runeSelected == null) return;
+  		let inventory = this.component.component.main.inventory;
+  		inventory.obtainItem(this.magData.runeSelected, this.magData.runeSelected.quantity);
+  		this.magData.runeSelected = null;
+  		this.runeSelectedSlot.style.backgroundImage = "";
+  		this.runeSelectedSlot.innerHTML = "";
+  		this.updateInventoryItems();	
   	}
 
-  	removeRune = () => {
-
+  	fusionRune = () => {
+  		console.log('fusion')
   	}
 }

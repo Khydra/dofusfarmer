@@ -2,7 +2,7 @@ import { Window } from '../../../utils/Window.js';
 import { Element } from '../../../utils/Element.js';
 import { Input } from '../../../utils/Input.js';
 import { Selector } from '../../../utils/Selector.js';
-import { Tooltip } from '../../../utils/Tooltip.js';
+import { Tooltip, removeTooltips } from '../../../utils/Tooltip.js';
 import { resourceData } from '../../data/item/resourceData.js';
 import { expJobData } from '../../data/class/expData.js';
 
@@ -10,23 +10,24 @@ export class ForjamagoWindow extends Window {
 	constructor(component) {
 		const title = "Forjamago";
 	    const width = 900;
-	    const height = 600;
+	    const height = 638;
 	    const x = 330; 
 	    const y = 80; 
 
 	    super(title, width, height, x, y); 
 	    this.component = component;
-	    this.tabSelected = 0;
+	    this.tabSelected = 1;
 
 	    this.inventoryData = {
 	    	tabSelected: 0,
-	    	slotsMin: 44,
-	    	slotsNeed: 44,
+	    	slotsMin: 24,
+	    	slotsNeed: 24,
 	    	items: []
 	    }
 
 	    this.magData = {
 	    	itemSelected: null,
+	    	runeSelected: null
 	    }
 
 	    this.crusherData = {
@@ -92,8 +93,12 @@ export class ForjamagoWindow extends Window {
   		this.itemContainer = new Element(this.workContainer, { className: 'mag-item-container' }).element;
   		this.runeContainer = new Element(this.workContainer, { className: 'mag-rune-container' }).element;
   		// HISTROTY
+  		this.historyText = new Element(this.historyContainer, { className: 'mag-history-text' }).element;
 
   		// ITEM
+  		this.itemSelectedSlot = new Element(this.itemContainer, { className: 'mag-item-selected-slot' }).element;
+  		this.runeSelectedSlot = new Element(this.itemContainer, { className: 'mag-rune-selected-slot' }).element;	
+  		this.fusionButton = new Element(this.itemContainer, { className: 'mag-fusion-button stroke', text: 'FUSIONAR' }).element;
 
   		// MAG
   		this.runeGuideContainer = new Element(this.runeContainer, { className: 'mag-rune-guide-container' }).element;
@@ -124,7 +129,7 @@ export class ForjamagoWindow extends Window {
   			this.runeStatRowR1[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r1'}).element; 
   			this.runeStatRowR2[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r2'}).element; 
   			this.runeStatRowR3[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r3'}).element; 
-  		} 		
+  		} 	
   	}
 
   	updateTabs = (inventory = false) => {
@@ -195,7 +200,7 @@ export class ForjamagoWindow extends Window {
 
 	countInventorySlots = () => {
 		this.inventoryData.slotsNeed = this.inventoryData.slotsMin;
-  		if (this.inventoryData.items.length >= 39) this.inventoryData.slotsNeed = Math.ceil(this.inventoryData.items.length / 4) * 4;
+  		if (this.inventoryData.items.length >= 24) this.inventoryData.slotsNeed = Math.ceil(this.inventoryData.items.length / 3) * 3;
 	}
 
 	drawInventoryItem = (item, pos) => {
@@ -207,9 +212,9 @@ export class ForjamagoWindow extends Window {
 		this.tooltip = new Tooltip(this.inventorySlot[pos], item, 'forjamagoWindow', this);
 
   		// Agregar evento de doble clic para destruir equipamiento
-    	this.inventorySlot[pos].addEventListener('dblclick', () => {
+    	this.inventorySlot[pos].addEventListener('click', () => {
 	        if (item.type === 'equipment') this.selectItem(item);    
-	        else this.setRune();
+	        else this.selectRune();
     	});
   	}
 
@@ -223,11 +228,36 @@ export class ForjamagoWindow extends Window {
   		this.updateInventoryItems();
   	}
 
-  	selectItem = () => {
+  	selectItem = (item) => {
+  		let inventory = this.component.component.main.inventory;
+  		if (this.tabSelected == 1) {
+  			if (this.magData.itemSelected != null) this.removeItem();
+	  		this.magData.itemSelected = item;
+	  		inventory.removeItem(item);
+	  		this.itemSelectedSlot.style.backgroundImage = `url("${item.image}")`;
+	  		this.updateInventoryItems();
+	  		removeTooltips();
+  		} else {
 
+  		}
   	}
 
-  	setRune = () => {
+  	removeItem = () => {
+  		let inventory = this.component.component.main.inventory;
+  		inventory.obtainItem(this.magData.itemSelected);
+  		this.magData.itemSelected = null;
+  		this.itemSelectedSlot.style.backgroundImage = "";
+  		this.updateInventoryItems();	
+  	}
+
+  	selectRune = (rune) => {
+  		if (this.tabSelected == 1) {
+  			if (this.magData.runeSelected != null) this.removeRune();
+  			this.magData.runeSelected = rune;
+  		}	
+  	}
+
+  	removeRune = () => {
 
   	}
 }

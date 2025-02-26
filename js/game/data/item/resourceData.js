@@ -1112,7 +1112,6 @@ export const resourceData = {
 		image: './assets/images/items/resources/r3.png',
 		type: 'resource',
 		sort: 'rune',
-		level: 20,
 		value: {
 			str: 1,
 			peso: 1
@@ -1146,7 +1145,6 @@ export const resourceData = {
 		image: './assets/images/items/resources/r6.png',
 		type: 'resource',
 		sort: 'rune',
-		level: 20,
 		value: {
 			int: 1,
 			peso: 1
@@ -1180,7 +1178,6 @@ export const resourceData = {
 		image: './assets/images/items/resources/r9.png',
 		type: 'resource',
 		sort: 'rune',
-		level: 20,
 		value: {
 			cha: 1,
 			peso: 1

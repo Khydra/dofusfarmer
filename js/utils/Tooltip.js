@@ -82,13 +82,23 @@ export class Tooltip {
         switch (this.data.type) {
             case "resource":
                 this.infoType.innerText = `RECURSO ◆ ${this.data.sort.toUpperCase()}`;
-                if (this.location == 'inventoryWindow') this.eventGuide.innerText = `RMB: Opciones \n SHIFT: Almacenar`;
-                if (this.location == 'bankWindow') this.eventGuide.innerText = `RMB: Opciones \n SHIFT: Retirar`;
+                if (this.data.sort == 'rune') {
+                    let runeValue = [];
+                    Object.keys(this.data.value).forEach((key, i) => {
+                        runeValue[i] = [key, this.data.value[key]];
+                    })
+                    this.eventGuide.innerHTML = `Efecto: ${runeValue[0][1]} ${text.stat[runeValue[0][0]]} <br> Densidad: ${runeValue[1][1]} <br><br>`;
+                }
+
+                if (this.location == 'inventoryWindow') this.eventGuide.innerHTML += `RMB: Opciones <br> SHIFT: Almacenar`;
+                if (this.location == 'bankWindow') this.eventGuide.innerHTML += `RMB: Opciones <br> SHIFT: Retirar`;
                 if (this.location == 'jobWindow') {
                     const quantityInventory = this.src.component.component.main.inventory.items[this.data.key]?.quantity ?? 0;
                     const quantityBank = this.src.component.component.main.bank.items[this.data.key]?.quantity ?? 0;
-                    this.eventGuide.innerText = `Inventario: ${quantityInventory} \n Bancosako: ${quantityBank}`;
+                    this.eventGuide.innerHTML += `Inventario: ${quantityInventory} <br> Bancosako: ${quantityBank}`;
                 }
+                if (this.location == 'forjamagoWindow') this.eventGuide.innerHTML += `Click: Añadir`;
+                
             break;
             case "equipment":
                 this.infoType.innerText = `${this.data.sort.toUpperCase()} ◆ NIVEL ${this.data.level}`;
@@ -211,4 +221,11 @@ export class Tooltip {
             } 
         }
     }
+}
+
+export function removeTooltips() {
+    const tooltips = document.querySelectorAll('.tooltip');
+    tooltips.forEach(tooltip => {
+        tooltip.remove();
+    });
 }

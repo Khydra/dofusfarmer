@@ -343,6 +343,7 @@
 	bottom: 10px;
 	color: var(--white);
 	overflow-y: auto;
+	text-shadow: 1px 1px 1px black;
 }
 
 .mag-history-text::-webkit-scrollbar { width: 8px; }
@@ -355,5 +356,35 @@
 
 .history-item {
 	width: 200px;
+	height: 50px;
 	border-bottom: 3px dashed var(--white);
+	font-size: 18px;
+}
+
+.history-effect-exo {
+	position: absolute;
+	font-size: 14px;
+	padding-top: 10px;
+	color: #52beda;
+}
+
+.history-effect-clean {
+	position: absolute;
+	font-size: 14px;
+	padding-top: 10px;
+	color: #90e052;
+}
+
+.history-effect-succes {
+	position: absolute;
+	font-size: 14px;
+	padding-top: 10px;
+	color: var(--yellow);
+}
+
+.history-effect-fail {
+	position: absolute;
+	font-size: 14px;
+	padding-top: 10px;
+	color: #fe8081;
 }

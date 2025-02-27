@@ -1368,7 +1368,7 @@ export const resourceData = {
 		type: 'resource',
 		sort: 'rune',
 		value: {
-			cri: 1,
+			crt: 1,
 			peso: 10,			
 		},
 		notation: 'crt1'

@@ -382,14 +382,15 @@ export class ForjamagoWindow extends Window {
 
   		switch(runeFusion) {
 	  		case 'clean': 
-	  			if (this.magData.itemSelected.stats[runeData[0]] != undefined) {
+	  			if (this.magData.itemSelected.base[runeData[0]] != undefined) {
 	  				this.magData.itemSelected.stats[runeData[0]] += runeData[1]
+	  				this.historyText.innerHTML += `<span class="history-effect-clean">${runeData[1]} ${text.stat[runeData[0]]}</span><br>`
 	  			} else {
-	  				this.magData.itemSelected.stats[runeData[0]] = runeData[1];
+	  				if (this.magData.itemSelected.stats[runeData[0]] == undefined) this.magData.itemSelected.stats[runeData[0]] = runeData[1];
+	  				else this.magData.itemSelected.stats[runeData[0]] += runeData[1];
+	  				this.historyText.innerHTML += `<span class="history-effect-exo">${runeData[1]} ${text.stat[runeData[0]]}</span><br>`
 	  			}
-
 	  			break
-
 	  		case 'succes': 
 	  			break;
 

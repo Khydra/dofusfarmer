@@ -6,10 +6,8 @@ export class AlmanaxWindow extends Window {
 		const title = "Almanax";
 	    const width = 600;
 	    const height = 450;
-	    const x = 530; 
-	    const y = 80; 
 
-	    super(title, width, height, x, y); 
+	    super(title, width, height); 
 	    this.component = component;
 
 	    this.render();

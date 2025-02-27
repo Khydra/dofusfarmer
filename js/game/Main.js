@@ -99,6 +99,10 @@ export class Main {
 		this.inventory.obtainItem(resourceData['runa_bu_vi'], 1361)
 		this.inventory.obtainItem(resourceData['runa_fu'], 1618)
 
+		this.inventory.obtainItem(resourceData['runa_sa'], 88)
+		this.inventory.obtainItem(resourceData['runa_bu_sa'], 5)
+		this.inventory.obtainItem(resourceData['runa_su_sa'], 10)
+
 		this.inventory.obtainItem(generateItemStats(equipmentData['la_capa_slok']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));

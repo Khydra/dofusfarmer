@@ -12,10 +12,8 @@ export class HerreroWindow extends Window {
 		const title = "Herrero";
 	    const width = 850;
 	    const height = 485;
-	    const x = 530; 
-	    const y = 80; 
 
-	    super(title, width, height, x, y); 
+	    super(title, width, height); 
 	    this.recipesShown;
 	    this.component = component;
 	    this.filter = {

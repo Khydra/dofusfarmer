@@ -6,10 +6,8 @@ export class AchievementsWindow extends Window {
 		const title = "Logros";
 	    const width = 600;
 	    const height = 450;
-	    const x = 530; 
-	    const y = 80; 
 
-	    super(title, width, height, x, y); 
+	    super(title, width, height); 
 	    this.component = component;
 
 	    this.render();

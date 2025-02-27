@@ -150,25 +150,28 @@ export class Tooltip {
 
         if (!Tooltip.isControlActive) {
             Object.keys(this.data.stats).forEach((key) => {
-                if (this.data.stats[key] > 0) this.statValues.innerHTML += `<span class="stat-green"><b>${this.data.stats[key]}</b> ${text.stat[key]}</span> <br>`; 
+                if (this.data.base[key] == undefined) this.statValues.innerHTML += `<span class="stat-exo"><b>${this.data.stats[key]}</b> ${text.stat[key]}</span> <br>`; 
+                else if (this.data.stats[key] > 0) this.statValues.innerHTML += `<span class="stat-green"><b>${this.data.stats[key]}</b> ${text.stat[key]}</span> <br>`; 
                 else if (this.data.stats[key] < 0) this.statValues.innerHTML += `<span class="stat-red"><b>${this.data.stats[key]}</b> ${text.stat[key]}</span> <br>`; 
                 else if (this.data.stats[key] === 0) this.statValues.innerHTML += `<span class="stat-no"><b>${this.data.stats[key]}</b> ${text.stat[key]}</span> <br>`; 
             })
         } else {
             Object.keys(this.data.stats).forEach((key) => {
-                if (this.data.stats[key] > 0) {
+                if (this.data.base[key] == undefined) this.statValues.innerHTML += `<span class="stat-exo"><b>${this.data.stats[key]}</b> ${text.stat[key]}</span> <br>`; 
+
+                else  if (this.data.stats[key] > 0) {
                     this.statValues.innerHTML +=  `<span class="stat-green"><b>${this.data.stats[key]}</b> ${text.stat[key]}</span>`;
                     if (this.data.base[key].length > 1) this.statValues.innerHTML += `<span class="stat-teoric">[${this.data.base[key][0]} a ${this.data.base[key][1]}]</span><br>`;
                     else this.statValues.innerHTML += `<span class="stat-teoric">[${this.data.base[key][0]}]</span><br>`;
                 }
 
-                if (this.data.stats[key] < 0) {
+                else if (this.data.stats[key] < 0) {
                     this.statValues.innerHTML +=  `<span class="stat-red"><b>${this.data.stats[key]}</b> ${text.stat[key]}</span>`;
                     if (this.data.base[key].length > 1) this.statValues.innerHTML += `<span class="stat-teoric">[${this.data.base[key][0]} a ${this.data.base[key][1]}]</span><br>`;
                     else this.statValues.innerHTML += `<span class="stat-teoric">[${this.data.base[key][0]}]</span><br>`;
                 }
 
-                if (this.data.stats[key] === 0) {
+                else if (this.data.stats[key] === 0) {
                     this.statValues.innerHTML +=  `<span class="stat-no"><b>${this.data.stats[key]}</b> ${text.stat[key]}</span>`;
                     if (this.data.base[key].length > 1) this.statValues.innerHTML += `<span class="stat-teoric">[${this.data.base[key][0]} a ${this.data.base[key][1]}]</span><br>`;
                     else this.statValues.innerHTML += `<span class="stat-teoric">[${this.data.base[key][0]}]</span><br>`;

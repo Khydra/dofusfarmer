@@ -18,10 +18,8 @@ export class JobsWindow extends Window {
 		const title = "Oficios";
 	    const width = 600;
 	    const height = 450;
-	    const x = 530; 
-	    const y = 80; 
 
-	    super(title, width, height, x, y); 
+	    super(title, width, height); 
 	    this.component = component;
 
 	    this.craftWindow = new CraftWindow(this);

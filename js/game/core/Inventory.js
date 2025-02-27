@@ -35,6 +35,6 @@ export class Inventory {
 	}
 
 	findItemByNotation = (notation) => {
-		return Object.values(this.items).find(item => item.value?.notation === notation) || null;
+		return Object.values(this.items).find(item => item.notation === notation) || null;
 	}
 }

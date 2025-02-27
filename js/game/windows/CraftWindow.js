@@ -10,10 +10,8 @@ export class CraftWindow extends Window {
 		const title = "Creación";
 	    const width = 300;
 	    const height = 325;
-	    const x = 530; 
-	    const y = 80; 
 
-	    super(title, width, height, x, y); 
+	    super(title, width, height); 
 	    this.component = component;
 	    this.recipe = undefined;
 	    this.job = undefined;

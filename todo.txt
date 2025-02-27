@@ -108,3 +108,5 @@ amuleto_de_pio_amarillo: {
 		sort: 'sombrero',
 		set: setData['set_de_pio_amarillo'],
 	},
+
+

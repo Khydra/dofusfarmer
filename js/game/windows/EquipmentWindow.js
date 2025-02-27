@@ -7,10 +7,8 @@ export class EquipmentWindow extends Window {
 		const title = "Equipamiento";
 	    const width = 450;
 	    const height = 500;
-	    const x = 50; 
-	    const y = 80; 
 
-	    super(title, width, height, x, y); 
+	    super(title, width, height); 
 	    this.component = component;
 	    this.tooltips = {};
 	    this.render();

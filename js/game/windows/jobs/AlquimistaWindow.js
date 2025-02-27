@@ -12,10 +12,8 @@ export class AlquimistaWindow extends Window {
 		const title = "Alquimista";
 	    const width = 850;
 	    const height = 485;
-	    const x = 530; 
-	    const y = 80; 
 
-	    super(title, width, height, x, y); 
+	    super(title, width, height); 
 	    this.recipesShown;
 	    this.component = component;
 	    this.filter = {

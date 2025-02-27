@@ -47,7 +47,6 @@
 .forjamago-mag-scene {
 	display: none;
 	position: absolute;
-	width: 675px;
 	top: 31px;
 	bottom: 0px;
 	flex-wrap: wrap;
@@ -63,7 +62,7 @@
 .mag-work-container {
 	position: relative;
 	height: 100%;
-	width: 449px;
+	width: 499px; /*449*/
 	display: flex;
 	flex-wrap: wrap;
 	outline: 1px solid black;
@@ -102,7 +101,7 @@
 	width: 15%;
 }
 .mag-rune-guide-label:nth-child(2) {
-	width: 10%;
+	width: 7%;
 }
 .mag-rune-guide-label:nth-child(3) {
 	width: 30%;
@@ -110,7 +109,7 @@
 	padding-left: 20px;
 }
 .mag-rune-guide-label:nth-child(4) {
-	width: 15%;
+	width: 10%;
 }
 
 .mag-rune-stat-container {
@@ -128,8 +127,8 @@
 	flex-wrap: wrap;
 	color: var(--white);
 	text-shadow: 1px 1px 1px black;
-	font-size: 14px;
-	line-height: 30px;
+	font-size: 15px;
+	line-height: 31px;
 	text-align: center;
 }
 
@@ -142,7 +141,7 @@
 
 .mag-rune-stat-max {
 	position: relative;
-	width: 10%;
+	width: 7%;
 }
 
 .mag-rune-stat-effect {
@@ -154,29 +153,32 @@
 
 .mag-rune-stat-modif {
 	position: relative;
-	width: 15%;
+	width: 10%;
 }	
 
 .mag-rune-stat-r1 {
 	position: relative;
-	width: 8%;
-	background-size: 75%;
+	width: 9%;
+	padding-left: 10px;
+	background-size: 62%;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 
 .mag-rune-stat-r2 {
 	position: relative;
-	width: 8%;
-	background-size: 75%;
+	width: 9%;
+	padding-left: 8px;
+	background-size: 62%;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 
 .mag-rune-stat-r3 {
 	position: relative;
-	width: 8%;
-	background-size: 75%;
+	width: 9%;
+	padding-left: 8px;
+	background-size: 62%;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -278,7 +280,7 @@
 .mag-item-selected-slot {
 	position: absolute;
 	top: 12px;
-	left: 150px;
+	left: 175px;
 	width: 60px;
 	height: 60px;
 	background-color: rgba(0, 0, 0, 0.5);
@@ -293,7 +295,7 @@
 .mag-rune-selected-slot {
 	position: absolute;
 	top: 12px;
-	right: 150px;
+	right: 175px;
 	width: 60px;
 	height: 60px;
 	background-color: rgba(0, 0, 0, 0.5);

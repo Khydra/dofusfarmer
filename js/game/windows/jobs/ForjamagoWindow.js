@@ -10,12 +10,10 @@ import { text } from '../../../file/text.js';
 export class ForjamagoWindow extends Window { 
 	constructor(component) {
 		const title = "Forjamago";
-	    const width = 900;
+	    const width = 950;
 	    const height = 638;
-	    const x = 330; 
-	    const y = 80; 
 
-	    super(title, width, height, x, y); 
+	    super(title, width, height); 
 	    this.component = component;
 	    this.tabSelected = 1;
 
@@ -248,15 +246,14 @@ export class ForjamagoWindow extends Window {
   	selectRune = (rune) => {
   		if (this.tabSelected != 1) return;
 
-  		let inventory = this.component.component.main.inventory;
+  		//let inventory = this.component.component.main.inventory;
   		if (this.magData.runeSelected != null) this.removeRune();
 
   		this.magData.runeSelected = rune;
-  		inventory.removeAll(rune);
+  		//inventory.removeAll(rune);
   		this.runeSelectedSlot.style.backgroundImage = `url("${rune.image}")`;
   		this.runeSelectedSlot.innerHTML = `<span class="isq stroke">x${rune.quantity}</span>`
   		this.updateInventoryItems();
-  		console.log(this.magData.runeSelected)
   		removeTooltips();
   	}
 
@@ -273,8 +270,6 @@ export class ForjamagoWindow extends Window {
 
   	removeRune = () => {
   		if (this.magData.runeSelected == null) return;
-  		let inventory = this.component.component.main.inventory;
-  		inventory.obtainItem(this.magData.runeSelected, this.magData.runeSelected.quantity);
   		this.magData.runeSelected = null;
   		this.runeSelectedSlot.style.backgroundImage = "";
   		this.runeSelectedSlot.innerHTML = "";
@@ -282,12 +277,22 @@ export class ForjamagoWindow extends Window {
   	}
 
   	fusionRune = () => {
-  		console.log('fusion')
+  		if (this.magData.runeSelected != null && this.magData.itemSelected != null) {
+  			this.tryRune(this.magData.runeSelected);
+  			this.magData.runeSelected.quantity -= 1;
+  			this.runeSelectedSlot.innerHTML = `<span class="isq stroke">x${this.magData.runeSelected.quantity}</span>`;
+  			if (this.magData.runeSelected.quantity == 0) {
+  				this.component.component.main.inventory.removeAll(this.magData.runeSelected);
+  				this.removeRune();
+  			}
+  			this.updateInventoryItems();	
+  			this.showItemStats();
+  		}
   	}
 
   	showItemStats = () => {
   		let inventory = this.component.component.main.inventory;
-
+  		this.cleanItemStats();
   		Object.keys(this.magData.itemSelected.base).forEach((key, i) => {
   			this.runeStatRowMin[i].innerHTML = this.magData.itemSelected.base[key][0];
 			if (this.magData.itemSelected.base[key][1] != undefined) this.runeStatRowMax[i].innerHTML = this.magData.itemSelected.base[key][1];
@@ -317,6 +322,32 @@ export class ForjamagoWindow extends Window {
 				this.runeStatRowR3[i].innerHTML = `<span class="isq-mini stroke">x${r3.quantity}</span>`
 			}
   		})
+
+  		// exos
+  		Object.keys(this.magData.itemSelected.stats).forEach((key, i) => {
+  			if (this.magData.itemSelected.base[key] == undefined) {
+  				this.runeStatRowMin[i].innerHTML = "-";
+  				this.runeStatRowMax[i].innerHTML = "-";
+  				this.runeStatRowEffect[i].innerHTML = `<span class="stat-exo">${this.magData.itemSelected.stats[key]} ${text.stat[key].toLowerCase()}</span>`;
+
+  				let r1 = inventory.findItemByNotation(`${key}1`);
+				let r2 = inventory.findItemByNotation(`${key}2`);
+				let r3 = inventory.findItemByNotation(`${key}3`);
+
+				if (r1 != null) {
+					this.runeStatRowR1[i].style.backgroundImage = `url("${r1.image}")`;
+					this.runeStatRowR1[i].innerHTML = `<span class="isq-mini stroke">x${r1.quantity}</span>`
+				}
+				if (r2 != null) {
+					this.runeStatRowR2[i].style.backgroundImage = `url("${r2.image}")`;
+					this.runeStatRowR2[i].innerHTML = `<span class="isq-mini stroke">x${r2.quantity}</span>`
+				}
+				if (r3 != null) {
+					this.runeStatRowR3[i].style.backgroundImage = `url("${r3.image}")`;
+					this.runeStatRowR3[i].innerHTML = `<span class="isq-mini stroke">x${r3.quantity}</span>`
+				}
+  			}
+  		})
   	}
 
   	cleanItemStats = () => {
@@ -336,6 +367,35 @@ export class ForjamagoWindow extends Window {
 
   	updateItemStats = () => {
 
+  	}
+
+  	tryRune = (rune) => {
+  		let runeData = []; //stat - value - peso
+  		Object.keys(rune.value).forEach((key, i) => {
+  			if (i == 0) {
+  				runeData.push(key)
+  				runeData.push(rune.value[key])
+  		 	} else if (i == 1) runeData.push(rune.value[key])
+  		})
+
+  		let runeFusion = 'clean'
+
+  		switch(runeFusion) {
+	  		case 'clean': 
+	  			if (this.magData.itemSelected.stats[runeData[0]] != undefined) {
+	  				this.magData.itemSelected.stats[runeData[0]] += runeData[1]
+	  			} else {
+	  				this.magData.itemSelected.stats[runeData[0]] = runeData[1];
+	  			}
+
+	  			break
+
+	  		case 'succes': 
+	  			break;
+
+	  		case 'fail': 
+	  			break;
+  		}
   	}
 }
 

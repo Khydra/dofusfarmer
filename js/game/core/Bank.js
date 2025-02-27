@@ -8,9 +8,9 @@ export class Bank {
 		if (this.items[item.key]) {
 		    this.items[item.key].quantity += q;
 		} else {
-		    this.items[item.key] = {
-		      	...item, 
-		      	quantity: q          
+		  	this.items = {
+		    	[item.key]: { ...item, quantity: q },
+		    	...this.items
 		    };
 		}
 	}

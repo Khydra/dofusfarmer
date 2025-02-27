@@ -105,6 +105,15 @@
 	font-size: 12px;
 }
 
+.isq-mini {
+	position: absolute;
+	right: 0px;
+	bottom: -5px;
+	color: var(--white);
+	text-align: right;
+	font-size: 10px;
+}
+
 .inventory-kamas {
 	position: absolute;
 	bottom: 15px;

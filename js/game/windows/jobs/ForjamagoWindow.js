@@ -5,6 +5,7 @@ import { Selector } from '../../../utils/Selector.js';
 import { Tooltip, removeTooltips } from '../../../utils/Tooltip.js';
 import { resourceData } from '../../data/item/resourceData.js';
 import { expJobData } from '../../data/class/expData.js';
+import { text } from '../../../file/text.js';
 
 export class ForjamagoWindow extends Window { 
 	constructor(component) {
@@ -123,7 +124,7 @@ export class ForjamagoWindow extends Window {
   		this.runeStatRowR2 = [];
   		this.runeStatRowR3 = [];
 
-  		for (let i = 0; i < 17; i++) {
+  		for (let i = 0; i < 14; i++) {
   			this.runeStatRow[i] = new Element(this.runeStatContainer, { className: 'mag-rune-stat-row'}).element; 
 
   			this.runeStatRowMin[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-min'}).element; 
@@ -235,7 +236,9 @@ export class ForjamagoWindow extends Window {
 	  		this.magData.itemSelected = item;
 	  		inventory.removeItem(item);
 	  		this.itemSelectedSlot.style.backgroundImage = `url("${item.image}")`;
+	  		this.historyText.innerHTML += `<span class="history-item">${item.name}</span> <br>`
 	  		this.updateInventoryItems();
+	  		this.showItemStats();
 	  		removeTooltips();
   		} else {
 
@@ -259,10 +262,12 @@ export class ForjamagoWindow extends Window {
 
   	removeItem = () => {
   		if (this.magData.itemSelected == null) return;
+  		this.historyText.innerHTML +=  `<br>`;
   		let inventory = this.component.component.main.inventory;
   		inventory.obtainItem(this.magData.itemSelected);
   		this.magData.itemSelected = null;
   		this.itemSelectedSlot.style.backgroundImage = "";
+  		this.cleanItemStats();
   		this.updateInventoryItems();	
   	}
 
@@ -279,4 +284,66 @@ export class ForjamagoWindow extends Window {
   	fusionRune = () => {
   		console.log('fusion')
   	}
+
+  	showItemStats = () => {
+  		let inventory = this.component.component.main.inventory;
+
+  		Object.keys(this.magData.itemSelected.base).forEach((key, i) => {
+  			this.runeStatRowMin[i].innerHTML = this.magData.itemSelected.base[key][0];
+			if (this.magData.itemSelected.base[key][1] != undefined) this.runeStatRowMax[i].innerHTML = this.magData.itemSelected.base[key][1];
+			else this.runeStatRowMax[i].innerHTML = this.magData.itemSelected.base[key][0];
+			
+			if (this.magData.itemSelected.stats[key] > 0) 
+				this.runeStatRowEffect[i].innerHTML = `<span class="stat-green">${this.magData.itemSelected.stats[key]} ${text.stat[key].toLowerCase()}</span>`;
+			else if (this.magData.itemSelected.stats[key] < 0) 
+				this.runeStatRowEffect[i].innerHTML = `<span class="stat-red">${this.magData.itemSelected.stats[key]} ${text.stat[key].toLowerCase()}</span>`;
+			else if (this.magData.itemSelected.stats[key] === 0) 
+				this.runeStatRowEffect[i].innerHTML = `<span class="stat-no">${this.magData.itemSelected.stats[key]} ${text.stat[key].toLowerCase()}</span>`;
+
+			let r1 = inventory.findItemByNotation(`${key}1`);
+			let r2 = inventory.findItemByNotation(`${key}2`);
+			let r3 = inventory.findItemByNotation(`${key}3`);
+
+			if (r1 != null) {
+				this.runeStatRowR1[i].style.backgroundImage = `url("${r1.image}")`;
+				this.runeStatRowR1[i].innerHTML = `<span class="isq-mini stroke">x${r1.quantity}</span>`
+			}
+			if (r2 != null) {
+				this.runeStatRowR2[i].style.backgroundImage = `url("${r2.image}")`;
+				this.runeStatRowR2[i].innerHTML = `<span class="isq-mini stroke">x${r2.quantity}</span>`
+			}
+			if (r3 != null) {
+				this.runeStatRowR3[i].style.backgroundImage = `url("${r3.image}")`;
+				this.runeStatRowR3[i].innerHTML = `<span class="isq-mini stroke">x${r3.quantity}</span>`
+			}
+  		})
+  	}
+
+  	cleanItemStats = () => {
+  		this.runeStatRow.forEach((row, i) => {
+  			this.runeStatRowMin[i].innerHTML = "";
+  			this.runeStatRowMax[i].innerHTML = "";
+  			this.runeStatRowEffect[i].innerHTML = "";
+  			this.runeStatRowModif[i].innerHTML = "";
+  			this.runeStatRowR1[i].innerHTML = "";
+  			this.runeStatRowR2[i].innerHTML = "";
+  			this.runeStatRowR3[i].innerHTML = "";
+  			this.runeStatRowR1[i].style.backgroundImage = "";
+  			this.runeStatRowR2[i].style.backgroundImage = "";
+  			this.runeStatRowR3[i].style.backgroundImage = "";
+  		})
+  	}
+
+  	updateItemStats = () => {
+
+  	}
 }
+
+//this.runeStatRow[i] = new Element(this.runeStatContainer, { className: 'mag-rune-stat-row'}).element; 
+//this.runeStatRowMin[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-min'}).element; 
+//this.runeStatRowMax[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-max'}).element; 
+//this.runeStatRowEffect[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-effect'}).element; 
+//this.runeStatRowModif[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-modif'}).element; 
+//this.runeStatRowR1[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r1'}).element; 
+//this.runeStatRowR2[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r2'}).element; 
+//this.runeStatRowR3[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r3'}).element; 

@@ -8,10 +8,15 @@ export class Inventory {
 		if (this.items[item.key]) {
 		    this.items[item.key].quantity += q;
 		} else {
-		    this.items[item.key] = {
-		      	...item, 
-		      	quantity: q          
+			// Crear un nuevo objeto con el ítem al inicio
+		    this.items = {
+		    	[item.key]: { ...item, quantity: q },
+		    	...this.items
 		    };
+		    // this.items[item.key] = {
+		    //   	...item, 
+		    //   	quantity: q          
+		    // };
 		}
 	}
 
@@ -29,5 +34,7 @@ export class Inventory {
 		delete this.items[item.key];
 	}
 
-	
+	findItemByNotation = (notation) => {
+		return Object.values(this.items).find(item => item.value?.notation === notation) || null;
+	}
 }

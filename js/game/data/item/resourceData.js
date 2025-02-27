@@ -1081,7 +1081,8 @@ export const resourceData = {
 		level: 20,
 		value: {
 			vit: 5,
-			peso: 1
+			peso: 1,
+			notation: 'vit1'
 		}
 	},
 	runa_bu_vi: {
@@ -1092,7 +1093,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			vit: 15,
-			peso: 3
+			peso: 3,
+			notation: 'vit2'
 		}
 	},
 	runa_su_vi: {
@@ -1103,7 +1105,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			vit: 50,
-			peso: 10
+			peso: 10,
+			notation: 'vit3'
 		}
 	},
 	runa_fu: {
@@ -1114,7 +1117,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			str: 1,
-			peso: 1
+			peso: 1,
+			notation: 'str1'
 		}
 	},
 	runa_bu_fu: {
@@ -1125,7 +1129,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			str: 3,
-			peso: 3
+			peso: 3,
+			notation: 'str2'
 		}
 	},
 	runa_su_fu: {
@@ -1136,7 +1141,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			str: 10,
-			peso: 10
+			peso: 10,
+			notation: 'str3'
 		}
 	},
 	runa_inte: {
@@ -1147,7 +1153,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			int: 1,
-			peso: 1
+			peso: 1,
+			notation: 'int1'
 		}
 	},
 	runa_bu_inte: {
@@ -1158,7 +1165,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			int: 3,
-			peso: 3
+			peso: 3,
+			notation: 'int2'
 		}
 	},
 	runa_su_inte: {
@@ -1169,7 +1177,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			int: 10,
-			peso: 10
+			peso: 10,
+			notation: 'int3'
 		}
 	},
 	runa_sue: {
@@ -1180,7 +1189,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			cha: 1,
-			peso: 1
+			peso: 1,
+			notation: 'cha1'
 		}
 	},
 	runa_bu_sue: {
@@ -1191,7 +1201,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			cha: 3,
-			peso: 3
+			peso: 3,
+			notation: 'cha2'
 		}
 	},
 	runa_su_sue: {
@@ -1202,7 +1213,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			cha: 10,
-			peso: 10
+			peso: 10,
+			notation: 'cha3'
 		}
 	},
 	runa_agi: {
@@ -1213,7 +1225,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			agi: 1,
-			peso: 1
+			peso: 1,
+			notation: 'agi1'
 		}
 	},
 	runa_bu_agi: {
@@ -1224,7 +1237,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			agi: 3,
-			peso: 3
+			peso: 3,
+			notation: 'agi2'
 		}
 	},
 	runa_su_agi: {
@@ -1235,7 +1249,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			agi: 10,
-			peso: 10
+			peso: 10,
+			notation: 'agi3'
 		}
 	},
 	runa_pa: {
@@ -1246,7 +1261,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pa: 1,
-			peso: 100
+			peso: 100,
+			notation: 'pa1'
 		}
 	},
 	runa_pm: {
@@ -1257,7 +1273,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pm: 1,
-			peso: 90
+			peso: 90,
+			notation: 'pm1'
 		}
 	},
 	runa_lu: {
@@ -1268,7 +1285,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			al: 1,
-			peso: 51
+			peso: 51,
+			notation: 'str1'
 		}
 	},
 	runa_be: {
@@ -1279,7 +1297,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			invo: 1,
-			peso: 30
+			peso: 30,
+			notation: 'str1'
 		}
 	},
 	runa_prospe: {
@@ -1290,7 +1309,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pp: 1,
-			peso: 3
+			peso: 3,
+			notation: 'str1'
 		}
 	},
 	runa_bu_prospe: {
@@ -1301,7 +1321,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pp: 3,
-			peso: 9
+			peso: 9,
+			notation: 'str1'
 		}
 	},
 	runa_pot: {
@@ -1312,7 +1333,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pot: 1,
-			peso: 2
+			peso: 2,
+			notation: 'str1'
 		}
 	},
 	runa_bu_pot: {
@@ -1323,7 +1345,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pot: 3,
-			peso: 6
+			peso: 6,
+			notation: 'str1'
 		}
 	},
 	runa_su_pot: {
@@ -1334,7 +1357,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pot: 10,
-			peso: 20
+			peso: 20,
+			notation: 'str1'
 		}
 	},
 	runa_cri: {
@@ -1345,7 +1369,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			cri: 1,
-			peso: 10
+			peso: 10,
+			notation: 'str1'
 		}
 	},
 	runa_da: {
@@ -1356,7 +1381,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			dmg: 1,
-			peso: 20
+			peso: 20,
+			notation: 'str1'
 		}
 	},
 	runa_cu: {
@@ -1367,7 +1393,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			cue: 1,
-			peso: 10
+			peso: 10,
+			notation: 'str1'
 		}
 	},
 	runa_bu_cu: {
@@ -1378,7 +1405,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			cue: 3,
-			peso: 30
+			peso: 30,
+			notation: 'str1'
 		}
 	},
 	runa_da_tierra: {
@@ -1389,7 +1417,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			strDmg: 1,
-			peso: 5
+			peso: 5,
+			notation: 'str1'
 		}
 	},
 	runa_bu_da_tierra: {
@@ -1400,7 +1429,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			strDmg: 3,
-			peso: 15
+			peso: 15,
+			notation: 'str1'
 		}
 	},
 	runa_da_fuego: {
@@ -1411,7 +1441,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			intDmg: 1,
-			peso: 5
+			peso: 5,
+			notation: 'str1'
 		}
 	},
 	runa_bu_da_fuego: {
@@ -1422,7 +1453,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			intDmg: 3,
-			peso: 15
+			peso: 15,
+			notation: 'str1'
 		}
 	},
 	runa_da_agua: {
@@ -1433,7 +1465,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			chaDmg: 1,
-			peso: 5
+			peso: 5,
+			notation: 'str1'
 		}
 	},
 	runa_bu_da_agua: {
@@ -1444,7 +1477,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			chaDmg: 3,
-			peso: 15
+			peso: 15,
+			notation: 'str1'
 		}
 	},
 	runa_da_aire: {
@@ -1455,7 +1489,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			agiDmg: 1,
-			peso: 5
+			peso: 5,
+			notation: 'str1'
 		}
 	},
 	runa_bu_da_aire: {
@@ -1466,7 +1501,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			agiDmg: 3,
-			peso: 15
+			peso: 15,
+			notation: 'str1'
 		}
 	},
 	runa_da_cri: {
@@ -1477,7 +1513,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			crtDmg: 1,
-			peso: 5
+			peso: 5,
+			notation: 'str1'
 		}
 	},
 	runa_bu_da_cri: {
@@ -1488,7 +1525,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			crtDmg: 3,
-			peso: 15
+			peso: 15,
+			notation: 'str1'
 		}
 	},
 	runa_por_he: {
@@ -1499,7 +1537,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			speDmg: 1,
-			peso: 10
+			peso: 10,
+			notation: 'str1'
 		}
 	},
 	runa_por_ar: {
@@ -1510,7 +1549,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			wepDmg: 1,
-			peso: 10
+			peso: 10,
+			notation: 'str1'
 		}
 	},
 	runa_por_res: {
@@ -1521,7 +1561,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			res: 1,
-			peso: 10
+			peso: 10,
+			notation: 'str1'
 		}
 	},
 	runa_por_reen: {
@@ -1532,7 +1573,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			reDmg: 1,
-			peso: 10
+			peso: 10,
+			notation: 'str1'
 		}
 	},
 }

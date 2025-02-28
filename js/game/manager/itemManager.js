@@ -5,6 +5,7 @@ export const generateItemStats = (item, craft = false) => {
 
 	newItem.base = item.stats;
  	newItem.key = `${newItem.key}_${data.itemId}`;
+ 	newItem.peso = [0, 101];
 
 	Object.keys(newItem.stats).forEach(stat => {
 		let min = newItem.stats[stat][0];

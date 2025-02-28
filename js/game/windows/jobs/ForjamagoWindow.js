@@ -378,7 +378,7 @@ export class ForjamagoWindow extends Window {
   		 	} else if (i == 1) runeData.push(rune.value[key])
   		})
 
-  		let runeFusion = 'clean'
+  		let runeFusion = this.tryFusion(runeData);
 
   		switch(runeFusion) {
 	  		case 'clean': 
@@ -393,18 +393,122 @@ export class ForjamagoWindow extends Window {
 	  			break
 	  		case 'succes': 
 	  			break;
+	  			//+stats
+	  			//-stats posible
 
+	  			this.historyText.innerHTML += `<span class="history-effect-fail">-restos</span><br>`
 	  		case 'fail': 
 	  			break;
+	  			//-stats
+	  			this.historyText.innerHTML += `<span class="history-effect-fail">+restos</span><br>`
+	  		case 'ruins': 
+	  			this.historyText.innerHTML += `<span class="history-effect-fail">-restos</span><br>`
+	  			break;
+	  		case 'nothing':
+	  			this.historyText.innerHTML += `<span class="history-effect-fail">fallo</span><br>`
+	  			break;
+  		}
+  		this.historyText.scrollTop = 100000;
+  	}
+
+  	tryFusion = (runeData) => {
+  		if (this.magData.itemSelected.base[runeData[0]] == undefined) {
+  			// exo
+  			return this.exoFusion(runeData);
+  		} else if (this.magData.itemSelected.stats[runeData[0]] + runeData[1] > this.magData.itemSelected.base[runeData[0]][1])
+  			// over
+  			return this.overFusion(runeData);
+  		else {
+  			// normal
+  			return this.normalFusion(runeData);
   		}
   	}
-}
 
-//this.runeStatRow[i] = new Element(this.runeStatContainer, { className: 'mag-rune-stat-row'}).element; 
-//this.runeStatRowMin[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-min'}).element; 
-//this.runeStatRowMax[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-max'}).element; 
-//this.runeStatRowEffect[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-effect'}).element; 
-//this.runeStatRowModif[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-modif'}).element; 
-//this.runeStatRowR1[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r1'}).element; 
-//this.runeStatRowR2[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r2'}).element; 
-//this.runeStatRowR3[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r3'}).element; 
+  	normalFusion = (runeData) => {
+  		let nothing = Math.floor(Math.random() * 100);
+  		if (nothing < Math.floor(runeData[2]/4)) return 'nothing';
+
+  		if (this.magData.itemSelected.peso[0] == 0) {
+  			// clean
+  			let cleanProb = 100 - (this.magData.itemSelected.stats[runeData[0]] / this.magData.itemSelected.base[runeData[0]][1]) * 92.5;
+  			let tryClean = Math.floor(Math.random() * 100);
+  			if (tryClean < cleanProb) return 'clean';
+  			
+  			// succes
+  			let trySucces = Math.floor(Math.random() * 90);
+  			if (trySucces < cleanProb) return 'succes';
+
+  			// fail
+			return 'fail';
+  		} 
+
+  		// clean
+  		let cleanProb = 100 - (this.magData.itemSelected.stats[runeData[0]] / this.magData.itemSelected.base[runeData[0]][1]) * 92.5;
+  		let tryClean = Math.floor(Math.random() * (100 + Math.floor(this.magData.itemSelected.peso[0]/2)));
+  		if (tryClean < cleanProb) return 'clean';
+
+  		// succes
+  		let trySucces = Math.floor(Math.random() * (90 + Math.floor(this.magData.itemSelected.peso[0]/3)));
+  		if (trySucces < cleanProb) return 'succes';
+
+		return 'fail';
+  	}
+
+  	overFusion = (runeData) => {
+  		let nothing = Math.floor(Math.random() * 100);
+  		if (nothing < 15) return 'nothing';
+  		
+		if (runeData[2] + this.magData.itemSelected.peso[0] > this.magData.itemSelected.peso[1]) {
+			this.loseStats(runeData);
+			//try entrar 50/50
+			if (Math.floor(Math.random() * 100) < 50) {
+				return 'succes';
+			} else {
+				return 'fail';
+			}	
+		} else {
+			let ruins = Math.floor(Math.random() * 100);
+  			if (ruins < 20) return 'ruins';
+
+  			// clean
+  			let cleanProb = 60;
+  			let tryClean = Math.floor(Math.random() * (100 + Math.floor(this.magData.itemSelected.peso[0]/2)));
+  			if (tryClean < cleanProb) return 'clean';
+  			
+  			// succes
+  			let trySucces = Math.floor(Math.random() * 100);
+  			if (trySucces < cleanProb) return 'succes';
+
+  			// fail
+			return 'fail';
+		}
+  	}
+
+  	exoFusion = (runeData) => {
+  		let nothing = Math.floor(Math.random() * 100);
+  		if (nothing < Math.floor(runeData[2]/4)) return 'nothing';
+
+		if (runeData[2] + this.magData.itemSelected.peso[0] > this.magData.itemSelected.peso[1]) {
+			this.loseStats(runeData);
+			//try entrar 
+
+			return 'succes';
+			//else
+			return 'fail';
+		} else {
+			//probs excos
+			console.log(Math.floor(runeData[2]))
+			//clean:
+			this.magData.itemSelected.peso[0] += runeData[2];
+			return 'clean';
+
+			//else
+			this.loseStats(runeData);
+			return 'succes';
+		}
+  	}
+
+  	loseStats = (runeData) => {
+
+  	}
+}

@@ -63,8 +63,9 @@ export const equipmentData = {
 		image: './assets/images/items/equipment/s000-3.webp',
 		level: 1,
 		stats: {
-			vit: [7, 10],
-			int: [4, 6]
+			vit: [7, 11],
+			int: [4, 6],
+
 		},
 		type: 'equipment',
 		sort: 'cinturon',

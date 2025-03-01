@@ -344,6 +344,9 @@
 	color: var(--white);
 	overflow-y: auto;
 	text-shadow: 1px 1px 1px black;
+
+	font-size: 14px;
+	padding-top: 10px;
 }
 
 .mag-history-text::-webkit-scrollbar { width: 8px; }
@@ -362,29 +365,17 @@
 }
 
 .history-effect-exo {
-	position: absolute;
-	font-size: 14px;
-	padding-top: 10px;
 	color: #52beda;
 }
 
 .history-effect-clean {
-	position: absolute;
-	font-size: 14px;
-	padding-top: 10px;
 	color: #90e052;
 }
 
 .history-effect-succes {
-	position: absolute;
-	font-size: 14px;
-	padding-top: 10px;
 	color: var(--yellow);
 }
 
 .history-effect-fail {
-	position: absolute;
-	font-size: 14px;
-	padding-top: 10px;
 	color: #fe8081;
 }

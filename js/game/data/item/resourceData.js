@@ -1381,7 +1381,7 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			dmg: 1,
-			peso: 20,			
+			peso: 10,			
 		},
 		notation: 'dmg1'
 	},
@@ -1537,7 +1537,7 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			speDmg: 1,
-			peso: 10,			
+			peso: 15,			
 		},
 		notation: 'speDmg1'
 	},
@@ -1549,7 +1549,7 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			wepDmg: 1,
-			peso: 10,			
+			peso: 15,			
 		},
 		notation: 'wepDmg1'
 	},
@@ -1561,7 +1561,7 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			res: 1,
-			peso: 10,			
+			peso: 15,			
 		},
 		notation: 'res1'
 	},
@@ -1573,7 +1573,7 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			reDmg: 1,
-			peso: 10,			
+			peso: 15,			
 		},
 		notation: 'reDmg1'
 	},

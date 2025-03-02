@@ -103,16 +103,16 @@ export class Main {
 		this.inventory.obtainItem(resourceData['runa_bu_sa'], 5)
 		this.inventory.obtainItem(resourceData['runa_su_sa'], 10)
 
-		this.inventory.obtainItem(generateItemStats(equipmentData['la_capa_slok']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['sombrero_de_jalato']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['capa_bilidad']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['las_okupas']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['la_spamita']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_masano']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_smesmo']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_halt_efkuat']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['bunihima']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_masano']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['capa_oscura']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['suerte_de_zurcarak']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['botas_del_hombre_oso']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['amuleto_campesino']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['cintobermuda_de_campesino']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['capa_invisible']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['escudo_de_jalato']));
 		
 		this.player.gainExp(2000);
 

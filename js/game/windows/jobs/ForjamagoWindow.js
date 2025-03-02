@@ -378,13 +378,17 @@ export class ForjamagoWindow extends Window {
   		 	} else if (i == 1) runeData.push(rune.value[key])
   		})
 
+  		let maxItemStat; 
+  		if (this.magData.itemSelected.base[runeData[0]].length > 1) maxItemStat = this.magData.itemSelected.base[runeData[0]][1]
+  		else maxItemStat = this.magData.itemSelected.base[runeData[0]][0]
+
   		// EXO
   		if (this.magData.itemSelected.base[runeData[0]] == undefined) { 
   			console.log("----------------- EXO");
   			this.exoFusion(runeData);
   		} 
   		// OVER
-  		else if (this.magData.itemSelected.stats[runeData[0]] + runeData[1] > this.magData.itemSelected.base[runeData[0]][1]) {
+  		else if (this.magData.itemSelected.stats[runeData[0]] + runeData[1] > maxItemStat) {
 			console.log("----------------- OVER");
   			this.overFusion(runeData);
   		}
@@ -406,10 +410,16 @@ export class ForjamagoWindow extends Window {
   			return;
   		}
 
+  		// HACER QUE RUNAS TOCHAS FALLEN MAS EN ITEMS LVL BAJO
+
   		// CON RESTOS:
 
   		// SIN RESTOS:
-  		let cleanProb = 130 - (this.magData.itemSelected.stats[runeData[0]] / this.magData.itemSelected.base[runeData[0]][1]) * 92.5;
+  		let maxItemStat; 
+  		if (this.magData.itemSelected.base[runeData[0]].length > 1) maxItemStat = this.magData.itemSelected.base[runeData[0]][1]
+  		else maxItemStat = this.magData.itemSelected.base[runeData[0]][0]
+
+  		let cleanProb = 130 - (this.magData.itemSelected.stats[runeData[0]] / maxItemStat) * 92.5;
   		let tryClean = Math.floor(Math.random() * (100 + Math.floor(this.magData.itemSelected.peso[0] / 2)));
   		let trySucces = Math.floor(Math.random() * (90 + Math.floor(this.magData.itemSelected.peso[0] / 3)));
 
@@ -436,7 +446,9 @@ export class ForjamagoWindow extends Window {
   			this.historyText.innerHTML += `<span class="history-effect-fail">Fallo</span><br>`;
   			return;
   		}
-  		
+
+  		// HACER QUE RUNAS TOCHAS FALLEN MAS EN ITEMS LVL BAJO
+
   		if (this.magData.itemSelected.restos > runeData[2]) { // SI HAY MAS RESTOS DE LO QUE PESA LA RUNA
   			let probs = Math.floor(Math.random() * 100);
   			if (probs < 10) {
@@ -515,6 +527,8 @@ export class ForjamagoWindow extends Window {
   	exoFusion = (runeData) => {
   		let nothing = Math.floor(Math.random() * 100);
   		if (nothing < Math.floor(runeData[2] / 4)) return 'nothing';
+
+  		// HACER QUE RUNAS TOCHAS FALLEN MAS EN ITEMS LVL BAJO
 
   		if (this.magData.itemSelected.restos > runeData[2]) { // SI HAY MAS RESTOS DE LO QUE PESA LA RUNA
   			let probs = Math.floor(Math.random() * 100);
@@ -660,6 +674,7 @@ const pesoList = {
 	intDmg: 5,
 	chaDmg: 5,
 	agiDmg: 5,
+	crtDmg: 5,
 	crt: 5,
 	wis: 3,
 	speDmg: 15,

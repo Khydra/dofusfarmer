@@ -2,6 +2,30 @@ import { setData } from './setData.js';
 
 export const equipmentData = {
 	//sets
+	borrar: {
+		id: 1111110,
+		key: 'borrar',
+		name: 'Borrar',
+		image: './assets/images/items/equipment/s000-0.webp',
+		level: 200,
+		stats: {
+			vit: [350, 400],
+			str: [60, 80],
+			wis: [21, 30],
+			crt: [4, 5],
+			pm: [1],
+			res: [9, 12],
+			strDmg: [11, 15],
+			agiDmg: [11, 15],
+		},
+		type: 'equipment',
+		sort: 'sombrero',
+		recipe: {
+			ortiga: 2, 
+			lana_celeste: 2,
+		},
+		set: setData['set_del_bun'],
+	},
 	el_flud: {
 		id: 0,
 		key: 'el_flud',

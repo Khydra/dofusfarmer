@@ -1081,7 +1081,8 @@ export const resourceData = {
 		level: 20,
 		value: {
 			vit: 5,
-			peso: 1,			
+			peso: 1,
+			tier: 1,			
 		},
 		notation: 'vit1'
 	},
@@ -1093,7 +1094,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			vit: 15,
-			peso: 3,			
+			peso: 3,
+			tier: 2,			
 		},
 		notation: 'vit2'
 	},
@@ -1105,7 +1107,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			vit: 50,
-			peso: 10,			
+			peso: 10,
+			tier: 3,			
 		},
 		notation: 'vit3'
 	},
@@ -1117,7 +1120,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			str: 1,
-			peso: 1,			
+			peso: 1,
+			tier: 1,			
 		},
 		notation: 'str1'
 	},
@@ -1129,7 +1133,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			str: 3,
-			peso: 3,			
+			peso: 3,
+			tier: 2,			
 		},
 		notation: 'str2'
 	},
@@ -1141,7 +1146,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			str: 10,
-			peso: 10,			
+			peso: 10,
+			tier: 3,			
 		},
 		notation: 'str3'
 	},
@@ -1153,7 +1159,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			int: 1,
-			peso: 1,			
+			peso: 1,
+			tier: 1,			
 		},
 		notation: 'int1'
 	},
@@ -1165,7 +1172,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			int: 3,
-			peso: 3,			
+			peso: 3,
+			tier: 2,			
 		},
 		notation: 'int2'
 	},
@@ -1177,7 +1185,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			int: 10,
-			peso: 10,			
+			peso: 10,
+			tier: 3,			
 		},
 		notation: 'int3'
 	},
@@ -1189,7 +1198,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			cha: 1,
-			peso: 1,			
+			peso: 1,
+			tier: 1,			
 		},
 		notation: 'cha1'
 	},
@@ -1201,7 +1211,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			cha: 3,
-			peso: 3,			
+			peso: 3,
+			tier: 2,			
 		},
 		notation: 'cha2'
 	},
@@ -1213,7 +1224,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			cha: 10,
-			peso: 10,			
+			peso: 10,
+			tier: 3,			
 		},
 		notation: 'cha3'
 	},
@@ -1225,7 +1237,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			agi: 1,
-			peso: 1,			
+			peso: 1,
+			tier: 1,			
 		},
 		notation: 'agi1'
 	},
@@ -1237,7 +1250,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			agi: 3,
-			peso: 3,			
+			peso: 3,
+			tier: 2,			
 		},
 		notation: 'agi2'
 	},
@@ -1249,7 +1263,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			agi: 10,
-			peso: 10,			
+			peso: 10,
+			tier: 3,			
 		},
 		notation: 'agi3'
 	},
@@ -1261,7 +1276,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pa: 1,
-			peso: 100,			
+			peso: 100,
+			tier: 1,			
 		},
 		notation: 'pa1'
 	},
@@ -1273,7 +1289,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pm: 1,
-			peso: 90,			
+			peso: 90,
+			tier: 1,			
 		},
 		notation: 'pm1'
 	},
@@ -1285,7 +1302,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			al: 1,
-			peso: 51,			
+			peso: 51,
+			tier: 1,			
 		},
 		notation: 'al1'
 	},
@@ -1297,7 +1315,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			invo: 1,
-			peso: 30,			
+			peso: 30,
+			tier: 1,			
 		},
 		notation: 'invo1'
 	},
@@ -1309,7 +1328,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pp: 1,
-			peso: 3,			
+			peso: 3,
+			tier: 1,			
 		},
 		notation: 'pp1'
 	},
@@ -1321,7 +1341,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pp: 3,
-			peso: 9,			
+			peso: 9,
+			tier: 2,			
 		},
 		notation: 'pp2'
 	},
@@ -1333,7 +1354,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pot: 1,
-			peso: 2,			
+			peso: 2,
+			tier: 1,			
 		},
 		notation: 'pot1'
 	},
@@ -1345,7 +1367,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pot: 3,
-			peso: 6,			
+			peso: 6,
+			tier: 2,			
 		},
 		notation: 'pot2'
 	},
@@ -1357,7 +1380,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			pot: 10,
-			peso: 20,			
+			peso: 20,
+			tier: 3,			
 		},
 		notation: 'pot3'
 	},
@@ -1369,7 +1393,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			crt: 1,
-			peso: 10,			
+			peso: 10,
+			tier: 1,			
 		},
 		notation: 'crt1'
 	},
@@ -1381,7 +1406,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			dmg: 1,
-			peso: 10,			
+			peso: 10,
+			tier: 1,			
 		},
 		notation: 'dmg1'
 	},
@@ -1393,7 +1419,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			cur: 1,
-			peso: 10,			
+			peso: 10,
+			tier: 1,			
 		},
 		notation: 'cur1'
 	},
@@ -1405,7 +1432,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			cur: 3,
-			peso: 30,			
+			peso: 30,
+			tier: 2,			
 		},
 		notation: 'cur2'
 	},
@@ -1417,7 +1445,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			strDmg: 1,
-			peso: 5,			
+			peso: 5,
+			tier: 1,			
 		},
 		notation: 'strDmg1'
 	},
@@ -1429,7 +1458,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			strDmg: 3,
-			peso: 15,			
+			peso: 15,
+			tier: 2,			
 		},
 		notation: 'strDmg2'
 	},
@@ -1441,7 +1471,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			intDmg: 1,
-			peso: 5,			
+			peso: 5,
+			tier: 1,			
 		},
 		notation: 'intDmg1'
 	},
@@ -1453,7 +1484,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			intDmg: 3,
-			peso: 15,			
+			peso: 15,
+			tier: 2,			
 		},
 		notation: 'intDmg2'
 	},
@@ -1465,7 +1497,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			chaDmg: 1,
-			peso: 5,			
+			peso: 5,
+			tier: 1,			
 		},
 		notation: 'chaDmg1'
 	},
@@ -1477,7 +1510,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			chaDmg: 3,
-			peso: 15,			
+			peso: 15,
+			tier: 2,			
 		},
 		notation: 'chaDmg2'
 	},
@@ -1489,7 +1523,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			agiDmg: 1,
-			peso: 5,			
+			peso: 5,
+			tier: 1,			
 		},
 		notation: 'agiDmg1'
 	},
@@ -1501,7 +1536,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			agiDmg: 3,
-			peso: 15,			
+			peso: 15,
+			tier: 2,			
 		},
 		notation: 'agiDmg2'
 	},
@@ -1513,7 +1549,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			crtDmg: 1,
-			peso: 5,			
+			peso: 5,
+			tier: 1,			
 		},
 		notation: 'crtDmg1'
 	},
@@ -1525,7 +1562,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			crtDmg: 3,
-			peso: 15,			
+			peso: 15,
+			tier: 2,			
 		},
 		notation: 'crtDmg2'
 	},
@@ -1537,7 +1575,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			speDmg: 1,
-			peso: 15,			
+			peso: 15,
+			tier: 1,			
 		},
 		notation: 'speDmg1'
 	},
@@ -1549,7 +1588,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			wepDmg: 1,
-			peso: 15,			
+			peso: 15,
+			tier: 1,			
 		},
 		notation: 'wepDmg1'
 	},
@@ -1561,7 +1601,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			res: 1,
-			peso: 15,			
+			peso: 15,
+			tier: 1,			
 		},
 		notation: 'res1'
 	},
@@ -1573,7 +1614,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			reDmg: 1,
-			peso: 15,			
+			peso: 15,
+			tier: 1,			
 		},
 		notation: 'reDmg1'
 	},
@@ -1585,7 +1627,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			wis: 1,
-			peso: 3,			
+			peso: 3,
+			tier: 1,			
 		},
 		notation: 'wis1'
 	},
@@ -1597,7 +1640,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			wis: 3,
-			peso: 9,			
+			peso: 9,
+			tier: 2,			
 		},
 		notation: 'wis2'
 	},
@@ -1609,7 +1653,8 @@ export const resourceData = {
 		sort: 'rune',
 		value: {
 			wis: 10,
-			peso: 30,			
+			peso: 30,
+			tier: 3,			
 		},
 		notation: 'wis3'
 	},

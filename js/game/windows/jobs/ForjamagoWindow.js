@@ -30,7 +30,7 @@ export class ForjamagoWindow extends Window {
 	    }
 
 	    this.crusherData = {
-
+	    	items: []
 	    }
 
 	    this.tooltip;
@@ -40,14 +40,14 @@ export class ForjamagoWindow extends Window {
 	render = () => {
 		this.scenes = [];
 
-		this.renderCrusher();
 		this.renderMag();
+		this.renderCrusher();
 		this.renderTabs();
 		this.renderInventory();
   	}
 
   	renderTabs = () => {
-  		const tabNames = ['ROMPER OBJETOS', 'MAGUEAR OBJETOS']
+  		const tabNames = ['MAGUEAR OBJETOS', 'ROMPER OBJETOS']
 
   		this.tab = [];
   		this.tabContainer = new Element(this.container, { className: 'forjamago-tab-container stroke' }).element; 
@@ -81,14 +81,38 @@ export class ForjamagoWindow extends Window {
   	}
 
   	renderCrusher = () => {
-  		this.scenes[0] = new Element(this.container, { className: 'forjamago-crusher-scene' }).element; 
+  		this.scenes[1] = new Element(this.container, { className: 'forjamago-crusher-scene' }).element; 
+
+  		// ITEMS
+  		this.crushItemContainer = new Element(this.scenes[1], { className: 'crush-item-container' }).element; 
+  		this.crushItemButton = new Element(this.crushItemContainer, { className: 'crush-item-button stroke', text: 'ROMPER TODO' }).element; 
+  		this.crushItemSlotContainer = new Element(this.crushItemContainer, { className: 'crush-item-slot-container' }).element; 
+
+  		this.crushItemSlot = [];
+  		for (let i = 0; i < 20; i++) {
+  			this.crushItemSlot[i] = new Element(this.crushItemSlotContainer, { className: 'forjamago-inventory-slot-empty' }).element; 
+  		}
+
+  		// RESULT
+  		this.crushResultContainer = new Element(this.scenes[1], { className: 'crush-result-container' }).element;
+
+  		this.crushGuideContainer = new Element(this.crushResultContainer, { className: 'crush-guide-container' }).element; 
+  		this.crushGuideLabel = [];
+  		const guideLabels = ['Objeto', 'Multiplicador', 'Runas'];
+  		guideLabels.forEach((label, i) => {
+  			this.crushGuideLabel[i] = new Element(this.crushGuideContainer, { className: 'crush-guide-label', text: label}).element; 
+  		})
+
+  		this.crushResultListContainer = new Element(this.crushResultContainer, { className: 'crush-result-list-container' }).element; 
+  		
+  		this.crushResultRow = [];
   	}
 
   	renderMag = () => {
-  		this.scenes[1] = new Element(this.container, { className: 'forjamago-mag-scene' }).element; 
+  		this.scenes[0] = new Element(this.container, { className: 'forjamago-mag-scene' }).element; 
 
-  		this.historyContainer = new Element(this.scenes[1], { className: 'mag-history-container' }).element; 
-  		this.workContainer = new Element(this.scenes[1], { className: 'mag-work-container' }).element;
+  		this.historyContainer = new Element(this.scenes[0], { className: 'mag-history-container' }).element; 
+  		this.workContainer = new Element(this.scenes[0], { className: 'mag-work-container' }).element;
   		this.itemContainer = new Element(this.workContainer, { className: 'mag-item-container' }).element;
   		this.runeContainer = new Element(this.workContainer, { className: 'mag-rune-container' }).element;
   		// HISTROTY
@@ -219,17 +243,19 @@ export class ForjamagoWindow extends Window {
 
   	open() {
 	    super.open(); 
-	    this.update();
+	    this.updateInventoryItems();
   	}
 
-  	update = () => {
-
-  		this.updateInventoryItems();
+  	close() {
+	    super.close(); 
+	    this.removeItem();
+		this.removeRune();
+		this.historyText.innerHTML = "";
   	}
 
   	selectItem = (item) => {
   		let inventory = this.component.component.main.inventory;
-  		if (this.tabSelected == 1) {
+  		if (this.tabSelected == 0) {
   			if (this.magData.itemSelected != null) this.removeItem();
 	  		this.magData.itemSelected = item;
 	  		inventory.removeItem(item);
@@ -244,7 +270,7 @@ export class ForjamagoWindow extends Window {
   	}
 
   	selectRune = (rune) => {
-  		if (this.tabSelected != 1) return;
+  		if (this.tabSelected != 0) return;
 
   		//let inventory = this.component.component.main.inventory;
   		if (this.magData.runeSelected != null) this.removeRune();
@@ -397,8 +423,9 @@ export class ForjamagoWindow extends Window {
   			
   		this.historyText.scrollTop = 1000000;
   		this.actualizarPeso();
-  		console.log(`peso: ${this.magData.itemSelected.peso}`)
-  		console.log(`restos: ${this.magData.itemSelected.restos}`)
+  		this.magData.itemSelected.mage = this.component.component.main.player.name;
+  		// console.log(`peso: ${this.magData.itemSelected.peso}`)
+  		// console.log(`restos: ${this.magData.itemSelected.restos}`)
   	}
 
   	normalFusion = (runeData) => {
@@ -605,7 +632,7 @@ export class ForjamagoWindow extends Window {
   			let trySucces = Math.floor(Math.random() * 100);
 
   			if (cleanProb < 2) cleanProb = 2;
-  			console.log(tryClean)
+  			
   			if (tryClean < cleanProb) { // LA RUNA ENTRA LIMPIA
   				if (this.magData.itemSelected.stats[runeData[0]] == undefined) this.magData.itemSelected.stats[runeData[0]] = runeData[1];
 	  			else this.magData.itemSelected.stats[runeData[0]] += runeData[1];

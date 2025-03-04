@@ -118,7 +118,7 @@ export class Tooltip {
 
                     if (this.data.mage) {
                         this.statCraft.innerHTML += `
-                            Modificado por: <span class="stat-craft">${this.data.autor}</span>
+                            Modificado por: <span class="stat-craft">${this.data.mage}</span>
                         `;
                     }
                 }

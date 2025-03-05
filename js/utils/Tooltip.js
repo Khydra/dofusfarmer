@@ -98,7 +98,6 @@ export class Tooltip {
                     this.eventGuide.innerHTML += `Inventario: ${quantityInventory} <br> Bancosako: ${quantityBank}`;
                 }
                 if (this.location == 'forjamagoWindow') this.eventGuide.innerHTML += `Click: Añadir`;
-                
             break;
             case "equipment":
                 this.infoType.innerText = `${this.data.sort.toUpperCase()} ◆ NIVEL ${this.data.level}`;
@@ -127,6 +126,7 @@ export class Tooltip {
                 if (this.location == 'inventoryWindow') this.eventGuide.innerText = `RMB: Opciones \n DblClick: Equipar \n CTRL: Valores teóricos \n SHIFT: Almacenar`;
                 if (this.location == 'bankWindow') this.eventGuide.innerText = `RMB: Opciones \n CTRL: Valores teóricos \n SHIFT: Retirar`;
                 if (this.location == 'forjamagoWindow') this.eventGuide.innerText = `Click: Añadir`;
+                if (this.location == 'crusherWindow') this.eventGuide.innerHTML = `Click: Retirar`;
             break;
 
             case "consumable":

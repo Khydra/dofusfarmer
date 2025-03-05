@@ -86,6 +86,7 @@ export class ForjamagoWindow extends Window {
   		// ITEMS
   		this.crushItemContainer = new Element(this.scenes[1], { className: 'crush-item-container' }).element; 
   		this.crushItemButton = new Element(this.crushItemContainer, { className: 'crush-item-button stroke', text: 'ROMPER TODO' }).element; 
+  		this.crushItemButton.addEventListener('click', () => {this.crushItems();})
   		this.crushItemSlotContainer = new Element(this.crushItemContainer, { className: 'crush-item-slot-container' }).element; 
 
   		this.crushItemSlot = [];
@@ -106,6 +107,9 @@ export class ForjamagoWindow extends Window {
   		this.crushResultListContainer = new Element(this.crushResultContainer, { className: 'crush-result-list-container' }).element; 
   		
   		this.crushResultRow = [];
+  		this.crushResultItem = [];
+  		this.crushResultMultiplier = [];
+  		this.crushResultRunes = [];
   	}
 
   	renderMag = () => {
@@ -250,6 +254,7 @@ export class ForjamagoWindow extends Window {
 	    super.close(); 
 	    this.removeItem();
 		this.removeRune();
+		this.retireAllCrusherItems();
 		this.historyText.innerHTML = "";
   	}
 
@@ -265,8 +270,97 @@ export class ForjamagoWindow extends Window {
 	  		this.showItemStats();
 	  		removeTooltips();
   		} else {
-
+  			if (this.crusherData.items.length == 20) return;
+  			this.crusherData.items.push(item);
+  			inventory.removeItem(item);
+  			this.updateCrusherItems();
+  			this.updateInventoryItems();
+  			removeTooltips();
   		}
+  	}
+
+  	destroyCrusherItems = () => {
+	    this.crushItemSlot.forEach(slot => {
+	        if (slot.parentNode) {
+	            slot.parentNode.removeChild(slot);
+	        }
+	    });
+	    this.crushItemSlot = [];   
+  	}
+
+  	updateCrusherItems = () => {
+  		this.destroyCrusherItems();
+  		
+  		for (let i = 0; i < 20; i++) {
+  			this.crushItemSlot[i] = new Element(this.crushItemSlotContainer, { className: 'forjamago-inventory-slot-empty' }).element; 
+  		}
+
+  		this.crusherData.items.forEach((item, i) => {
+  		 	this.drawCrusherItem(item, i);
+  		})
+  	}
+
+	drawCrusherItem = (item, pos) => {
+  		this.crushItemSlot[pos].className = 'forjamago-inventory-slot';
+  		this.crushItemSlot[pos].style.backgroundImage = `url("${item.image}")`;
+
+  		// Crear el tooltip al pasar el ratón por encima del slot
+		this.tooltip = new Tooltip(this.crushItemSlot[pos], item, 'crusherWindow', this);
+
+  		// Agregar evento de doble clic para destruir equipamiento
+    	this.crushItemSlot[pos].addEventListener('click', () => {
+	        this.retireCrusherItem(item);    
+    	});
+  	}
+
+  	retireCrusherItem = (item) => {
+  		let inventory = this.component.component.main.inventory;
+  		this.crusherData.items.forEach((it, i) => {
+  			if (it === item) {	
+  				inventory.obtainItem(item);
+  				this.crusherData.items.splice(i, 1);
+  				this.updateInventoryItems();
+  				this.updateCrusherItems();
+  				removeTooltips();
+  			}
+  		})
+  	}
+
+  	retireAllCrusherItems = () => {
+  		let inventory = this.component.component.main.inventory;
+  		this.crusherData.items.forEach((item, i) => {
+  			inventory.obtainItem(item);
+  		})
+  		this.crusherData.items = [];
+  		this.updateInventoryItems();
+  		this.updateCrusherItems();
+  		removeTooltips();
+  	}
+
+  	crushItems = () => {
+  		if (this.crusherData.items.length <= 0) return;
+
+  		console.log(this.crushResultRow)
+  		for (let i = 0; i < this.crushResultRow.length; i++) {
+  			this.crushResultListContainer.removeChild(this.crushResultRow[i]);
+  		}
+
+  		this.crushResultRow = [];
+  		this.crushResultItem = [];
+  		this.crushResultMultiplier = [];
+  		this.crushResultRunes = [];
+
+  		this.crusherData.items.forEach((item, i) => {
+  			this.obtainRunes(item)
+  			this.crushResultRow[i] = new Element(this.crushResultListContainer, { className: 'crush-result-row'}).element; 
+  		})
+
+  		this.crusherData.items = [];
+  		this.updateCrusherItems();
+  	}
+
+  	obtainRunes = (item) => {
+
   	}
 
   	selectRune = (rune) => {

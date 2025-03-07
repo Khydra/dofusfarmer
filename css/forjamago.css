@@ -157,6 +157,22 @@
 
 .crush-result-row:nth-child(2n) {background-color:  var(--bg1);}
 
+.crush-result-row-item {
+	position: relative;
+	width: 18.5%;
+	height: 100%;
+	background-position: center;
+	background-size: 40%;
+	background-repeat: no-repeat;
+}
+
+.crush-result-row-multiplier {
+	position: relative;
+	width: 11.5%;
+	height: 100%;
+	line-height: 60px;
+}
+
 /* MAGUEO */
 .forjamago-mag-scene {
 	display: none;

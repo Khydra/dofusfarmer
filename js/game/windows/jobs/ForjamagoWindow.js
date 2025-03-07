@@ -340,7 +340,6 @@ export class ForjamagoWindow extends Window {
   	crushItems = () => {
   		if (this.crusherData.items.length <= 0) return;
 
-  		console.log(this.crushResultRow)
   		for (let i = 0; i < this.crushResultRow.length; i++) {
   			this.crushResultListContainer.removeChild(this.crushResultRow[i]);
   		}
@@ -351,8 +350,10 @@ export class ForjamagoWindow extends Window {
   		this.crushResultRunes = [];
 
   		this.crusherData.items.forEach((item, i) => {
-  			this.obtainRunes(item)
+  			let runeInfo = this.obtainRunes(item)
   			this.crushResultRow[i] = new Element(this.crushResultListContainer, { className: 'crush-result-row'}).element; 
+  			this.crushResultItem[i] = new Element(this.crushResultRow[i], { className: 'crush-result-row-item', image: item.image}).element; 
+  			this.crushResultMultiplier[i] = new Element(this.crushResultRow[i], { className: 'crush-result-row-multiplier', text: `${runeInfo[1]}%`}).element; 
   		})
 
   		this.crusherData.items = [];
@@ -360,7 +361,136 @@ export class ForjamagoWindow extends Window {
   	}
 
   	obtainRunes = (item) => {
+  		let multiplier = this.randomMultiplier();
+  		let pesoEsperado = this.pesoMultiplierCalculator(item, multiplier);
 
+  		const statList = [];
+  		Object.keys(item.stats).forEach(key => {
+  			if (item.stats[key] > 0) {
+  				statList.push({stat: key, peso: pesoList[key]})
+  			} 
+  		})
+  		let shuffledList = shuffleArray(statList);
+  		
+  		let runes = [];
+
+  		shuffledList.forEach((stat, i) => {
+  			if (pesoEsperado >= stat.peso) {
+  				let max = Math.floor(pesoEsperado / stat.peso);
+  				let runesQuantity = Math.floor(Math.random() * max);
+  				if (i === shuffledList.length - 1) runesQuantity = max;
+  				runes.push([stat.stat, runesQuantity]);
+  				pesoEsperado -= (stat.peso*runesQuantity);
+  			}	
+  		})
+
+  		let newRunes = this.runeTierCalculator(runes, item.level);
+  		console.log(newRunes)
+  		return [runes, multiplier]
+  	}
+
+  	randomMultiplier = () => {
+  		let multiplierBase = Math.floor(Math.random() * 100);
+  		let multiplier;
+
+  		if (multiplierBase < 30) multiplier = Math.floor(Math.random() * 80) + 20; // entre 20 y 100%
+  		else if (multiplierBase < 90) multiplier = Math.floor(Math.random() * 250) + 50; // entre 50 y 300%
+  		else if (multiplierBase < 95) multiplier = Math.floor(Math.random() * 500) + 200; // entre 200 y 700%
+  		else if (multiplierBase < 97) multiplier = Math.floor(Math.random() * 300) + 700; // entre 700 y 1000%
+  		else if (multiplierBase < 98) multiplier = Math.floor(Math.random() * 1500) + 1500; // entre 1500 y 3000%
+  		else multiplier = Math.floor(Math.random() * 1000) + 3000; // entre 3000 y 4000%
+
+  		return multiplier;
+  	}
+
+  	pesoMultiplierCalculator = (item, multiplier) => {
+  		let peso = 0;
+
+  		Object.keys(item.stats).forEach(key => {
+  			if (item.stats[key] > 0) peso += item.stats[key] * pesoList[key];
+  		})
+
+  		return Math.floor((peso * multiplier) / 100);
+  	}
+
+  	runeTierCalculator = (runes, level) => {
+  		let newRunes = [];
+  		let loops = 2 + Math.floor(level / 40);
+
+  		runes.forEach(rune => {
+  			let tier1 = rune[1];
+  			let tier2 = 0;
+  			let tier3 = 0;
+  			switch(rune[0]) {
+	  			case 'vit': 
+	  				for (let i = 0; i < loops; i++) {
+	  					if (Math.floor(Math.random() * (level * 3)) > 130 && tier1 > 30) {
+		  					tier3 += Math.floor((Math.random() * Math.floor(tier1 / 15)));
+		  					tier1 -= tier3;
+		  					if (tier1 < 0) tier1 = 0;
+		  				}
+		  				if (Math.floor(Math.random() * (level * 2)) > 40 && tier1 > 10) {
+		  					tier2 += Math.floor((Math.random() * Math.floor(tier1 / 5)));
+		  					tier1 -= tier2;
+		  					if (tier1 < 0) tier1 = 0;
+		  				}
+	  				}
+	  				break;
+	  			case 'str': 
+	  			case 'int':
+	  			case 'cha':
+	  			case 'agi':
+	  			case 'wis':
+	  			case 'pot': 
+	  				for (let i = 0; i < loops; i++) {
+		  				if (Math.floor(Math.random() * (level * 3)) > 130 && tier1 > 20) {
+		  					tier3 += Math.floor((Math.random() * Math.floor(tier1 / 10)));
+		  					tier1 -= tier3;
+		  					if (tier1 < 0) tier1 = 0;
+		  				}
+		  				if (Math.floor(Math.random() * (level * 2)) > 40 && tier1 > 6) {
+		  					tier2 += Math.floor((Math.random() * Math.floor(tier1 / 3)));
+		  					tier1 -= tier2;
+		  					if (tier1 < 0) tier1 = 0;
+		  				}
+		  			}
+	  				break;
+	  			case 'strDmg': 
+	  			case 'intDmg':
+	  			case 'chaDmg':
+	  			case 'agiDmg':
+	  			case 'crtDmg':	
+	  				for (let i = 0; i < loops; i++) {
+		  				if (Math.floor(Math.random() * (level * 2)) > 115 && tier1 > 6) {
+		  					tier2 += Math.floor((Math.random() * Math.floor(tier1 / 3)));
+		  					tier1 -= tier2;
+		  					if (tier1 < 0) tier1 = 0;
+		  				}
+		  			}
+	  				break;
+	  			case 'pp': 
+	  				for (let i = 0; i < loops; i++) {
+		  				if (Math.floor(Math.random() * level) > 50 && tier1 > 6) {
+		  					tier2 += Math.floor((Math.random() * Math.floor(tier1 / 3)));
+		  					tier1 -= tier2;
+		  					if (tier1 < 0) tier1 = 0;
+		  				}
+		  			}
+	  				break
+	  			case 'cur': 
+	  				for (let i = 0; i < loops; i++) {
+		  				if (Math.floor(Math.random() * level) > 70 && tier1 > 6) {
+		  					tier2 += Math.floor((Math.random() * Math.floor(tier1 / 3)));
+		  					tier1 -= tier2;
+		  					if (tier1 < 0) tier1 = 0;
+		  				}
+		  			}
+	  				break
+
+	  		}
+	  		newRunes.push([rune[0], tier1, tier2, tier3])
+  		})
+  		return newRunes;
   	}
 
   	selectRune = (rune) => {
@@ -487,7 +617,8 @@ export class ForjamagoWindow extends Window {
 
   	// DIFICULTAR EL EXO PA / PM
   	// SI EL STAT PERDIODO ES EXO U OVER -> BAJAR PESO
-
+  	// NO PONER EL MENSAJE DE -RESTOS SI HAY 0 RESTOS
+  	// LIMITE PESO EN OVER (EJ over 200 vit - 40 potencia etc)
   	tryRune = (rune) => {
   		let runeData = []; //stat - value - peso - tier
   		Object.keys(rune.value).forEach((key, i) => {

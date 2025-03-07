@@ -386,6 +386,10 @@ export class ForjamagoWindow extends Window {
 
   		let newRunes = this.runeTierCalculator(runes, item.level);
   		console.log(newRunes)
+
+  		newRunes.forEach(rune => {
+  			if (rune[0] > 0 && rune[1] != undefined) console.log(rune)
+  		})
   		return [runes, multiplier]
   	}
 
@@ -486,9 +490,8 @@ export class ForjamagoWindow extends Window {
 		  				}
 		  			}
 	  				break
-
 	  		}
-	  		newRunes.push([rune[0], tier1, tier2, tier3])
+	  		newRunes.push([tier1, runeData[rune[0]][1]], [tier2, runeData[rune[0]][2]], [tier3, runeData[rune[0]][3]])
   		})
   		return newRunes;
   	}
@@ -1051,4 +1054,31 @@ const pesoList = {
 	wepDmg: 15,
 	res: 15,
 	reDmg: 15,
+}
+
+const runeData = {
+	vit: [resourceData['runa_vi'], resourceData['runa_bu_vi'], resourceData['runa_su_vi']],
+	str: [resourceData['runa_fu'], resourceData['runa_bu_fu'], resourceData['runa_su_fu']],
+	int: [resourceData['runa_inte'], resourceData['runa_bu_inte'], resourceData['runa_su_inte']],
+	cha: [resourceData['runa_sue'], resourceData['runa_bu_sue'], resourceData['runa_su_sue']],
+	agi: [resourceData['runa_agi'], resourceData['runa_bu_agi'], resourceData['runa_su_agi']],
+	pa: [resourceData['runa_pa']],
+	pm: [resourceData['runa_pm']],
+	al: [resourceData['runa_lu']],
+	invo: [resourceData['runa_be']],
+	pp: [resourceData['runa_prospe'], resourceData['runa_bu_prospe']],
+	pot: [resourceData['runa_pot'], resourceData['runa_bu_pot']],
+	dmg: [resourceData['runa_da']],
+	cur: [resourceData['runa_cu'], resourceData['runa_bu_cu']],
+	strDmg: [resourceData['runa_da_tierra'], resourceData['runa_da_tierra']],
+	intDmg: [resourceData['runa_da_fuego'], resourceData['runa_da_fuego']],
+	chaDmg: [resourceData['runa_da_agua'], resourceData['runa_da_agua']],
+	agiDmg: [resourceData['runa_da_aire'], resourceData['runa_da_aire']],
+	crtDmg: [resourceData['runa_da_cri'], resourceData['runa_da_cri']],
+	crt: [resourceData['runa_cri']],
+	wis: [resourceData['runa_sa'], resourceData['runa_bu_sa'], resourceData['runa_su_sa']],
+	speDmg: [resourceData['runa_por_he']],
+	wepDmg: [resourceData['runa_por_res']],
+	res: [resourceData['runa_por_res']],
+	reDmg: [resourceData['runa_por_reen']],
 }

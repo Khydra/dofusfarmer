@@ -127,8 +127,9 @@
 	bottom: 0px;
 	width: 100%;
 	display: flex;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	overflow-y: auto;
+	flex-direction: column;
 }
 
 .crush-result-list-container::-webkit-scrollbar { width: 12px; }
@@ -144,7 +145,7 @@
 .crush-result-row {
 	position: relative;
 	width: 100%;
-	height: 60px;
+	height: 60px !important;
 	display: flex;
 	flex-wrap: wrap;
 	color: var(--white);
@@ -155,7 +156,9 @@
 	background-color:  var(--bg2);
 }
 
-.crush-result-row:nth-child(2n) {background-color:  var(--bg1);}
+.crush-result-row:nth-child(2n) {
+	background-color:  var(--bg1);
+}
 
 .crush-result-row-item {
 	position: relative;
@@ -171,6 +174,24 @@
 	width: 11.5%;
 	height: 100%;
 	line-height: 60px;
+}
+
+.crush-result-row-runes-wrap {
+	position: relative;
+	width: 70%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.crush-result-row-rune {
+	position: relative;
+	height: 40px;
+	width: 40px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 /* MAGUEO */

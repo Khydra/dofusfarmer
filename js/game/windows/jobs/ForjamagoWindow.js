@@ -109,7 +109,7 @@ export class ForjamagoWindow extends Window {
   		this.crushResultRow = [];
   		this.crushResultItem = [];
   		this.crushResultMultiplier = [];
-  		this.crushResultRunes = [];
+  		this.crushResultRunesWrap = [];
   	}
 
   	renderMag = () => {
@@ -347,20 +347,23 @@ export class ForjamagoWindow extends Window {
   		this.crushResultRow = [];
   		this.crushResultItem = [];
   		this.crushResultMultiplier = [];
-  		this.crushResultRunes = [];
+  		this.crushResultRunesWrap = [];
 
-  		this.crusherData.items.forEach((item, i) => {
-  			let runeInfo = this.obtainRunes(item)
+  		this.crusherData.items.forEach((item, i) => {	
   			this.crushResultRow[i] = new Element(this.crushResultListContainer, { className: 'crush-result-row'}).element; 
   			this.crushResultItem[i] = new Element(this.crushResultRow[i], { className: 'crush-result-row-item', image: item.image}).element; 
-  			this.crushResultMultiplier[i] = new Element(this.crushResultRow[i], { className: 'crush-result-row-multiplier', text: `${runeInfo[1]}%`}).element; 
+  			this.crushResultMultiplier[i] = new Element(this.crushResultRow[i], { className: 'crush-result-row-multiplier' }).element; 
+  			this.crushResultRunesWrap[i] = new Element(this.crushResultRow[i], { className: 'crush-result-row-runes-wrap'}).element; 
+  			let runeInfo = this.obtainRunes(item, i);
+  			this.crushResultMultiplier[i].innerText = `${runeInfo[1]}%`;
   		})
 
   		this.crusherData.items = [];
   		this.updateCrusherItems();
   	}
 
-  	obtainRunes = (item) => {
+  	obtainRunes = (item, row) => {
+  		let inventory = this.component.component.main.inventory;
   		let multiplier = this.randomMultiplier();
   		let pesoEsperado = this.pesoMultiplierCalculator(item, multiplier);
 
@@ -385,11 +388,14 @@ export class ForjamagoWindow extends Window {
   		})
 
   		let newRunes = this.runeTierCalculator(runes, item.level);
-  		console.log(newRunes)
-
-  		newRunes.forEach(rune => {
-  			if (rune[0] > 0 && rune[1] != undefined) console.log(rune)
+  		
+  		newRunes.forEach((rune, i) => {
+  			inventory.obtainItem(resourceData[rune[1]], rune[0]);
+  			let runeImg = new Element(this.crushResultRunesWrap[row], { className: 'crush-result-row-rune', image: resourceData[rune[1]].image}).element; 
+  			runeImg.innerHTML = `<span class="isq-mini stroke">x${rune[0]}</span>`;
   		})
+  		this.updateInventoryItems();
+
   		return [runes, multiplier]
   	}
 
@@ -418,7 +424,7 @@ export class ForjamagoWindow extends Window {
   	}
 
   	runeTierCalculator = (runes, level) => {
-  		let newRunes = [];
+  		let preRunes = [];
   		let loops = 2 + Math.floor(level / 40);
 
   		runes.forEach(rune => {
@@ -491,7 +497,13 @@ export class ForjamagoWindow extends Window {
 		  			}
 	  				break
 	  		}
-	  		newRunes.push([tier1, runeData[rune[0]][1]], [tier2, runeData[rune[0]][2]], [tier3, runeData[rune[0]][3]])
+	  		preRunes.push([tier1, runeData[rune[0]][0]], [tier2, runeData[rune[0]][1]], [tier3, runeData[rune[0]][2]])
+  		})
+
+  		let newRunes = [];
+
+  		preRunes.forEach(rune => {
+  			if (rune[0] > 0 && rune[1] != undefined) newRunes.push(rune)
   		})
   		return newRunes;
   	}
@@ -1057,28 +1069,28 @@ const pesoList = {
 }
 
 const runeData = {
-	vit: [resourceData['runa_vi'], resourceData['runa_bu_vi'], resourceData['runa_su_vi']],
-	str: [resourceData['runa_fu'], resourceData['runa_bu_fu'], resourceData['runa_su_fu']],
-	int: [resourceData['runa_inte'], resourceData['runa_bu_inte'], resourceData['runa_su_inte']],
-	cha: [resourceData['runa_sue'], resourceData['runa_bu_sue'], resourceData['runa_su_sue']],
-	agi: [resourceData['runa_agi'], resourceData['runa_bu_agi'], resourceData['runa_su_agi']],
-	pa: [resourceData['runa_pa']],
-	pm: [resourceData['runa_pm']],
-	al: [resourceData['runa_lu']],
-	invo: [resourceData['runa_be']],
-	pp: [resourceData['runa_prospe'], resourceData['runa_bu_prospe']],
-	pot: [resourceData['runa_pot'], resourceData['runa_bu_pot']],
-	dmg: [resourceData['runa_da']],
-	cur: [resourceData['runa_cu'], resourceData['runa_bu_cu']],
-	strDmg: [resourceData['runa_da_tierra'], resourceData['runa_da_tierra']],
-	intDmg: [resourceData['runa_da_fuego'], resourceData['runa_da_fuego']],
-	chaDmg: [resourceData['runa_da_agua'], resourceData['runa_da_agua']],
-	agiDmg: [resourceData['runa_da_aire'], resourceData['runa_da_aire']],
-	crtDmg: [resourceData['runa_da_cri'], resourceData['runa_da_cri']],
-	crt: [resourceData['runa_cri']],
-	wis: [resourceData['runa_sa'], resourceData['runa_bu_sa'], resourceData['runa_su_sa']],
-	speDmg: [resourceData['runa_por_he']],
-	wepDmg: [resourceData['runa_por_res']],
-	res: [resourceData['runa_por_res']],
-	reDmg: [resourceData['runa_por_reen']],
+	vit: ['runa_vi', 'runa_bu_vi', 'runa_su_vi'],
+	str: ['runa_fu', 'runa_bu_fu', 'runa_su_fu'],
+	int: ['runa_inte', 'runa_bu_inte', 'runa_su_inte'],
+	cha: ['runa_sue', 'runa_bu_sue', 'runa_su_sue'],
+	agi: ['runa_agi', 'runa_bu_agi', 'runa_su_agi'],
+	pa: ['runa_pa'],
+	pm: ['runa_pm'],
+	al: ['runa_lu'],
+	invo: ['runa_be'],
+	pp: ['runa_prospe', 'runa_bu_prospe'],
+	pot: ['runa_pot', 'runa_bu_pot'],
+	dmg: ['runa_da'],
+	cur: ['runa_cu', 'runa_bu_cu'],
+	strDmg: ['runa_da_tierra', 'runa_da_tierra'],
+	intDmg: ['runa_da_fuego', 'runa_da_fuego'],
+	chaDmg: ['runa_da_agua', 'runa_da_agua'],
+	agiDmg: ['runa_da_aire', 'runa_da_aire'],
+	crtDmg: ['runa_da_cri', 'runa_da_cri'],
+	crt: ['runa_cri'],
+	wis: ['runa_sa', 'runa_bu_sa', 'runa_su_sa'],
+	speDmg: ['runa_por_he'],
+	wepDmg: ['runa_por_res'],
+	res: ['runa_por_res'],
+	reDmg: ['runa_por_reen'],
 }

@@ -1,3 +1,5 @@
+import { Blackscreen } from './Blackscreen.js';
+
 export class Window {
     static zIndexCounter = 1;
 
@@ -41,8 +43,10 @@ export class Window {
         this.window.appendChild(this.container);
     }
 
-    open() {
-        document.body.appendChild(this.window);
+    open(bs = false) {
+        if (bs) {
+            this.blacksreen = new Blackscreen(this.window);
+        } else document.body.appendChild(this.window);
         this.window.style.left = `${this.x}px`;
         this.window.style.top = `${Math.max(this.y, 0)}px`; // Evita que se abra fuera de la pantalla por arriba
         this.isOpen = true;
@@ -79,7 +83,8 @@ export class Window {
         this.window.style.zIndex = ++Window.zIndexCounter;
     }
 
-    close() {
+    close(bs) {
+        if (bs) this.blacksreen.destroy();
         this.isOpen = false;
         this.window.remove();
     }

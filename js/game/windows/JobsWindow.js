@@ -76,7 +76,6 @@ export class JobsWindow extends Window {
   	open() {
 	    super.open(); 
 	    this.update();
-	     this.forjamagoWindow.open()
   	}
 
   	handleAction = (tabName) => {

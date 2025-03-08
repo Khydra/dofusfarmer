@@ -1,5 +1,6 @@
 import { Window } from '../../../utils/Window.js';
 import { Element } from '../../../utils/Element.js';
+import { Blackscreen } from '../../../utils/Blackscreen.js';
 import { Input } from '../../../utils/Input.js';
 import { Selector } from '../../../utils/Selector.js';
 import { Tooltip, removeTooltips } from '../../../utils/Tooltip.js';
@@ -15,7 +16,7 @@ export class ForjamagoWindow extends Window {
 
 	    super(title, width, height); 
 	    this.component = component;
-	    this.tabSelected = 1;
+	    this.tabSelected = 0;
 
 	    this.inventoryData = {
 	    	tabSelected: 0,
@@ -179,6 +180,9 @@ export class ForjamagoWindow extends Window {
 
   	changeTab = (n, inventory = false) => {
   		if (!inventory) {
+  			this.removeItem();
+			this.removeRune();
+			this.retireAllCrusherItems();
   			this.tabSelected = n;
 	  		this.updateTabs();
   		} else {
@@ -246,12 +250,12 @@ export class ForjamagoWindow extends Window {
   	}
 
   	open() {
-	    super.open(); 
+	    super.open(true); 
 	    this.updateInventoryItems();
   	}
 
   	close() {
-	    super.close(); 
+	    super.close(true); 
 	    this.removeItem();
 		this.removeRune();
 		this.retireAllCrusherItems();

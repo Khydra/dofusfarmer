@@ -105,7 +105,7 @@ export class Main {
 
 		this.inventory.obtainItem(generateItemStats(equipmentData['sombrero_de_jalato']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['capa_bilidad']));
-		this.inventory.obtainItem(generateItemStats(equipmentData['el_flud']));
+		this.inventory.obtainItem(generateItemStats(equipmentData['borrar']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['capa_oscura']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['suerte_de_zurcarak']));
 		this.inventory.obtainItem(generateItemStats(equipmentData['anillo_de_satisfaccion']));

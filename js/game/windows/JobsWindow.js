@@ -17,7 +17,7 @@ export class JobsWindow extends Window {
 	constructor(component) {
 		const title = "Oficios";
 	    const width = 600;
-	    const height = 450;
+	    const height = 600;
 
 	    super(title, width, height); 
 	    this.component = component;

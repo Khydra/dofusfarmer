@@ -150,6 +150,9 @@ export class ForjamagoWindow extends Window {
   		this.runeStatRowR1 = [];
   		this.runeStatRowR2 = [];
   		this.runeStatRowR3 = [];
+  		this.runeSRR1 = [];
+  		this.runeSRR2 = [];
+  		this.runeSRR3 = [];
 
   		for (let i = 0; i < 14; i++) {
   			this.runeStatRow[i] = new Element(this.runeStatContainer, { className: 'mag-rune-stat-row'}).element; 
@@ -161,6 +164,12 @@ export class ForjamagoWindow extends Window {
   			this.runeStatRowR1[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r1'}).element; 
   			this.runeStatRowR2[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r2'}).element; 
   			this.runeStatRowR3[i] = new Element(this.runeStatRow[i], { className: 'mag-rune-stat-r3'}).element; 
+  			this.runeStatRowR1[i].addEventListener('click', () => { this.selectRuneR1(i) });
+			this.runeStatRowR2[i].addEventListener('click', () => { this.selectRuneR2(i) });
+			this.runeStatRowR3[i].addEventListener('click', () => { this.selectRuneR3(i) });
+			this.runeSRR1[i] = null;
+			this.runeSRR2[i] = null;
+			this.runeSRR3[i] = null;
   		} 	
   	}
 
@@ -526,6 +535,24 @@ export class ForjamagoWindow extends Window {
   		removeTooltips();
   	}
 
+  	selectRuneR1 = (i) => {
+  		if (this.runeSRR1[i] == null) return
+  		this.selectRune(this.runeSRR1[i]);
+  		this.fusionRune();
+  	} 
+
+  	selectRuneR2 = (i) => {
+  		if (this.runeSRR2[i] == null) return
+  		this.selectRune(this.runeSRR2[i]);
+  		this.fusionRune();
+  	}
+
+  	selectRuneR3 = (i) => {
+  		if (this.runeSRR3[i] == null) return
+  		this.selectRune(this.runeSRR3[i]);
+  		this.fusionRune();
+  	}
+
   	removeItem = () => {
   		if (this.magData.itemSelected == null) return;
   		this.historyText.innerHTML +=  `<br>`;
@@ -580,15 +607,18 @@ export class ForjamagoWindow extends Window {
 
 			if (r1 != null) {
 				this.runeStatRowR1[i].style.backgroundImage = `url("${r1.image}")`;
-				this.runeStatRowR1[i].innerHTML = `<span class="isq-mini stroke">x${r1.quantity}</span>`
+				this.runeStatRowR1[i].innerHTML = `<span class="isq-mini stroke">x${r1.quantity}</span>`;
+				this.runeSRR1[i] = r1;
 			}
 			if (r2 != null) {
 				this.runeStatRowR2[i].style.backgroundImage = `url("${r2.image}")`;
-				this.runeStatRowR2[i].innerHTML = `<span class="isq-mini stroke">x${r2.quantity}</span>`
+				this.runeStatRowR2[i].innerHTML = `<span class="isq-mini stroke">x${r2.quantity}</span>`;
+				this.runeSRR2[i] = r2;
 			}
 			if (r3 != null) {
 				this.runeStatRowR3[i].style.backgroundImage = `url("${r3.image}")`;
-				this.runeStatRowR3[i].innerHTML = `<span class="isq-mini stroke">x${r3.quantity}</span>`
+				this.runeStatRowR3[i].innerHTML = `<span class="isq-mini stroke">x${r3.quantity}</span>`;
+				this.runeSRR3[i] = r3;
 			}
   		})
 
@@ -605,15 +635,18 @@ export class ForjamagoWindow extends Window {
 
 				if (r1 != null) {
 					this.runeStatRowR1[i].style.backgroundImage = `url("${r1.image}")`;
-					this.runeStatRowR1[i].innerHTML = `<span class="isq-mini stroke">x${r1.quantity}</span>`
+					this.runeStatRowR1[i].innerHTML = `<span class="isq-mini stroke">x${r1.quantity}</span>`;
+					this.runeSRR1[i] = r1;
 				}
 				if (r2 != null) {
 					this.runeStatRowR2[i].style.backgroundImage = `url("${r2.image}")`;
-					this.runeStatRowR2[i].innerHTML = `<span class="isq-mini stroke">x${r2.quantity}</span>`
+					this.runeStatRowR2[i].innerHTML = `<span class="isq-mini stroke">x${r2.quantity}</span>`;
+					this.runeSRR2[i] = r2;
 				}
 				if (r3 != null) {
 					this.runeStatRowR3[i].style.backgroundImage = `url("${r3.image}")`;
-					this.runeStatRowR3[i].innerHTML = `<span class="isq-mini stroke">x${r3.quantity}</span>`
+					this.runeStatRowR3[i].innerHTML = `<span class="isq-mini stroke">x${r3.quantity}</span>`;
+					this.runeSRR3[i] = r3;
 				}
   			}
   		})
@@ -631,13 +664,12 @@ export class ForjamagoWindow extends Window {
   			this.runeStatRowR1[i].style.backgroundImage = "";
   			this.runeStatRowR2[i].style.backgroundImage = "";
   			this.runeStatRowR3[i].style.backgroundImage = "";
+  			this.runeSRR1[i] = null;
+			this.runeSRR2[i] = null;
+			this.runeSRR3[i] = null;
   		})
   	}
 
-  	// DIFICULTAR EL EXO PA / PM
-  	// SI EL STAT PERDIODO ES EXO U OVER -> BAJAR PESO
-  	// NO PONER EL MENSAJE DE -RESTOS SI HAY 0 RESTOS
-  	// LIMITE PESO EN OVER (EJ over 200 vit - 40 potencia etc)
   	tryRune = (rune) => {
   		let runeData = []; //stat - value - peso - tier
   		Object.keys(rune.value).forEach((key, i) => {
@@ -721,7 +753,13 @@ export class ForjamagoWindow extends Window {
   			return;
   		}
 
-  		// HACER QUE RUNAS TOCHAS FALLEN MAS EN ITEMS LVL BAJO
+  		// CAPEAR OVER
+  		let overCap = this.checkOverCap(runeData);
+  		if (overCap[0]) {
+  			this.historyText.innerHTML += `<span class="history-effect-fail">Fallo (capacidad máxima ${overCap[1]})</span><br>`;
+  			return;
+  		}
+  		
   		let handicap = 0;
   		if (runeData[3] > 1) handicap = Math.ceil((((201 - this.magData.itemSelected.level) / 4) * runeData[3]) / 6);
 
@@ -810,11 +848,18 @@ export class ForjamagoWindow extends Window {
   		let nothing = Math.floor(Math.random() * 100);
   		if (nothing < Math.floor(runeData[2] / 4)) return 'nothing';
 
+  		// CAPEAR OVER
+  		let overCap = this.checkOverCap(runeData, true);
+  		if (overCap[0]) {
+  			this.historyText.innerHTML += `<span class="history-effect-fail">Fallo (capacidad máxima ${overCap[1]})</span><br>`;
+  			return;
+  		}
+
   		// HACER QUE RUNAS TOCHAS FALLEN MAS EN ITEMS LVL BAJO
   		let handicap = 0;
   		if (runeData[3] > 1) handicap = Math.ceil((((201 - this.magData.itemSelected.level) / 4) * runeData[3] * 1.5) / 5);
   		if (runeData[2] > 50) handicap += (200 + (runeData[2] * 2));
-  		console.log(handicap)
+
   		if (runeData[2] + this.magData.itemSelected.peso[0] > this.magData.itemSelected.peso[1]) { // SI HAY MAS PESO DE LO QUE PESA LA RUNA
 			this.loseStats(runeData, false, runeData[2]);
 			if (runeData[2] + this.magData.itemSelected.peso[0] <= this.magData.itemSelected.peso[1]) {
@@ -898,6 +943,57 @@ export class ForjamagoWindow extends Window {
   				return;
   			}	
 		}
+  	}
+
+  	checkOverCap = (runeData, isExo = false) => {
+  		let maxStat;
+
+  		if (!isExo) {
+  			if (this.magData.itemSelected.base[runeData[0]][1] != undefined) maxStat = this.magData.itemSelected.base[runeData[0]][1];
+			else maxStat = this.magData.itemSelected.base[runeData[0]][0];
+  		} else maxStat = 0;
+  		
+
+  		let overCap = [false, null];
+  		switch (runeData[0]) {
+  			case 'vit': 
+	  			overCap[1] = 505;	
+	  			break;
+	  		case 'str': case 'int': case 'cha': case 'agi': case 'pot':  
+	  			overCap[1] = 101;
+	  			break;
+	  		case 'wis': case 'pp':
+	  		 	if (maxStat < 30) overCap[1] = 33;
+	  			else if (maxStat < 60) overCap[1] = 66;
+	  			else overCap[1] = 99;
+	  			break;
+	  		case 'strDmg': case 'intDmg': case 'chaDmg': case 'agiDmg': case 'crtDmg':	
+	  			if (maxStat < 20) overCap[1] = 20;
+	  			else overCap[1] = maxStat + 20;
+	  			break;
+	  		case 'dmg': 
+	  			overCap[1] = maxStat + 9;	
+	  			break
+	  		case 'cur': case 'crt': 
+	  			overCap[1] = maxStat + 10;	
+	  			break
+	  		case 'invo':
+	  			overCap[1] = 4;
+	  			break;
+	  		case 'pa': case 'pm': case 'al':
+	  			overCap[1] = 1;	
+	  			break;
+	  		case 'speDmg': case 'wepDmg': case 'res': 
+	  			overCap[1] = maxStat + 6
+				break;
+			case 'reDmg':
+				overCap[1] = 5
+				break;
+  		}
+
+  		if (this.magData.itemSelected.stats[runeData[0]] + runeData[1] > overCap[1]) overCap[0] = true;
+
+  		return overCap;
   	}
 
   	loseStats = (runeData, parcial = false, restosPrev = 0) => {

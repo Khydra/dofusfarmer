@@ -5,7 +5,7 @@ import { text } from '../../file/text.js';
 export class SpellsWindow extends Window { 
 	constructor(component) {
 		const title = "Hechizos";
-	    const width = 600;
+	    const width = 700;
 	    const height = 500;
 
 	    super(title, width, height); 
@@ -22,10 +22,13 @@ export class SpellsWindow extends Window {
 		this.spellSelected = this.spellList[0];
 	    this.levelSelected = this.spellList[0].level - 1;
 
-		this.listNameLabel = new Element(this.container, { className: 'spells-list-name-label', text: 'Hechizo' }).element; 
-		this.listLevelLabel = new Element(this.container, { className: 'spells-list-level-label', text: 'Nivel' }).element;
+	    // LEFT 
+	    this.dataContainer = new Element(this.container, { className: 'spells-data-container' }).element; 
 
-		this.listContainer = new Element(this.container, { className: 'spells-list-container stroke' }).element; 
+		this.listNameLabel = new Element(this.dataContainer, { className: 'spells-list-name-label', text: 'Hechizo' }).element; 
+		this.listLevelLabel = new Element(this.dataContainer, { className: 'spells-list-level-label', text: 'Nivel' }).element;
+
+		this.listContainer = new Element(this.dataContainer, { className: 'spells-list-container stroke' }).element; 
 		this.spellContainer = [];
 		this.spellImage = []
 		this.spellName = []
@@ -39,8 +42,9 @@ export class SpellsWindow extends Window {
 			this.spellContainer[key].addEventListener('click', () => { this.selectSpell(key) })
 		})
 
-		this.availablePoints = new Element(this.container, { className: 'spells-available-points' }).element;
+		this.availablePoints = new Element(this.dataContainer, { className: 'spells-available-points' }).element;
 
+		// RIGHT
 		this.infoContainer = new Element(this.container, { className: 'spells-info-container' }).element; 
 
 		this.infoLevelContainer = new Element(this.infoContainer, { className: 'spells-info-level-container' }).element; 
@@ -48,6 +52,7 @@ export class SpellsWindow extends Window {
 
 		for (let i = 1; i < 7; i++) {
 			this.infoLevel[i] = new Element(this.infoLevelContainer, { className: 'spells-info-level stroke', text: i }).element; 
+			this.infoLevel[i].addEventListener('click', () => { this.selectSpellLevel(i-1) })
 		}
 
 		this.infoImage = new Element(this.infoContainer, { className: 'spells-info-image' }).element;
@@ -61,8 +66,7 @@ export class SpellsWindow extends Window {
 		this.infoDamageCritical = new Element(this.infoDataContainer, { className: 'spells-info-damage-critical' }).element;
 
 		this.update();
-		this.drawSpell();
-
+		this.selectSpell(0);
   	}
 
   	update = () => {
@@ -115,7 +119,15 @@ export class SpellsWindow extends Window {
 
   	selectSpell = (pos) => {
   		this.spellSelected = this.spellList[pos];
-	    this.levelSelected = this.spellList[pos].level - 1;
+  		this.selectSpellLevel(this.spellList[pos].level - 1)
+  	}
+
+  	selectSpellLevel = (level) => {
+  		this.infoLevel.forEach((infoLevel, i) => {
+  			if (i === level + 1) infoLevel.className = 'spells-info-level-selected stroke';
+  			else infoLevel.className = 'spells-info-level stroke';
+  		})
+  		this.levelSelected = level;
   		this.drawSpell();
   	}
 

@@ -1,8 +1,15 @@
+.spells-data-container {
+	position: absolute;
+	left: 0px;
+	height: 100%;
+	width: 45%;
+}
+
 .spells-list-name-label {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 35%;
+	width: 70%;
 	height: 30px;
 	text-align: center;
 	color: var(--white);
@@ -14,8 +21,8 @@
 .spells-list-level-label {
 	position: absolute;
 	top: 0px;
-	left: 35%;
-	width: 15%;
+	left: 70%;
+	width: 30%;
 	height: 30px;
 	text-align: center;
 	color: var(--white);
@@ -28,7 +35,7 @@
 	position: absolute;
 	bottom: 0px;
 	left: 0;
-	width: 50%;
+	width: 100%;
 	height: 30px;
 	text-align: center;
 	color: var(--white);
@@ -41,7 +48,7 @@
 	position: absolute;
 	top: 30px;
 	bottom: 30px;
-	width: 50%;
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	overflow-y: auto;
@@ -58,6 +65,10 @@
     box-shadow: inset 1px 0 1px black;
     background: #222; 
 }
+
+/* RIGHT  */
+/* RIGHT  */
+/* RIGHT  */
 
 .spells-spell-container {
 	position: relative;
@@ -104,7 +115,6 @@
 	position: relative;
 	height: 100%;
 	width: 25%;
-
 	text-align: center;
 }
 
@@ -112,15 +122,15 @@
 	position: absolute;
 	right: 0px;
 	height: 100%;
-	width: 50%;
+	width: 55%;
 	outline: 1px solid black;
 }
 
 .spells-info-level-container {
 	position: absolute;
 	top: 15px;
-	left: 5px;
-	right: 5px;
+	left: 15px;
+	right: 15px;
 	height: 26px;
 	display: flex;
 	flex-wrap: wrap;
@@ -130,7 +140,7 @@
 
 .spells-info-level {
 	position: relative;
-	width: 40px;
+	width: 48px;
 	height: 100%;
 	text-align: center;
 	font-weight: bold;
@@ -138,6 +148,7 @@
 	background: var(--bg2);
 	border-radius: 5px 5px 0 0;
 	cursor: pointer;
+
 }
 
 .spells-info-level:hover {
@@ -146,12 +157,12 @@
 
 .spells-info-level-selected {
 	position: relative;
-	width: 40px;
+	width: 48px;
 	height: 100%;
 	text-align: center;
 	font-weight: bold;
 	color: var(--white);
-	background: var(--orange); 
+	background: var(--bg3); 
 	border-radius: 5px 5px 0 0;
 	pointer-events: none;
 }

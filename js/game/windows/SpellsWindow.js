@@ -94,8 +94,8 @@ export class SpellsWindow extends Window {
   		this.infoData.innerHTML += `<br> Crítico: ${this.spellSelected.crt}%`;
   		if (this.spellSelected.use) this.infoData.innerHTML += `<br> Usos por turno: ${this.spellSelected.use[this.levelSelected]}`;
   		if (this.spellSelected.cd) this.infoData.innerHTML += `<br> Enfriamiento: ${this.spellSelected.cd[this.levelSelected]} turnos`;
-  		// stack
-  		// duration
+  		if (this.spellSelected.stack) this.infoData.innerHTML += `<br> Cúmulo de efectos: ${this.spellSelected.stack[this.levelSelected]}`;
+  		if (this.spellSelected.duration) this.infoData.innerHTML += `<br> Duración de efectos: ${this.spellSelected.duration[this.levelSelected]} turnos`;
   	}
 
   	drawSpellInfoDamage = () => {
@@ -110,6 +110,16 @@ export class SpellsWindow extends Window {
 	  		})
   		}
 
+  		if (this.spellSelected.damageExtraDescription) {
+  			Object.keys(this.spellSelected.damageExtra[this.levelSelected]).forEach((key) => {
+	  			this.spellSelected.damageExtra[this.levelSelected][key].forEach((value) => {
+	  				if (value[2]) this.infoDamage.innerHTML += `<span class='${key} spells-info-dmg-value'>${value[0]} a ${value[1]} Robo ${text.element[key]}</span>`;
+	  				else this.infoDamage.innerHTML += `<span class='${key} spells-info-dmg-value'>${value[0]} a ${value[1]} Daños ${text.element[key]}</span>`;		
+	  			})	
+	  		})	
+  			this.infoDamage.innerHTML += `<span class='neu spells-info-dmg-value'>(${this.spellSelected.damageExtraDescription})</span>`;
+  		}
+
   		if (this.spellSelected.effectDescription)
   		this.infoDamage.innerHTML += `<span class='neu spells-info-dmg-value'>${this.spellSelected.effectDescription[this.levelSelected]}</span>`;
 
@@ -122,6 +132,16 @@ export class SpellsWindow extends Window {
   				else this.infoDamageCritical.innerHTML += `<span class='${key} spells-info-dmg-value'>${value[0]} a ${value[1]} Daños ${text.element[key]}</span><br>`;		
   			})	
   		})
+
+  		if (this.spellSelected.damageExtraDescription) {
+  			Object.keys(this.spellSelected.damageExtraCritical[this.levelSelected]).forEach((key) => {
+	  			this.spellSelected.damageExtraCritical[this.levelSelected][key].forEach((value) => {
+	  				if (value[2]) this.infoDamageCritical.innerHTML += `<span class='${key} spells-info-dmg-value'>${value[0]} a ${value[1]} Robo ${text.element[key]}</span>`;
+	  				else this.infoDamageCritical.innerHTML += `<span class='${key} spells-info-dmg-value'>${value[0]} a ${value[1]} Daños ${text.element[key]}</span>`;		
+	  			})	
+	  		})	
+  			this.infoDamageCritical.innerHTML += `<span class='neu spells-info-dmg-value'>(${this.spellSelected.damageExtraDescription})</span>`;
+  		}
 
   		if (this.spellSelected.effectCriticalDescription)
   		this.infoDamageCritical.innerHTML += `<span class='neu spells-info-dmg-value'>${this.spellSelected.effectCriticalDescription[this.levelSelected]}</span>`;

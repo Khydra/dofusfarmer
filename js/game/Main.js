@@ -7,7 +7,6 @@ import { Scenes } from './components/Scenes.js';
 import { Toolbar } from './components/Toolbar.js';
 
 import { Player } from './core/Player.js';
-import { Enemy } from './core/Enemy.js';
 import { Inventory } from './core/Inventory.js';
 import { Equipment } from './core/Equipment.js';
 import { Bank } from './core/Bank.js';
@@ -119,12 +118,10 @@ export class Main {
 		    if (e.key === "s") {
 
 		    	let character = this.player.getData();
-		    	//let enemy = this.enemy.getData();
 		    	let bank = this.bank.getData();
 
 		        saveData(
 		        	character,
-		        	//enemy,
 					bank,
 		        );
 		    }

@@ -1,0 +1,193 @@
+.battle-container {
+	position: absolute;
+	height: 340px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.battle-background {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-size: 100%;
+	filter: blur(25px);
+}
+
+.battle-enemy-info-container {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 400px;
+	height: 120px;
+	background: rgba(0, 0, 0, 0.7);
+	outline: 1px solid black;
+	border-radius: 5px;
+	z-index: 2;
+}
+
+.battle-enemy-name {
+
+}
+
+.battle-enemy-health-bar-container {
+
+}
+
+.battle-enemy-health-bar {
+
+}
+
+.battle-enemy-health {
+
+}
+
+.battle-enemy-armor-bar-container {
+
+}
+
+.battle-enemy-armor-bar {
+
+}
+
+.battle-enemy-armor {
+
+}
+
+.battle-enemy-resis-container {
+
+}
+
+.battle-enemy-action-container {
+
+}
+
+
+.battle-player-image {
+	position: absolute;
+	bottom: -50px;
+	left: 100px;
+	width: 200px;
+	height: 200px;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: scaleX(-1);
+	filter: drop-shadow(0 0 4px black);
+	cursor: pointer;
+	transition: .2s;
+	z-index: 1;
+}
+
+.battle-enemy-image {
+	position: absolute;
+	top: 10px;
+	right: 100px;
+	width: 200px;
+	height: 200px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: scaleX(-1);
+	filter: drop-shadow(0 0 4px black);
+	cursor: pointer;
+	transition: .2s;
+	z-index: 1;
+}
+
+.battle-player-image:hover, .battle-enemy-image:hover {
+	filter: drop-shadow(0 0 6px black) brightness(1.1);
+	transform: scaleX(-1) translate(0, -4px);
+}
+
+.battle-floor {
+	position: absolute;
+	width: 250px;
+	height: 100px;
+	border-radius: 50%;
+
+	transform: skew(25deg) rotateX(45deg) scale(1.2);
+	box-shadow: 0 0 10px black;
+	background-position: center;
+}
+
+.battle-player-floor {
+	bottom: -60px;
+	left: 75px;
+}
+
+.battle-enemy-floor {
+	top: 140px;
+	right: 75px;
+}
+
+.battle-chat-button {
+	position: absolute;
+	bottom: 8px;
+	right: 10px;
+	width: 24px;
+	height: 24px;
+	background-image: url("../assets/images/icons/battle/chat.png");
+	background-size: 100%;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	transition: .1s;
+}
+
+.battle-chat-button:hover {
+	filter: brightness(1.2);
+	padding-bottom: 2px;
+}
+/* BOTTOM BAR */
+.battle-action-bar {
+	position: absolute;
+	bottom: 0px;
+	height: 120px;
+	width: 100%;
+	background: var(--bg2);
+	border-top: 1px solid black;
+	z-index: 2;
+}
+
+.battle-action-bar-spell-container {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translate(0, -50%);
+	width: 520px;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+
+	gap: 6px;
+}
+
+.battle-action-bar-spell-slot {
+	position: relative;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    box-shadow: inset 0 0 2px black;
+    cursor: pointer;
+}
+
+.battle-action-bar-end-turn {
+	position: absolute;
+	bottom: 18px;
+	right: 20px;
+	width: 240px;
+	height: 30px;
+	background: var(--bg3);
+	border-radius: 5px;
+	text-align: center;
+	line-height: 30px;
+	outline: 1px solid black;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.battle-action-bar-end-turn:hover {
+	filter: brightness(1.2);
+}

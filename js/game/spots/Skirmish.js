@@ -1,42 +1,51 @@
 import { Element } from '../../utils/Element.js';
-import { Enemy } from '../core/Enemy.js';
+import { BattleWindow } from '../windows/BattleWindow.js';
 
 export class Skirmish {
 	constructor(game, player, spot) {
 		this.game = game;
 		this.player = player;
 		this.spot = spot;
-		this.enemy = this.setEnemy();
+		this.battleWindow; 
 		
 		this.render();
 	}	
 
 	render = () => {
-		this.enemyImage = new Element(this.game.container, { className: 'skirmish-enemy-image', image: this.enemy.image }).element;
-		this.enemyName = new Element(this.game.container, { className: 'skirmish-enemy-name', text: `${this.enemy.name}, lv ${this.enemy.level}` }).element;
-		this.enemyHealthBarContainer = new Element(this.game.container, { className: 'skirmish-enemy-health-bar-container' }).element;
-		this.enemyHealthBar = new Element(this.enemyHealthBarContainer, { className: 'skirmish-enemy-health-bar' }).element;
-		this.enemyHealth = new Element(this.enemyHealthBarContainer, { className: 'skirmish-enemy-health' }).element;
+		this.zoneContainer = new Element(this.game.container, { className: 'skirmish-zone-container' }).element;
+		this.zone = [];
+		this.zoneName = [];
+		this.zoneImage = [];
 
-		this.update();
+		Object.keys(this.spot.zone).forEach((key) => {
+			this.zone[key] = new Element(this.zoneContainer, { className: 'skirmish-zone' }).element;
+			this.zoneName[key] = new Element(this.zone[key], { className: 'skirmish-zone-name', text: this.spot.zone[key].name }).element;
+			this.zoneImage[key] = new Element(this.zone[key], { className: 'skirmish-zone-image', image: this.spot.zone[key].enemies[0].image }).element;
+
+			this.zone[key].addEventListener('click', () => { this.enterBattle(this.spot.zone[key]) })
+		})
 	}
 
-	update = () => {
-		this.enemyHealth.innerText = `${this.enemy.vit[0]}/${this.enemy.vit[1]}`;
-	}
-
-	setEnemy = () => {
-		let enemy = new Enemy(this.spot.enemies[0]);
-		console.log(enemy)
-		return enemy;
+	enterBattle = (zone) => {
+		this.battleWindow = new BattleWindow(this, zone);
+		this.battleWindow.open()
 	}
 
 	destroy = () => {
-        if (this.enemyImage) this.enemyImage.remove();
-        if (this.enemyName) this.enemyName.remove();
-        if (this.enemyHealthBarContainer) this.enemyHealthBarContainer.remove();
-        if (this.enemyHealthBar) this.enemyHealthBar.remove();
-        if (this.enemyHealth) this.enemyHealth.remove();
+        this.zone.forEach((zoneElement, i) => {
+	        this.zoneName[i].remove();
+	        this.zoneImage[i].remove();
+	        zoneElement.remove();
+	    });
+
+	    if (this.zoneContainer) {
+	        this.zoneContainer.remove();
+	    }
+
+	    this.zone = [];
+		this.zoneName = [];
+		this.zoneImage = [];
+	    this.zoneContainer = null;
     }
 }
 

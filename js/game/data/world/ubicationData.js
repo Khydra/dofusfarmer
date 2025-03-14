@@ -34,11 +34,25 @@ export const ubicationData = {
 				name: 'Escaramuza',
 				image: './assets/images/ubication/incarnam/skirmish.png',
 				type: 'skirmish',
-				enemies: [
-					enemyData['miaucrobata'],
-					enemyData['ronroteston'],
-					enemyData['tigrelindre']
-				],
+				zone: {
+					0: {
+						name: 'Monstruos de Incarnam',
+						enemies: [
+							enemyData['miaucrobata'],
+							enemyData['ronroteston'],
+							enemyData['tigrelindre']
+						],
+						background: './assets/images/ubication/incarnam/skirmish.png',
+					},
+					1: {
+						name: 'Monstruos del Cementerio',
+						enemies: [
+							enemyData['miaucrobata'],
+							enemyData['ronroteston'],
+							enemyData['tigrelindre']
+						],
+					},
+				},
 			},
 			gathering: {
 				key: 'gathering',
@@ -87,11 +101,24 @@ export const ubicationData = {
 				name: 'Escaramuza',
 				image: './assets/images/ubication/astrub/skirmish.png',
 				type: 'skirmish',
-				enemies: [
-					enemyData['miaucrobata'],
-					enemyData['ronroteston'],
-					enemyData['tigrelindre']
-				],
+				zone: {
+					0: {
+						name: 'Monstruos de Astrub',
+						enemies: [
+							enemyData['miaucrobata'],
+							enemyData['ronroteston'],
+							enemyData['tigrelindre']
+						],
+					},
+					1: {
+						name: 'Monstruos de las Alcantarillas',
+						enemies: [
+							enemyData['miaucrobata'],
+							enemyData['ronroteston'],
+							enemyData['tigrelindre']
+						],
+					}
+				},
 			},
 			gathering: {
 				key: 'gathering',

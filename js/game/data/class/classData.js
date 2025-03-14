@@ -12,6 +12,10 @@ export const classData = {
 			body: {
 				male: './assets/images/classes/yopukaBodyM.png',
 				female:'./assets/images/classes/yopukaBodyF.png',
+			},
+			bodyBack: {
+				male: './assets/images/classes/yopukaBodyBackM.png',
+				female:'./assets/images/classes/yopukaBodyBackF.png',
 			}
 		},
 		spells: spellSetData['yopuka']

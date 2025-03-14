@@ -95,6 +95,7 @@ export class CharacterCreation {
 			name: this.playerName.value,
 			portrait: this.classSelected.image.portrait[this.genderSelected],
 			body: this.classSelected.image.body[this.genderSelected],
+			bodyBack: this.classSelected.image.bodyBack[this.genderSelected],
 			class: this.classSelected,
 			level: 1,
 			availablePoints: 0,

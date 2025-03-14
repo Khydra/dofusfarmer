@@ -7,6 +7,7 @@ export class Player {
 		this.name = charData.name;
 		this.portrait = charData.portrait;
 		this.body = charData.body;
+		this.bodyBack = charData.bodyBack;
 		this.class = charData.class;
 		this.level = charData.level;
 		this.exp = charData.exp;
@@ -83,34 +84,34 @@ export class Player {
 
 		switch (job) {
         	case 'lenador':
-            	
+            	this.main.menu.jobsWindow.lenadorWindow.update();
                 break;
         	case 'minero':
-        		
+        		this.main.menu.jobsWindow.mineroWindow.update();
             	break;    
             case 'alquimista':
-
+            	this.main.menu.jobsWindow.alquimistaWindow.update();
                 break;
             case 'campesino':
-            	
+            	this.main.menu.jobsWindow.campesinoWindow.update();
                 break;    
             case 'joyero':
-            	
+            	this.main.menu.jobsWindow.joyeroWindow.update();
                 break;
             case 'sastre':
             	this.main.menu.jobsWindow.sastreWindow.update();
             	break;
             case 'zapatero':
-            	
+            	this.main.menu.jobsWindow.zapateroWindow.update();
             	break;
             case 'herrero':
-            	
+            	this.main.menu.jobsWindow.herreroWindow.update();
                 break;
             case 'escultor':
-
+            	this.main.menu.jobsWindow.escultorWindow.update();
                 break;
             case 'fabricante':
-
+            	this.main.menu.jobsWindow.fabricanteWindow.update();
                 break;
             case 'forjamago':
 
@@ -126,6 +127,7 @@ export class Player {
 			name: this.name,
 			portrait: this.portrait,
 			body: this.body,
+			bodyBack: this.bodyBack,
 			class: this.class,
 			level: this.level,
 			exp: this.exp,

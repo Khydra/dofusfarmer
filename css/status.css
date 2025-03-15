@@ -1,12 +1,13 @@
 .status-container {
 	position: relative;
     height: 880px; 
-    background: var(--bg1); 
     box-shadow: 0 0 5px black;
     border-radius: 5px;
     overflow: hidden;
     text-shadow: 1px 1px 2px black;
+    background: linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 50%, var(--bg1) 100%);
 }
+
 
 .status-title {
 	height: 40px;
@@ -17,6 +18,7 @@
 	border-bottom: 1px solid black;
 	font-weight: bold;
 	color: var(--white);
+	background-image: url('../assets/images/textures/texture3.png');
 }
 
 .status-player-container {

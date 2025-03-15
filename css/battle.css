@@ -101,8 +101,8 @@
 
 .battle-enemy-image {
 	position: absolute;
-	top: 10px;
-	right: 100px;
+	top: 25px;
+	right: 90px;
 	width: 200px;
 	height: 200px;
 	background-size: 100%;
@@ -164,7 +164,7 @@
 	bottom: 0px;
 	height: 120px;
 	width: 100%;
-	background: var(--bg2);
+	background: linear-gradient(45deg,var(--bg1) 0%, var(--bg2) 50%, var(--bg1) 100%);
 	border-top: 1px solid black;
 	z-index: 2;
 }
@@ -200,13 +200,19 @@
 	right: 20px;
 	width: 240px;
 	height: 30px;
-	background: var(--bg3);
-	border-radius: 5px;
+
+	font-size: 16px;
+	color: var(--white);
 	text-align: center;
 	line-height: 30px;
-	outline: 1px solid black;
-	cursor: pointer;
-	transition: .2s;
+	font-weight: bold;
+	
+	box-shadow: 0 0 1px black;
+  	background: linear-gradient(to bottom, #f9a06e 0%, #e85c26 100%);
+
+  	border-radius: 3px;
+  	border: 1px inset #a5753a;
+  	cursor: pointer;
 }
 
 .battle-action-bar-end-turn:hover {

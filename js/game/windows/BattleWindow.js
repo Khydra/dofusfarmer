@@ -46,7 +46,7 @@ export class BattleWindow extends Window {
 		
 		this.actionBar = new Element(this.container, { className: 'battle-action-bar' }).element;
 		this.actionBarSpellContainer = new Element(this.actionBar, { className: 'battle-action-bar-spell-container' }).element;
-		this.actionBarEndTurn = new Element(this.actionBar, { className: 'battle-action-bar-end-turn', text: 'TERMINAR TURNO' }).element;
+		this.actionBarEndTurn = new Element(this.actionBar, { className: 'battle-action-bar-end-turn stroke', text: 'TERMINAR TURNO' }).element;
 
 		for (let i = 0; i < 22; i++) {
 			this.actionBarSpell[i] = new Element(this.actionBarSpellContainer, { className: 'battle-action-bar-spell-slot' }).element;

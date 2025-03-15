@@ -10,7 +10,7 @@
 	height: 100%;
 	width: 100%;
 	background-size: 100%;
-	filter: blur(25px);
+	filter: blur(25px) grayscale(50%);
 }
 
 .battle-enemy-info-container {
@@ -26,11 +26,21 @@
 }
 
 .battle-enemy-name {
-
+	position: absolute;
+	top: 5px;
+	left: 20px;
+	color: var(--white);
+	font-size: 20px;
 }
 
 .battle-enemy-health-bar-container {
-
+	position: absolute;
+	top: 36px;
+	left: 20px;
+	width: 300px;
+	height: 18px;
+	background: red;
+	border-radius: 5px 5px 0 0;
 }
 
 .battle-enemy-health-bar {
@@ -42,7 +52,13 @@
 }
 
 .battle-enemy-armor-bar-container {
-
+	position: absolute;
+	top: 56px;
+	left: 20px;
+	width: 300px;
+	height: 14px;
+	background: red;
+	border-radius: 0 0 5px 5px;
 }
 
 .battle-enemy-armor-bar {
@@ -54,7 +70,12 @@
 }
 
 .battle-enemy-resis-container {
-
+	position: absolute;
+	top: 75px;
+	left: 20px;
+	width: 300px;
+	height: 30px;
+	background: red;
 }
 
 .battle-enemy-action-container {

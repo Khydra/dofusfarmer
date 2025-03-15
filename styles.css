@@ -25,6 +25,7 @@
     --p2: #d7d0ac;
     --p3: #6a654d;
     --p4: #463627;
+    --p5: #ebe4d2;
 
     --str: #a17535;
     --int: #ff6d01;
@@ -36,7 +37,6 @@ body {
     user-select: none;
     margin: 0;
     padding: 0;
-    background-color: var(--bg0);
 
     font-family: "Kanit", sans-serif;
     font-weight: 400;
@@ -48,6 +48,8 @@ body {
     height: 100vh; 
     overflow-x: hidden; 
     overflow-y: auto; 
+    background-color: var(--bg0);
+    background-image: url("./assets/images/textures/texture2.png");
 }
 
 .stroke {

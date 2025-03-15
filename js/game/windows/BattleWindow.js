@@ -22,7 +22,7 @@ export class BattleWindow extends Window {
 	render = () => {
 		// BATTLE
 		this.enemyInfoContainer = new Element(this.container, { className: 'battle-enemy-info-container' }).element;
-		this.enemyInfoName = new Element(this.enemyInfoContainer, { className: 'battle-enemy-name' }).element;
+		this.enemyInfoName = new Element(this.enemyInfoContainer, { className: 'battle-enemy-name stroke' }).element;
 		this.enemyInfoHealthBarContainer = new Element(this.enemyInfoContainer, { className: 'battle-enemy-health-bar-container' }).element;
 		this.enemyInfoHealthBar = new Element(this.enemyInfoContainer, { className: 'battle-enemy-health-bar' }).element;
 		this.enemyInfoHealth = new Element(this.enemyInfoContainer, { className: 'battle-enemy-health' }).element;
@@ -67,6 +67,7 @@ export class BattleWindow extends Window {
 
 	displayEnemy = () => {
 		this.enemyImage.style.backgroundImage = `url("${this.enemy.image}")`;
+		this.enemyInfoName.innerText = `${this.enemy.name} (lv. ${this.enemy.level})`;
 	}
 
 	updatePlayer = () => {

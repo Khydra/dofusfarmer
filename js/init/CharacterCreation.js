@@ -36,18 +36,18 @@ export class CharacterCreation {
 			this[`classPortrait${char.name}`].addEventListener('click', () => this.classSelect(char));
 		});
 
-		this.cancelButton = new Element(this.leftSection, { className: 'new-character-cancel-button', text: 'VOLVER' }).element;
+		this.cancelButton = new Element(this.leftSection, { className: 'new-character-cancel-button stroke', text: 'VOLVER' }).element;
 		this.cancelButton.addEventListener('click', () => this.destroy())
 
 		// MID SECTION
 		this.epithetName = new Element(this.midSection, { className: 'new-character-class-epithet' }).element;
 		this.className = new Element(this.midSection, { className: 'new-character-class-name' }).element;
 		this.classImage = new Element(this.midSection, { className: 'new-character-class-image' }).element;
-		this.playerName = new Input(this.midSection, { className: 'new-character-player-name', maxlength: 12, onlyLetters: true }).element;
+		this.playerName = new Input(this.midSection, { className: 'new-character-player-name', maxlength: 10, onlyLetters: true }).element;
 
 		// RIGHT SECTION
 		this.spellContainer = new Element(this.rightSection, { className: 'new-character-spell-container' }).element;
-		this.createButton = new Element(this.rightSection, { className: 'new-character-create-button', text: 'CREAR' }).element;
+		this.createButton = new Element(this.rightSection, { className: 'new-character-create-button stroke', text: 'CREAR' }).element;
 		this.createButton.addEventListener('click', () => this.createCharacter())
 
 		this.classSelect(classData['yopuka']); 

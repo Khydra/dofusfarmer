@@ -9,8 +9,7 @@ export class Init {
 	}
 
 	render = () => {
-		//this.title = new Element(document.body, { className: 'game-title', text: 'DOFUS FARMER' }).element;
-
+		this.tittle = new Element(document.body, { className: 'game-title', text: 'DOFUS FARMER v0.0.1' }).element;
 		this.characterContainer = new Element(document.body, { className: 'init-character-container' }).element;
 		this.character = [];
 		this.characterName = [];

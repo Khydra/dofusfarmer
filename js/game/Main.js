@@ -65,11 +65,6 @@ export class Main {
 				this.player.gainExp(5000);
 		    }
 
-		    if (e.key === "e") {
-		    	this.inventory.obtainItem(equipmentData['borrar'])
-		    }
-
-
 		});
 	}
 

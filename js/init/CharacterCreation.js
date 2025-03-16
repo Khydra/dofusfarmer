@@ -122,7 +122,7 @@ export class CharacterCreation {
 				reDmg: { base: 0, bonus: 0},
 				vit: { base: 60, bonus: 0},
 				pot: { base: 0, bonus: 0},
-				str: { base: 120, scroll: 0, bonus: 0 },
+				str: { base: 0, scroll: 0, bonus: 0 },
 				int: { base: 0, scroll: 0, bonus: 0 },
 				cha: { base: 0, scroll: 0, bonus: 0 },
 				agi: { base: 0, scroll: 0, bonus: 0 },

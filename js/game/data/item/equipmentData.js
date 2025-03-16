@@ -3679,7 +3679,7 @@ export const equipmentData = {
 		type: 'equipment',
 		sort: 'escudo',
 		recipe: {
-			crin_de_miserata_strubiense: 2,
+			//crin_de_miserata_strubiense: 2,
 			tabla_de_aglomerado: 1
 		},
 		set: null,

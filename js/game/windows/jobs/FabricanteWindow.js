@@ -56,6 +56,7 @@ export class FabricanteWindow extends Window {
 
   	drawRecipes = () => {
   		this.recipesShown = this.filterRecipes();
+
   		this.recipeSlot = [];
   		this.recipeClickHandlers = [];
 
@@ -99,7 +100,7 @@ export class FabricanteWindow extends Window {
 
   	drawIngredients = (recipe, ingredientContainer) => {
   		const ingredients = [];
-  		
+
   		Object.keys(recipe).forEach((key, i) => {
   			ingredients[i] = new Element(ingredientContainer, { className: 'job-recipe-slot-ingredient', image: resourceData[key].image }).element; 
   			ingredients[i].innerHTML = `<span class="isq stroke">x${recipe[key]}</span>`;

@@ -91,6 +91,11 @@ export class CharacterCreation {
 			return;
 		}
 
+		if (this.classSelected != classData['yopuka']) {
+			console.log('solo la clase YOPUKA está disponible')
+			this.classSelected = classData['yopuka'];
+		}
+		
 		const character = {
 			name: this.playerName.value,
 			portrait: this.classSelected.image.portrait[this.genderSelected],
@@ -137,16 +142,16 @@ export class CharacterCreation {
 			kamas: 0,
 			spells: this.classSelected.spells,
 			jobs: {
-				lenador: { level: 1, exp: [0, 20] },
-				minero: { level: 1, exp: [0, 20] },
-				alquimista: { level: 1, exp: [0, 20] },
-				campesino: { level: 1, exp: [0, 20] },
-				joyero: { level: 1, exp: [0, 20] },
-				sastre: { level: 1, exp: [0, 20] },
-				zapatero: { level: 1, exp: [0, 20] },
-				herrero: { level: 1, exp: [0, 20] },
-				fabricante: { level: 1, exp: [0, 20] },
-				forjamago: { level: 1, exp: [0, 20] },
+				lenador: { level: 10, exp: [0, 20] },
+				minero: { level: 10, exp: [0, 20] },
+				alquimista: { level: 10, exp: [0, 20] },
+				campesino: { level: 10, exp: [0, 20] },
+				joyero: { level: 10, exp: [0, 20] },
+				sastre: { level: 10, exp: [0, 20] },
+				zapatero: { level: 10, exp: [0, 20] },
+				herrero: { level: 10, exp: [0, 20] },
+				fabricante: { level: 10, exp: [0, 20] },
+				forjamago: { level: 200, exp: [0, 20] },
 			},
 			inventory: {},
 			equipment: {

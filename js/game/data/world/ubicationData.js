@@ -51,6 +51,7 @@ export const ubicationData = {
 							enemyData['ronroteston'],
 							enemyData['tigrelindre']
 						],
+						background: './assets/images/ubication/incarnam/skirmish.png',
 					},
 				},
 			},
@@ -77,10 +78,10 @@ export const ubicationData = {
 				name: 'Ir a Astrub',
 				image: './assets/images/ubication/incarnam/moveAstrub.png',
 				type: 'travel',
-				condition: {
-					level: 10,
-					description: `Necesitas alcancar el nivel 10 para ir a Astrub.`
-				},
+				// condition: {
+				// 	level: 10,
+				// 	description: `Necesitas alcancar el nivel 10 para ir a Astrub.`
+				// },
 				newUbication: ['astrub', 'moveIncarnam']
 			},
 		},

@@ -6,7 +6,7 @@ import { JobsWindow } from '../windows/JobsWindow.js';
 import { BankWindow } from '../windows/BankWindow.js';
 import { AchievementsWindow } from '../windows/AchievementsWindow.js';
 import { AlmanaxWindow } from '../windows/AlmanaxWindow.js';
-import { EncyclopediaWindow } from '../windows/EncyclopediaWindow.js';
+//import { EncyclopediaWindow } from '../windows/EncyclopediaWindow.js';
 import { SettingsWindow } from '../windows/SettingsWindow.js';
 
 export class Menu {
@@ -21,7 +21,7 @@ export class Menu {
 		this.bankWindow = new BankWindow(this);
 		this.achievementsWindow = new AchievementsWindow(this);
 		this.almanaxWindow = new AlmanaxWindow(this);
-		this.encyclopediaWindow = new EncyclopediaWindow(this);
+		//this.encyclopediaWindow = new EncyclopediaWindow(this);
 		this.settingsWindow = new SettingsWindow(this);
 
 		this.render();
@@ -62,7 +62,7 @@ export class Menu {
             	(!this.almanaxWindow.isOpen) ? this.almanaxWindow.open() : this.almanaxWindow.close();
                 break;
             case 'encyclopedia':
-            	(!this.encyclopediaWindow.isOpen) ? this.encyclopediaWindow.open() : this.encyclopediaWindow.close();
+            	//(!this.encyclopediaWindow.isOpen) ? this.encyclopediaWindow.open() : this.encyclopediaWindow.close();
                 break;
             case 'settings':
             	(!this.settingsWindow.isOpen) ? this.settingsWindow.open() : this.settingsWindow.close();

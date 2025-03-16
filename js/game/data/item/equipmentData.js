@@ -2,30 +2,6 @@ import { setData } from './setData.js';
 
 export const equipmentData = {
 	//sets
-	borrar: {
-		id: 1111110,
-		key: 'borrar',
-		name: 'Borrar',
-		image: './assets/images/items/equipment/s000-0.webp',
-		level: 200,
-		stats: {
-			vit: [350, 400],
-			str: [60, 80],
-			wis: [21, 30],
-			crt: [4, 5],
-			pm: [1],
-			res: [9, 12],
-			strDmg: [11, 15],
-			agiDmg: [11, 15],
-		},
-		type: 'equipment',
-		sort: 'sombrero',
-		recipe: {
-			ortiga: 2, 
-			lana_celeste: 2,
-		},
-		set: setData['set_del_bun'],
-	},
 	el_flud: {
 		id: 0,
 		key: 'el_flud',
@@ -5077,5 +5053,95 @@ export const equipmentData = {
 			concentrado_de_matorral: 2
 		},
 		set: null,
+	},
+
+	/*BORRAR*/
+	test1: {
+		id: 997,
+		key: 'test1',
+		name: 'Adorno de Buitre (test)',
+		image: './assets/images/items/placeholder/test1.webp',
+		level: 1,
+		stats: {
+			vit: [351, 400],
+			str: [61, 80],
+			wis: [21, 30],
+			crt: [4, 5],
+			pm: [1],
+			res: [9, 12],
+			strDmg: [11, 15],
+			agiDmg: [11, 15],
+		},
+		type: 'equipment',
+		sort: 'capa',
+		recipe: {
+			petalo_de_girasol_salvaje: 500,
+			aluminita: 500,
+			ortiga: 500, 
+			ala_de_moskito: 500,
+			concentrado_de_matorral: 500,
+			espina_de_champi_champ: 500,
+			ojo_de_arakmutada: 500,
+			lana_celeste: 500,
+		},
+		set: null
+	},
+	test2: {
+		id: 998,
+		key: 'test1',
+		name: 'Alianza de Dark Vlad (test)',
+		image: './assets/images/items/placeholder/test2.webp',
+		level: 1,
+		stats: {
+			vit: [251, 300],
+			int: [36, 66],
+			wis: [21, 30],
+			crt: [2, 3],
+			res: [3, 6],
+			intDmg: [9, 12],
+		},
+		type: 'equipment',
+		sort: 'anillo',
+		recipe: {
+			petalo_de_girasol_salvaje: 500,
+			aluminita: 500,
+			ortiga: 500, 
+			ala_de_moskito: 500,
+			concentrado_de_matorral: 500,
+			espina_de_champi_champ: 500,
+			ojo_de_arakmutada: 500,
+			lana_celeste: 500,
+		},
+		set: null
+	},
+	test3: {
+		id: 999,
+		key: 'test1',
+		name: 'Menoturón (test)',
+		image: './assets/images/items/placeholder/test3.webp',
+		level: 1,
+		stats: {
+			vit: [301, 350],
+			agi: [61, 80],
+			wis: [31, 40],
+			crt: [4, 6],
+			pa: [1],
+			agiDmg: [16, 20],
+			res: [7, 10],
+			pp: [11, 15],
+		},
+		type: 'equipment',
+		sort: 'cinturon',
+		recipe: {
+			petalo_de_girasol_salvaje: 500,
+			aluminita: 500,
+			ortiga: 500, 
+			ala_de_moskito: 500,
+			concentrado_de_matorral: 500,
+			espina_de_champi_champ: 500,
+			ojo_de_arakmutada: 500,
+			lana_celeste: 500,
+		},
+		set: null
 	},
 }
